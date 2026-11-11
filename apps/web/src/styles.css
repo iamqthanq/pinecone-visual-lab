@@ -45,7 +45,7 @@ nav { display: flex; flex-direction: column; gap: 5px; }
 nav a { display: flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 13px; color: #a4b0c4; border: 1px solid transparent; border-radius: 7px; font-size: 12px; font-weight: 500; transition: background .16s, color .16s; }
 nav a.active { background: #182b2f; border-color: #2b4545; color: #9aefda; }
 nav a:hover { background: #1a2434; color: #eef4ff; }
-.nav-shortcut { margin-left: auto; font-family: var(--mono); font-size: 9px; opacity: .65; }
+.nav-shortcut { margin-left: auto; font-family: var(--mono); font-size: 9px; color: #9ba9be; }
 .sidebar-guide { border: 1px solid #293344; border-radius: 8px; margin: auto 4px 24px; padding: 17px 14px; background: linear-gradient(145deg, #192333, #101722); }
 .guide-icon { color: #9faee2; display: block; margin-bottom: 12px; }
 .sidebar-guide strong { font-size: 12px; font-weight: 600; }

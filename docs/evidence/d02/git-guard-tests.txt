@@ -1,0 +1,25 @@
+COMMAND: .venv/Scripts/python.exe -m pytest -c apps/api/pyproject.toml tests/test_git_guard.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0 -- D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 9 items
+
+apps\api::GitGuardTests::test_actual_git_hook_with_git_for_windows_shell PASSED [ 11%]
+apps\api::GitGuardTests::test_d02_assignment_allows_issue_three_and_rejects_old_issue_one_ref PASSED [ 22%]
+apps\api::GitGuardTests::test_disabled_hooks_and_wrong_workdir PASSED    [ 33%]
+apps\api::GitGuardTests::test_non_fast_forward PASSED                    [ 44%]
+apps\api::GitGuardTests::test_positive_new_branch_and_fast_forward PASSED [ 55%]
+apps\api::GitGuardTests::test_powershell_entry_point_without_network PASSED [ 66%]
+apps\api::GitGuardTests::test_wrong_active_issue_and_main_and_detached PASSED [ 77%]
+apps\api::GitGuardTests::test_wrong_refs_tags_deletion_multiple_and_sha
+apps\api::GitGuardTests::test_wrong_refs_tags_deletion_multiple_and_sha PASSED [ 88%]
+apps\api::GitGuardTests::test_wrong_remote_name_url_and_push_urls
+apps\api::GitGuardTests::test_wrong_remote_name_url_and_push_urls PASSED [100%]
+
+=================== 9 passed, 12 subtests passed in 14.08s ====================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 14.81

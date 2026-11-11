@@ -1,0 +1,69 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File .cache/d02-git-snapshot.ps1
+WORKDIR: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+origin	https://github.com/iamqthanq/pinecone-visual-lab (fetch)
+origin	https://github.com/iamqthanq/pinecone-visual-lab (push)
+## feature/issue-3-document-chunking...origin/main
+ M .env.example
+ M .github/workflows/ci.yml
+ M .gitignore
+ M AGENTS.md
+ M README.md
+ M apps/api/app/main.py
+ M apps/api/pyproject.toml
+ M apps/api/requirements.in
+ M apps/api/requirements.lock
+ M apps/api/tests/test_health.py
+ M apps/web/package.json
+ M apps/web/src/App.test.tsx
+ M apps/web/src/App.tsx
+ M apps/web/src/api.ts
+ M apps/web/src/styles.css
+ M apps/web/vite.config.ts
+ M docs/BRANCH_POLICY.md
+ M docs/architecture/overview.md
+ M docs/design-foundation.md
+ M package-lock.json
+ M package.json
+ M playwright.config.ts
+ M scripts/check.ps1
+ M scripts/verify_repository.py
+ M tests/e2e/foundation.spec.ts
+ M tests/test_git_guard.py
+?? apps/api/app/chunking.py
+?? apps/api/app/document_api.py
+?? apps/api/app/documents.py
+?? apps/api/app/tokenization.py
+?? apps/api/tests/conftest.py
+?? apps/api/tests/test_chunking.py
+?? apps/api/tests/test_documents.py
+?? apps/api/testsupport/
+?? apps/web/src/DocumentsLab.test.tsx
+?? apps/web/src/DocumentsLab.tsx
+?? apps/web/src/documents-api.ts
+?? apps/web/src/documents.css
+?? docs/architecture/documents.md
+?? docs/evidence/d02/
+?? docs/tokenizer.md
+?? scripts/create_pdf_fixture.py
+?? scripts/setup_tokenizer.py
+?? tests/e2e/documents.spec.ts
+feature/issue-3-document-chunking
+fd4060c8814ff82637d1de35d543eee59ceaea12
+fd4060c8814ff82637d1de35d543eee59ceaea12
+3
+feature/issue-3-document-chunking
+D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+.githooks
+nothing
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78       D:\Corel\HK1_NAM4\PR\Giữa kì\...
+Original workflow/master plan/D01 evidence unchanged.
+v22.20.0
+10.9.3
+Python 3.13.7
+No broken requirements found.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 5.55

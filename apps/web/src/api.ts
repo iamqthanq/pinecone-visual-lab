@@ -2,7 +2,8 @@ export interface Health {
   status: 'ok'
   service: 'pinecone-visual-lab-api'
   version: string
-  phase: 'D01'
+  phase: 'D02'
+  documents: 'available'
   timestamp: string
   pinecone: 'not_configured'
   embedding: 'not_loaded'
@@ -19,7 +20,7 @@ export async function getHealth(signal: AbortSignal): Promise<Health> {
   if (!body || typeof body !== 'object') throw new Error('Invalid health response')
   const health = body as Partial<Health>
   if (health.status !== 'ok' || health.service !== 'pinecone-visual-lab-api'
-    || health.phase !== 'D01' || health.pinecone !== 'not_configured'
+    || health.phase !== 'D02' || health.documents !== 'available' || health.pinecone !== 'not_configured'
     || health.embedding !== 'not_loaded' || typeof health.version !== 'string'
     || typeof health.timestamp !== 'string' || !Number.isFinite(Date.parse(health.timestamp))) {
     throw new Error('Unexpected health response')

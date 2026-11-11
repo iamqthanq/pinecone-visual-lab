@@ -1,0 +1,46 @@
+COMMAND: .venv/Scripts/python.exe -c "import hashlib, json
+from importlib.metadata import metadata, version
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path('apps/api').resolve()))
+from app.tokenization import CACHE, real_tokenizer
+asset = CACHE / 'tokenizer.json'
+print(json.dumps(dict(tokenizer=real_tokenizer().info(), bytes=asset.stat().st_size, sha256=hashlib.sha256(asset.read_bytes()).hexdigest(), cached_files=sorted(p.name for p in CACHE.iterdir()), dependencies={n:dict(version=version(n), license=metadata(n).get('License-Expression') or metadata(n).get('License')) for n in ['pypdf','tokenizers','python-multipart','reportlab']}), ensure_ascii=False, indent=2))"
+{
+  "tokenizer": {
+    "available": true,
+    "mode": "e5",
+    "id": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "model_limit": 512,
+    "prefix": "passage: ",
+    "prefix_special_overhead": 5,
+    "max_chunk_size": 507
+  },
+  "bytes": 17082730,
+  "sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+  "cached_files": [
+    "tokenizer.json"
+  ],
+  "dependencies": {
+    "pypdf": {
+      "version": "7.0.1",
+      "license": "BSD-3-Clause"
+    },
+    "tokenizers": {
+      "version": "0.23.3",
+      "license": null
+    },
+    "python-multipart": {
+      "version": "0.0.33",
+      "license": "Apache-2.0"
+    },
+    "reportlab": {
+      "version": "5.1.0",
+      "license": "BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc."
+    }
+  }
+}
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 2.00

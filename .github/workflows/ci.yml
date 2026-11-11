@@ -1,4 +1,4 @@
-name: D01 offline quality
+name: Offline quality
 
 on:
   pull_request:
@@ -34,9 +34,16 @@ jobs:
           exit $LASTEXITCODE
       - name: Local quality gates
         shell: pwsh
+        env:
+          HF_HUB_OFFLINE: '1'
+          TRANSFORMERS_OFFLINE: '1'
         run: ./scripts/check.ps1
       - name: Browser integration and actual API smoke
         shell: pwsh
+        env:
+          PVL_E2E_FIXTURE: '1'
+          HF_HUB_OFFLINE: '1'
+          TRANSFORMERS_OFFLINE: '1'
         run: |
           npx playwright install msedge
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
@@ -46,7 +53,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: d01-browser-evidence
+          name: lab-browser-evidence
           path: |
-            docs/evidence/d01/*.png
+            docs/evidence/d02/*.png
             test-results/

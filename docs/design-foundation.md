@@ -23,3 +23,9 @@ GSAP Skills/runtime are **NOT USED in D01**; no GSAP performance/lifecycle resul
 Background `#0b101b`, sidebar `#0d131f`, surface `#111927`, raised surface `#172131`, line `#263142`, body ink `#e5eaf4`, muted ink `#9ba9be`, accent `#7ce7cb`. Cards use a 10px base radius; buttons 6px. The shell collapses to a disclosure navigation at 700px; pipeline nodes reflow from six to three to two columns; lab cards from four to two to one. All lab routes support direct links.
 
 Desktop 1440 and mobile 390 screenshots are stored with D01 evidence. Overflow is checked on all five routes at 320, 390, 768, 1024, 1440. Keyboard and reduced-motion checks are implemented; full D08 visual regression/performance acceptance remains planned.
+
+## D02 extension
+
+Documents Lab extends the existing shell, tokens, Panel/Button/TextField/Badge and pinned Taste source-guided adaptation. File selection leads to source pages, preview, confirmation and export. Library/source/inspector columns stack on mobile without hiding provenance or version state. Only Documents Lab becomes operational; the other lab roadmaps remain planned.
+
+Highlighted overlap has an actual/requested token legend. Draft/confirmed badges, stale-config warnings, explicit deletion, upload status, keyboard controls and tokenizer-unavailable/fixture labels support technical readability. Edge checks the populated desktop/mobile flow, copy/export, axe serious/critical issues and shell/navigation/reduced-motion regression. An inherited inactive-navigation contrast issue was fixed using the existing muted color token. Screenshots are actual browser captures; no upstream Taste gate or GSAP result is claimed. GSAP remains unused in D02.
