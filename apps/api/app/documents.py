@@ -132,7 +132,7 @@ class Store:
             db.row_factory = sqlite3.Row
             db.execute("PRAGMA foreign_keys=ON")
             schema = db.execute("PRAGMA user_version").fetchone()[0]
-            if schema not in (0, 1):
+            if schema not in (0, 1, 2):
                 raise DocumentError(
                     "Unsupported database schema. Preserve data and upgrade the app.", 503
                 )
@@ -159,6 +159,19 @@ class Store:
               );
               PRAGMA user_version=1;
             """)
+            if schema < 2:
+                db.executescript("""
+                  BEGIN IMMEDIATE;
+                  CREATE TABLE IF NOT EXISTS embeddings (
+                    id TEXT PRIMARY KEY,
+                    chunk_id TEXT NOT NULL REFERENCES chunks(id) ON DELETE CASCADE,
+                    model_signature TEXT NOT NULL,
+                    data TEXT NOT NULL,
+                    UNIQUE(chunk_id, model_signature)
+                  );
+                  PRAGMA user_version=2;
+                  COMMIT;
+                """)
             with db:
                 yield db
         finally:

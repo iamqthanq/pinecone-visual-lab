@@ -1,0 +1,73 @@
+COMMAND: .venv/Scripts/python.exe .cache/d03-manifest.py
+{
+  "model_manifest": {
+    "model_id": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "assets": {
+      "model.safetensors": {
+        "bytes": 470641600,
+        "sha256": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477"
+      },
+      "config.json": {
+        "bytes": 655,
+        "sha256": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959"
+      },
+      "1_Pooling/config.json": {
+        "bytes": 200,
+        "sha256": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0"
+      },
+      "modules.json": {
+        "bytes": 387,
+        "sha256": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04"
+      }
+    }
+  },
+  "tokenizer_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "tokenizer_sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+  "runtime": {
+    "torch": {
+      "version": "2.15.0",
+      "license": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND ISC AND MIT AND Zlib"
+    },
+    "transformers": {
+      "version": "5.22.2",
+      "license": "Apache 2.0 License"
+    },
+    "safetensors": {
+      "version": "0.8.0",
+      "license": "See upstream LICENSE"
+    },
+    "tokenizers": {
+      "version": "0.23.3",
+      "license": "See upstream LICENSE"
+    },
+    "numpy": {
+      "version": "2.5.4",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    }
+  },
+  "python": "3.13.7",
+  "windows": "Windows-10-10.0.19045-SP0",
+  "cpu": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+  "logical_cpus": 8,
+  "torch_cuda_build": null,
+  "device_used": "cpu",
+  "threads_per_worker": 2
+}
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 23.71
+
+HELPER SOURCE FOR REPRODUCTION:
+import json,sys,platform,os
+from pathlib import Path
+from importlib.metadata import metadata,version
+sys.path.insert(0,str(Path('apps/api').resolve()))
+from app.embedding_assets import model_directory,verify
+from app.tokenization import REVISION,TOKENIZER_SHA256
+import torch
+root=model_directory()
+verify(root)
+destination=Path('docs/evidence/d03')
+(destination/'model-manifest.json').write_bytes((root/'manifest.json').read_bytes())
+print(json.dumps(dict(model_manifest=json.loads((root/'manifest.json').read_text()), tokenizer_revision=REVISION,tokenizer_sha256=TOKENIZER_SHA256, runtime={name:dict(version=version(name),license=(metadata(name).get('License-Expression') or metadata(name).get('License') or 'See upstream LICENSE').splitlines()[0][:120]) for name in ['torch','transformers','safetensors','tokenizers','numpy']},python=platform.python_version(),windows=platform.platform(),cpu=platform.processor(),logical_cpus=os.cpu_count(),torch_cuda_build=torch.version.cuda,device_used='cpu',threads_per_worker=2),indent=2))

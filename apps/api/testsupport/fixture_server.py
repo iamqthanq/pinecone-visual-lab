@@ -4,6 +4,7 @@ from tokenizers import Tokenizer, models, pre_tokenizers, processors
 
 from app.main import create_app
 from app.tokenization import TokenizerEngine
+from testsupport.embedding_fixture import FixtureProvider
 
 
 def fixture_engine():
@@ -17,4 +18,4 @@ def fixture_engine():
     return TokenizerEngine(tokenizer, fixture=True)
 
 
-app = create_app(engine_provider=fixture_engine)
+app = create_app(engine_provider=fixture_engine, embedding_provider=FixtureProvider())

@@ -1,5 +1,7 @@
 # D02 documents: extraction, SQLite and provenance
 
+D03 retains these extraction/version contracts. Schema1 described below is the D02 baseline; current schema2 adds only versioned embedding records through a forward migration, documented in [embedding architecture](embeddings.md). Unknown newer schemas still fail safely.
+
 ## Storage and limits
 
 Default `.data/` is Git ignored: `<uuid>.pdf` / `<uuid>.txt` plus `documents.sqlite3`. Display filenames are sanitized (Windows separators, reserved device names and invalid characters), never used as storage paths. IDs are validated UUIDs. An explicit `PVL_DATA_DIR` can relocate storage; it must remain private/untracked. Tests use temporary or ignored isolated stores, never user libraries. Repository checks reject accidentally tracked `.data`, cache, PDFs, databases and model-weight formats.

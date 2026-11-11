@@ -5,8 +5,8 @@ import App from './App'
 import { getHealth } from './api'
 
 const health = {
-  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.2.0', phase: 'D02', documents: 'available',
-  timestamp: new Date().toISOString(), pinecone: 'not_configured', embedding: 'not_loaded',
+  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.3.0', phase: 'D03', documents: 'available',
+  timestamp: new Date().toISOString(), pinecone: 'not_configured', embedding: 'not_loaded', embedding_mode: 'e5',
 }
 
 function mount(path = '/') {
@@ -29,7 +29,7 @@ describe('D01 foundation', () => {
     expect(await screen.findByText('ONLINE')).toBeInTheDocument()
     expect(screen.getByText('NOT CONFIGURED')).toBeInTheDocument()
     expect(screen.getByText('NOT LOADED')).toBeInTheDocument()
-    expect(screen.getByText('Documents + chunks available; vector stages planned.')).toBeInTheDocument()
+    expect(screen.getByText('Documents, chunks and local embeddings; vector DB planned.')).toBeInTheDocument()
   })
 
   it('shows disconnected help and can reconnect through the retry control', async () => {
@@ -43,16 +43,19 @@ describe('D01 foundation', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2)
   })
 
-  it('navigates to the working Documents Lab without changing planned vector labs', async () => {
+  it('navigates to working Documents and Vectors Labs while keeping Search planned', async () => {
     vi.stubGlobal('fetch', vi.fn().mockImplementation((url: string) => Promise.resolve(Response.json(
       url.includes('/documents') ? { documents: [], max_file_bytes: 10485760 }
-        : url.includes('/tokenizer') ? { available: true, mode: 'e5' } : health,
+        : url.includes('/tokenizer') ? { available: true, mode: 'e5' }
+          : url.includes('/embeddings/status') ? { state: 'not_cached', mode: 'e5' } : health,
     ))))
     mount()
     fireEvent.click(screen.getByRole('link', { name: 'Documents Lab' }))
     expect(await screen.findByRole('heading', { name: 'Start with the source.' })).toBeInTheDocument()
     expect(await screen.findByRole('button', { name: 'Choose file' })).toBeEnabled()
     fireEvent.click(screen.getByRole('link', { name: 'Vectors Lab' }))
+    expect(await screen.findByRole('heading', { name: 'Turn text into coordinates.' })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('link', { name: 'Search Lab' }))
     expect(await screen.findByText('This lab is on the roadmap.')).toBeInTheDocument()
   })
 

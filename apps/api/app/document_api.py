@@ -27,11 +27,15 @@ class UploadLimit:
         self.app, self.limit = app, max_bytes + 64 * 1024
 
     async def __call__(self, scope, receive, send):
-        if (
-            scope["type"] != "http"
-            or scope.get("method") != "POST"
-            or scope.get("path") != "/api/documents"
-        ):
+        if scope["type"] != "http" or scope.get("method") != "POST":
+            return await self.app(scope, receive, send)
+        path = scope.get("path", "")
+        limit = (
+            self.limit
+            if path == "/api/documents"
+            else (1024 * 1024 if path.startswith("/api/embeddings/") else None)
+        )
+        if limit is None:
             return await self.app(scope, receive, send)
         blocks, size = [], 0
         while True:
@@ -40,8 +44,10 @@ class UploadLimit:
                 return
             block = message.get("body", b"")
             size += len(block)
-            if size > self.limit:
-                response = JSONResponse({"detail": "Upload body exceeds the file size limit."}, 413)
+            if size > limit:
+                response = JSONResponse(
+                    {"detail": "Request body exceeds the configured size limit."}, 413
+                )
                 return await response(scope, receive, send)
             blocks.append(block)
             if not message.get("more_body", False):

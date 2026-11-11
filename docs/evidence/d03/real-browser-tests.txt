@@ -1,0 +1,29 @@
+COMMAND: node node_modules/@playwright/test/cli.js test
+[WebServer] INFO:     Started server process [19452]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:26480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:21048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:2804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok 1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (28.2s)
+  ok 2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (5.7s)
+[WebServer] Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][WebServer] Loading weights:   1%|          | 1/199 [00:00<00:41,  4.79it/s][WebServer] Loading weights:   9%|▊         | 17/199 [00:00<00:03, 59.52it/s][WebServer] Loading weights:  15%|█▍        | 29/199 [00:00<00:02, 78.58it/s][WebServer] Loading weights:  25%|██▍       | 49/199 [00:00<00:01, 116.31it/s][WebServer] Loading weights:  32%|███▏      | 64/199 [00:00<00:01, 125.16it/s][WebServer] Loading weights:  39%|███▉      | 78/199 [00:00<00:00, 125.84it/s][WebServer] Loading weights: 100%|██████████| 199/199 [00:00<00:00, 256.22it/s]
+  ok 3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (1.4m)
+  ok 4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (2.5s)
+  ok 5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (7.1s)
+  ok 6 tests\e2e\foundation.spec.ts:38:1 › mobile menu, deep links, reduced motion and layout at four widths (18.3s)
+  ok 7 tests\e2e\foundation.spec.ts:60:1 › network failure and recovery (explicitly intercepted fault injection) (1.8s)
+  ok 8 tests\e2e\foundation.spec.ts:72:1 › keyboard skip link is first and visible (1.7s)
+
+  8 passed (2.9m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 173.71

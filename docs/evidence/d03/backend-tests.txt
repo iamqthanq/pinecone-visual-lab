@@ -1,0 +1,19 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\3558462a19534a38b060595ea20fa43e\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 72 items / 2 deselected / 70 selected
+
+apps\api\tests\test_chunking.py ............                             [ 17%]
+apps\api\tests\test_documents.py ..........................              [ 54%]
+apps\api\tests\test_embeddings.py ...................                    [ 81%]
+apps\api\tests\test_health.py ...                                        [ 85%]
+apps\api\tests\test_git_guard.py ..........                              [100%]
+
+====================== 70 passed, 2 deselected in 43.39s ======================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 48.04
