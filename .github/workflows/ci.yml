@@ -1,0 +1,52 @@
+name: D01 offline quality
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  foundation:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.20.0'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: apps/api/requirements.lock
+      - name: Install exact locked dependencies (no AI models)
+        shell: pwsh
+        run: |
+          npm ci
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m venv .venv
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .venv/Scripts/python.exe -m pip install -r apps/api/requirements.lock
+          exit $LASTEXITCODE
+      - name: Local quality gates
+        shell: pwsh
+        run: ./scripts/check.ps1
+      - name: Browser integration and actual API smoke
+        shell: pwsh
+        run: |
+          npx playwright install msedge
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run test:e2e
+          exit $LASTEXITCODE
+      - name: Preserve browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: d01-browser-evidence
+          path: |
+            docs/evidence/d01/*.png
+            test-results/

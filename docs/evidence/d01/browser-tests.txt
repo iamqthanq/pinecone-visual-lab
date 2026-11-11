@@ -1,0 +1,19 @@
+COMMAND: node node_modules/@playwright/test/cli.js test
+[WebServer] INFO:     Started server process [23368]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+
+Running 4 tests using 1 worker
+
+(node:1980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\foundation.spec.ts:4:1 › live API health, desktop navigation, accessibility, and screenshot (6.5s)
+  ok 2 tests\e2e\foundation.spec.ts:29:1 › mobile menu, deep links, reduced motion and layout at four widths (14.9s)
+  ok 3 tests\e2e\foundation.spec.ts:51:1 › network failure and recovery (explicitly intercepted fault injection) (1.8s)
+  ok 4 tests\e2e\foundation.spec.ts:63:1 › keyboard skip link is first and visible (1.4s)
+
+  4 passed (30.6s)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 33.49

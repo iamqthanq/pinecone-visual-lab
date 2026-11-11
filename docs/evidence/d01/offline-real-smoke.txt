@@ -1,0 +1,5 @@
+COMMAND: node scripts/browser_offline_smoke.mjs
+PASS: browser shows OFFLINE with the actual API stopped; no request interception used.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 11.06
