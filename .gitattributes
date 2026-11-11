@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.sh text eol=lf
+.githooks/* text eol=lf
+*.ps1 text eol=lf
+# Preserve the authentic supplied file byte-for-byte, including its line endings.
+GITHUB_COLLAB_WORKFLOW_STANDARD.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/reference/PINECONE_VISUAL_LAB_DEMO_MASTER_PLAN_v2_1_WINDOWS.md -text whitespace=-blank-at-eol,-blank-at-eof

@@ -1,0 +1,30 @@
+COMMAND: .venv/Scripts/python.exe -m unittest discover -s tests -v
+test_actual_git_hook_with_git_for_windows_shell (test_git_guard.GitGuardTests.test_actual_git_hook_with_git_for_windows_shell) ... ok
+
+test_disabled_hooks_and_wrong_workdir (test_git_guard.GitGuardTests.test_disabled_hooks_and_wrong_workdir) ... ok
+
+test_non_fast_forward (test_git_guard.GitGuardTests.test_non_fast_forward) ... ok
+
+test_positive_new_branch_and_fast_forward (test_git_guard.GitGuardTests.test_positive_new_branch_and_fast_forward) ... ok
+
+test_powershell_entry_point_without_network (test_git_guard.GitGuardTests.test_powershell_entry_point_without_network) ... ok
+
+test_wrong_active_issue_and_main_and_detached (test_git_guard.GitGuardTests.test_wrong_active_issue_and_main_and_detached) ... ok
+
+test_wrong_refs_tags_deletion_multiple_and_sha (test_git_guard.GitGuardTests.test_wrong_refs_tags_deletion_multiple_and_sha) ... ok
+
+test_wrong_remote_name_url_and_push_urls (test_git_guard.GitGuardTests.test_wrong_remote_name_url_and_push_urls) ... ok
+
+
+
+----------------------------------------------------------------------
+
+Ran 8 tests in 15.500s
+
+
+
+OK
+
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 15.74
