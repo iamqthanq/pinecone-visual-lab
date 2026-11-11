@@ -3,3 +3,7 @@ uvicorn
 httpx
 pytest
 ruff
+pypdf==7.0.1
+tokenizers==0.23.3
+python-multipart
+reportlab

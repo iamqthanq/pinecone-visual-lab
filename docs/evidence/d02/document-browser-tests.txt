@@ -1,0 +1,113 @@
+COMMAND: node node_modules/@playwright/test/cli.js test tests/e2e/documents.spec.ts
+[WebServer] INFO:     Started server process [19856]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:17260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:26568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  x  1 tests\e2e\documents.spec.ts:7:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (20.6s)
+(node:26156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 tests\e2e\documents.spec.ts:61:1 › TXT/BOM upload, validation error, and confirmed deletion (2.8s)
+
+
+  1) tests\e2e\documents.spec.ts:7:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 58
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d131f",
+    +               "contrastRatio": 4.22,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#6f798a",
+    +               "fontSize": "6.8pt (9px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 4.22 (foreground color: #6f798a, background color: #0d131f, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<aside class=\"sidebar \" id=\"sidebar\">",
+    +                 "target": Array [
+    +                   "#sidebar",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 4.22 (foreground color: #6f798a, background color: #0d131f, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"nav-shortcut\">01</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".nav-shortcut",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    + ]
+
+      40 |   await page.screenshot({ path: 'docs/evidence/d02/desktop-1440.png', fullPage: true })
+      41 |   const accessibility = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()
+    > 42 |   expect(accessibility.violations.filter(v => ['serious', 'critical'].includes(v.impact ?? ''))).toEqual([])
+         |                                                                                                  ^
+      43 |   await page.getByLabel('Chunk size (tokens)').fill('180')
+      44 |   await expect(page.getByText(/Configuration changed/)).toBeVisible()
+      45 |   await expect(page.getByRole('button', { name: 'Confirm / Save' })).toBeDisabled()
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\documents.spec.ts:42:98
+
+    Error Context: test-results\documents-real-PDF-upload--fad1f-nfirm-→-JSONL-→-persistence\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\documents-real-PDF-upload--fad1f-nfirm-→-JSONL-→-persistence\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\documents-real-PDF-upload--fad1f-nfirm-→-JSONL-→-persistence\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\e2e\documents.spec.ts:7:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence
+  1 passed (38.5s)
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 39.65

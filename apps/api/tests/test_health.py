@@ -15,7 +15,8 @@ def test_health_reports_real_process_and_explicit_capabilities():
     data = response.json()
     assert data["status"] == "ok"
     assert data["service"] == "pinecone-visual-lab-api"
-    assert data["phase"] == "D01"
+    assert data["phase"] == "D02"
+    assert data["documents"] == "available"
     assert data["pinecone"] == "not_configured"
     assert data["embedding"] == "not_loaded"
     assert before <= datetime.fromisoformat(data["timestamp"]) <= after
@@ -25,9 +26,13 @@ def test_health_reports_real_process_and_explicit_capabilities():
 def test_allowed_browser_origin_and_rejected_external_origin():
     response = client.get("/api/health", headers={"Origin": "http://127.0.0.1:5173"})
     assert response.headers["access-control-allow-origin"] == "http://127.0.0.1:5173"
-    response = client.options("/api/health", headers={
-        "Origin": "https://untrusted.example", "Access-Control-Request-Method": "GET",
-    })
+    response = client.options(
+        "/api/health",
+        headers={
+            "Origin": "https://untrusted.example",
+            "Access-Control-Request-Method": "GET",
+        },
+    )
     assert response.status_code == 400
     assert "access-control-allow-origin" not in response.headers
 

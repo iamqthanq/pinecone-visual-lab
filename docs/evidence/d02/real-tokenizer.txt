@@ -1,0 +1,15 @@
+COMMAND: .venv/Scripts/python.exe -m pytest -c apps/api/pyproject.toml -m real_tokenizer -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0 -- D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 51 items / 50 deselected / 1 selected
+
+apps\api\tests\test_chunking.py::test_real_e5_correctness_and_metadata PASSED [100%]
+
+====================== 1 passed, 50 deselected in 3.61s =======================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 4.80

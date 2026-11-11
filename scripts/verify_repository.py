@@ -27,7 +27,11 @@ def main() -> int:
         path = ROOT / name
         if not path.is_file():
             continue
-        if path.suffix in {".pdf", ".gguf", ".safetensors", ".sqlite", ".db"}:
+        if any(part.lower() in {'.data', '.cache', '.venv', 'node_modules', 'uploads', 'models'}
+               for part in Path(name).parts):
+            failures.append(f"Private/runtime directory: {name}")
+        if path.suffix.lower() in {".pdf", ".gguf", ".safetensors", ".sqlite", ".sqlite3", ".db",
+                           ".onnx", ".bin", ".pt", ".pth"}:
             failures.append(f"Forbidden data artifact: {name}")
         if path.name == ".env" or (path.name.startswith(".env.") and path.name != ".env.example"):
             failures.append(f"Environment secret file: {name}")

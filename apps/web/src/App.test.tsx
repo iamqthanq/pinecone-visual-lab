@@ -5,7 +5,7 @@ import App from './App'
 import { getHealth } from './api'
 
 const health = {
-  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.1.0', phase: 'D01',
+  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.2.0', phase: 'D02', documents: 'available',
   timestamp: new Date().toISOString(), pinecone: 'not_configured', embedding: 'not_loaded',
 }
 
@@ -29,7 +29,7 @@ describe('D01 foundation', () => {
     expect(await screen.findByText('ONLINE')).toBeInTheDocument()
     expect(screen.getByText('NOT CONFIGURED')).toBeInTheDocument()
     expect(screen.getByText('NOT LOADED')).toBeInTheDocument()
-    expect(screen.getByText('Pipeline processing is not available in D01.')).toBeInTheDocument()
+    expect(screen.getByText('Documents + chunks available; vector stages planned.')).toBeInTheDocument()
   })
 
   it('shows disconnected help and can reconnect through the retry control', async () => {
@@ -43,13 +43,17 @@ describe('D01 foundation', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2)
   })
 
-  it('navigates from the overview to a clearly planned Documents Lab', async () => {
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(Response.json(health)))
+  it('navigates to the working Documents Lab without changing planned vector labs', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockImplementation((url: string) => Promise.resolve(Response.json(
+      url.includes('/documents') ? { documents: [], max_file_bytes: 10485760 }
+        : url.includes('/tokenizer') ? { available: true, mode: 'e5' } : health,
+    ))))
     mount()
     fireEvent.click(screen.getByRole('link', { name: 'Documents Lab' }))
-    expect(await screen.findByRole('heading', { name: 'Documents Lab' })).toBeInTheDocument()
-    expect(screen.getByText(/No processing is available/)).toBeInTheDocument()
-    expect(screen.queryByRole('button', { name: /upload/i })).not.toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Start with the source.' })).toBeInTheDocument()
+    expect(await screen.findByRole('button', { name: 'Choose file' })).toBeEnabled()
+    fireEvent.click(screen.getByRole('link', { name: 'Vectors Lab' }))
+    expect(await screen.findByText('This lab is on the roadmap.')).toBeInTheDocument()
   })
 
   it('renders a meaningful unknown-route fallback', async () => {

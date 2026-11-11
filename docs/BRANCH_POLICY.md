@@ -7,7 +7,7 @@
 | INTEGRATION_BRANCH | `main` (GitHub default verified) |
 | RELEASE_BRANCH | `main`; never push directly |
 | FEATURE_BRANCH_PATTERN | `feature/issue-<actual-number>-<slug>` |
-| Active assignment | Issue #1 / `feature/issue-1-foundation` |
+| Active assignment | D02 / Issue #3 / `feature/issue-3-document-chunking` |
 | TEST_COMMANDS | `scripts/check.ps1`; npm/Python subcommands in README |
 | PUSH_COMMAND | `powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/push_issue_branch.ps1` |
 | MERGE_POLICY | User-only; agent never opens PR or closes Issue |
@@ -21,8 +21,8 @@ After inspecting any existing hooks/configuration, configure this checkout:
 ```powershell
 git config --local push.default nothing
 git config --local core.hooksPath .githooks
-git config --local pinecone.issue 1
-git config --local pinecone.branch feature/issue-1-foundation
+git config --local pinecone.issue 3
+git config --local pinecone.branch feature/issue-3-document-chunking
 git config --local pinecone.workdir (Get-Location).Path
 ```
 
