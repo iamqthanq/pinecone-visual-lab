@@ -1,8 +1,8 @@
 # Pinecone Visual Lab
 
-A local workbench for a vector database seminar. **D02 implements Documents Lab:** PDF/TXT upload, real page extraction, E5-tokenizer chunks, overlap inspection, confirmed versions and UTF-8 JSONL. D01 health, navigation, design system and Git safeguards remain. Embeddings, Pinecone operations, retrieval, RAG and Slab simulation remain **PLANNED (D03–D09)**. This project is independent of Pinecone's console.
+A local vector-database seminar workbench. **D03 implements local E5 embeddings and a 384D inspector/cosine mini-lab**, preserving D02 PDF/TXT documents, chunks, confirmed versions and JSONL. Pinecone operations, top-k retrieval, RAG and Slab remain **PLANNED (D04–D09)**. This project is independent of Pinecone's console.
 
-![D02 Documents Lab](docs/evidence/d02/desktop-1440.png)
+![D03 Embedding Inspector](docs/evidence/d03/vectors-desktop-1440.png)
 
 ## Windows setup
 
@@ -35,7 +35,21 @@ Start web in another terminal:
 npm.cmd run dev:web
 ```
 
-Open **http://127.0.0.1:5173/documents**. Health: **http://127.0.0.1:8000/api/health**; schema: http://127.0.0.1:8000/docs. Stop owned processes with Ctrl+C; no services are installed. Health refreshes every 15 seconds/on demand with a 5-second timeout. Stop API and click **Check connection** to see OFFLINE. Pinecone stays NOT CONFIGURED and embedding model NOT LOADED even when the tokenizer is cached.
+Open **http://127.0.0.1:5173/documents**. Health: **http://127.0.0.1:8000/api/health**; schema: http://127.0.0.1:8000/docs. Stop owned processes with Ctrl+C; no services are installed. Health refreshes every 15 seconds/on demand with a 5-second timeout. Stop API and click **Check connection** to see OFFLINE. Pinecone stays NOT CONFIGURED. Embedding status reports actual cache/load state; the model loads only on explicit generation.
+
+## Local E5 / Vectors Lab (D03)
+
+Before the first large download, approve the official source/size/resource disclosure. The current D03 owner approved it on 2026-11-11. Then explicitly run:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/setup_embedding_model.py --accept-download
+```
+
+Source: official HF snapshot `614241f622f53c4eeff9890bdc4f31cfecc418b3`, matching D02 tokenizer. Safetensors **470,641,600 bytes (~471 MB)**, SHA-256 `1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477`. Reserve3GB disk and3–4GB available RAM; runtime dependencies are in the lock. Ignored `.cache/embedding-model/`; optional `PVL_MODEL_DIR`. No startup/API/CI downloads. See [model architecture/licenses/resources](docs/architecture/embeddings.md).
+
+Open **http://127.0.0.1:5173/vectors**. Choose document → confirmed version → chunk → Generate Embedding. The first call verifies/loads local weights in one CPU worker; status distinguishes cached/not loaded/loading/loaded/unavailable. Inspect all384 values as heatmap/table, norm/tokens/pages/revision and measured whole-batch latency; Copy includes full JSON. Enter raw Vietnamese query (prefix added once), generate it, then compare with the chunk. Two-sentence presets demonstrate raw cosine, not probability or Pinecone score. No Vector DB search occurs.
+
+Batches1–8, total≤512 input tokens including prefix/specials, no truncation; oversized input fails. Timeout120s, frontend cancellation130s, explicit Cancel stops owned inference worker. Only confirmed chunk vectors persist idempotently in SQLite schema2; ad hoc queries never persist. Earlier confirmed versions/D02 drafts remain intact. [D03 evidence](docs/evidence/d03/REPORT.md).
 
 ## Documents Lab
 
@@ -57,14 +71,14 @@ Vite proxies `/api` to port 8000; `PVL_API_PROXY_TARGET` changes that dev proxy.
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
-.\.venv\Scripts\python.exe -m pytest -c apps/api/pyproject.toml -m real_tokenizer -v
+.\.venv\Scripts\python.exe scripts/run_pytest.py -m "real_tokenizer or real_model" -v -s
 npm.cmd run test:e2e
 npm.cmd audit --audit-level=moderate
 ```
 
-`RemoteSigned` applies only to that PowerShell process, preserving persistent policy/hooks. `check.ps1` fails on any required ESLint, strict typecheck, Vitest, Ruff, Pytest/API/Git guards, build, artifact/secret scan or whitespace check failure. The separate real-tokenizer test requires cached assets (otherwise explicitly SKIPPED); no download occurs.
+`RemoteSigned` applies only to that PowerShell process, preserving persistent policy/hooks. `check.ps1` fails on any required ESLint, strict typecheck, Vitest, Ruff, Pytest/API/Git guards, build, artifact/secret scan or whitespace check failure. Separate real-tokenizer/model tests require explicitly installed cached assets (otherwise SKIPPED); no download occurs. Default tests exclude both markers. The Pytest helper creates fresh ignored temp/cache directories, avoiding shared Windows Temp ACL problems without changing user Temp.
 
-Playwright uses installed **Edge**, starts isolated web/API on **5174/8001**, stores synthetic data under ignored `.cache/e2e-d02/` and stops its owned servers. Occupied ports cause failure instead of server reuse. Local default E2E uses actual E5 assets. Fixtures use installed Windows Arial for Vietnamese PDFs (font not redistributed). Tests cover upload → pages → generate → inspect/overlap/copy → confirm → export → reload, draft recovery, delete confirmation, axe serious/critical checks, navigation, reduced motion, responsive widths and injected network failure/recovery. Actual screenshots go to `docs/evidence/d02/`; historical D01 evidence is unchanged.
+Playwright uses installed **Edge**, starts isolated web/API on **5174/8001**, stores synthetic data under ignored `.cache/e2e-d03/` and stops its owned servers. Occupied ports cause failure instead of server reuse. Local default E2E uses actual E5 tokenizer and weights; ensure model setup before running. It additionally checks confirmed source → 384 values/table/copy → query → cosine and model-unavailable behavior. Fixtures use installed Windows Arial for Vietnamese PDFs (font not redistributed). Tests cover upload → pages → generate → inspect/overlap/copy → confirm → export → reload, draft recovery, delete confirmation, axe serious/critical checks, navigation, reduced motion, responsive widths and injected network failure/recovery. Actual screenshots go to `docs/evidence/d03/`; historical D01/D02 evidence is unchanged.
 
 Reproduce CI's **explicit fixture mode**, which requires no AI assets:
 
@@ -84,7 +98,7 @@ Individual commands: `npm.cmd run lint`, `npm.cmd run typecheck`, `npm.cmd test`
 
 Read [authentic workflow](GITHUB_COLLAB_WORKFLOW_STANDARD.md), [branch policy](docs/BRANCH_POLICY.md), [AGENTS.md](AGENTS.md). Original workflow SHA-256: `5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78`. Original workflow/master-plan whitespace is preserved by `.gitattributes` exceptions.
 
-Active: **[Issue #3](https://github.com/iamqthanq/pinecone-visual-lab/issues/3)**, **`feature/issue-3-document-chunking`**, base **`main`** after D01 PR #2 merge. Configure checkout guards per policy. After review/tests/commit:
+Active: **[Issue #5](https://github.com/iamqthanq/pinecone-visual-lab/issues/5)**, **`feature/issue-5-local-embeddings`**, base **`main`** after D02 PR #4 merge. Configure checkout guards per policy. After review/tests/commit:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/push_issue_branch.ps1
@@ -94,9 +108,11 @@ The no-argument script validates checkout/active Issue/branch/remote/HEAD and pu
 
 ## Architecture and evidence
 
+Current: [D03 report/logs](docs/evidence/d03/REPORT.md), [embedding design/schema2](docs/architecture/embeddings.md), [desktop1440](docs/evidence/d03/vectors-desktop-1440.png), [mobile390](docs/evidence/d03/vectors-mobile-390.png). D01/D02 evidence links below are historical.
+
 - [Current architecture/health](docs/architecture/overview.md), [D02 schema/provenance](docs/architecture/documents.md), [tokenizer/licenses](docs/tokenizer.md)
 - [Free-first ADR](docs/decisions/0001-free-first-stack.md), [Taste source/design](docs/design-foundation.md)
 - [D02 requirement/test report](docs/evidence/d02/REPORT.md), [desktop](docs/evidence/d02/desktop-1440.png), [mobile](docs/evidence/d02/mobile-390.png)
 - [Historical D01 report](docs/evidence/d01/REPORT.md)
 
-Future LIVE PINECONE, LOCAL DEMO retrieval and SLAB SIMULATOR remain planned. No embeddings, upserts, OCR or production hosting ship in D02. PDF reading order follows the text layer and may differ from visual layout. API is for loopback/local use without multi-user authentication. Resource caps do not constitute a hostile-PDF execution sandbox. Repository scan is focused, not a comprehensive security audit.
+Future LIVE PINECONE, LOCAL DEMO retrieval and SLAB SIMULATOR remain planned. D03 ships real local embeddings; no upserts, top-k search, OCR or production hosting. PDF reading order follows the text layer and may differ from visual layout. API is for loopback/local use without multi-user authentication. Resource caps do not constitute a hostile-PDF execution sandbox. Repository scan is focused, not a comprehensive security audit.

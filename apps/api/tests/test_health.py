@@ -15,10 +15,11 @@ def test_health_reports_real_process_and_explicit_capabilities():
     data = response.json()
     assert data["status"] == "ok"
     assert data["service"] == "pinecone-visual-lab-api"
-    assert data["phase"] == "D02"
+    assert data["phase"] == "D03"
     assert data["documents"] == "available"
     assert data["pinecone"] == "not_configured"
-    assert data["embedding"] == "not_loaded"
+    assert data["embedding"] in {"not_cached", "not_loaded"}
+    assert data["embedding_mode"] == "e5"
     assert before <= datetime.fromisoformat(data["timestamp"]) <= after
     assert "api_key" not in data
 

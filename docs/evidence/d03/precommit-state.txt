@@ -1,0 +1,94 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File .cache/d03-git-snapshot.ps1
+WORKDIR: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+origin	https://github.com/iamqthanq/pinecone-visual-lab (fetch)
+origin	https://github.com/iamqthanq/pinecone-visual-lab (push)
+## feature/issue-5-local-embeddings...origin/main
+ M .env.example
+ M .github/workflows/ci.yml
+ M AGENTS.md
+ M README.md
+ M apps/api/app/document_api.py
+ M apps/api/app/documents.py
+ M apps/api/app/main.py
+ M apps/api/pyproject.toml
+ M apps/api/requirements.in
+ M apps/api/requirements.lock
+ M apps/api/tests/test_health.py
+ M apps/api/testsupport/fixture_server.py
+ M apps/web/package.json
+ M apps/web/src/App.test.tsx
+ M apps/web/src/App.tsx
+ M apps/web/src/api.ts
+ M docs/BRANCH_POLICY.md
+ M docs/architecture/documents.md
+ M docs/architecture/overview.md
+ M docs/design-foundation.md
+ M package-lock.json
+ M package.json
+ M playwright.config.ts
+ M scripts/check.ps1
+ M scripts/run_logged.py
+ M tests/e2e/documents.spec.ts
+ M tests/e2e/foundation.spec.ts
+ M tests/test_git_guard.py
+?? apps/api/app/embedding_api.py
+?? apps/api/app/embedding_assets.py
+?? apps/api/app/embedding_contracts.py
+?? apps/api/app/embedding_math.py
+?? apps/api/app/embedding_provider.py
+?? apps/api/app/embedding_resources.py
+?? apps/api/app/embeddings.py
+?? apps/api/tests/test_embeddings.py
+?? apps/api/tests/test_real_embeddings.py
+?? apps/api/testsupport/embedding_fixture.py
+?? apps/web/src/VectorsLab.test.tsx
+?? apps/web/src/VectorsLab.tsx
+?? apps/web/src/embeddings-api.ts
+?? apps/web/src/vectors.css
+?? docs/architecture/embeddings.md
+?? docs/evidence/d03/
+?? scripts/run_pytest.py
+?? scripts/setup_embedding_model.py
+?? tests/e2e/embeddings.spec.ts
+feature/issue-5-local-embeddings
+855006e0ab41e6bb28e62cd3dcc37e35ac3ed882
+855006e0ab41e6bb28e62cd3dcc37e35ac3ed882
+5
+feature/issue-5-local-embeddings
+D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+.githooks
+nothing
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78       D:\Corel\HK1_NAM4\PR\Giữa kì\...
+Original workflow/master plan/D01 evidence unchanged.
+v22.20.0
+10.9.3
+Python 3.13.7
+No broken requirements found.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 4.38
+
+HELPER SOURCE FOR REPRODUCTION:
+$ErrorActionPreference = 'Stop'
+Write-Output ('WORKDIR: ' + (Get-Location).Path)
+git remote -v
+git status --short --branch
+git branch --show-current
+git rev-parse HEAD origin/main
+git config --get pinecone.issue
+git config --get pinecone.branch
+git config --get pinecone.workdir
+git config --get core.hooksPath
+git config --get push.default
+Get-FileHash -Algorithm SHA256 -LiteralPath 'GITHUB_COLLAB_WORKFLOW_STANDARD.md'
+git diff --exit-code origin/main -- GITHUB_COLLAB_WORKFLOW_STANDARD.md docs/reference/PINECONE_VISUAL_LAB_DEMO_MASTER_PLAN_v2_1_WINDOWS.md docs/evidence/d01 docs/evidence/d02
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'Original workflow/master plan/D01 evidence unchanged.'
+node --version
+npm.cmd --version
+.\.venv\Scripts\python.exe --version
+.\.venv\Scripts\python.exe -m pip check
+exit $LASTEXITCODE

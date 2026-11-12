@@ -1,0 +1,21 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py -m "real_model or real_tokenizer" -v -s
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0 -- D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.venv\Scripts\python.exe
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\2cda2fc268df43878294065fe80c4fbe\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 68 items / 66 deselected / 2 selected
+
+apps\api\tests\test_chunking.py::test_real_e5_correctness_and_metadata PASSED
+apps\api\tests\test_real_embeddings.py::test_real_e5_reference_pooling_prefix_batch_repeatability_and_vietnamese Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   1%|          | 1/199 [00:01<06:07,  1.86s/it]Loading weights:   1%|          | 2/199 [00:02<02:58,  1.10it/s]Loading weights:   2%|▏         | 3/199 [00:02<02:05,  1.56it/s]Loading weights:   9%|▊         | 17/199 [00:02<00:12, 14.20it/s]Loading weights:  22%|██▏       | 44/199 [00:02<00:03, 43.63it/s]Loading weights:  33%|███▎      | 65/199 [00:02<00:02, 66.58it/s]Loading weights:  41%|████      | 81/199 [00:03<00:02, 55.35it/s]Loading weights:  47%|████▋     | 93/199 [00:03<00:01, 62.57it/s]Loading weights:  53%|█████▎    | 105/199 [00:03<00:01, 63.27it/s]Loading weights: 100%|██████████| 199/199 [00:03<00:00, 57.50it/s]
+Worker measurements: {"inference_ms": 731.6671000007773, "load_ms": 0.0, "worker_peak_working_set_bytes": 1020862464}
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   8%|▊         | 16/199 [00:00<00:01, 153.78it/s]Loading weights:  19%|█▉        | 38/199 [00:00<00:00, 187.65it/s]Loading weights:  29%|██▊       | 57/199 [00:00<00:00, 173.65it/s]Loading weights:  39%|███▊      | 77/199 [00:00<00:00, 179.25it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 408.34it/s]
+Observed Vietnamese experiment (not a general theorem): {"related": 0.9472104609462585, "unrelated": 0.8403406367374009}
+Actual CPU batch inference ms: 2596.154099999694 load ms: 23994.031800000812
+PASSED
+
+====================== 2 passed, 66 deselected in 57.41s ======================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 62.10

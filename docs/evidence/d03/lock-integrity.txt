@@ -1,0 +1,13 @@
+COMMAND: .venv/Scripts/python.exe .cache/d03-lock-check.py
+PASS: npm lock changes only the three project version fields; all third-party dependency metadata/integrities are unchanged.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.15
+
+HELPER SOURCE FOR REPRODUCTION:
+import json,subprocess
+from pathlib import Path
+base=json.loads(subprocess.check_output(['git','show','origin/main:package-lock.json']))
+base['version']=base['packages']['']['version']=base['packages']['apps/web']['version']='0.3.0'
+assert json.loads(Path('package-lock.json').read_text())==base
+print('PASS: npm lock changes only the three project version fields; all third-party dependency metadata/integrities are unchanged.')

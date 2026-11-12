@@ -27,6 +27,7 @@ def main() -> int:
         + result.stdout.decode("utf-8", errors="replace").replace("\r\n", "\n").replace("\r", "")
         + f"\nEXIT_CODE: {result.returncode}\nELAPSED_SECONDS: {time.monotonic() - started:.2f}\n"
     )
+    report = '\n'.join(line.rstrip() for line in report.splitlines()) + '\n'
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(report, encoding="utf-8", newline="\n")
     sys.stdout.reconfigure(encoding="utf-8")

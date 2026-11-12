@@ -1,0 +1,28 @@
+COMMAND: node node_modules/@playwright/test/cli.js test
+[WebServer] INFO:     Started server process [2204]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:24948) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:13500) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok 1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (13.4s)
+  ok 2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (4.1s)
+  ok 3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (17.9s)
+  ok 4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (2.0s)
+  ok 5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (4.9s)
+  ok 6 tests\e2e\foundation.spec.ts:38:1 › mobile menu, deep links, reduced motion and layout at four widths (17.7s)
+  ok 7 tests\e2e\foundation.spec.ts:60:1 › network failure and recovery (explicitly intercepted fault injection) (2.1s)
+  ok 8 tests\e2e\foundation.spec.ts:72:1 › keyboard skip link is first and visible (2.4s)
+
+  8 passed (1.2m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 76.27

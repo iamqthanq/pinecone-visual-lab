@@ -8,5 +8,5 @@ select = ["E", "F", "I", "UP", "B"]
 [tool.pytest.ini_options]
 testpaths = ["tests", "../../tests"]
 pythonpath = ["."]
-addopts = "-ra -m 'not real_tokenizer'"
-markers = ["real_tokenizer: separate integration check using explicitly cached E5 assets"]
+addopts = "-ra -m 'not real_tokenizer and not real_model'"
+markers = ["real_tokenizer: separate integration check using explicitly cached E5 assets", "real_model: official cached E5 weights, explicit local-only integration"]

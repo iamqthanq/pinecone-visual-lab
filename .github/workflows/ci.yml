@@ -55,5 +55,5 @@ jobs:
         with:
           name: lab-browser-evidence
           path: |
-            docs/evidence/d02/*.png
+            docs/evidence/d03/*.png
             test-results/
