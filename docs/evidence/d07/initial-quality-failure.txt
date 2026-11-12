@@ -1,0 +1,34 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
+[D07] Frontend lint
+
+> pinecone-visual-lab@0.7.0 lint
+> npm run lint --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.7.0 lint
+> eslint .
+
+
+D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web\src\GuidedProvider.test.tsx
+  49:40  error  '_url' is defined but never used  @typescript-eslint/no-unused-vars
+  74:40  error  '_url' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+npm error Lifecycle script `lint` failed with error:
+npm error code 1
+npm error path D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error workspace @pinecone-visual-lab/web@0.7.0
+npm error location D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error command failed
+npm error command C:\Windows\system32\cmd.exe /d /s /c eslint .
+Frontend lint FAILED (exit 1)
+At D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\scripts\check.ps1:12 char:30
++ ... f ($LASTEXITCODE -ne 0) { throw "$Name FAILED (exit $LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Frontend lint FAILED (exit 1):String) [], RuntimeException
+    + FullyQualifiedErrorId : Frontend lint FAILED (exit 1)
+
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 37.80

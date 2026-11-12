@@ -6,6 +6,7 @@ import { documentAPI } from './documents-api'
 import type { ChunkVersion, DocumentSummary, SourceDocument, TokenizerStatus } from './documents-api'
 import './documents.css'
 import { parseDocumentLink } from './document-link'
+import { demoSelection } from './guided-state'
 
 export default function DocumentsLab() {
   const location = useLocation()
@@ -14,8 +15,9 @@ export default function DocumentsLab() {
 
 function DocumentWorkbench({ search }: { search: string }) {
   const deepLink = useMemo(() => parseDocumentLink(search), [search])
+  const guidedSource = useMemo(() => demoSelection(search), [search])
   const [documents, setDocuments] = useState<DocumentSummary[]>([])
-  const [selected, setSelected] = useState(deepLink.source?.document ?? '')
+  const [selected, setSelected] = useState(deepLink.source?.document ?? demoSelection(search).document)
   const [doc, setDoc] = useState<SourceDocument | null>(null)
   const [tokenizer, setTokenizer] = useState<TokenizerStatus | null>(null)
   const [ready, setReady] = useState(false)
@@ -55,7 +57,8 @@ function DocumentWorkbench({ search }: { search: string }) {
     documentAPI.get(selected, controller.signal).then(async source => {
       let saved: ChunkVersion | null = null
       const linked = deepLink.source?.document === selected ? deepLink.source : undefined
-      const savedId = linked?.version ?? source.confirmed_id ?? source.versions[0]?.id
+      const guidedVersion = guidedSource.document === selected ? guidedSource.version : ''
+      const savedId = linked?.version ?? (guidedVersion || source.confirmed_id || source.versions[0]?.id)
       if (savedId) saved = await documentAPI.version(source.id, savedId, controller.signal)
       const linkedIndex = linked ? saved?.chunks.findIndex(item => item.chunk_id === linked.chunk) ?? -1 : 0
       if (linked && (!saved || saved.state !== 'confirmed' || linkedIndex < 0
@@ -68,7 +71,7 @@ function DocumentWorkbench({ search }: { search: string }) {
       setSize(saved?.config.size ?? 300); setOverlap(saved?.config.overlap ?? 50)
     }).catch(failure => { if (!controller.signal.aborted) setError((failure as Error).message) })
     return () => controller.abort()
-  }, [selected, deepLink])
+  }, [selected, deepLink, guidedSource])
 
   async function upload(file?: File) {
     if (!file || busy || !ready) return

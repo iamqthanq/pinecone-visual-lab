@@ -76,7 +76,7 @@ def test_real_e5_search_pdf_txt_known_example_filters_trace_and_exact_active_sou
         assert filtered["hits"][0]["page_end"] == 2
         assert len(filtered["comparison"]) == 2
         assert all(s["ms"] >= 0 for s in filtered["trace"]["stages"])
-        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d06"
+        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d07"
         evidence.mkdir(parents=True, exist_ok=True)
         (evidence / "real-search-example.json").write_text(
             json.dumps(

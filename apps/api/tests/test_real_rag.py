@@ -50,7 +50,7 @@ def test_real_e5_rag_context_citation_fallback_and_no_cloud(tmp_path):
         fallback = client.post("/api/rag/chat", json=request).json()
         assert fallback["status"] == "llm_unavailable" and fallback["retrieval_hits"]
         assert client.post("/api/search", json=request).json()["hits"]
-        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d06"
+        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d07"
         evidence.mkdir(parents=True, exist_ok=True)
         (evidence / "real-e5-mock-ollama-example.json").write_text(
             json.dumps(

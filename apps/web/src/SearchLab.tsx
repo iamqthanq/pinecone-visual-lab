@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ArrowUpRight, Clock3, Copy, Filter, LoaderCircle, RefreshCw, Search } from 'lucide-react'
 import { Badge, Button, Panel, TextField } from './components'
 import { documentAPI } from './documents-api'
@@ -7,8 +7,10 @@ import type { DocumentSummary } from './documents-api'
 import { searchAPI } from './search-api'
 import type { SearchFilters, SearchHit, SearchResult, SearchStatus } from './search-api'
 import type { IndexInfo, StoreTarget } from './vector-store-api'
+import { defaultLocalIndex } from './vector-store-api'
 import './search.css'
 import RagChat from './RagChat'
+import { demoSelection } from './guided-state'
 
 const timeLabel = (ms: number) => ms > 0 && ms < 0.01 ? '<0.01' : ms.toFixed(2)
 
@@ -30,7 +32,8 @@ function HitList({ title, hits, result, onNotice }: { title: string; hits: Searc
 }
 
 export default function SearchLab() {
-  const [tab, setTab] = useState('semantic')
+  const location = useLocation()
+  const [tab, setTab] = useState(new URLSearchParams(location.search).get('tab') === 'rag' ? 'rag' : 'semantic')
   return <><div className="rag-tabs" role="tablist" aria-label="Search Lab views">{[
     ['semantic', 'Semantic Search'], ['rag', 'RAG Chat'],
   ].map(([id, label]) => <button key={id} id={`tab-${id}`} role="tab" aria-selected={tab === id} aria-controls={`panel-${id}`} tabIndex={tab === id ? 0 : -1} onClick={() => setTab(id)} onKeyDown={event => {
@@ -39,16 +42,17 @@ export default function SearchLab() {
 }
 
 function SemanticSearch() {
+  const selection = demoSelection(useLocation().search)
   const [status, setStatus] = useState<SearchStatus | null>(null)
   const [documents, setDocuments] = useState<DocumentSummary[]>([])
   const [indexes, setIndexes] = useState<IndexInfo[]>([])
   const [mode, setMode] = useState<StoreTarget['mode']>('local')
   const [index, setIndex] = useState('')
-  const [namespace, setNamespace] = useState('')
+  const [namespace, setNamespace] = useState(selection.namespace)
   const [namespaces, setNamespaces] = useState<{ namespace: string; count: number }[]>([])
   const [query, setQuery] = useState('')
   const [topK, setTopK] = useState(5)
-  const [documentId, setDocumentId] = useState('')
+  const [documentId, setDocumentId] = useState(selection.document)
   const [filename, setFilename] = useState('')
   const [from, setFrom] = useState('')
   const [to, setTo] = useState('')
@@ -63,7 +67,7 @@ function SemanticSearch() {
   useEffect(() => {
     let active = true
     Promise.all([searchAPI.status(), documentAPI.list()]).then(([state, list]) => {
-      if (active) { setStatus(state); setIndexes(state.local_indexes); setIndex(state.local_indexes.find(item => item.compatible)?.name ?? ''); setDocuments(list.documents) }
+      if (active) { setStatus(state); setIndexes(state.local_indexes); setIndex(defaultLocalIndex(state.local_indexes)); setDocuments(list.documents) }
     }).catch(() => { if (active) setError('Search API offline. Start the backend and refresh status.') })
     return () => { active = false; controller.current?.abort() }
   }, [])
@@ -84,7 +88,7 @@ function SemanticSearch() {
   const filters: SearchFilters = { ...(documentId ? { document_id: documentId } : {}), ...(filename ? { source_name: filename } : {}), ...(from && to ? { page_from: Number(from), page_to: Number(to) } : {}) }
   return <>
     <div className="page-meta"><Badge>D05 · SEMANTIC SEARCH</Badge><span className="mono">QUESTION → ACTIVE VECTORS → ORIGINAL SOURCE</span></div>
-    <div className="documents-title"><div><span className="eyebrow accent">SEARCH LAB</span><h1>Find meaning. Follow the source.</h1><p>Ask in Vietnamese. Inspect ranked chunks, raw cosine and every measured stage. No LLM required.</p></div><Button disabled={Boolean(busy)} onClick={() => void run('Refreshing local readiness…', async () => { const [state, list] = await Promise.all([searchAPI.status(), documentAPI.list()]); setStatus(state); setDocuments(list.documents); if (mode === 'local') { setIndexes(state.local_indexes); if (!index) setIndex(state.local_indexes.find(item => item.compatible)?.name ?? '') } })}><RefreshCw size={14} />Refresh search status</Button></div>
+    <div className="documents-title"><div><span className="eyebrow accent">SEARCH LAB</span><h1>Find meaning. Follow the source.</h1><p>Ask in Vietnamese. Inspect ranked chunks, raw cosine and every measured stage. No LLM required.</p></div><Button disabled={Boolean(busy)} onClick={() => void run('Refreshing local readiness…', async () => { const [state, list] = await Promise.all([searchAPI.status(), documentAPI.list()]); setStatus(state); setDocuments(list.documents); if (mode === 'local') { setIndexes(state.local_indexes); if (!index) setIndex(defaultLocalIndex(state.local_indexes)) } })}><RefreshCw size={14} />Refresh search status</Button></div>
     <div className="search-mode-strip"><Badge tone={mode === 'local' ? 'green' : 'amber'}>{mode === 'local' ? 'LOCAL DEMO' : 'LIVE PINECONE'}</Badge><p>{mode === 'local' ? 'Exact cosine over persisted SQLite vectors in verified ACTIVE manifests. Filters run before Top-K.' : 'LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION. ANN ranking; no automatic cloud reads.'}</p><Badge>RAG · OPTIONAL LOCAL</Badge></div>
     {status?.model.mode === 'test-fixture-not-e5' && <p className="doc-warning">TEST FIXTURE — NOT E5. Deterministic test vectors have no semantic relevance claim.</p>}
     {status && <div className="search-readiness"><Badge>{status.model.state.replace(/_/g, ' ').toUpperCase()}</Badge><span>{status.model.message}</span>{status.model.setup_command && modelUnavailable && <code>{status.model.setup_command}</code>}</div>}
@@ -96,7 +100,7 @@ function SemanticSearch() {
         <Panel className="search-panel"><div className="document-panel-heading"><h2><Search size={18} />Search a verified collection</h2><Badge>query:</Badge></div>
           <label htmlFor="search-query">Question in Vietnamese or another language</label><textarea id="search-query" value={query} maxLength={20000} rows={3} placeholder="Cơ sở dữ liệu vector tìm kiếm theo ngữ nghĩa như thế nào?" onChange={event => { setQuery(event.target.value); invalidate() }} />
           <p className="config-hint">Raw text only; the backend adds query: once. Maximum512 input tokens including prefix/special tokens, with no silent truncation.</p>
-          <div className="search-target-grid"><label>Retrieval mode<select aria-label="Retrieval mode" value={mode} onChange={event => { const next = event.target.value as StoreTarget['mode']; setMode(next); setIndexes(next === 'local' ? status?.local_indexes ?? [] : []); setIndex(next === 'local' ? status?.local_indexes.find(item => item.compatible)?.name ?? '' : ''); setNamespace(''); setNamespaces([]); setLiveRead(false); setLiveCompare(false); setCompare(false); invalidate() }}><option value="local">LOCAL DEMO · exact cosine</option><option value="live">LIVE PINECONE · ANN</option></select></label>
+          <div className="search-target-grid"><label>Retrieval mode<select aria-label="Retrieval mode" value={mode} onChange={event => { const next = event.target.value as StoreTarget['mode']; setMode(next); setIndexes(next === 'local' ? status?.local_indexes ?? [] : []); setIndex(next === 'local' ? defaultLocalIndex(status?.local_indexes) : ''); setNamespace(''); setNamespaces([]); setLiveRead(false); setLiveCompare(false); setCompare(false); invalidate() }}><option value="local">LOCAL DEMO · exact cosine</option><option value="live">LIVE PINECONE · ANN</option></select></label>
             <label>Search index<select aria-label="Search index" value={index} onChange={event => { setIndex(event.target.value); setNamespaces([]); invalidate() }}><option value="">Choose an index</option>{indexes.map(item => <option key={item.name} value={item.name}>{item.name} · {item.compatible ? '384D/cosine/Ready' : 'INCOMPATIBLE'}</option>)}</select></label>
             <TextField label="Search namespace" value={namespace} maxLength={64} pattern="[a-zA-Z0-9_.-]*" hint="Blank = default namespace. Existing stored vectors only." list="search-namespaces" onChange={event => { setNamespace(event.target.value); invalidate() }} />
             <label>Top-K<select aria-label="Top-K" value={topK} onChange={event => { setTopK(Number(event.target.value)); invalidate() }}>{Array.from({ length: 10 }, (_, i) => <option value={i + 1} key={i}>{i + 1}</option>)}</select></label></div>

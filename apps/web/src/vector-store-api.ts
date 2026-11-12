@@ -1,4 +1,8 @@
 export interface StoreTarget { mode: 'local' | 'live'; index: string; namespace: string }
+export function defaultLocalIndex(indexes: { name: string; compatible: boolean }[] = []) {
+  return indexes.find(item => item.name === 'local-e5' && item.compatible)?.name
+    ?? indexes.find(item => item.compatible)?.name ?? ''
+}
 export interface StoreStatus {
   local_available: boolean; live_key_configured: boolean; live_disabled: boolean
   sdk_version: string; api_version: string; project: string; embedding_mode: string; live_verification: string

@@ -1,0 +1,142 @@
+[
+  {
+    "file": "desktop-1440.png",
+    "width": 1440,
+    "height": 1985,
+    "bytes": 262051,
+    "sha256": "ca9b00b774b7b92bbc82d0192c97e6a79e169c6927b551ff54c62eaa299eb7f5"
+  },
+  {
+    "file": "guided-simulator-desktop-1440.png",
+    "width": 1440,
+    "height": 4525,
+    "bytes": 536113,
+    "sha256": "f2971047a7349c4b847f756e5bb8e03b8daefdf0471ac03e153ad830c0a30e17"
+  },
+  {
+    "file": "guided-simulator-mobile-390.png",
+    "width": 390,
+    "height": 6436,
+    "bytes": 441100,
+    "sha256": "5fd0cfaf7f9b552d06e9961ca81a301482abbd32c2bb17fe96856f442f5294a7"
+  },
+  {
+    "file": "mobile-390.png",
+    "width": 390,
+    "height": 2966,
+    "bytes": 158198,
+    "sha256": "d1a70a8e7e85e873f3c6d6bcf3201b4016f1e78bdbdd0cf5794bf5dc7feaddf3"
+  },
+  {
+    "file": "offline-fault-injection.png",
+    "width": 1440,
+    "height": 1375,
+    "bytes": 233729,
+    "sha256": "5dfe7f0f6386253d2d6a14f532d35d19f83aad2d21c11ca7a96126192729e4cd"
+  },
+  {
+    "file": "overview-desktop-1440.png",
+    "width": 1440,
+    "height": 1375,
+    "bytes": 233344,
+    "sha256": "86cae04dc12a3a2377a5982b213e6af135c05c96776cf355ac215a0ecc5a8f3f"
+  },
+  {
+    "file": "overview-mobile-390.png",
+    "width": 390,
+    "height": 2976,
+    "bytes": 175008,
+    "sha256": "90f5bf03936bcdfc67d09e1561d4df3e294aac598e54954c9e376995ecf087b5"
+  },
+  {
+    "file": "rag-desktop-1440.png",
+    "width": 1440,
+    "height": 2694,
+    "bytes": 287303,
+    "sha256": "36ba42d3be7419c7efe0fd748469a7df2d8925257424fb5bf73a900a0c904551"
+  },
+  {
+    "file": "rag-mobile-390.png",
+    "width": 390,
+    "height": 4169,
+    "bytes": 236272,
+    "sha256": "380557f55546a3a0fefb9303d71902c682f15000ca074e5f3db4b924b3c6dd31"
+  },
+  {
+    "file": "search-desktop-1440.png",
+    "width": 1440,
+    "height": 3208,
+    "bytes": 340945,
+    "sha256": "fd7c56395ead39c5b0774011a620dedb2982622259f2651591554304af5105e5"
+  },
+  {
+    "file": "search-mobile-390.png",
+    "width": 390,
+    "height": 5432,
+    "bytes": 290386,
+    "sha256": "18ad6341ec0f9e31a3882271c32bd395e79a0bcd5c00cccbd02c06d6d5252075"
+  },
+  {
+    "file": "simulator-compaction-1440.png",
+    "width": 1440,
+    "height": 4525,
+    "bytes": 536113,
+    "sha256": "f2971047a7349c4b847f756e5bb8e03b8daefdf0471ac03e153ad830c0a30e17"
+  },
+  {
+    "file": "simulator-desktop-1440.png",
+    "width": 1440,
+    "height": 2960,
+    "bytes": 385659,
+    "sha256": "d2c9c3da7091dfc0d1ffbceb440f2195444e630d8f7b4246018245a6b7fd3f6d"
+  },
+  {
+    "file": "simulator-mobile-390.png",
+    "width": 390,
+    "height": 4355,
+    "bytes": 293475,
+    "sha256": "124f98e378f9d4421fd8eb47844f9d6b508c7f5cebc855e66c3f6896865c5277"
+  },
+  {
+    "file": "simulator-read-1440.png",
+    "width": 1440,
+    "height": 3715,
+    "bytes": 467713,
+    "sha256": "4d5f14dcfb3ff67b021e4082cbbebf5dbe2b8153203b6190c1a3e288a2debca6"
+  },
+  {
+    "file": "simulator-write-1440.png",
+    "width": 1440,
+    "height": 5068,
+    "bytes": 584258,
+    "sha256": "e58dd70033af717d98fc59c8f8425acbe815b275c0e0b8ec5d71ed4e26fd77a8"
+  },
+  {
+    "file": "vector-store-desktop-1440.png",
+    "width": 1440,
+    "height": 3303,
+    "bytes": 311053,
+    "sha256": "6c06acb6c993990cb49c9a32b914bef456a3bc10e6f3a53f229e1db76236e1d9"
+  },
+  {
+    "file": "vector-store-mobile-390.png",
+    "width": 390,
+    "height": 4428,
+    "bytes": 252465,
+    "sha256": "ed14a2aa8fe9cb574aac6345d5d4f3b0e0d064ffe87b3f42cd76f8917e40ab93"
+  },
+  {
+    "file": "vectors-desktop-1440.png",
+    "width": 1440,
+    "height": 2894,
+    "bytes": 335310,
+    "sha256": "aeca261b350e41a48a0aaabf74412e435518bc34a85ba5f9fcc5e7d8a60669ab"
+  },
+  {
+    "file": "vectors-mobile-390.png",
+    "width": 390,
+    "height": 5495,
+    "bytes": 277557,
+    "sha256": "f9cb191d30168c515d9db3bc457299706f8f8abedc4ac07ebc9db800d61a2fd6"
+  }
+]

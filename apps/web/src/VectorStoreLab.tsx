@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ArrowLeft, Database, LoaderCircle, RefreshCw, ShieldCheck } from 'lucide-react'
 import { Badge, Button, Panel, TextField } from './components'
 import { documentAPI } from './documents-api'
@@ -8,6 +8,7 @@ import { vectorStoreAPI as api } from './vector-store-api'
 import type { CreatePreview, Deletion, FetchedVectors, IndexInfo, Manifest, StorePage, StoreStatus, StoreTarget } from './vector-store-api'
 import './vectors.css'
 import './vector-store.css'
+import { demoSelection } from './guided-state'
 
 export function StoredVectorInspector({ fetched, onNotice }: { fetched: FetchedVectors; onNotice: (message: string) => void }) {
   const [table, setTable] = useState(false)
@@ -30,11 +31,12 @@ export function StoredVectorInspector({ fetched, onNotice }: { fetched: FetchedV
 }
 
 export default function VectorStoreLab() {
+  const selection = demoSelection(useLocation().search)
   const [status, setStatus] = useState<StoreStatus | null>(null)
   const [mode, setMode] = useState<StoreTarget['mode']>('local')
   const [indexes, setIndexes] = useState<IndexInfo[]>([])
   const [index, setIndex] = useState('local-e5')
-  const [namespace, setNamespace] = useState('')
+  const [namespace, setNamespace] = useState(selection.namespace)
   const [target, setTarget] = useState<StoreTarget | null>(null)
   const [namespaces, setNamespaces] = useState<{ namespace: string; count: number }[]>([])
   const [documents, setDocuments] = useState<DocumentSummary[]>([])

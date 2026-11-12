@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Braces, Check, Copy, LoaderCircle, RefreshCw, X } from 'lucide-react'
 import { Badge, Button, Panel } from './components'
 import { documentAPI } from './documents-api'
@@ -7,6 +7,7 @@ import type { ChunkVersion, DocumentSummary, SourceDocument } from './documents-
 import { embeddingAPI } from './embeddings-api'
 import type { EmbeddingRecord, ModelStatus, Similarity } from './embeddings-api'
 import './vectors.css'
+import { demoSelection } from './guided-state'
 
 export function VectorInspector({ record, title, onNotice }: { record: EmbeddingRecord; title: string; onNotice: (text: string) => void }) {
   const [view, setView] = useState('heatmap')
@@ -27,6 +28,7 @@ export function VectorInspector({ record, title, onNotice }: { record: Embedding
 }
 
 export default function VectorsLab() {
+  const selection = demoSelection(useLocation().search)
   const [status, setStatus] = useState<ModelStatus | null>(null)
   const [documents, setDocuments] = useState<DocumentSummary[]>([])
   const [doc, setDoc] = useState<SourceDocument | null>(null)
@@ -42,6 +44,14 @@ export default function VectorsLab() {
   const [notice, setNotice] = useState('')
   const [busy, setBusy] = useState('')
   const controller = useRef<AbortController | null>(null)
+  useEffect(() => {
+    if (!selection.document || !selection.version || !selection.chunk) return
+    const request = new AbortController()
+    Promise.all([documentAPI.get(selection.document, request.signal), documentAPI.version(selection.document, selection.version, request.signal)]).then(([doc, version]) => {
+      if (!request.signal.aborted && version.state === 'confirmed' && version.chunks.some(c => c.chunk_id === selection.chunk)) { setDoc(doc); setVersion(version); setChunkId(selection.chunk) }
+    }).catch(failure => { if (!request.signal.aborted) setError((failure as Error).message) })
+    return () => request.abort()
+  }, [selection.document, selection.version, selection.chunk])
   useEffect(() => {
     let active = true
     Promise.all([embeddingAPI.status(), documentAPI.list()]).then(([model, list]) => {

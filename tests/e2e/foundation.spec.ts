@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
-const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d06'
+const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d07'
 
 test('live API health, desktop navigation, accessibility, and screenshot', async ({ page, request }) => {
   const errors: string[] = []
@@ -9,7 +9,7 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
   const response = await request.get('http://127.0.0.1:8001/api/health')
   expect(response.ok()).toBeTruthy()
   expect(await response.json()).toMatchObject({
-    status: 'ok', phase: 'D06', documents: 'available', pinecone: 'not_configured',
+    status: 'ok', phase: 'D07', documents: 'available', pinecone: 'not_configured',
   })
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/')
@@ -29,15 +29,16 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
     } else if (title === 'Search Lab') {
       await expect(page.getByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeVisible()
     } else {
-      await expect(page.getByRole('heading', { name: title, exact: true })).toBeVisible()
-      await expect(page.getByText('This lab is on the roadmap.')).toBeVisible()
+      await expect(page.getByRole('heading', { name: 'Follow a write. Unpack a read.', exact: true })).toBeVisible()
+      await expect(page.getByRole('button', { name: 'Next', exact: true })).toBeEnabled()
     }
   }
-  await expect(page.getByText('SIMULATOR PLANNED · LOCAL SEARCH AVAILABLE')).toBeVisible()
+  await expect(page.getByText('SIMULATION — EDUCATIONAL MODEL — NOT PINECONE TELEMETRY', { exact: true })).toBeVisible()
   expect(errors).toEqual([])
 })
 
-test('mobile menu, deep links, reduced motion and layout at four widths', async ({ page }) => {
+test('mobile menu, deep links, reduced motion and layout at five widths', async ({ page }) => {
+  test.setTimeout(90000) // 30 full-page navigations now include the real React Flow diagram.
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/')

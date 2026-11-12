@@ -1,0 +1,357 @@
+{
+  "label": "REAL E5 / LOCAL SQLite / synthetic PDF+TXT / NO CLOUD",
+  "observation": "Known relevant example, not a universal ranking theorem",
+  "request": {
+    "query": "Cơ sở dữ liệu vector tìm kiếm ngữ nghĩa bằng embedding như thế nào?",
+    "top_k": 2,
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "real-search"
+    }
+  },
+  "response": {
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "real-search"
+    },
+    "top_k": 2,
+    "filters": {
+      "document_id": null,
+      "version_id": null,
+      "source_name": null,
+      "page_from": null,
+      "page_to": null
+    },
+    "retrieval_mode": "LOCAL EXACT COSINE",
+    "data_origin": "SQLite local_vectors + confirmed chunks",
+    "embedding": {
+      "mode": "e5",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+      "prefix": "query: ",
+      "input_token_count": 23,
+      "inference_ms": 18.99569999659434
+    },
+    "score_meaning": "Raw cosine similarity [-1,+1], not probability or percentage",
+    "hits": [
+      {
+        "id": "pvl-b8b041c4-e4cd-5bdd-9914-8bcba63cf3e0",
+        "rank": 1,
+        "score": 0.9049505432589934,
+        "document_id": "3079faa0-4b84-42b7-9d91-8616a0032a13",
+        "version_id": "99c25a5e-8c24-4707-8cac-192ba802468d",
+        "chunk_id": "533e6ff2-e2ac-5b34-a7fd-b1d444b417fb",
+        "source_name": "kiến-thức.pdf",
+        "page_start": 1,
+        "page_end": 2,
+        "text": "Cơ sở dữ liệu vector lưu embedding biểu diễn ngữ nghĩa của tài liệu.\n\n\nPinecone tìm kiếm các vector gần nhau bằng cosine similarity. Namespace cô lập dữ liệu.\n",
+        "snippet": "Cơ sở dữ liệu vector lưu embedding biểu diễn ngữ nghĩa của tài liệu.\n\n\nPinecone tìm kiếm các vector gần nhau bằng cosine similarity. Namespace cô lập dữ liệu.\n",
+        "source_url": "/documents?document=3079faa0-4b84-42b7-9d91-8616a0032a13&version=99c25a5e-8c24-4707-8cac-192ba802468d&chunk=533e6ff2-e2ac-5b34-a7fd-b1d444b417fb&page=1",
+        "metadata": {
+          "owner_job": "13e6001e-6a9d-5303-aafd-6572e8a3e633",
+          "document_id": "3079faa0-4b84-42b7-9d91-8616a0032a13",
+          "version_id": "99c25a5e-8c24-4707-8cac-192ba802468d",
+          "chunk_id": "533e6ff2-e2ac-5b34-a7fd-b1d444b417fb",
+          "source_name": "kiến-thức.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      },
+      {
+        "id": "pvl-2e9456a7-9da1-5f79-9de1-18f66085b6c3",
+        "rank": 2,
+        "score": 0.7606084820921113,
+        "document_id": "b6769e74-a06e-459e-9698-fe3220ca565d",
+        "version_id": "02865e8c-e85b-4911-b99b-7bcc67e0c20b",
+        "chunk_id": "c2b99f65-697b-5893-bd93-7a619a7c3ebf",
+        "source_name": "nấu-ăn.txt",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "Bánh mì được nướng trong lò. Trộn bột mì, men, muối và nước để làm bánh.",
+        "snippet": "Bánh mì được nướng trong lò. Trộn bột mì, men, muối và nước để làm bánh.",
+        "source_url": "/documents?document=b6769e74-a06e-459e-9698-fe3220ca565d&version=02865e8c-e85b-4911-b99b-7bcc67e0c20b&chunk=c2b99f65-697b-5893-bd93-7a619a7c3ebf&page=1",
+        "metadata": {
+          "owner_job": "b7791335-a2b7-5111-a164-d03ccc0cc9a1",
+          "document_id": "b6769e74-a06e-459e-9698-fe3220ca565d",
+          "version_id": "02865e8c-e85b-4911-b99b-7bcc67e0c20b",
+          "chunk_id": "c2b99f65-697b-5893-bd93-7a619a7c3ebf",
+          "source_name": "nấu-ăn.txt",
+          "page_start": 1,
+          "page_end": 1,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      }
+    ],
+    "comparison": null,
+    "empty_reason": null,
+    "trace": {
+      "stages": [
+        {
+          "name": "input_validation",
+          "ms": 0.11520000407472253,
+          "status": "measured"
+        },
+        {
+          "name": "active_manifest_selection",
+          "ms": 0.49700000090524554,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter",
+          "ms": 0.5605999904219061,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup",
+          "ms": 0.5833000031998381,
+          "status": "measured"
+        },
+        {
+          "name": "query_embedding",
+          "ms": 20.43499999854248,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query",
+          "ms": 0.6302999972831458,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration",
+          "ms": 0.04719999560620636,
+          "status": "measured"
+        },
+        {
+          "name": "active_source_revalidation",
+          "ms": 0.9754999919096008,
+          "status": "measured"
+        },
+        {
+          "name": "response_assembly",
+          "ms": 0.004999994416721165,
+          "status": "measured"
+        }
+      ],
+      "total_ms": 24.350400010007434,
+      "scope": "Server handler; excludes HTTP transfer and browser rendering",
+      "candidate_count": 2,
+      "candidate_count_kind": "exact stored eligible count",
+      "manifest_count": 2,
+      "discarded_count": 0,
+      "warnings": []
+    }
+  },
+  "filtered_request": {
+    "query": "Cơ sở dữ liệu vector tìm kiếm ngữ nghĩa bằng embedding như thế nào?",
+    "top_k": 2,
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "real-search"
+    },
+    "filters": {
+      "page_from": 2,
+      "page_to": 2
+    },
+    "compare": true
+  },
+  "filtered_response": {
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "real-search"
+    },
+    "top_k": 2,
+    "filters": {
+      "document_id": null,
+      "version_id": null,
+      "source_name": null,
+      "page_from": 2,
+      "page_to": 2
+    },
+    "retrieval_mode": "LOCAL EXACT COSINE",
+    "data_origin": "SQLite local_vectors + confirmed chunks",
+    "embedding": {
+      "mode": "e5",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+      "prefix": "query: ",
+      "input_token_count": 23,
+      "inference_ms": 18.885699988459237
+    },
+    "score_meaning": "Raw cosine similarity [-1,+1], not probability or percentage",
+    "hits": [
+      {
+        "id": "pvl-b8b041c4-e4cd-5bdd-9914-8bcba63cf3e0",
+        "rank": 1,
+        "score": 0.9049505432589934,
+        "document_id": "3079faa0-4b84-42b7-9d91-8616a0032a13",
+        "version_id": "99c25a5e-8c24-4707-8cac-192ba802468d",
+        "chunk_id": "533e6ff2-e2ac-5b34-a7fd-b1d444b417fb",
+        "source_name": "kiến-thức.pdf",
+        "page_start": 1,
+        "page_end": 2,
+        "text": "Cơ sở dữ liệu vector lưu embedding biểu diễn ngữ nghĩa của tài liệu.\n\n\nPinecone tìm kiếm các vector gần nhau bằng cosine similarity. Namespace cô lập dữ liệu.\n",
+        "snippet": "Cơ sở dữ liệu vector lưu embedding biểu diễn ngữ nghĩa của tài liệu.\n\n\nPinecone tìm kiếm các vector gần nhau bằng cosine similarity. Namespace cô lập dữ liệu.\n",
+        "source_url": "/documents?document=3079faa0-4b84-42b7-9d91-8616a0032a13&version=99c25a5e-8c24-4707-8cac-192ba802468d&chunk=533e6ff2-e2ac-5b34-a7fd-b1d444b417fb&page=1",
+        "metadata": {
+          "owner_job": "13e6001e-6a9d-5303-aafd-6572e8a3e633",
+          "document_id": "3079faa0-4b84-42b7-9d91-8616a0032a13",
+          "version_id": "99c25a5e-8c24-4707-8cac-192ba802468d",
+          "chunk_id": "533e6ff2-e2ac-5b34-a7fd-b1d444b417fb",
+          "source_name": "kiến-thức.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      }
+    ],
+    "comparison": [
+      {
+        "id": "pvl-b8b041c4-e4cd-5bdd-9914-8bcba63cf3e0",
+        "rank": 1,
+        "score": 0.9049505432589934,
+        "document_id": "3079faa0-4b84-42b7-9d91-8616a0032a13",
+        "version_id": "99c25a5e-8c24-4707-8cac-192ba802468d",
+        "chunk_id": "533e6ff2-e2ac-5b34-a7fd-b1d444b417fb",
+        "source_name": "kiến-thức.pdf",
+        "page_start": 1,
+        "page_end": 2,
+        "text": "Cơ sở dữ liệu vector lưu embedding biểu diễn ngữ nghĩa của tài liệu.\n\n\nPinecone tìm kiếm các vector gần nhau bằng cosine similarity. Namespace cô lập dữ liệu.\n",
+        "snippet": "Cơ sở dữ liệu vector lưu embedding biểu diễn ngữ nghĩa của tài liệu.\n\n\nPinecone tìm kiếm các vector gần nhau bằng cosine similarity. Namespace cô lập dữ liệu.\n",
+        "source_url": "/documents?document=3079faa0-4b84-42b7-9d91-8616a0032a13&version=99c25a5e-8c24-4707-8cac-192ba802468d&chunk=533e6ff2-e2ac-5b34-a7fd-b1d444b417fb&page=1",
+        "metadata": {
+          "owner_job": "13e6001e-6a9d-5303-aafd-6572e8a3e633",
+          "document_id": "3079faa0-4b84-42b7-9d91-8616a0032a13",
+          "version_id": "99c25a5e-8c24-4707-8cac-192ba802468d",
+          "chunk_id": "533e6ff2-e2ac-5b34-a7fd-b1d444b417fb",
+          "source_name": "kiến-thức.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      },
+      {
+        "id": "pvl-2e9456a7-9da1-5f79-9de1-18f66085b6c3",
+        "rank": 2,
+        "score": 0.7606084820921113,
+        "document_id": "b6769e74-a06e-459e-9698-fe3220ca565d",
+        "version_id": "02865e8c-e85b-4911-b99b-7bcc67e0c20b",
+        "chunk_id": "c2b99f65-697b-5893-bd93-7a619a7c3ebf",
+        "source_name": "nấu-ăn.txt",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "Bánh mì được nướng trong lò. Trộn bột mì, men, muối và nước để làm bánh.",
+        "snippet": "Bánh mì được nướng trong lò. Trộn bột mì, men, muối và nước để làm bánh.",
+        "source_url": "/documents?document=b6769e74-a06e-459e-9698-fe3220ca565d&version=02865e8c-e85b-4911-b99b-7bcc67e0c20b&chunk=c2b99f65-697b-5893-bd93-7a619a7c3ebf&page=1",
+        "metadata": {
+          "owner_job": "b7791335-a2b7-5111-a164-d03ccc0cc9a1",
+          "document_id": "b6769e74-a06e-459e-9698-fe3220ca565d",
+          "version_id": "02865e8c-e85b-4911-b99b-7bcc67e0c20b",
+          "chunk_id": "c2b99f65-697b-5893-bd93-7a619a7c3ebf",
+          "source_name": "nấu-ăn.txt",
+          "page_start": 1,
+          "page_end": 1,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      }
+    ],
+    "empty_reason": null,
+    "trace": {
+      "stages": [
+        {
+          "name": "input_validation",
+          "ms": 0.13139999646227807,
+          "status": "measured"
+        },
+        {
+          "name": "active_manifest_selection",
+          "ms": 0.636500000837259,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter",
+          "ms": 0.5458000086946413,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup",
+          "ms": 0.34250000317115337,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter_unfiltered",
+          "ms": 0.7308000058401376,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup_unfiltered",
+          "ms": 0.6052999960957095,
+          "status": "measured"
+        },
+        {
+          "name": "query_embedding",
+          "ms": 20.37959999870509,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query",
+          "ms": 0.21300000662449747,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration",
+          "ms": 0.02469999890308827,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query_unfiltered",
+          "ms": 0.44759998854715377,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration_unfiltered",
+          "ms": 0.03090000245720148,
+          "status": "measured"
+        },
+        {
+          "name": "active_source_revalidation",
+          "ms": 0.9491000091657043,
+          "status": "measured"
+        },
+        {
+          "name": "response_assembly",
+          "ms": 0.0042000028770416975,
+          "status": "measured"
+        }
+      ],
+      "total_ms": 26.080600000568666,
+      "scope": "Server handler; excludes HTTP transfer and browser rendering",
+      "candidate_count": 1,
+      "candidate_count_kind": "exact stored eligible count",
+      "manifest_count": 2,
+      "discarded_count": 0,
+      "warnings": []
+    }
+  }
+}

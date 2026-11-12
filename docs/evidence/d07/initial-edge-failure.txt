@@ -1,0 +1,267 @@
+COMMAND: npm.cmd run test:e2e
+
+> pinecone-visual-lab@0.7.0 test:e2e
+> playwright test
+
+[WebServer] INFO:     Started server process [26916]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:3940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:15224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 20 tests using 1 worker
+
+(node:20400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (20.4s)
+  ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (5.7s)
+  ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (28.7s)
+  ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (2.6s)
+  x   5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (13.1s)
+(node:22984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   6 tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at four widths (32.2s)
+(node:27816) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 tests\e2e\foundation.spec.ts:62:1 › network failure and recovery (explicitly intercepted fault injection) (6.1s)
+  ok  8 tests\e2e\foundation.spec.ts:74:1 › keyboard skip link is first and visible (4.6s)
+  ok  9 tests\e2e\guided.spec.ts:23:1 › complete guided local pipeline, reload/source linking, optional RAG, three simulations and safe reset (4.0m)
+  ok 10 tests\e2e\guided.spec.ts:156:1 › standalone simulation finite play/pause/back/replay/reset, reduced motion and no backend writes (9.3s)
+  ok 11 tests\e2e\guided.spec.ts:182:1 › malformed guide storage and backend failure remain cancellable without implicit data/model calls (5.4s)
+  x  12 tests\e2e\rag.spec.ts:8:1 › RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → verified citations/context → exact source (10.5s)
+(node:25016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  13 tests\e2e\rag.spec.ts:81:1 › RAG: search-only, no source, error/cancel and tab keyboard recovery (13.5s)
+(node:27572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  14 tests\e2e\rag.spec.ts:111:1 › RAG: untrusted source with forged citation fails closed through actual backend (13.5s)
+(node:5212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  x  15 tests\e2e\search.spec.ts:9:1 › Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace (24.2s)
+(node:28176) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 tests\e2e\search.spec.ts:108:1 › Search reload and LIVE switch make no automatic cloud query; invalid deep links fail closed (12.6s)
+  ok 17 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (31.0s)
+  ok 18 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (2.6s)
+  ok 19 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (4.1s)
+
+  ok 20 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (13.0s)
+
+
+  1) tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Architecture Lab', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Architecture Lab', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Architecture Lab', exact: true })
+
+
+      30 |       await expect(page.getByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeVisible()
+      31 |     } else {
+    > 32 |       await expect(page.getByRole('heading', { name: title, exact: true })).toBeVisible()
+         |                                                                             ^
+      33 |       await expect(page.getByText('This lab is on the roadmap.')).toBeVisible()
+      34 |     }
+      35 |   }
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\foundation.spec.ts:32:77
+
+    Error Context: test-results\foundation-live-API-health-1fbb6-ccessibility-and-screenshot\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\foundation-live-API-health-1fbb6-ccessibility-and-screenshot\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\foundation-live-API-health-1fbb6-ccessibility-and-screenshot\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at four widths
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "http://127.0.0.1:5174/vectors/store", waiting until "load"
+
+
+      53 |     await page.setViewportSize({ width, height: 900 })
+      54 |     for (const route of ['/', '/documents', '/vectors', '/vectors/store', '/search', '/architecture']) {
+    > 55 |       await page.goto(route)
+         |                  ^
+      56 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+      57 |         `${route} overflow at ${width}px`).toBeTruthy()
+      58 |     }
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\foundation.spec.ts:55:18
+
+    Error Context: test-results\foundation-mobile-menu-dee-2b4e7-n-and-layout-at-four-widths\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\foundation-mobile-menu-dee-2b4e7-n-and-layout-at-four-widths\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\foundation-mobile-menu-dee-2b4e7-n-and-layout-at-four-widths\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\e2e\rag.spec.ts:8:1 › RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → verified citations/context → exact source
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByLabel('RAG index')
+    Expected: "local-e5"
+    Received: "guide-user-index"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('RAG index') with timeout 5000ms
+      - waiting for getByLabel('RAG index')
+        13 × locator resolved to <select>…</select>
+           - unexpected value "guide-user-index"
+
+
+      27 |   await page.goto('/search')
+      28 |   await page.getByRole('tab', { name: 'RAG Chat' }).click()
+    > 29 |   await expect(page.getByLabel('RAG index')).toHaveValue('local-e5')
+         |                                              ^
+      30 |   expect(automatic).toEqual([])
+      31 |   await page.getByRole('button', { name: 'Refresh Ollama readiness' }).click()
+      32 |   await expect(page.getByText('MOCK OLLAMA / NOT REAL LLM', { exact: true })).toBeVisible()
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\rag.spec.ts:29:46
+
+    Error Context: test-results\rag-RAG-actual-upload-conf-ad480-ions-context-→-exact-source\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\rag-RAG-actual-upload-conf-ad480-ions-context-→-exact-source\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\rag-RAG-actual-upload-conf-ad480-ions-context-→-exact-source\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests\e2e\rag.spec.ts:81:1 › RAG: search-only, no source, error/cancel and tab keyboard recovery
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByLabel('RAG index')
+    Expected: "local-e5"
+    Received: "guide-user-index"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('RAG index') with timeout 5000ms
+      - waiting for getByLabel('RAG index')
+        13 × locator resolved to <select>…</select>
+           - unexpected value "guide-user-index"
+
+
+      84 |   await page.keyboard.press('ArrowRight')
+      85 |   await expect(page.getByRole('tab', { name: 'RAG Chat' })).toBeFocused()
+    > 86 |   await expect(page.getByLabel('RAG index')).toHaveValue('local-e5')
+         |                                              ^
+      87 |   await page.getByLabel('RAG namespace').fill('rag-seminar')
+      88 |   await page.getByLabel('RAG question in Vietnamese').fill('Tìm kiếm ngữ nghĩa là gì?')
+      89 |   await page.getByLabel('LLM enabled').uncheck()
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\rag.spec.ts:86:46
+
+    Error Context: test-results\rag-RAG-search-only-no-sou-7592b-l-and-tab-keyboard-recovery\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\rag-RAG-search-only-no-sou-7592b-l-and-tab-keyboard-recovery\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\rag-RAG-search-only-no-sou-7592b-l-and-tab-keyboard-recovery\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests\e2e\rag.spec.ts:111:1 › RAG: untrusted source with forged citation fails closed through actual backend
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByLabel('RAG index')
+    Expected: "local-e5"
+    Received: "guide-user-index"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('RAG index') with timeout 5000ms
+      - waiting for getByLabel('RAG index')
+        13 × locator resolved to <select>…</select>
+           - unexpected value "guide-user-index"
+
+
+      125 |   await page.goto('/search')
+      126 |   await page.getByRole('tab', { name: 'RAG Chat' }).click()
+    > 127 |   await expect(page.getByLabel('RAG index')).toHaveValue('local-e5')
+          |                                              ^
+      128 |   await page.getByLabel('RAG namespace').fill('rag-untrusted')
+      129 |   await page.getByLabel('RAG question in Vietnamese').fill('Tài liệu này nói gì?')
+      130 |   const response = page.waitForResponse(r => r.url().endsWith('/api/rag/chat'))
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\rag.spec.ts:127:46
+
+    Error Context: test-results\rag-RAG-untrusted-source-w-3c020-osed-through-actual-backend\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\rag-RAG-untrusted-source-w-3c020-osed-through-actual-backend\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\rag-RAG-untrusted-source-w-3c020-osed-through-actual-backend\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests\e2e\search.spec.ts:9:1 › Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByLabel('Search index')
+    Expected: "local-e5"
+    Received: "guide-user-index"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('Search index') with timeout 5000ms
+      - waiting for getByLabel('Search index')
+        13 × locator resolved to <select aria-label="Search index">…</select>
+           - unexpected value "guide-user-index"
+
+
+      40 |   await page.goto('/search')
+      41 |   await expect(page.getByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeVisible()
+    > 42 |   await expect(page.getByLabel('Search index')).toHaveValue('local-e5')
+         |                                                 ^
+      43 |   await page.getByLabel('Question in Vietnamese or another language').fill('Cơ sở dữ liệu vector tìm kiếm thông tin theo ngữ nghĩa như thế nào?')
+      44 |   await page.getByLabel('Search namespace').fill('search-seminar')
+      45 |   await page.getByLabel('Top-K', { exact: true }).selectOption('1')
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\search.spec.ts:42:49
+
+    Error Context: test-results\search-Vietnamese-PDF-TXT--6416d-l-source-→-reload-namespace\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\search-Vietnamese-PDF-TXT--6416d-l-source-→-reload-namespace\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\search-Vietnamese-PDF-TXT--6416d-l-source-→-reload-namespace\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot
+    tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at four widths
+    tests\e2e\rag.spec.ts:8:1 › RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → verified citations/context → exact source
+    tests\e2e\rag.spec.ts:81:1 › RAG: search-only, no source, error/cancel and tab keyboard recovery
+    tests\e2e\rag.spec.ts:111:1 › RAG: untrusted source with forged citation fails closed through actual backend
+    tests\e2e\search.spec.ts:9:1 › Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace
+  14 passed (9.0m)
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 548.54

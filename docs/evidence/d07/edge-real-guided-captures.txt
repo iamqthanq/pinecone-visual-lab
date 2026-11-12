@@ -1,0 +1,27 @@
+COMMAND: npm.cmd run test:e2e -- tests/e2e/guided.spec.ts
+
+> pinecone-visual-lab@0.7.0 test:e2e
+> playwright test tests/e2e/guided.spec.ts
+
+[WebServer] INFO:     Started server process [3424]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:20624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:13160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:23724) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][WebServer] Loading weights:   5%|▍         | 9/199 [00:00<00:02, 79.55it/s][WebServer] Loading weights:   9%|▊         | 17/199 [00:00<00:02, 77.50it/s][WebServer] Loading weights:  14%|█▍        | 28/199 [00:00<00:01, 91.40it/s][WebServer] Loading weights:  23%|██▎       | 46/199 [00:00<00:01, 115.15it/s][WebServer] Loading weights:  29%|██▉       | 58/199 [00:00<00:01, 113.20it/s][WebServer] Loading weights:  42%|████▏     | 83/199 [00:00<00:00, 119.50it/s][WebServer] Loading weights:  48%|████▊     | 95/199 [00:00<00:00, 119.50it/s][WebServer] Loading weights: 100%|██████████| 199/199 [00:00<00:00, 232.73it/s]
+  ok 1 tests\e2e\guided.spec.ts:26:1 › complete guided local pipeline, reload/source linking, optional RAG, three simulations and safe reset (44.5s)
+  ok 2 tests\e2e\guided.spec.ts:160:1 › standalone simulation finite play/pause/back/replay/reset, reduced motion and no backend writes (8.3s)
+  ok 3 tests\e2e\guided.spec.ts:191:1 › malformed guide storage and backend failure remain cancellable without implicit data/model calls (2.0s)
+
+  3 passed (1.0m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 63.33

@@ -1,0 +1,81 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File docs/evidence/d07/git-audit.ps1
+WORKDIR: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+BRANCH: feature/issue-13-slab-guided-demo
+ORIGIN: https://github.com/iamqthanq/pinecone-visual-lab
+## feature/issue-13-slab-guided-demo...origin/main
+ M .github/workflows/ci.yml
+ M AGENTS.md
+ M README.md
+ M apps/api/app/document_api.py
+ M apps/api/app/main.py
+ M apps/api/tests/test_health.py
+ M apps/api/tests/test_real_embeddings.py
+ M apps/api/tests/test_real_rag.py
+ M apps/api/tests/test_real_search.py
+ M apps/api/tests/test_real_vector_store.py
+ M apps/web/package.json
+ M apps/web/src/App.test.tsx
+ M apps/web/src/App.tsx
+ M apps/web/src/DocumentsLab.tsx
+ M apps/web/src/RagChat.tsx
+ M apps/web/src/SearchLab.tsx
+ M apps/web/src/VectorStoreLab.tsx
+ M apps/web/src/VectorsLab.tsx
+ M apps/web/src/api.ts
+ M apps/web/src/test/setup.ts
+ M apps/web/src/vector-store-api.ts
+ M docs/BRANCH_POLICY.md
+ M docs/architecture/overview.md
+ M docs/architecture/search.md
+ M docs/architecture/vector-store.md
+ M docs/design-foundation.md
+ M package-lock.json
+ M package.json
+ M playwright.config.ts
+ M scripts/check.ps1
+ M tests/e2e/documents.spec.ts
+ M tests/e2e/embeddings.spec.ts
+ M tests/e2e/foundation.spec.ts
+ M tests/e2e/rag.spec.ts
+ M tests/e2e/search.spec.ts
+ M tests/e2e/vector-store.spec.ts
+ M tests/test_git_guard.py
+?? apps/api/app/demo_sample.txt
+?? apps/api/app/guided.py
+?? apps/api/app/guided_api.py
+?? apps/api/tests/test_guided.py
+?? apps/api/tests/test_real_guided.py
+?? apps/web/src/ArchitectureLab.test.tsx
+?? apps/web/src/ArchitectureLab.tsx
+?? apps/web/src/GuidedContext.tsx
+?? apps/web/src/GuidedPanel.tsx
+?? apps/web/src/GuidedProvider.test.tsx
+?? apps/web/src/guided-api.ts
+?? apps/web/src/guided-context.ts
+?? apps/web/src/guided-state.test.ts
+?? apps/web/src/guided-state.ts
+?? apps/web/src/guided.css
+?? apps/web/src/simulator-graph.ts
+?? apps/web/src/simulator.css
+?? apps/web/src/simulator.test.ts
+?? apps/web/src/simulator.ts
+?? apps/web/src/vector-target.test.ts
+?? docs/architecture/guided-demo.md
+?? docs/architecture/slab-simulator.md
+?? docs/demo/
+?? docs/evidence/d07/
+?? tests/e2e/guided.spec.ts
+HEAD and fetched origin/main (HEAD is pre-publication; final SHA is in handoff):
+53ba4924df3f58151c36f1455249de8e5f1bb9f8
+53ba4924df3f58151c36f1455249de8e5f1bb9f8
+pinecone.issue: 13
+pinecone.branch: feature/issue-13-slab-guided-demo
+pinecone.workdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+core.hooksPath: .githooks
+push.default: nothing
+refs/heads/feature/issue-13-slab-guided-demo
+WORKFLOW_SHA256: 5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78
+Historical workflow/master plan/evidence/guard implementation unchanged. Git audit PASS.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 2.70

@@ -1,0 +1,11 @@
+PINECONE VISUAL LAB — TÀI LIỆU SEMINAR TỰ BIÊN SOẠN
+
+Đây là dữ liệu tổng hợp của dự án, không chứa tài liệu cá nhân. Văn bản được cung cấp theo CC0-1.0 để học tập và tái sử dụng.
+
+Cơ sở dữ liệu vector lưu các tọa độ biểu diễn nội dung. Trong ứng dụng này, multilingual-e5-small chạy trên máy tạo embedding 384 chiều. Văn bản nguồn dùng tiền tố passage; câu hỏi dùng query. Cosine so sánh hướng của hai vector, không phải xác suất câu trả lời đúng.
+
+Tài liệu được trích xuất theo trang, chia thành chunk và xác nhận phiên bản. LOCAL DEMO lưu vector trong SQLite với namespace riêng. Chỉ phiên bản ACTIVE đã kiểm chứng được dùng cho tìm kiếm. Mỗi kết quả giữ document ID, version ID, chunk ID và trang để xem lại nguồn.
+
+RAG truy xuất chunk trước khi gọi mô hình ngôn ngữ tùy chọn. Thiếu Ollama, có thể tắt LLM và tiếp tục tìm kiếm. Trích dẫn phải khớp nguồn; dẫn nguồn hợp lệ không tự chứng minh nội dung đúng.
+
+Slab Simulator là mô hình giáo dục độc lập. Nó minh họa log, memtable, slab bất biến và compaction bằng vài bản ghi 2D. Các số trong simulator không phải telemetry Pinecone. Dùng Next, Back và Reset để quan sát cách giữ phiên bản mới nhất khi cập nhật hoặc xóa.

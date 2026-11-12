@@ -1,0 +1,5 @@
+COMMAND: npm.cmd audit --audit-level=moderate
+found 0 vulnerabilities
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 7.05
