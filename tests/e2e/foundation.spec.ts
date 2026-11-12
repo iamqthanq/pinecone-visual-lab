@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
-const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d03'
+const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d04'
 
 test('live API health, desktop navigation, accessibility, and screenshot', async ({ page, request }) => {
   const errors: string[] = []
@@ -9,7 +9,7 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
   const response = await request.get('http://127.0.0.1:8001/api/health')
   expect(response.ok()).toBeTruthy()
   expect(await response.json()).toMatchObject({
-    status: 'ok', phase: 'D03', documents: 'available', pinecone: 'not_configured',
+    status: 'ok', phase: 'D04', documents: 'available', pinecone: 'not_configured',
   })
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/')
@@ -31,7 +31,7 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
       await expect(page.getByText('This lab is on the roadmap.')).toBeVisible()
     }
   }
-  await expect(page.getByText('ALL MODES PLANNED')).toBeVisible()
+  await expect(page.getByText('SIMULATOR PLANNED · LOCAL STORE AVAILABLE')).toBeVisible()
   expect(errors).toEqual([])
 })
 
@@ -49,7 +49,7 @@ test('mobile menu, deep links, reduced motion and layout at four widths', async 
   await expect(page.getByRole('button', { name: 'Open navigation' })).toHaveAttribute('aria-expanded', 'false')
   for (const width of [1440, 1024, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 900 })
-    for (const route of ['/', '/documents', '/vectors', '/search', '/architecture']) {
+    for (const route of ['/', '/documents', '/vectors', '/vectors/store', '/search', '/architecture']) {
       await page.goto(route)
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
         `${route} overflow at ${width}px`).toBeTruthy()

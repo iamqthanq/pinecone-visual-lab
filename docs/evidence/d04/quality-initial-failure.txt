@@ -1,0 +1,73 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
+[D04] Frontend lint
+
+> pinecone-visual-lab@0.4.0 lint
+> npm run lint --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.4.0 lint
+> eslint .
+
+[D04] TypeScript strict
+
+> pinecone-visual-lab@0.4.0 typecheck
+> npm run typecheck --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.4.0 typecheck
+> tsc --noEmit
+
+[D04] Frontend unit tests
+
+> pinecone-visual-lab@0.4.0 test
+> npm run test --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.4.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/Corel/HK1_NAM4/PR/Giữa kì/pinecone-visual-lab/apps/web
+
+ ❯ src/VectorStoreLab.test.tsx (6 tests | 1 failed) 7793ms
+   ❯ D04 Vector Explorer (6)
+     × requires exact confirmation, ingests, fetches from adapter and deletes only owned IDs 5080ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/VectorStoreLab.test.tsx > D04 Vector Explorer > requires exact confirmation, ingests, fetches from adapter and deletes only owned IDs
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/VectorStoreLab.test.tsx:63:3
+     61|     await waitFor(() => expect(fetchMock.mock.calls.some(([, options])…
+     62|   })
+     63|   it('requires exact confirmation, ingests, fetches from adapter and d…
+       |   ^
+     64|     await preview()
+     65|     const ingest = screen.getByRole('button', { name: 'Confirm / resum…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  1 failed | 19 passed (20)
+   Start at  15:42:35
+   Duration  44.71s (environment 70%, setup 13%, tests 12%, import 3%, transform 3%)
+
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error workspace @pinecone-visual-lab/web@0.4.0
+npm error location D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error command failed
+npm error command C:\Windows\system32\cmd.exe /d /s /c vitest run
+Frontend unit tests FAILED (exit 1)
+At D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\scripts\check.ps1:12 char:30
++ ... f ($LASTEXITCODE -ne 0) { throw "$Name FAILED (exit $LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Frontend unit tests FAILED (exit 1):String) [], RuntimeException
+    + FullyQualifiedErrorId : Frontend unit tests FAILED (exit 1)
+
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 81.66

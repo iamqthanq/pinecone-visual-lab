@@ -35,6 +35,7 @@ jobs:
       - name: Local quality gates
         shell: pwsh
         env:
+          PVL_DISABLE_CLOUD: '1'
           HF_HUB_OFFLINE: '1'
           TRANSFORMERS_OFFLINE: '1'
         run: ./scripts/check.ps1
@@ -42,6 +43,7 @@ jobs:
         shell: pwsh
         env:
           PVL_E2E_FIXTURE: '1'
+          PVL_DISABLE_CLOUD: '1'
           HF_HUB_OFFLINE: '1'
           TRANSFORMERS_OFFLINE: '1'
         run: |
@@ -55,5 +57,5 @@ jobs:
         with:
           name: lab-browser-evidence
           path: |
-            docs/evidence/d03/*.png
+            docs/evidence/d04/*.png
             test-results/

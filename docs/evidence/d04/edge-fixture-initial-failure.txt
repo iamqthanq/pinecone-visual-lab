@@ -1,0 +1,67 @@
+COMMAND: npm.cmd run test:e2e
+
+> pinecone-visual-lab@0.4.0 test:e2e
+> playwright test
+
+[WebServer] INFO:     Started server process [20552]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:13604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:14784) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:25304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (8.5s)
+  ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (2.5s)
+  ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (12.3s)
+  ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (1.1s)
+  ok  5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (5.1s)
+  ok  6 tests\e2e\foundation.spec.ts:38:1 › mobile menu, deep links, reduced motion and layout at four widths (19.4s)
+  ok  7 tests\e2e\foundation.spec.ts:60:1 › network failure and recovery (explicitly intercepted fault injection) (2.2s)
+  ok  8 tests\e2e\foundation.spec.ts:72:1 › keyboard skip link is first and visible (1.5s)
+  ok  9 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (13.6s)
+  ok 10 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (1.2s)
+  ok 11 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (1.8s)
+
+  x  12 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (11.2s)
+
+
+  1) tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 17
+    Received length: 8
+    Received array:  [{"id": "pvl-98e061bc-e1b7-58ca-a89c-9511683812a5", "metadata": {"chunk_id": "20a2de8d-a9d2-519a-a196-4d15a25631da", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [0.0700058713555336, 0.023363418877124786, -0.0038843760266900063, 0.019936349242925644, 0.0709177628159523, 0.06471419334411621, 0.07301647216081619, -0.013438797555863857, -0.022549524903297424, -0.029997073113918304, …]}, {"id": "pvl-48a14c34-52b0-51a6-8d25-70f2f3d93e47", "metadata": {"chunk_id": "af1a9efc-c3d4-56ad-9924-bcc2626575b8", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.04503602907061577, -0.04850266873836517, 0.043247684836387634, -0.08526003360748291, -0.06790483742952347, 0.014378293417394161, 0.03499378636479378, 0.05529562756419182, 0.07118438184261322, -0.035092830657958984, …]}, {"id": "pvl-8ffd02b3-2a2a-55f6-9ad0-e2a586b90f4d", "metadata": {"chunk_id": "ed814fb1-624e-5b81-a1d8-2b182c08e0c9", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.04503602907061577, -0.04850266873836517, 0.043247684836387634, -0.08526003360748291, -0.06790483742952347, 0.014378293417394161, 0.03499378636479378, 0.05529562756419182, 0.07118438184261322, -0.035092830657958984, …]}, {"id": "pvl-c67de199-8939-5981-81fd-93efb456dfa2", "metadata": {"chunk_id": "7809d3c1-d5f5-5c94-a699-b43c89cf5c7f", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.04503602907061577, -0.04850266873836517, 0.043247684836387634, -0.08526003360748291, -0.06790483742952347, 0.014378293417394161, 0.03499378636479378, 0.05529562756419182, 0.07118438184261322, -0.035092830657958984, …]}, {"id": "pvl-08c8cca7-7f4f-5b6d-af0b-a56828a42365", "metadata": {"chunk_id": "ecfb8412-08bb-598b-8de8-61030ea71fec", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.04503602907061577, -0.04850266873836517, 0.043247684836387634, -0.08526003360748291, -0.06790483742952347, 0.014378293417394161, 0.03499378636479378, 0.05529562756419182, 0.07118438184261322, -0.035092830657958984, …]}, {"id": "pvl-eae7ca29-556c-5e36-a0ea-3eef41ede0c6", "metadata": {"chunk_id": "ebadeca4-e1d6-5765-8525-4e70935b54f2", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.04503602907061577, -0.04850266873836517, 0.043247684836387634, -0.08526003360748291, -0.06790483742952347, 0.014378293417394161, 0.03499378636479378, 0.05529562756419182, 0.07118438184261322, -0.035092830657958984, …]}, {"id": "pvl-53709172-b705-5caf-ad48-4075f6b674e1", "metadata": {"chunk_id": "7641aa78-a55f-5d7e-bd54-a6ce20747a54", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.04503602907061577, -0.04850266873836517, 0.043247684836387634, -0.08526003360748291, -0.06790483742952347, 0.014378293417394161, 0.03499378636479378, 0.05529562756419182, 0.07118438184261322, -0.035092830657958984, …]}, {"id": "pvl-1f27d945-3bf3-5762-9282-0e4bf33f1b9b", "metadata": {"chunk_id": "3e5e38c9-3df0-5aa2-989e-a76873ee3fa4", "document_id": "1cb54c0e-2485-4b3f-bb06-cc4a8902745c", "embedding_mode": "test-fixture-not-e5", "model_id": "deterministic-384-NOT-E5", "model_revision": "fixture-v1", "model_signature": "deterministic-384-NOT-E5@fixture-v1", "owner_job": "621a345f-f09e-5f50-9d1d-9dab01bc9f87", "page_end": 1, "page_start": 1, "source_name": "store-vietnamese.pdf", "version_id": "91490163-7f7a-4a8a-ba94-6a1d99375668"}, "values": [-0.05622245371341705, 0.058206163346767426, 0.018780948594212532, 0.05188018083572388, 0.08679895102977753, -0.06866100430488586, 0.06745161861181259, 0.0459345206618309, -0.07101956754922867, -0.004555693361908197, …]}]
+
+      135 |   expect(job.state).toBe('active')
+      136 |   const values = await (await request.post('/api/vector-store/records/fetch', { data: { target: job.target, ids: job.ids.slice(0, 8) } })).json()
+    > 137 |   expect(values.records).toHaveLength(version.chunks.length)
+          |                          ^
+      138 |   for (let i = 0; i < values.records.length; i++) {
+      139 |     expect(values.records[i].metadata.chunk_id).toBe(version.chunks[i].chunk_id)
+      140 |     expect(values.records[i].metadata.page_start).toBe(version.chunks[i].page_start)
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\vector-store.spec.ts:137:26
+
+    Error Context: test-results\vector-store-multi-page-Vi-85cde-ored-with-real-source-pages\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\vector-store-multi-page-Vi-85cde-ored-with-real-source-pages\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\vector-store-multi-page-Vi-85cde-ored-with-real-source-pages\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages
+  11 passed (1.5m)
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 93.18

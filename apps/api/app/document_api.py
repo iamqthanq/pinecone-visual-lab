@@ -33,7 +33,9 @@ class UploadLimit:
         limit = (
             self.limit
             if path == "/api/documents"
-            else (1024 * 1024 if path.startswith("/api/embeddings/") else None)
+            else (
+                1024 * 1024 if path.startswith(("/api/embeddings/", "/api/vector-store/")) else None
+            )
         )
         if limit is None:
             return await self.app(scope, receive, send)

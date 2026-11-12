@@ -132,7 +132,7 @@ class Store:
             db.row_factory = sqlite3.Row
             db.execute("PRAGMA foreign_keys=ON")
             schema = db.execute("PRAGMA user_version").fetchone()[0]
-            if schema not in (0, 1, 2):
+            if schema not in (0, 1, 2, 3):
                 raise DocumentError(
                     "Unsupported database schema. Preserve data and upgrade the app.", 503
                 )
@@ -172,6 +172,10 @@ class Store:
                   PRAGMA user_version=2;
                   COMMIT;
                 """)
+            if schema < 3:
+                from app.vector_schema import SCHEMA
+
+                db.executescript(SCHEMA)
             with db:
                 yield db
         finally:

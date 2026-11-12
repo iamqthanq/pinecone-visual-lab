@@ -1,30 +1,27 @@
-# Current architecture — D03
+# Current architecture — D04
 
 ```text
 React / TypeScript / Tailwind + D01 shell
   └─ typed /api → Vite proxy :5173 → FastAPI :8000 (loopback)
-       ├─ health → UTC timestamp / declared capabilities
-       ├─ PDF/TXT → capped body → validation → page extraction
-       │    └─ ignored .data/ : original UUID files + SQLite
-       ├─ cached E5 tokenizer → preview → confirmed version → JSONL
-       └─ confirmed chunks / queries → owned CPU E5 worker → 384D + cosine
-            └─ source vectors → schema2 SQLite records (no vector DB upsert)
+       ├─ health → timestamp / actual cache status / key readiness (no cloud call)
+       ├─ PDF/TXT → validation → pages → cached tokenizer → draft/confirmed → JSONL
+       ├─ confirmed chunks / queries → owned CPU E5 worker → 384D + cosine
+       │    └─ D03 source embeddings → SQLite (queries do not persist)
+       └─ explicit confirmed ingest → version manifest → bounded batch + fetch verification
+            ├─ LOCAL DEMO → persistent SQLite values + metadata, scoped by index/namespace
+            └─ LIVE PINECONE → backend SDK / key / exact authorization (not verified)
 ```
 
-`GET /api/health` retains D01 fields, now declaring `version: 0.3.0`, `phase: D03`, `documents: available`, `pinecone: not_configured`, `embedding: <actual cache/load state>` and `embedding_mode: e5 | test-fixture-not-e5`. Frontend validates before ONLINE. Network/HTTP/schema failure or a 5-second timeout produces OFFLINE. Refresh is every 15 seconds/on demand. CORS permits explicit local origins. Tokenizer availability is separate: missing assets do not disable extraction or falsely imply an embedding model is loaded.
+Health keeps D01 behavior and declares `version: 0.4.0`, `phase: D04`, `documents: available`, `vector_store: local_available`, `pinecone: not_configured | configured_not_verified` and actual `embedding`/`embedding_mode`. Key configured is not proof of connectivity or permissions. Frontend validates this shape before ONLINE; errors/5-second timeout produce OFFLINE. Refresh every 15 seconds/on demand. CORS permits explicit local origins.
 
-[Document architecture](documents.md) defines canonical source, offsets, schema1, versions and limits. [Tokenizer contract](../tokenizer.md) defines pinned offline loading/budgets. D03 adds real local384D embedding inference with approved cached weights, masked mean pooling and L2 normalization; no OCR/cloud upload/vector upsert. Only explicit tokenizer/model setup CLIs download assets. The fixture server is a separate test entry point, conspicuously labeled; production has no automatic fallback.
+[Documents](documents.md), [tokenizer](../tokenizer.md) and [E5](embeddings.md) retain source/version/token budget and approved cache contracts. Only explicit setup CLIs download assets. Production has no fixture fallback. [Vector storage](vector-store.md) describes forward schema3 migration, actual adapter fetch, deterministic IDs, leases, bounded retries, checkpoints, CAS activation after verification and exact owned delete. Source deletion never implicitly becomes a cloud write/delete.
 
-## Planned D04–D09
+LOCAL DEMO is operational with real E5. The LIVE adapter is implemented against SDK10.3/API2026-07 and tested with offline HTTP transport, but **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. No account telemetry is fabricated. Project label comes from server configuration and must be checked against the key's project in Pinecone console. The UI never receives credentials or accepts arbitrary SDK hosts. Index writes/deletes require separate specific owner approval and explicit confirmations.
 
-Confirmed chunks → real local E5 embeddings (384D) are implemented. Vector store → semantic search → optional local RAG remain planned. Guided demo and educational Slab simulator follow. These stages remain unimplemented.
+## Planned D05–D09
 
-- **LIVE PINECONE:** planned real cloud API/index/namespace/scores with server credentials.
-- **LOCAL DEMO:** planned local retrieval with any fixtures labeled.
-- **SLAB SIMULATOR:** planned educational state machine, separate from telemetry.
-
-D03 matches tokenizer/prefix/model and preserves document/page/version provenance; D04 should reuse EmbeddingService. No automatic cloud action or model download is introduced.
+Semantic/top-k search, RAG, simulator, advanced animation, tour and deployment remain planned. Embedding/cosine and stored-vector inspection are not a Pinecone top-k search. SLAB SIMULATOR will remain an educational model separate from actual telemetry. No D05 endpoint/UI has been implemented.
 
 ## Verification boundaries
 
-API tests use temporary SQLite and synthetic PDF/TXT. Default tests use deterministic offline tokenizer fixtures; a separate real-E5 check validates Unicode/budgets/coverage with cached official assets. Local Edge E2E uses the production API and real tokenizer. CI explicitly selects the separate fixture server, never fetches AI assets, and does not claim real-E5 coverage. Health/offline/navigation/Git guard regression remain. [D03 embedding design/schema2](embeddings.md) and [D03 evidence](../evidence/d03/REPORT.md) record current contracts/status. Historical D02 evidence remains unchanged; [D01 evidence](../evidence/d01/REPORT.md) remains historical and unchanged.
+Offline tests use isolated SQLite and explicit **NOT E5** providers, plus actual SDK serialization with fake HTTP transport and DNS blocked. Real-E5 tests separately verify cached checksums, masked pooling, prefixes, budget, persistence and Edge flows. CI installs locked packages/browser, then tests without AI assets/cloud keys; it never runs setup/download. Local fixture success is not GitHub CI success. [D04 evidence](../evidence/d04/REPORT.md) records actual commands/exits and 1440/390 captures; D01–D03 evidence remains historical and unchanged.

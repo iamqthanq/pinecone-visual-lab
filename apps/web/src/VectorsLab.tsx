@@ -73,7 +73,7 @@ export default function VectorsLab() {
   }
   const chunk = version?.chunks.find(item => item.chunk_id === chunkId)
   return <>
-    <div className="page-meta"><Badge>D03 · LOCAL EMBEDDINGS</Badge><span className="mono">TEXT → 384D → COSINE</span></div>
+    <div className="page-meta"><Badge>D03 · LOCAL EMBEDDINGS</Badge><Link className="text-link" to="/vectors/store">Open Vector Explorer →</Link></div>
     <div className="documents-title"><div><span className="eyebrow accent">VECTORS LAB</span><h1>Turn text into coordinates.</h1><p>Run E5 on this computer. Inspect the numbers before any vector database.</p></div><Button disabled={Boolean(busy)} onClick={() => { void run('Refreshing local status…', async () => { const [model, list] = await Promise.all([embeddingAPI.status(), documentAPI.list()]); setStatus(model); setDocuments(list.documents) }) }}><RefreshCw size={15} />Refresh status</Button></div>
     {error && <div className="doc-message error" role="alert">{error}<Button aria-label="Dismiss error" onClick={() => setError('')}><X size={15} /></Button></div>}
     {notice && <div className="doc-message success" role="status"><Check size={16} />{notice}</div>}
@@ -104,7 +104,7 @@ export default function VectorsLab() {
       <div className="sentence-grid"><label>Sentence A<textarea aria-label="Sentence A" maxLength={20000} disabled={Boolean(busy)} value={sentenceA} onChange={event => { setSentenceA(event.target.value); setScore(null) }} /></label><label>Sentence B<textarea aria-label="Sentence B" maxLength={20000} disabled={Boolean(busy)} value={sentenceB} onChange={event => { setSentenceB(event.target.value); setScore(null) }} /></label></div>
       <Button className="button-primary" disabled={!canRun || !sentenceA.trim() || !sentenceB.trim()} onClick={() => void run('Embedding sentence batch / computing cosine…', async signal => { const result = await embeddingAPI.encode([sentenceA, sentenceB], signal); setScore(await embeddingAPI.compare(result.records[0], result.records[1], signal)) })}>Compare sentences</Button>
       {score && <div className="cosine-result" role="status"><span>RAW COSINE · {score.mode === 'e5' ? 'LOCAL E5' : 'TEST FIXTURE — NOT E5'}</span><output aria-label="Cosine similarity">{score.cosine.toFixed(6)}</output><p>{score.meaning}</p></div>}
-      <p className="config-hint">Embedding = a 384D representation. Cosine = a geometric comparison in [-1,+1], not probability. Vector DB search ranks stored vectors with filters/indexes; D04–D05 remains PLANNED. No top-k search or Pinecone operation occurs here.</p>
+      <p className="config-hint">Embedding = a 384D representation. Cosine = a geometric comparison in [-1,+1], not probability. D04 Vector Explorer stores and fetches confirmed vectors. Top-k search comes in D05. No Pinecone operation occurs in this embedding view.</p>
     </Panel>
   </>
 }
