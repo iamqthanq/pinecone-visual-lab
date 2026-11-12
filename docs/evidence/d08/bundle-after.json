@@ -1,0 +1,427 @@
+{
+  "label": "after",
+  "command": "npm.cmd run build",
+  "entry": "index-DAPfpF_0.js",
+  "assets": [
+    {
+      "file": "ArchitectureLab-BuN918to.css",
+      "bytes": 18594,
+      "gzip_bytes": 3447,
+      "sha256": "480c0e3039a639e61707b3395ee5f5ebe1e2a8e47a41e3753d670181896df3b5"
+    },
+    {
+      "file": "ArchitectureLab-oBWh_LQo.js",
+      "bytes": 195843,
+      "gzip_bytes": 62830,
+      "sha256": "58dfc44e27ce4f30f3904cf12fbbfd63f1151e6ee656f739589fa263c7b620d0"
+    },
+    {
+      "file": "components-Dkxyj7JT.js",
+      "bytes": 13111,
+      "gzip_bytes": 5165,
+      "sha256": "085e9106721aaddaffafa13f932b0f0f015291ee503a3256e712f3302a79752d"
+    },
+    {
+      "file": "copy-BO7Ipngl.js",
+      "bytes": 270,
+      "gzip_bytes": 225,
+      "sha256": "11c975d18f945df40a9de162259e88ca537d6209df319daba571097867ba1246"
+    },
+    {
+      "file": "documents-api-Dnl7A59J.js",
+      "bytes": 1090,
+      "gzip_bytes": 587,
+      "sha256": "81f013852374dfe3a5f53600690dfdb84fbd14358dcf18fa3b8391ddc33992ac"
+    },
+    {
+      "file": "DocumentsLab-Cnjb3pCN.css",
+      "bytes": 8526,
+      "gzip_bytes": 2224,
+      "sha256": "ebcc98f4f8143dfa31701244b0f7ae0ec7a8f1b1139283d50f7a7dc368d01a8e"
+    },
+    {
+      "file": "DocumentsLab-Cr5dKBJP.js",
+      "bytes": 16458,
+      "gzip_bytes": 5682,
+      "sha256": "5796ff132131e7dd9e245c27fab1b0f055e3db9fac4dbad1871f257922022657"
+    },
+    {
+      "file": "gsap-OWHkPl-m.js",
+      "bytes": 69993,
+      "gzip_bytes": 27048,
+      "sha256": "9e6f44b7f41c1543d89d4ae9bfc76d15d2aee013cd73b163f00dd2e52a2e0595"
+    },
+    {
+      "file": "GuidedPanel-BhfmGV-F.css",
+      "bytes": 2841,
+      "gzip_bytes": 973,
+      "sha256": "c3c46d6d6f6a3d396ef954270a5a4ab989fec1354780c9d85d6cf05916bbc0a7"
+    },
+    {
+      "file": "GuidedPanel-DoEWv-Gq.js",
+      "bytes": 11879,
+      "gzip_bytes": 4087,
+      "sha256": "9b55972176f73cdb1bca8e7ba6cba1377b2fd5d3f45d0b686416044febdc7625"
+    },
+    {
+      "file": "index-BGaVrgfh.css",
+      "bytes": 49599,
+      "gzip_bytes": 13466,
+      "sha256": "6ce3cc792f7b6ea15fb07e91bca92f6304ae1f2ab1e76b17c29dda6fb60625e6"
+    },
+    {
+      "file": "index-DAPfpF_0.js",
+      "bytes": 292494,
+      "gzip_bytes": 92367,
+      "sha256": "7b2f7ec059725d5b6924a96771b12bf4e07f4e0d54cdc2ea88e1f8da6043a7fb"
+    },
+    {
+      "file": "RagChat-BXxVIHDQ.css",
+      "bytes": 1868,
+      "gzip_bytes": 702,
+      "sha256": "5b0f7ff3d89e5fa0631c29247f8ce568bcff1224a9a0e0dd8706f4fbe4b5066f"
+    },
+    {
+      "file": "RagChat-D9NAX--a.js",
+      "bytes": 16415,
+      "gzip_bytes": 5718,
+      "sha256": "05cf7c459c1223e3d6b8d98aeef28debcad0b0eedfe812012e8438d6102a7030"
+    },
+    {
+      "file": "SearchLab-Cen1b60c.js",
+      "bytes": 18590,
+      "gzip_bytes": 6504,
+      "sha256": "027125fb7275a923bb930caf12bdf5c52c99bf0a43e339d8fbcd818d15e92c22"
+    },
+    {
+      "file": "SearchLab-CY9mMbyc.css",
+      "bytes": 4304,
+      "gzip_bytes": 1272,
+      "sha256": "cbde48b108d713954d4ee3653e6aea891ac3afd0a178e5617dc3149f2ee5c79f"
+    },
+    {
+      "file": "StoredVectorInspector-DxWK2FWG.css",
+      "bytes": 2809,
+      "gzip_bytes": 979,
+      "sha256": "89fd90efa12f1bb05090d9addd7f2167abed23b1f83a7ab828d8948b14aaaf26"
+    },
+    {
+      "file": "StoredVectorInspector-rshPi53d.js",
+      "bytes": 2654,
+      "gzip_bytes": 1154,
+      "sha256": "d53d56e1fed96314c7b7822adfe182d2fc5a93df5a20e782c8eb3d066f76f3ab"
+    },
+    {
+      "file": "vector-store-api-Cc-VkiJo.js",
+      "bytes": 1515,
+      "gzip_bytes": 801,
+      "sha256": "4f539ce22c8184ef0eaa6f4d43c55b92c01bd81aba402ff09a73bcf213937e2e"
+    },
+    {
+      "file": "VectorInspector-D_Y9Jb4V.js",
+      "bytes": 2846,
+      "gzip_bytes": 1206,
+      "sha256": "2c95be29a0966a5b4c3046f738f25454f2db20a59ec6a68f9eceb3b0fa5f39fb"
+    },
+    {
+      "file": "vectors-DmKxnioJ.css",
+      "bytes": 3633,
+      "gzip_bytes": 1088,
+      "sha256": "0bd664d28c54b1d85dfbca8ea1d3fa1bc8e20e1d8923f00ea98871da1ca3aa4c"
+    },
+    {
+      "file": "vectors-DPeHDYna.js",
+      "bytes": 1370,
+      "gzip_bytes": 670,
+      "sha256": "20906b899deb46ae170b20cff0871e8700c00419270e855453b88d90712c7402"
+    },
+    {
+      "file": "VectorsLab-B1yj6-JV.js",
+      "bytes": 10825,
+      "gzip_bytes": 3922,
+      "sha256": "113bb61c6594ddad5c52d5731c555d94b3c0fc28f1d8f68bf5be2f476dae596a"
+    },
+    {
+      "file": "VectorStoreLab-4g7RoxGX.js",
+      "bytes": 15626,
+      "gzip_bytes": 5129,
+      "sha256": "5de71d241df7f1c8b0008d76f27cab920efe9740ec15c55d085a423b87750085"
+    }
+  ],
+  "total_js_bytes": 670979,
+  "total_js_gzip_bytes": 223095,
+  "source_maps": [],
+  "manifest": {
+    "../../node_modules/@fontsource-variable/manrope/files/manrope-cyrillic-wght-normal.woff2": {
+      "file": "assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2",
+      "src": "../../node_modules/@fontsource-variable/manrope/files/manrope-cyrillic-wght-normal.woff2"
+    },
+    "../../node_modules/@fontsource-variable/manrope/files/manrope-greek-wght-normal.woff2": {
+      "file": "assets/manrope-greek-wght-normal-DL7QRZyv.woff2",
+      "src": "../../node_modules/@fontsource-variable/manrope/files/manrope-greek-wght-normal.woff2"
+    },
+    "../../node_modules/@fontsource-variable/manrope/files/manrope-latin-ext-wght-normal.woff2": {
+      "file": "assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+      "src": "../../node_modules/@fontsource-variable/manrope/files/manrope-latin-ext-wght-normal.woff2"
+    },
+    "../../node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2": {
+      "file": "assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+      "src": "../../node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2"
+    },
+    "../../node_modules/@fontsource-variable/manrope/files/manrope-vietnamese-wght-normal.woff2": {
+      "file": "assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+      "src": "../../node_modules/@fontsource-variable/manrope/files/manrope-vietnamese-wght-normal.woff2"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-400-normal.woff": {
+      "file": "assets/ibm-plex-mono-cyrillic-400-normal-CEL4l2ZJ.woff",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-400-normal.woff"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-400-normal.woff2": {
+      "file": "assets/ibm-plex-mono-cyrillic-400-normal-BSMlKf0J.woff2",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-400-normal.woff2"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-ext-400-normal.woff": {
+      "file": "assets/ibm-plex-mono-cyrillic-ext-400-normal-DMdlQ8Kv.woff",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-ext-400-normal.woff"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-ext-400-normal.woff2": {
+      "file": "assets/ibm-plex-mono-cyrillic-ext-400-normal-xuaO2J-f.woff2",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-cyrillic-ext-400-normal.woff2"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff": {
+      "file": "assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2": {
+      "file": "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-ext-400-normal.woff": {
+      "file": "assets/ibm-plex-mono-latin-ext-400-normal-D3D2R8hC.woff",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-ext-400-normal.woff"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-ext-400-normal.woff2": {
+      "file": "assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-ext-400-normal.woff2"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-vietnamese-400-normal.woff": {
+      "file": "assets/ibm-plex-mono-vietnamese-400-normal-DDuiU_S-.woff",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-vietnamese-400-normal.woff"
+    },
+    "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-vietnamese-400-normal.woff2": {
+      "file": "assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2",
+      "src": "../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-vietnamese-400-normal.woff2"
+    },
+    "../../node_modules/gsap/index.js": {
+      "file": "assets/gsap-OWHkPl-m.js",
+      "name": "gsap",
+      "src": "../../node_modules/gsap/index.js",
+      "isDynamicEntry": true
+    },
+    "_StoredVectorInspector-DxWK2FWG.css": {
+      "file": "assets/StoredVectorInspector-DxWK2FWG.css",
+      "src": "_StoredVectorInspector-DxWK2FWG.css"
+    },
+    "_StoredVectorInspector-rshPi53d.js": {
+      "file": "assets/StoredVectorInspector-rshPi53d.js",
+      "name": "StoredVectorInspector",
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_vectors-DPeHDYna.js"
+      ],
+      "css": [
+        "assets/StoredVectorInspector-DxWK2FWG.css"
+      ]
+    },
+    "_VectorInspector-D_Y9Jb4V.js": {
+      "file": "assets/VectorInspector-D_Y9Jb4V.js",
+      "name": "VectorInspector",
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_copy-BO7Ipngl.js",
+        "_vectors-DPeHDYna.js"
+      ]
+    },
+    "_components-Dkxyj7JT.js": {
+      "file": "assets/components-Dkxyj7JT.js",
+      "name": "components"
+    },
+    "_copy-BO7Ipngl.js": {
+      "file": "assets/copy-BO7Ipngl.js",
+      "name": "copy",
+      "imports": [
+        "_components-Dkxyj7JT.js"
+      ]
+    },
+    "_documents-api-Dnl7A59J.js": {
+      "file": "assets/documents-api-Dnl7A59J.js",
+      "name": "documents-api"
+    },
+    "_vector-store-api-Cc-VkiJo.js": {
+      "file": "assets/vector-store-api-Cc-VkiJo.js",
+      "name": "vector-store-api"
+    },
+    "_vectors-DPeHDYna.js": {
+      "file": "assets/vectors-DPeHDYna.js",
+      "name": "vectors",
+      "imports": [
+        "_components-Dkxyj7JT.js"
+      ],
+      "css": [
+        "assets/vectors-DmKxnioJ.css"
+      ]
+    },
+    "_vectors-DmKxnioJ.css": {
+      "file": "assets/vectors-DmKxnioJ.css",
+      "src": "_vectors-DmKxnioJ.css"
+    },
+    "index.html": {
+      "file": "assets/index-DAPfpF_0.js",
+      "name": "index",
+      "src": "index.html",
+      "isEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js"
+      ],
+      "dynamicImports": [
+        "../../node_modules/gsap/index.js",
+        "src/DocumentsLab.tsx",
+        "src/VectorsLab.tsx",
+        "src/VectorStoreLab.tsx",
+        "src/SearchLab.tsx",
+        "src/ArchitectureLab.tsx",
+        "src/GuidedPanel.tsx"
+      ],
+      "css": [
+        "assets/index-BGaVrgfh.css"
+      ],
+      "assets": [
+        "assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2",
+        "assets/manrope-greek-wght-normal-DL7QRZyv.woff2",
+        "assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+        "assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+        "assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+        "assets/ibm-plex-mono-cyrillic-ext-400-normal-xuaO2J-f.woff2",
+        "assets/ibm-plex-mono-cyrillic-ext-400-normal-DMdlQ8Kv.woff",
+        "assets/ibm-plex-mono-cyrillic-400-normal-BSMlKf0J.woff2",
+        "assets/ibm-plex-mono-cyrillic-400-normal-CEL4l2ZJ.woff",
+        "assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2",
+        "assets/ibm-plex-mono-vietnamese-400-normal-DDuiU_S-.woff",
+        "assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2",
+        "assets/ibm-plex-mono-latin-ext-400-normal-D3D2R8hC.woff",
+        "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+        "assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff"
+      ]
+    },
+    "src/ArchitectureLab.tsx": {
+      "file": "assets/ArchitectureLab-oBWh_LQo.js",
+      "name": "ArchitectureLab",
+      "src": "src/ArchitectureLab.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "../../node_modules/gsap/index.js"
+      ],
+      "css": [
+        "assets/ArchitectureLab-BuN918to.css"
+      ]
+    },
+    "src/DocumentsLab.tsx": {
+      "file": "assets/DocumentsLab-Cr5dKBJP.js",
+      "name": "DocumentsLab",
+      "src": "src/DocumentsLab.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_copy-BO7Ipngl.js",
+        "_documents-api-Dnl7A59J.js"
+      ],
+      "css": [
+        "assets/DocumentsLab-Cnjb3pCN.css"
+      ]
+    },
+    "src/GuidedPanel.tsx": {
+      "file": "assets/GuidedPanel-DoEWv-Gq.js",
+      "name": "GuidedPanel",
+      "src": "src/GuidedPanel.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_VectorInspector-D_Y9Jb4V.js",
+        "_StoredVectorInspector-rshPi53d.js"
+      ],
+      "css": [
+        "assets/GuidedPanel-BhfmGV-F.css"
+      ]
+    },
+    "src/RagChat.tsx": {
+      "file": "assets/RagChat-D9NAX--a.js",
+      "name": "RagChat",
+      "src": "src/RagChat.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_copy-BO7Ipngl.js",
+        "_documents-api-Dnl7A59J.js",
+        "src/SearchLab.tsx",
+        "_vector-store-api-Cc-VkiJo.js"
+      ],
+      "css": [
+        "assets/RagChat-BXxVIHDQ.css"
+      ]
+    },
+    "src/SearchLab.tsx": {
+      "file": "assets/SearchLab-Cen1b60c.js",
+      "name": "SearchLab",
+      "src": "src/SearchLab.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_copy-BO7Ipngl.js",
+        "_documents-api-Dnl7A59J.js",
+        "_vector-store-api-Cc-VkiJo.js"
+      ],
+      "dynamicImports": [
+        "src/RagChat.tsx"
+      ],
+      "css": [
+        "assets/SearchLab-CY9mMbyc.css"
+      ]
+    },
+    "src/VectorStoreLab.tsx": {
+      "file": "assets/VectorStoreLab-4g7RoxGX.js",
+      "name": "VectorStoreLab",
+      "src": "src/VectorStoreLab.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_documents-api-Dnl7A59J.js",
+        "_vector-store-api-Cc-VkiJo.js",
+        "_vectors-DPeHDYna.js",
+        "_StoredVectorInspector-rshPi53d.js"
+      ]
+    },
+    "src/VectorsLab.tsx": {
+      "file": "assets/VectorsLab-B1yj6-JV.js",
+      "name": "VectorsLab",
+      "src": "src/VectorsLab.tsx",
+      "isDynamicEntry": true,
+      "imports": [
+        "_components-Dkxyj7JT.js",
+        "index.html",
+        "_documents-api-Dnl7A59J.js",
+        "_vectors-DPeHDYna.js",
+        "_VectorInspector-D_Y9Jb4V.js"
+      ]
+    }
+  },
+  "gzip_note": "gzip estimate of emitted bytes; local preview serves uncompressed HTTP"
+}

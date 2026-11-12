@@ -1,0 +1,135 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
+[D08] Frontend lint
+
+> pinecone-visual-lab@0.8.0 lint
+> npm run lint --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 lint
+> eslint .
+
+[D08] TypeScript strict
+
+> pinecone-visual-lab@0.8.0 typecheck
+> npm run typecheck --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 typecheck
+> tsc --noEmit
+
+[D08] Frontend unit tests
+
+> pinecone-visual-lab@0.8.0 test
+> npm run test --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/Corel/HK1_NAM4/PR/Giữa kì/pinecone-visual-lab/apps/web
+
+
+ Test Files  14 passed (14)
+      Tests  76 passed (76)
+   Start at  00:32:34
+   Duration  51.15s (environment 58%, tests 24%, setup 12%, import 3%, transform 2%)
+
+Environment  jsdom was created 14 times · 56.21s total, 58% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+[D08] Python lint
+E501 Line too long (108 > 100)
+  --> apps\api\tests\test_real_guided.py:36:101
+   |
+34 |         assert not any(reset["session"]["completed"].values())
+35 |         assert app.state.guided_service.store.list() == before
+36 |         path = Path(__file__).resolve().parents[3] / "docs/evidence/d08/regression/real-guided-example.json"
+   |                                                                                                     ^^^^^^^^
+37 |         path.parent.mkdir(parents=True, exist_ok=True)
+38 |         path.write_text(
+   |
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> scripts\measure_bundle.py:23:23
+   |
+21 |       if path.is_file() and path.suffix in (".js", ".css"):
+22 |           data = path.read_bytes()
+23 |           assets.append(dict(file=path.name, bytes=len(data), gzip_bytes=len(gzip.compress(data, mtime=0)),
+   |  _______________________^
+24 | |                            sha256=hashlib.sha256(data).hexdigest()))
+   | |___________________________________________________________________^
+25 |   entry = re.search(r'<script[^>]*src="/assets/([^\"]+)"', html).group(1)
+26 |   manifest = build / ".vite/manifest.json"
+   |
+help: Rewrite as a literal
+   |
+22 |         data = path.read_bytes()
+   -         assets.append(dict(file=path.name, bytes=len(data), gzip_bytes=len(gzip.compress(data, mtime=0)),
+   -                            sha256=hashlib.sha256(data).hexdigest()))
+23 +         assets.append({"file": path.name, "bytes": len(data), "gzip_bytes": len(gzip.compress(data, mtime=0)),
+24 +                            "sha256": hashlib.sha256(data).hexdigest()})
+25 | entry = re.search(r'<script[^>]*src="/assets/([^\"]+)"', html).group(1)
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> scripts\measure_bundle.py:28:10
+   |
+26 |   manifest = build / ".vite/manifest.json"
+27 |   graph = json.loads(manifest.read_text(encoding="utf-8")) if manifest.exists() else None
+28 |   report = dict(label=args.label, command="npm.cmd run build", entry=entry, assets=assets,
+   |  __________^
+29 | |               total_js_bytes=sum(a["bytes"] for a in assets if a["file"].endswith(".js")),
+30 | |               total_js_gzip_bytes=sum(a["gzip_bytes"] for a in assets if a["file"].endswith(".js")),
+31 | |               source_maps=[str(p.relative_to(build)) for p in build.rglob("*.map")],
+32 | |               manifest=graph, gzip_note="gzip estimate of emitted bytes; local preview serves uncompressed HTTP")
+   | |_________________________________________________________________________________________________________________^
+33 |   output = root / f"docs/evidence/d08/bundle-{args.label}.json"
+34 |   output.parent.mkdir(parents=True, exist_ok=True)
+   |
+help: Rewrite as a literal
+   |
+27 | graph = json.loads(manifest.read_text(encoding="utf-8")) if manifest.exists() else None
+   - report = dict(label=args.label, command="npm.cmd run build", entry=entry, assets=assets,
+   -               total_js_bytes=sum(a["bytes"] for a in assets if a["file"].endswith(".js")),
+   -               total_js_gzip_bytes=sum(a["gzip_bytes"] for a in assets if a["file"].endswith(".js")),
+   -               source_maps=[str(p.relative_to(build)) for p in build.rglob("*.map")],
+   -               manifest=graph, gzip_note="gzip estimate of emitted bytes; local preview serves uncompressed HTTP")
+28 + report = {"label": args.label, "command": "npm.cmd run build", "entry": entry, "assets": assets,
+29 +               "total_js_bytes": sum(a["bytes"] for a in assets if a["file"].endswith(".js")),
+30 +               "total_js_gzip_bytes": sum(a["gzip_bytes"] for a in assets if a["file"].endswith(".js")),
+31 +               "source_maps": [str(p.relative_to(build)) for p in build.rglob("*.map")],
+32 +               "manifest": graph, "gzip_note": "gzip estimate of emitted bytes; local preview serves uncompressed HTTP"}
+33 | output = root / f"docs/evidence/d08/bundle-{args.label}.json"
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> scripts\measure_bundle.py:39:18
+   |
+37 | else:
+38 |     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
+39 | print(json.dumps(dict(entry=entry, total_js_bytes=report["total_js_bytes"], chunks=len(assets))))
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: Rewrite as a literal
+   |
+38 |     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
+   - print(json.dumps(dict(entry=entry, total_js_bytes=report["total_js_bytes"], chunks=len(assets))))
+39 + print(json.dumps({"entry": entry, "total_js_bytes": report["total_js_bytes"], "chunks": len(assets)}))
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 4 errors.
+3 unsafe fixes available with `--fix --unsafe-fixes`.
+Python lint FAILED (exit 1)
+At D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\scripts\check.ps1:12 char:30
++ ... f ($LASTEXITCODE -ne 0) { throw "$Name FAILED (exit $LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Python lint FAILED (exit 1):String) [], RuntimeException
+    + FullyQualifiedErrorId : Python lint FAILED (exit 1)
+
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 98.72

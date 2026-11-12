@@ -1,0 +1,9 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d08/verify-staged.py
+Exact inventory: 500 reviewed D08 paths. All staged blobs scanned, zero findings.
+No PDF/private database/model/credential/runtime artifact; largest staged file below5MB.
+Original workflow/master plan/D01-D07 evidence/hooks/guard/backend/reducer unchanged.
+37 frontend source hashes match tested working sources; Issue15 guard and whitespace PASS.
+Final verification logs are refreshed/restaged in the same inventory; no source changes after review.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 27.55

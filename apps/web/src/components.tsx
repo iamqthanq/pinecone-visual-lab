@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import type { ButtonHTMLAttributes, InputHTMLAttributes, ReactNode } from 'react'
+import type { ButtonHTMLAttributes, HTMLAttributes, InputHTMLAttributes, ReactNode, Ref } from 'react'
 import { ArrowUpRight, LoaderCircle } from 'lucide-react'
 
 export function Badge({ children, tone = 'muted' }: {
@@ -8,14 +8,14 @@ export function Badge({ children, tone = 'muted' }: {
   return <span className={`badge badge-${tone}`}>{children}</span>
 }
 
-export function Button({ children, className = '', ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
-  return <button className={`button ${className}`} {...props}>{children}</button>
+export function Button({ children, className = '', type = 'button', ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
+  return <button type={type} className={`button ${className}`} {...props}>{children}</button>
 }
 
-export function Panel({ children, className = '', label }: {
-  children: ReactNode; className?: string; label?: string
+export function Panel({ children, className = '', label, ref, ...props }: HTMLAttributes<HTMLElement> & {
+  children: ReactNode; label?: string; ref?: Ref<HTMLElement>
 }) {
-  return <section className={`panel ${className}`} aria-label={label}>{children}</section>
+  return <section {...props} ref={ref} className={`panel ${className}`} aria-label={label ?? props['aria-label']}>{children}</section>
 }
 
 export function LoadingState() {

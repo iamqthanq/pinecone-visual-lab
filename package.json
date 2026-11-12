@@ -1,7 +1,7 @@
 {
   "name": "pinecone-visual-lab",
   "private": true,
-  "version": "0.7.0",
+  "version": "0.8.0",
   "workspaces": [
     "apps/web"
   ],
@@ -14,7 +14,9 @@
     "typecheck": "npm run typecheck --workspace apps/web",
     "test": "npm run test --workspace apps/web",
     "build": "npm run build --workspace apps/web",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:visual": "playwright test --config playwright.visual.config.ts",
+    "test:performance": "playwright test --config playwright.performance.config.ts"
   },
   "overrides": {
     "minimatch": "11.0.1"

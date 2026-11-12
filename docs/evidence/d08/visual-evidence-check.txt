@@ -1,0 +1,8 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d08/verify-visual.py
+256 original captures +16 clean paired RAG supplements; exact persisted seed/source IDs match.
+Axe serious/critical0; all five-width overflow checks clear;64 active proposed reference hashes verified.
+360 PNG dimensions/hashes recorded (including separately labeled design diffs/regressions).
+37 production frontend source files fingerprinted (LF-normalized); replay contains only local NOT-E5 data.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 1.18

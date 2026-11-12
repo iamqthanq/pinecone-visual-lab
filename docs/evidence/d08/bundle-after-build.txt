@@ -1,0 +1,60 @@
+COMMAND: npm.cmd run build
+
+> pinecone-visual-lab@0.8.0 build
+> npm run build --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 2149 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                     0.76 kB │ gzip:  0.42 kB
+dist/assets/ibm-plex-mono-vietnamese-400-normal-DDuiU_S-.woff       5.62 kB
+dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-DMdlQ8Kv.woff     5.82 kB
+dist/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2      5.86 kB
+dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-xuaO2J-f.woff2    6.91 kB
+dist/assets/ibm-plex-mono-cyrillic-400-normal-CEL4l2ZJ.woff         7.20 kB
+dist/assets/ibm-plex-mono-cyrillic-400-normal-BSMlKf0J.woff2        8.35 kB
+dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2           8.52 kB
+dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2                9.44 kB
+dist/.vite/manifest.json                                           10.02 kB │ gzip:  1.27 kB
+dist/assets/ibm-plex-mono-latin-ext-400-normal-D3D2R8hC.woff       11.76 kB
+dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff           13.14 kB
+dist/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2      13.34 kB
+dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2            14.50 kB
+dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2          14.70 kB
+dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2           15.12 kB
+dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2               24.83 kB
+dist/assets/RagChat-BXxVIHDQ.css                                    1.86 kB │ gzip:  0.70 kB
+dist/assets/StoredVectorInspector-DxWK2FWG.css                      2.80 kB │ gzip:  0.98 kB
+dist/assets/GuidedPanel-BhfmGV-F.css                                2.84 kB │ gzip:  0.96 kB
+dist/assets/vectors-DmKxnioJ.css                                    3.63 kB │ gzip:  1.08 kB
+dist/assets/SearchLab-CY9mMbyc.css                                  4.30 kB │ gzip:  1.27 kB
+dist/assets/DocumentsLab-Cnjb3pCN.css                               8.52 kB │ gzip:  2.23 kB
+dist/assets/ArchitectureLab-BuN918to.css                           18.59 kB │ gzip:  3.49 kB
+dist/assets/index-BGaVrgfh.css                                     49.59 kB │ gzip: 13.60 kB
+dist/assets/copy-BO7Ipngl.js                                        0.27 kB │ gzip:  0.23 kB
+dist/assets/documents-api-Dnl7A59J.js                               1.09 kB │ gzip:  0.58 kB
+dist/assets/vectors-DPeHDYna.js                                     1.37 kB │ gzip:  0.67 kB
+dist/assets/vector-store-api-Cc-VkiJo.js                            1.51 kB │ gzip:  0.79 kB
+dist/assets/StoredVectorInspector-DJLF5NR5.js                       2.65 kB │ gzip:  1.15 kB
+dist/assets/VectorInspector-BYmkPi8g.js                             2.84 kB │ gzip:  1.20 kB
+dist/assets/VectorsLab-Cc_70o3W.js                                 10.82 kB │ gzip:  3.93 kB
+dist/assets/GuidedPanel-BpbRkgmI.js                                11.87 kB │ gzip:  4.10 kB
+dist/assets/components-Dkxyj7JT.js                                 13.11 kB │ gzip:  5.15 kB
+dist/assets/VectorStoreLab-CaAeJQMg.js                             15.62 kB │ gzip:  5.13 kB
+dist/assets/DocumentsLab-CJlidC9H.js                               16.20 kB │ gzip:  5.61 kB
+dist/assets/RagChat-C3ds8qGB.js                                    16.41 kB │ gzip:  5.74 kB
+dist/assets/SearchLab-BjK_Gi46.js                                  18.59 kB │ gzip:  6.55 kB
+dist/assets/gsap-OWHkPl-m.js                                       69.99 kB │ gzip: 27.44 kB
+dist/assets/ArchitectureLab-VxmeaC_7.js                           195.84 kB │ gzip: 63.67 kB
+dist/assets/index--HMAVusA.js                                     292.49 kB │ gzip: 93.60 kB
+
+✓ built in 2.81s
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 19.04

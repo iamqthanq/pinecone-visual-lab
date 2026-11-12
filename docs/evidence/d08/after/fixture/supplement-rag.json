@@ -1,0 +1,149 @@
+{
+  "stage": "after",
+  "mode": "fixture",
+  "label": "NOT E5 / LOCAL SQLITE / MOCK OLLAMA NOT REAL LLM / NO CLOUD",
+  "source_base": "24d56a9af81d0277224dc0f3b7eff5fd0f395bf3",
+  "browser": "157.0.4341.42",
+  "head": "24d56a9af81d0277224dc0f3b7eff5fd0f395bf3",
+  "seed": {
+    "id": "68a417f7-ecf0-455c-9724-7f068539f218",
+    "created_at": "2026-11-12T16:41:16.326002+00:00",
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "pvl-demo-68a417f7ecf0455c97247f068539f218"
+    },
+    "document_id": "9de9007b-d97d-4823-ba3c-fc7aaff768bf",
+    "draft_id": "c3e7c5af-e684-47ce-bfc6-96e7f4c8da51",
+    "version_id": "c3e7c5af-e684-47ce-bfc6-96e7f4c8da51",
+    "chunk_id": "0460435e-6595-54ce-af59-9223f4e05401",
+    "job_id": "ce70427b-686f-571f-acba-1b7d338fe438",
+    "completed": {
+      "upload": true,
+      "extract": true,
+      "chunks": true,
+      "embedding": true,
+      "upsert": true,
+      "search": false,
+      "rag": false
+    },
+    "source_error": null,
+    "embedding_mode": "test-fixture-not-e5",
+    "rag_outcome": null,
+    "provenance": "Project-authored CC0-1.0 synthetic Vietnamese sample; LOCAL DEMO only",
+    "reset_policy": "Tour metadata/simulation only. No data deletion endpoint.",
+    "draft": "90d3dc72-9fd5-4560-8a8d-9af7801ef94a",
+    "vector": "pvl-78b465a4-059c-53c1-bf71-aa6b2de2dc17"
+  },
+  "captures": [
+    {
+      "file": "rag-chat-visible-1440.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small:visible",
+        ".search-trace .document-panel-heading > strong:visible",
+        ".search-trace li > span:last-child:visible",
+        ".vector-metrics > span:nth-child(3) strong:visible",
+        ".vector-metrics > span:nth-child(4) strong:visible"
+      ],
+      "url": "/search?demoDocument=9de9007b-d97d-4823-ba3c-fc7aaff768bf&demoVersion=c3e7c5af-e684-47ce-bfc6-96e7f4c8da51&demoChunk=0460435e-6595-54ce-af59-9223f4e05401&demoNamespace=pvl-demo-68a417f7ecf0455c97247f068539f218"
+    },
+    {
+      "file": "rag-chat-visible-1024.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small:visible",
+        ".search-trace .document-panel-heading > strong:visible",
+        ".search-trace li > span:last-child:visible",
+        ".vector-metrics > span:nth-child(3) strong:visible",
+        ".vector-metrics > span:nth-child(4) strong:visible"
+      ],
+      "url": "/search?demoDocument=9de9007b-d97d-4823-ba3c-fc7aaff768bf&demoVersion=c3e7c5af-e684-47ce-bfc6-96e7f4c8da51&demoChunk=0460435e-6595-54ce-af59-9223f4e05401&demoNamespace=pvl-demo-68a417f7ecf0455c97247f068539f218"
+    },
+    {
+      "file": "rag-chat-visible-768.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small:visible",
+        ".search-trace .document-panel-heading > strong:visible",
+        ".search-trace li > span:last-child:visible",
+        ".vector-metrics > span:nth-child(3) strong:visible",
+        ".vector-metrics > span:nth-child(4) strong:visible"
+      ],
+      "url": "/search?demoDocument=9de9007b-d97d-4823-ba3c-fc7aaff768bf&demoVersion=c3e7c5af-e684-47ce-bfc6-96e7f4c8da51&demoChunk=0460435e-6595-54ce-af59-9223f4e05401&demoNamespace=pvl-demo-68a417f7ecf0455c97247f068539f218"
+    },
+    {
+      "file": "rag-chat-visible-390.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small:visible",
+        ".search-trace .document-panel-heading > strong:visible",
+        ".search-trace li > span:last-child:visible",
+        ".vector-metrics > span:nth-child(3) strong:visible",
+        ".vector-metrics > span:nth-child(4) strong:visible"
+      ],
+      "url": "/search?demoDocument=9de9007b-d97d-4823-ba3c-fc7aaff768bf&demoVersion=c3e7c5af-e684-47ce-bfc6-96e7f4c8da51&demoChunk=0460435e-6595-54ce-af59-9223f4e05401&demoNamespace=pvl-demo-68a417f7ecf0455c97247f068539f218"
+    },
+    {
+      "screen": "rag-chat",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    }
+  ],
+  "accessibility": [
+    {
+      "screen": "rag-chat",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "rag-chat",
+      "width": 390,
+      "violations": []
+    }
+  ],
+  "provenance": "Bundled project-authored CC0 Vietnamese sample; separate ignored data root; BEFORE never overwritten",
+  "transport": "Actual isolated backend services",
+  "review": "Candidate for independent ChatGPT/owner visual review, not automatically approved"
+}

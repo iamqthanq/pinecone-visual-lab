@@ -8,27 +8,10 @@ import { vectorStoreAPI as api } from './vector-store-api'
 import type { CreatePreview, Deletion, FetchedVectors, IndexInfo, Manifest, StorePage, StoreStatus, StoreTarget } from './vector-store-api'
 import './vectors.css'
 import './vector-store.css'
+import { StoredVectorInspector } from './StoredVectorInspector'
+export { StoredVectorInspector } from './StoredVectorInspector'
 import { demoSelection } from './guided-state'
-
-export function StoredVectorInspector({ fetched, onNotice }: { fetched: FetchedVectors; onNotice: (message: string) => void }) {
-  const [table, setTable] = useState(false)
-  const record = fetched.records[0]
-  if (!record) return <Panel className="store-panel"><h2>Vector not found</h2><p>The adapter returned no record for this ID in the selected namespace.</p></Panel>
-  const metadata = record.metadata
-  return <Panel className="store-panel vector-inspector" label="Stored vector inspector">
-    <div className="document-panel-heading"><h2>Fetched vector</h2><Badge tone="green">{record.values.length} DIMENSIONS</Badge></div>
-    <p className="mono store-id">{record.id}</p><p className="config-hint">Actual {fetched.data_origin} · {fetched.target.index} / {fetched.target.namespace || '(default namespace)'}</p>
-    {metadata.embedding_mode !== 'e5' && <p className="doc-warning">NOT E5 / unverified origin. Fixture vectors are not semantic embeddings.</p>}
-    <div className="vector-metrics"><span><small>L2 NORM</small><strong>{Math.hypot(...record.values).toFixed(6)}</strong></span><span><small>MODEL</small><strong>{String(metadata.model_id ?? 'Not supplied')}</strong></span></div>
-    <dl className="store-metadata">{Object.entries(metadata).map(([key, value]) => <div key={key}><dt>{key}</dt><dd>{String(value)}</dd></div>)}</dl>
-    <div className="vector-view-controls"><div role="group" aria-label="Stored vector view"><Button aria-pressed={!table} onClick={() => setTable(false)}>Heatmap</Button><Button aria-pressed={table} onClick={() => setTable(true)}>Table</Button></div><Button onClick={() => {
-      void navigator.clipboard.writeText(JSON.stringify({ ...record, target: fetched.target, data_origin: fetched.data_origin })).then(() => onNotice('Full stored vector JSON copied.')).catch(() => onNotice('Clipboard unavailable. Select values from the table.'))
-    }}>Copy stored vector JSON</Button></div>
-    {table ? <div className="vector-table-scroll" tabIndex={0} role="region" aria-label="Stored vector numeric values"><table><caption>All 384 dimensions · zero-based index</caption><thead><tr><th scope="col">Dimension</th><th scope="col">Value</th></tr></thead><tbody>{record.values.map((value, index) => <tr key={index}><th scope="row">{index}</th><td>{value.toPrecision(9)}</td></tr>)}</tbody></table></div>
-      : <><div className="vector-heatmap" role="group" aria-label="Stored vector 384 dimensions">{record.values.map((value, index) => <span key={index} role="img" aria-label={`Dimension ${index}: ${value.toFixed(6)}`} title={`${index}: ${value}`} style={{ background: value >= 0 ? `rgba(124,231,203,${0.15 + Math.min(0.85, Math.abs(value) * 5)})` : `rgba(158,142,247,${0.15 + Math.min(0.85, Math.abs(value) * 5)})` }} />)}</div><p className="config-hint">Indices 0–383, row by row. Mint ≥ 0; violet &lt; 0. Color encodes magnitude. Table exposes every numeric value.</p></>}
-    <p className="config-hint">A fetched record proves storage, not search quality. Cosine is geometry, not a probability. Top-k retrieval is available in Search Lab. <Link to="/documents">Inspect original documents</Link>.</p>
-  </Panel>
-}
+import { useDataMotion } from './useDataMotion'
 
 export default function VectorStoreLab() {
   const selection = demoSelection(useLocation().search)
@@ -44,6 +27,8 @@ export default function VectorStoreLab() {
   const [version, setVersion] = useState('')
   const [jobs, setJobs] = useState<Manifest[]>([])
   const [job, setJob] = useState<Manifest | null>(null)
+  const manifest = useRef<HTMLElement>(null)
+  useDataMotion(manifest, job, { selector: '.badge, progress' })
   const [confirmed, setConfirmed] = useState(false)
   const [page, setPage] = useState<StorePage | null>(null)
   const [fetched, setFetched] = useState<FetchedVectors | null>(null)
@@ -115,7 +100,7 @@ export default function VectorStoreLab() {
         <label>Confirmed source version<select aria-label="Confirmed source version" value={version} onChange={event => { setVersion(event.target.value); setConfirmed(false) }}><option value="">Choose a confirmed version</option>{doc?.versions.filter(item => item.state === 'confirmed').map(item => <option key={item.id} value={item.id}>Version {item.version} · {item.config.size}/{item.config.overlap}</option>)}</select></label>
         <Button disabled={!target || !doc || !version || mode === 'live' && fixture} onClick={() => { if (target && doc) void run('Creating a source-linked manifest…', async () => { const preview = await api.preview(target, doc.id, version); setJob(preview); setConfirmed(false); setDeletion(null); setJobs((await api.jobs(target)).jobs) }) }}>Preview ingest</Button>
       </Panel>
-      <Panel className="store-panel" label="Manifest progress"><h2>3. Confirm, ingest and verify</h2>
+      <Panel ref={manifest} className="store-panel" label="Manifest progress"><h2>3. Confirm, ingest and verify</h2>
         <label>Saved manifest<select aria-label="Saved manifest" value={job?.id ?? ''} onChange={event => { setJob(jobs.find(item => item.id === event.target.value) ?? null); setDeletion(null); setDeleteConfirmed(false); setConfirmed(false) }}><option value="">Choose a manifest</option>{jobs.map(item => <option key={item.id} value={item.id}>{item.id.slice(0, 8)} · {item.state} · {item.count} vectors</option>)}</select></label>
         {job ? <><p className="mono store-id">Manifest {job.id}<br />Document {job.document_id}<br />Version {job.version_id}</p><Badge tone={job.state === 'active' ? 'green' : 'muted'}>{job.state.toUpperCase()}</Badge><p className="config-hint">Exact target: {job.target.mode.toUpperCase()} / {job.target.index} / {job.target.namespace || '(default)'} · {job.count} owned IDs</p>
           <label htmlFor="ingest-progress">Upserted {job.checkpoint}/{job.count} · verified {job.verified}/{job.count} · retries {job.retries}</label><progress id="ingest-progress" max={job.count * 2 || 1} value={job.checkpoint + job.verified} />

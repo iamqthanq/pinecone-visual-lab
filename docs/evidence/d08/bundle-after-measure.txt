@@ -1,0 +1,5 @@
+COMMAND: .venv/Scripts/python.exe scripts/measure_bundle.py after apps/web/dist
+{"entry": "index-DAPfpF_0.js", "total_js_bytes": 670979, "chunks": 24}
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 1.00

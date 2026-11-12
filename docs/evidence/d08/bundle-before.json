@@ -1,0 +1,24 @@
+{
+  "label": "before",
+  "command": "npm.cmd run build",
+  "entry": "index-BHBSqUm6.js",
+  "assets": [
+    {
+      "file": "index-BbmNN3MS.css",
+      "bytes": 73570,
+      "gzip_bytes": 17730,
+      "sha256": "5976c3e942e0db6ea2ce2231897e3cff9a8a57000a400501774df3180c6c280e"
+    },
+    {
+      "file": "index-BHBSqUm6.js",
+      "bytes": 660065,
+      "gzip_bytes": 207628,
+      "sha256": "b83f9038ac8974ab1f20234ee91c06f262aa9e7b46bfe6c38c317a81295d9ee0"
+    }
+  ],
+  "total_js_bytes": 660065,
+  "total_js_gzip_bytes": 207628,
+  "source_maps": [],
+  "manifest": null,
+  "gzip_note": "gzip estimate of emitted bytes; local preview serves uncompressed HTTP"
+}

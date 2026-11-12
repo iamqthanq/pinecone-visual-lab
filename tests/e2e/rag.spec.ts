@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 
 const fixture = process.env.PVL_E2E_FIXTURE === '1'
-const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d07'
+const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d08/regression'
 
 test('RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → verified citations/context → exact source', async ({ page, request }) => {
   test.setTimeout(240000)
@@ -58,7 +58,7 @@ test('RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → 
   const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()
   expect(axe.violations.filter(v => ['serious', 'critical'].includes(v.impact ?? '')).map(v => ({ id: v.id, summary: v.nodes[0]?.failureSummary }))).toEqual([])
   await mkdir(evidence, { recursive: true })
-  await writeFile(fixture ? 'docs/evidence/d07/fixture-rag-example.json' : 'docs/evidence/d07/browser-rag-example.json', JSON.stringify({ label: `${fixture ? 'NOT E5' : 'REAL E5'} / SQLite / MOCK OLLAMA / NOT REAL LLM / NO CLOUD`, request: response.request().postDataJSON(), response: result }, null, 2) + '\n', 'utf8')
+  await writeFile(fixture ? 'docs/evidence/d08/regression/fixture-rag-example.json' : 'docs/evidence/d08/regression/browser-rag-example.json', JSON.stringify({ label: `${fixture ? 'NOT E5' : 'REAL E5'} / SQLite / MOCK OLLAMA / NOT REAL LLM / NO CLOUD`, request: response.request().postDataJSON(), response: result }, null, 2) + '\n', 'utf8')
   await page.evaluate(() => { (document.activeElement as HTMLElement)?.blur(); scrollTo(0, 0) })
   await page.screenshot({ path: `${evidence}/rag-desktop-1440.png`, fullPage: true })
   for (const width of [1024, 768, 390, 320]) {
@@ -135,6 +135,6 @@ test('RAG: untrusted source with forged citation fails closed through actual bac
   expect(result.used_sources.every((s: { cited: boolean }) => !s.cited)).toBeTruthy()
   await expect(page.getByRole('region', { name: 'Evidence answer' })).toContainText('INVALID CITATIONS')
   expect(await page.locator('.rag-answer, .rag-history script').count()).toBe(0)
-  const output = fixture ? 'docs/evidence/d07/fixture-invalid-citation.json' : 'docs/evidence/d07/real-e5-invalid-citation.json'
+  const output = fixture ? 'docs/evidence/d08/regression/fixture-invalid-citation.json' : 'docs/evidence/d08/regression/real-e5-invalid-citation.json'
   await writeFile(output, JSON.stringify({ label: `${fixture ? 'NOT E5' : 'REAL E5'} / MOCK OLLAMA / malicious source is test data, not instructions`, response: result }, null, 2) + '\n', 'utf8')
 })

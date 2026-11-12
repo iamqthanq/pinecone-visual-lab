@@ -1,0 +1,954 @@
+[
+  {
+    "file": "architecture-compaction-1024.png",
+    "before_size": [
+      1024,
+      3906
+    ],
+    "after_size": [
+      1024,
+      4173
+    ],
+    "different_pixels": 2919830,
+    "padded_canvas_pixels": 4273152,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-compaction-1440.png",
+    "before_size": [
+      1440,
+      3701
+    ],
+    "after_size": [
+      1440,
+      3947
+    ],
+    "different_pixels": 4081093,
+    "padded_canvas_pixels": 5683680,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-compaction-390.png",
+    "before_size": [
+      390,
+      5067
+    ],
+    "after_size": [
+      390,
+      5452
+    ],
+    "different_pixels": 1803186,
+    "padded_canvas_pixels": 2126280,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-compaction-768.png",
+    "before_size": [
+      768,
+      4665
+    ],
+    "after_size": [
+      768,
+      4562
+    ],
+    "different_pixels": 3037185,
+    "padded_canvas_pixels": 3582720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-read-1024.png",
+    "before_size": [
+      1024,
+      3164
+    ],
+    "after_size": [
+      1024,
+      3374
+    ],
+    "different_pixels": 2298406,
+    "padded_canvas_pixels": 3454976,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-read-1440.png",
+    "before_size": [
+      1440,
+      2960
+    ],
+    "after_size": [
+      1440,
+      3148
+    ],
+    "different_pixels": 3150205,
+    "padded_canvas_pixels": 4533120,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-read-390.png",
+    "before_size": [
+      390,
+      4355
+    ],
+    "after_size": [
+      390,
+      4682
+    ],
+    "different_pixels": 1538807,
+    "padded_canvas_pixels": 1825980,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-read-768.png",
+    "before_size": [
+      768,
+      3957
+    ],
+    "after_size": [
+      768,
+      3901
+    ],
+    "different_pixels": 2552860,
+    "padded_canvas_pixels": 3038976,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-write-1024.png",
+    "before_size": [
+      1024,
+      4626
+    ],
+    "after_size": [
+      1024,
+      4841
+    ],
+    "different_pixels": 3415138,
+    "padded_canvas_pixels": 4957184,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-write-1440.png",
+    "before_size": [
+      1440,
+      4313
+    ],
+    "after_size": [
+      1440,
+      4544
+    ],
+    "different_pixels": 4757689,
+    "padded_canvas_pixels": 6543360,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-write-390.png",
+    "before_size": [
+      390,
+      6165
+    ],
+    "after_size": [
+      390,
+      6679
+    ],
+    "different_pixels": 2220191,
+    "padded_canvas_pixels": 2604810,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "architecture-write-768.png",
+    "before_size": [
+      768,
+      5573
+    ],
+    "after_size": [
+      768,
+      5380
+    ],
+    "different_pixels": 3716483,
+    "padded_canvas_pixels": 4280064,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "chunks-versions-1024.png",
+    "before_size": [
+      1024,
+      2071
+    ],
+    "after_size": [
+      1024,
+      2530
+    ],
+    "different_pixels": 1918929,
+    "padded_canvas_pixels": 2590720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "chunks-versions-1440.png",
+    "before_size": [
+      1440,
+      1886
+    ],
+    "after_size": [
+      1440,
+      1991
+    ],
+    "different_pixels": 1530884,
+    "padded_canvas_pixels": 2867040,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "chunks-versions-390.png",
+    "before_size": [
+      390,
+      2831
+    ],
+    "after_size": [
+      390,
+      3129
+    ],
+    "different_pixels": 980311,
+    "padded_canvas_pixels": 1220310,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "chunks-versions-768.png",
+    "before_size": [
+      768,
+      2529
+    ],
+    "after_size": [
+      768,
+      2597
+    ],
+    "different_pixels": 1537098,
+    "padded_canvas_pixels": 1994496,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "delete-confirmation-1024.png",
+    "before_size": [
+      1024,
+      2378
+    ],
+    "after_size": [
+      1024,
+      2679
+    ],
+    "different_pixels": 2292206,
+    "padded_canvas_pixels": 2743296,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "delete-confirmation-1440.png",
+    "before_size": [
+      1440,
+      2099
+    ],
+    "after_size": [
+      1440,
+      2140
+    ],
+    "different_pixels": 2206452,
+    "padded_canvas_pixels": 3081600,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "delete-confirmation-390.png",
+    "before_size": [
+      390,
+      3113
+    ],
+    "after_size": [
+      390,
+      3399
+    ],
+    "different_pixels": 1152930,
+    "padded_canvas_pixels": 1325610,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "delete-confirmation-768.png",
+    "before_size": [
+      768,
+      2836
+    ],
+    "after_size": [
+      768,
+      2746
+    ],
+    "different_pixels": 1953790,
+    "padded_canvas_pixels": 2178048,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-source-1024.png",
+    "before_size": [
+      1024,
+      2123
+    ],
+    "after_size": [
+      1024,
+      2530
+    ],
+    "different_pixels": 1905513,
+    "padded_canvas_pixels": 2590720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-source-1440.png",
+    "before_size": [
+      1440,
+      1886
+    ],
+    "after_size": [
+      1440,
+      1991
+    ],
+    "different_pixels": 1531548,
+    "padded_canvas_pixels": 2867040,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-source-390.png",
+    "before_size": [
+      390,
+      2833
+    ],
+    "after_size": [
+      390,
+      3204
+    ],
+    "different_pixels": 1009481,
+    "padded_canvas_pixels": 1249560,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-source-768.png",
+    "before_size": [
+      768,
+      2581
+    ],
+    "after_size": [
+      768,
+      2597
+    ],
+    "different_pixels": 1474915,
+    "padded_canvas_pixels": 1994496,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-unselected-1024.png",
+    "before_size": [
+      1024,
+      803
+    ],
+    "after_size": [
+      1024,
+      1118
+    ],
+    "different_pixels": 799347,
+    "padded_canvas_pixels": 1144832,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-unselected-1440.png",
+    "before_size": [
+      1440,
+      900
+    ],
+    "after_size": [
+      1440,
+      900
+    ],
+    "different_pixels": 582326,
+    "padded_canvas_pixels": 1296000,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-unselected-390.png",
+    "before_size": [
+      390,
+      1343
+    ],
+    "after_size": [
+      390,
+      1421
+    ],
+    "different_pixels": 412409,
+    "padded_canvas_pixels": 554190,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "documents-unselected-768.png",
+    "before_size": [
+      768,
+      1144
+    ],
+    "after_size": [
+      768,
+      1136
+    ],
+    "different_pixels": 686050,
+    "padded_canvas_pixels": 878592,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "embeddings-1024.png",
+    "before_size": [
+      1024,
+      3149
+    ],
+    "after_size": [
+      1024,
+      3322
+    ],
+    "different_pixels": 2419006,
+    "padded_canvas_pixels": 3401728,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "embeddings-1440.png",
+    "before_size": [
+      1440,
+      2763
+    ],
+    "after_size": [
+      1440,
+      2986
+    ],
+    "different_pixels": 2676144,
+    "padded_canvas_pixels": 4299840,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "embeddings-390.png",
+    "before_size": [
+      390,
+      4242
+    ],
+    "after_size": [
+      390,
+      4281
+    ],
+    "different_pixels": 1316128,
+    "padded_canvas_pixels": 1669590,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "embeddings-768.png",
+    "before_size": [
+      768,
+      3255
+    ],
+    "after_size": [
+      768,
+      3394
+    ],
+    "different_pixels": 2265764,
+    "padded_canvas_pixels": 2606592,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-complete-1024.png",
+    "before_size": [
+      1024,
+      4730
+    ],
+    "after_size": [
+      1024,
+      5063
+    ],
+    "different_pixels": 3657578,
+    "padded_canvas_pixels": 5184512,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-complete-1440.png",
+    "before_size": [
+      1440,
+      4525
+    ],
+    "after_size": [
+      1440,
+      4677
+    ],
+    "different_pixels": 4752051,
+    "padded_canvas_pixels": 6734880,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-complete-390.png",
+    "before_size": [
+      390,
+      6436
+    ],
+    "after_size": [
+      390,
+      6869
+    ],
+    "different_pixels": 2268634,
+    "padded_canvas_pixels": 2678910,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-complete-768.png",
+    "before_size": [
+      768,
+      5787
+    ],
+    "after_size": [
+      768,
+      5452
+    ],
+    "different_pixels": 3878120,
+    "padded_canvas_pixels": 4444416,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-embedding-1024.png",
+    "before_size": [
+      1024,
+      3799
+    ],
+    "after_size": [
+      1024,
+      4029
+    ],
+    "different_pixels": 2999770,
+    "padded_canvas_pixels": 4125696,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-embedding-1440.png",
+    "before_size": [
+      1440,
+      3710
+    ],
+    "after_size": [
+      1440,
+      3863
+    ],
+    "different_pixels": 4083629,
+    "padded_canvas_pixels": 5562720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-embedding-390.png",
+    "before_size": [
+      390,
+      5283
+    ],
+    "after_size": [
+      390,
+      5332
+    ],
+    "different_pixels": 1732933,
+    "padded_canvas_pixels": 2079480,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "guided-embedding-768.png",
+    "before_size": [
+      768,
+      4144
+    ],
+    "after_size": [
+      768,
+      4122
+    ],
+    "different_pixels": 2665036,
+    "padded_canvas_pixels": 3182592,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "invalid-config-1024.png",
+    "before_size": [
+      1024,
+      2239
+    ],
+    "after_size": [
+      1024,
+      2679
+    ],
+    "different_pixels": 2028161,
+    "padded_canvas_pixels": 2743296,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "invalid-config-1440.png",
+    "before_size": [
+      1440,
+      1981
+    ],
+    "after_size": [
+      1440,
+      2140
+    ],
+    "different_pixels": 1693924,
+    "padded_canvas_pixels": 3081600,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "invalid-config-390.png",
+    "before_size": [
+      390,
+      2964
+    ],
+    "after_size": [
+      390,
+      3399
+    ],
+    "different_pixels": 1074413,
+    "padded_canvas_pixels": 1325610,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "invalid-config-768.png",
+    "before_size": [
+      768,
+      2697
+    ],
+    "after_size": [
+      768,
+      2746
+    ],
+    "different_pixels": 1622720,
+    "padded_canvas_pixels": 2108928,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "offline-fault-1024.png",
+    "before_size": [
+      1024,
+      1602
+    ],
+    "after_size": [
+      1024,
+      2403
+    ],
+    "different_pixels": 1838637,
+    "padded_canvas_pixels": 2460672,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "offline-fault-1440.png",
+    "before_size": [
+      1440,
+      1375
+    ],
+    "after_size": [
+      1440,
+      1538
+    ],
+    "different_pixels": 1245475,
+    "padded_canvas_pixels": 2214720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "offline-fault-390.png",
+    "before_size": [
+      390,
+      2973
+    ],
+    "after_size": [
+      390,
+      3361
+    ],
+    "different_pixels": 810732,
+    "padded_canvas_pixels": 1310790,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "offline-fault-768.png",
+    "before_size": [
+      768,
+      2174
+    ],
+    "after_size": [
+      768,
+      2467
+    ],
+    "different_pixels": 1458930,
+    "padded_canvas_pixels": 1894656,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "overview-1024.png",
+    "before_size": [
+      1024,
+      1602
+    ],
+    "after_size": [
+      1024,
+      2403
+    ],
+    "different_pixels": 1838637,
+    "padded_canvas_pixels": 2460672,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "overview-1440.png",
+    "before_size": [
+      1440,
+      1375
+    ],
+    "after_size": [
+      1440,
+      1538
+    ],
+    "different_pixels": 1245600,
+    "padded_canvas_pixels": 2214720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "overview-390.png",
+    "before_size": [
+      390,
+      2976
+    ],
+    "after_size": [
+      390,
+      3361
+    ],
+    "different_pixels": 806657,
+    "padded_canvas_pixels": 1310790,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "overview-768.png",
+    "before_size": [
+      768,
+      2174
+    ],
+    "after_size": [
+      768,
+      2467
+    ],
+    "different_pixels": 1458930,
+    "padded_canvas_pixels": 1894656,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-1024.png",
+    "before_size": [
+      1024,
+      3233
+    ],
+    "after_size": [
+      1024,
+      3686
+    ],
+    "different_pixels": 2693134,
+    "padded_canvas_pixels": 3774464,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-1440.png",
+    "before_size": [
+      1440,
+      2807
+    ],
+    "after_size": [
+      1440,
+      3263
+    ],
+    "different_pixels": 3508685,
+    "padded_canvas_pixels": 4698720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-390.png",
+    "before_size": [
+      390,
+      4403
+    ],
+    "after_size": [
+      390,
+      5017
+    ],
+    "different_pixels": 1626705,
+    "padded_canvas_pixels": 1956630,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-768.png",
+    "before_size": [
+      768,
+      3516
+    ],
+    "after_size": [
+      768,
+      3847
+    ],
+    "different_pixels": 2585770,
+    "padded_canvas_pixels": 2954496,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-visible-1024.png",
+    "before_size": [
+      1024,
+      3233
+    ],
+    "after_size": [
+      1024,
+      3686
+    ],
+    "different_pixels": 2692949,
+    "padded_canvas_pixels": 3774464,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-visible-1440.png",
+    "before_size": [
+      1440,
+      2807
+    ],
+    "after_size": [
+      1440,
+      3263
+    ],
+    "different_pixels": 3508172,
+    "padded_canvas_pixels": 4698720,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-visible-390.png",
+    "before_size": [
+      390,
+      4403
+    ],
+    "after_size": [
+      390,
+      5017
+    ],
+    "different_pixels": 1626705,
+    "padded_canvas_pixels": 1956630,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "rag-chat-visible-768.png",
+    "before_size": [
+      768,
+      3516
+    ],
+    "after_size": [
+      768,
+      3847
+    ],
+    "different_pixels": 2586130,
+    "padded_canvas_pixels": 2954496,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "semantic-search-1024.png",
+    "before_size": [
+      1024,
+      3993
+    ],
+    "after_size": [
+      1024,
+      4576
+    ],
+    "different_pixels": 3434427,
+    "padded_canvas_pixels": 4685824,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "semantic-search-1440.png",
+    "before_size": [
+      1440,
+      3098
+    ],
+    "after_size": [
+      1440,
+      3640
+    ],
+    "different_pixels": 3995459,
+    "padded_canvas_pixels": 5241600,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "semantic-search-390.png",
+    "before_size": [
+      390,
+      5371
+    ],
+    "after_size": [
+      390,
+      6292
+    ],
+    "different_pixels": 2111930,
+    "padded_canvas_pixels": 2453880,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "semantic-search-768.png",
+    "before_size": [
+      768,
+      4330
+    ],
+    "after_size": [
+      768,
+      4664
+    ],
+    "different_pixels": 3143961,
+    "padded_canvas_pixels": 3581952,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "vector-explorer-1024.png",
+    "before_size": [
+      1024,
+      3196
+    ],
+    "after_size": [
+      1024,
+      3992
+    ],
+    "different_pixels": 3081581,
+    "padded_canvas_pixels": 4087808,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "vector-explorer-1440.png",
+    "before_size": [
+      1440,
+      3568
+    ],
+    "after_size": [
+      1440,
+      3940
+    ],
+    "different_pixels": 4195177,
+    "padded_canvas_pixels": 5673600,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "vector-explorer-390.png",
+    "before_size": [
+      390,
+      4760
+    ],
+    "after_size": [
+      390,
+      5364
+    ],
+    "different_pixels": 1737821,
+    "padded_canvas_pixels": 2091960,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  },
+  {
+    "file": "vector-explorer-768.png",
+    "before_size": [
+      768,
+      3892
+    ],
+    "after_size": [
+      768,
+      4024
+    ],
+    "different_pixels": 2600444,
+    "padded_canvas_pixels": 3090432,
+    "interpretation": "Intentional design comparison; not a regression PASS/fail threshold"
+  }
+]

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import {
   ArrowDown, ArrowRight, ArrowUpRight, Blocks, BookOpen, Box, Braces, Check,
@@ -10,14 +10,26 @@ import type { LucideIcon } from 'lucide-react'
 import { getHealth } from './api'
 import type { Health } from './api'
 import { Badge, Button, LoadingState, Panel } from './components'
-import DocumentsLab from './DocumentsLab'
-import VectorsLab from './VectorsLab'
-import VectorStoreLab from './VectorStoreLab'
-import SearchLab from './SearchLab'
-import ArchitectureLab from './ArchitectureLab'
-import GuidedPanel from './GuidedPanel'
+import LabBoundary from './LabBoundary'
 import { GuidedProvider } from './GuidedContext'
 import { useGuided } from './guided-context'
+import { useDataMotion } from './useDataMotion'
+
+const DocumentsLab = lazy(() => import('./DocumentsLab'))
+const VectorsLab = lazy(() => import('./VectorsLab'))
+const VectorStoreLab = lazy(() => import('./VectorStoreLab'))
+const SearchLab = lazy(() => import('./SearchLab'))
+const ArchitectureLab = lazy(() => import('./ArchitectureLab'))
+const GuidedPanel = lazy(() => import('./GuidedPanel'))
+
+function OpeningLab({ label, onCancel }: { label: string; onCancel?: () => void }) {
+  return <div className="lab-loading" role="status" aria-busy="true"><span aria-hidden="true" />Opening {label}…{onCancel && <Button onClick={onCancel}>Cancel Guided Demo</Button>}</div>
+}
+function GuideSurface() {
+  const guide = useGuided()
+  if (!guide?.memory && !guide?.error) return null
+  return <LabBoundary label="Guided Demo" onCancel={guide.cancel}><Suspense fallback={<OpeningLab label="Guided Demo" onCancel={guide.cancel} />}><GuidedPanel /></Suspense></LabBoundary>
+}
 
 const repo = 'https://github.com/iamqthanq/pinecone-visual-lab'
 const labs: { path: string; title: string; short: string; icon: LucideIcon;
@@ -68,6 +80,9 @@ function Brand() {
 }
 
 function Pipeline() {
+  const guide = useGuided()
+  const reveal = useRef<HTMLElement>(null)
+  useDataMotion(reveal, guide?.session?.completed, { selector: '.pipeline-stage' })
   const stages = [
     { name: 'Documents', detail: 'PDF / TXT', icon: FileText, to: '/documents' },
     { name: 'Chunks', detail: 'Source-linked text', icon: Split, to: '/documents' },
@@ -76,9 +91,9 @@ function Pipeline() {
     { name: 'Search', detail: 'Top-k retrieval', icon: Search, to: '/search' },
     { name: 'Answer', detail: 'Optional local RAG', icon: MessageSquare, to: '/search' },
   ]
-  return <Panel className="pipeline-panel" label="Learning pipeline roadmap">
+  return <Panel ref={reveal} className="pipeline-panel" label="Learning pipeline roadmap">
     <div className="section-heading"><div><span className="eyebrow">THE LEARNING PATH</span>
-      <h2>One document. Every step visible.</h2></div><Badge>D07 GUIDED DEMO + SIMULATOR</Badge></div>
+      <h2>One document. Every step visible.</h2></div><Badge>LOCAL GUIDED DEMO + SIMULATION</Badge></div>
     <ol className="pipeline" id="pipeline">{stages.map((stage, index) =>
       <li key={stage.name}><Link to={stage.to} className="pipeline-stage">
         <span className="stage-top"><span className="mono">0{index + 1}</span><ArrowUpRight size={14} /></span>
@@ -117,7 +132,7 @@ function ConnectionPanel({ connection, refresh }: { connection: Connection; refr
 function Overview({ connection, refresh }: { connection: Connection; refresh: () => void }) {
   const guide = useGuided()
   return <>
-    <div className="page-meta"><span className="page-tag"><span className="status-dot online" />D07 · GUIDED VECTOR WORKBENCH</span>
+    <div className="page-meta"><span className="page-tag"><span className="status-dot online" />D08 · SEMINAR VECTOR WORKBENCH</span>
       <span className="mono meta-right">A WORKBENCH FOR VECTOR DATABASES</span></div>
     <div className="overview-top">
       <section className="intro"><span className="eyebrow accent">LEARN BY LOOKING INSIDE</span>
@@ -178,6 +193,14 @@ function AppShell() {
   const { connection, refresh } = useBackend()
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const previousRoute = useRef(location.pathname + location.search)
+  useEffect(() => {
+    const route = location.pathname + location.search
+    if (previousRoute.current === route) return
+    previousRoute.current = route
+    const frame = requestAnimationFrame(() => document.getElementById('main')?.focus())
+    return () => cancelAnimationFrame(frame)
+  }, [location.pathname, location.search])
   const currentLab = labs.find(lab => location.pathname === lab.path || location.pathname.startsWith(`${lab.path}/`))
   useEffect(() => {
     document.title = `${currentLab?.title ?? 'Overview'} · Pinecone Visual Lab`
@@ -196,18 +219,18 @@ function AppShell() {
         {labs.map(lab => <NavLink to={lab.path} key={lab.path}><lab.icon size={19} /><span>{lab.title}</span></NavLink>)}
       </nav>
       <div className="sidebar-guide"><span className="guide-icon"><BookOpen size={18} /></span><strong>Built to explain.</strong>
-        <p>Follow the data. Understand<br />the decisions along the way.</p><Link to="/architecture" onClick={() => setMenuOpen(false)}>See the roadmap<ArrowUpRight size={15} /></Link></div>
-      <div className="sidebar-bottom"><a href={`${repo}/issues/13`} target="_blank" rel="noreferrer"><CircleHelp size={17} />D07 specification<ArrowUpRight size={13} /></a>
-        <div><span className="version-mark">pvl</span><span className="mono">v0.7.0 · Guided + Simulation</span></div></div>
+        <p>Follow the data. Understand<br />the decisions along the way.</p><Link to="/architecture" onClick={() => setMenuOpen(false)}>Open Slab Simulator<ArrowUpRight size={15} /></Link></div>
+      <div className="sidebar-bottom"><a href={`${repo}/issues/15`} target="_blank" rel="noreferrer"><CircleHelp size={17} />D08 specification<ArrowUpRight size={13} /></a>
+        <div><span className="version-mark">pvl</span><span className="mono">v0.8.0 · Seminar workbench</span></div></div>
     </aside>
     <div className="main-shell"><header className="topbar"><div className="breadcrumbs"><span>Workspace</span><ChevronRight size={14} /><span>{currentLab?.title ?? 'Overview'}</span></div>
       <div className="topbar-actions"><span className="local-chip"><span className="status-dot" />LOCAL WORKSPACE</span>
         <a href={repo} target="_blank" rel="noreferrer" className="repo-link" aria-label="Open GitHub repository"><Code2 size={18} /><span>Repository</span><ArrowUpRight size={13} /></a></div></header>
-      <main id="main" tabIndex={-1}><GuidedPanel /><Routes><Route path="/" element={<Overview connection={connection} refresh={refresh} />} />
+      <main id="main" tabIndex={-1}><GuideSurface /><LabBoundary key={location.pathname + location.search} label={currentLab?.title ?? 'Workspace'}><Suspense fallback={<OpeningLab label={currentLab?.title ?? 'Workspace'} />}><Routes><Route path="/" element={<Overview connection={connection} refresh={refresh} />} />
         <Route path="/vectors/store" element={<VectorStoreLab />} />
         {labs.map(lab => <Route key={lab.path} path={lab.path} element={lab.path === '/documents' ? <DocumentsLab /> : lab.path === '/vectors' ? <VectorsLab key={location.search} /> : lab.path === '/search' ? <SearchLab key={location.search} /> : lab.path === '/architecture' ? <ArchitecturePage /> : <PlannedLab lab={lab} />} />)}
         <Route path="*" element={<Panel className="planned-panel"><h1>Page not found</h1><p>This route is not part of the lab.</p><Link to="/" className="button">Back to overview</Link></Panel>} />
-      </Routes>
+      </Routes></Suspense></LabBoundary>
       <footer className="app-footer"><span><span className="footer-dot" />Pinecone Visual Lab</span><span>Vector databases, made visible.<span className="footer-divider">/</span>Seminar edition</span></footer>
       </main>
     </div>
