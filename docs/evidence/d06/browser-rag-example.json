@@ -1,0 +1,245 @@
+{
+  "label": "REAL E5 / SQLite / MOCK OLLAMA / NOT REAL LLM / NO CLOUD",
+  "request": {
+    "query": "Tìm kiếm vector sử dụng cosine như thế nào?",
+    "top_k": 1,
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "rag-seminar"
+    },
+    "filters": {
+      "document_id": "948bf802-a4ca-470e-add1-969393f32742"
+    },
+    "compare": false,
+    "confirm_live_read": false,
+    "confirm_live_compare": false,
+    "model": "qwen2.5:1.5b",
+    "llm_enabled": true
+  },
+  "response": {
+    "status": "answered",
+    "answer": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản. [S1]",
+    "no_answer_reason": null,
+    "used_sources": [
+      {
+        "source_id": "S1",
+        "hit": {
+          "id": "pvl-5ffb18d2-6856-5b0b-b745-21bf244e53e0",
+          "rank": 1,
+          "score": 0.8905605224071494,
+          "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+          "version_id": "da3203d8-8d6a-46a7-8f07-df0688eb2168",
+          "chunk_id": "b1092715-590f-542a-9c6b-3623710d01a0",
+          "source_name": "rag-kiến-thức.txt",
+          "page_start": 1,
+          "page_end": 1,
+          "text": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+          "snippet": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+          "source_url": "/documents?document=948bf802-a4ca-470e-add1-969393f32742&version=da3203d8-8d6a-46a7-8f07-df0688eb2168&chunk=b1092715-590f-542a-9c6b-3623710d01a0&page=1",
+          "metadata": {
+            "owner_job": "7aabf112-5603-5f36-a5d0-bcdce2767f02",
+            "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+            "version_id": "da3203d8-8d6a-46a7-8f07-df0688eb2168",
+            "chunk_id": "b1092715-590f-542a-9c6b-3623710d01a0",
+            "source_name": "rag-kiến-thức.txt",
+            "page_start": 1,
+            "page_end": 1,
+            "model_id": "intfloat/multilingual-e5-small",
+            "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+            "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+            "embedding_mode": "e5"
+          }
+        },
+        "text": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+        "truncated": false,
+        "cited": true
+      }
+    ],
+    "retrieval_hits": [
+      {
+        "id": "pvl-5ffb18d2-6856-5b0b-b745-21bf244e53e0",
+        "rank": 1,
+        "score": 0.8905605224071494,
+        "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+        "version_id": "da3203d8-8d6a-46a7-8f07-df0688eb2168",
+        "chunk_id": "b1092715-590f-542a-9c6b-3623710d01a0",
+        "source_name": "rag-kiến-thức.txt",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+        "snippet": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+        "source_url": "/documents?document=948bf802-a4ca-470e-add1-969393f32742&version=da3203d8-8d6a-46a7-8f07-df0688eb2168&chunk=b1092715-590f-542a-9c6b-3623710d01a0&page=1",
+        "metadata": {
+          "owner_job": "7aabf112-5603-5f36-a5d0-bcdce2767f02",
+          "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+          "version_id": "da3203d8-8d6a-46a7-8f07-df0688eb2168",
+          "chunk_id": "b1092715-590f-542a-9c6b-3623710d01a0",
+          "source_name": "rag-kiến-thức.txt",
+          "page_start": 1,
+          "page_end": 1,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      }
+    ],
+    "assembled_context": "{\"question\":\"Tìm kiếm vector sử dụng cosine như thế nào?\",\"sources\":[{\"source_id\":\"S1\",\"document_id\":\"948bf802-a4ca-470e-add1-969393f32742\",\"version_id\":\"da3203d8-8d6a-46a7-8f07-df0688eb2168\",\"chunk_id\":\"b1092715-590f-542a-9c6b-3623710d01a0\",\"source_name\":\"rag-kiến-thức.txt\",\"page_start\":1,\"page_end\":1,\"text\":\"Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.\"}]}",
+    "context_budget": {
+      "max_prompt_bytes": 3072,
+      "prompt_bytes": 1072,
+      "num_ctx": 4096,
+      "reply_token_reserve": 512,
+      "framing_token_reserve": 512,
+      "conservative_prompt_token_estimate": 1584,
+      "estimate_kind": "UTF-8 byte estimate plus framing reserve; NOT exact LLM/E5 tokens",
+      "request_attempted": true,
+      "warnings": []
+    },
+    "llm_model": {
+      "requested_model": "qwen2.5:1.5b",
+      "actual_model": "qwen2.5:1.5b",
+      "mode": "mock-ollama-not-real-llm",
+      "usage": {}
+    },
+    "search": {
+      "target": {
+        "mode": "local",
+        "index": "local-e5",
+        "namespace": "rag-seminar"
+      },
+      "top_k": 1,
+      "filters": {
+        "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+        "version_id": null,
+        "source_name": null,
+        "page_from": null,
+        "page_to": null
+      },
+      "retrieval_mode": "LOCAL EXACT COSINE",
+      "data_origin": "SQLite local_vectors + confirmed chunks",
+      "embedding": {
+        "mode": "e5",
+        "model_id": "intfloat/multilingual-e5-small",
+        "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+        "prefix": "query: ",
+        "input_token_count": 18,
+        "inference_ms": 41.70140001224354
+      },
+      "score_meaning": "Raw cosine similarity [-1,+1], not probability or percentage",
+      "hits": [
+        {
+          "id": "pvl-5ffb18d2-6856-5b0b-b745-21bf244e53e0",
+          "rank": 1,
+          "score": 0.8905605224071494,
+          "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+          "version_id": "da3203d8-8d6a-46a7-8f07-df0688eb2168",
+          "chunk_id": "b1092715-590f-542a-9c6b-3623710d01a0",
+          "source_name": "rag-kiến-thức.txt",
+          "page_start": 1,
+          "page_end": 1,
+          "text": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+          "snippet": "Cơ sở dữ liệu vector lưu embedding để tìm kiếm ngữ nghĩa. Cosine so sánh hướng của vector và trả về nguồn văn bản.",
+          "source_url": "/documents?document=948bf802-a4ca-470e-add1-969393f32742&version=da3203d8-8d6a-46a7-8f07-df0688eb2168&chunk=b1092715-590f-542a-9c6b-3623710d01a0&page=1",
+          "metadata": {
+            "owner_job": "7aabf112-5603-5f36-a5d0-bcdce2767f02",
+            "document_id": "948bf802-a4ca-470e-add1-969393f32742",
+            "version_id": "da3203d8-8d6a-46a7-8f07-df0688eb2168",
+            "chunk_id": "b1092715-590f-542a-9c6b-3623710d01a0",
+            "source_name": "rag-kiến-thức.txt",
+            "page_start": 1,
+            "page_end": 1,
+            "model_id": "intfloat/multilingual-e5-small",
+            "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+            "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+            "embedding_mode": "e5"
+          }
+        }
+      ],
+      "comparison": null,
+      "empty_reason": null,
+      "trace": {
+        "stages": [
+          {
+            "name": "input_validation",
+            "ms": 0.18459999409969896,
+            "status": "measured"
+          },
+          {
+            "name": "active_manifest_selection",
+            "ms": 1.0772000096039847,
+            "status": "measured"
+          },
+          {
+            "name": "metadata_prefilter",
+            "ms": 2.977000011014752,
+            "status": "measured"
+          },
+          {
+            "name": "source_lookup",
+            "ms": 0.7941999938338995,
+            "status": "measured"
+          },
+          {
+            "name": "query_embedding",
+            "ms": 43.726699994294904,
+            "status": "measured"
+          },
+          {
+            "name": "vector_query",
+            "ms": 0.3394000086700544,
+            "status": "measured"
+          },
+          {
+            "name": "source_hydration",
+            "ms": 0.03979999746661633,
+            "status": "measured"
+          },
+          {
+            "name": "active_source_revalidation",
+            "ms": 0.9967999940272421,
+            "status": "measured"
+          },
+          {
+            "name": "response_assembly",
+            "ms": 0.009499999578110874,
+            "status": "measured"
+          }
+        ],
+        "total_ms": 51.04130000108853,
+        "scope": "Server handler; excludes HTTP transfer and browser rendering",
+        "candidate_count": 1,
+        "candidate_count_kind": "exact stored eligible count",
+        "manifest_count": 1,
+        "discarded_count": 0,
+        "warnings": []
+      }
+    },
+    "trace": {
+      "total_ms": 64.14640000730287,
+      "stages": [
+        {
+          "name": "d05_retrieval",
+          "ms": 61.7229000054067
+        },
+        {
+          "name": "context_assembly",
+          "ms": 0.14579998969566077
+        },
+        {
+          "name": "ollama_request",
+          "ms": 0.7315999973798171
+        },
+        {
+          "name": "source_revalidation",
+          "ms": 1.5272000018740073
+        }
+      ],
+      "warnings": [],
+      "scope": "Measured server orchestration; nested D05 Search Trace is reported separately"
+    },
+    "grounding_policy": "Verified verbatim excerpts, not independently verified truth or relevance."
+  }
+}

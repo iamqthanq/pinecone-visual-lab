@@ -1,0 +1,15 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py -m real_model apps/api/tests/test_real_rag.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0 -- D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.venv\Scripts\python.exe
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\ddc4e15f687b47f492debc2a46739d4b\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 1 item
+
+apps\api\tests\test_real_rag.py::test_real_e5_rag_context_citation_fallback_and_no_cloud PASSED [100%]
+
+============================= 1 passed in 40.02s ==============================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 44.07

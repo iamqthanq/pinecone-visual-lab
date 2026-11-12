@@ -92,7 +92,7 @@ def test_real_e5_reference_pooling_prefix_batch_repeatability_and_vietnamese(tmp
             "load ms:",
             records[0]["load_ms"],
         )
-        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d05"
+        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d06"
         evidence.mkdir(parents=True, exist_ok=True)
         (evidence / "real-vector-sample.json").write_text(
             json.dumps({"record": records[0], "experiment": scores}, ensure_ascii=False, indent=2)

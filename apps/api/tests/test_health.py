@@ -15,8 +15,9 @@ def test_health_reports_real_process_and_explicit_capabilities():
     data = response.json()
     assert data["status"] == "ok"
     assert data["service"] == "pinecone-visual-lab-api"
-    assert data["phase"] == "D05"
+    assert data["phase"] == "D06"
     assert data["documents"] == "available"
+    assert data["rag"] == "optional_local"
     assert data["pinecone"] == "not_configured"
     assert data["embedding"] in {"not_cached", "not_loaded"}
     assert data["embedding_mode"] == "e5"
@@ -42,3 +43,6 @@ def test_future_lab_endpoints_are_not_implemented():
     assert client.post("/api/upload").status_code == 404
     assert client.post("/api/search").status_code == 422
     assert client.post("/api/rag").status_code == 404
+    assert client.post("/api/rag/chat").status_code == 422
+    assert client.get("/api/rag/status").json()["state"] == "disabled"
+    assert client.post("/api/simulator").status_code == 404

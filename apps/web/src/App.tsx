@@ -74,7 +74,7 @@ function Pipeline() {
   ]
   return <Panel className="pipeline-panel" label="Learning pipeline roadmap">
     <div className="section-heading"><div><span className="eyebrow">THE LEARNING PATH</span>
-      <h2>One document. Every step visible.</h2></div><Badge>D05 LOCAL READY · D06 PLANNED</Badge></div>
+      <h2>One document. Every step visible.</h2></div><Badge>D06 OPTIONAL LOCAL RAG</Badge></div>
     <ol className="pipeline" id="pipeline">{stages.map((stage, index) =>
       <li key={stage.name}><Link to={stage.to} className="pipeline-stage">
         <span className="stage-top"><span className="mono">0{index + 1}</span><ArrowUpRight size={14} /></span>
@@ -83,7 +83,7 @@ function Pipeline() {
       </Link>{index < stages.length - 1 && <ChevronRight className="stage-arrow" size={17} aria-hidden="true" />}</li>,
     )}</ol>
     <div className="pipeline-foot"><ShieldCheck size={15} /><span>Every result will link back to its source.</span>
-      <span className="pipeline-note">Documents, storage and semantic search; LIVE awaits authorization.</span></div>
+      <span className="pipeline-note">Search and optional local RAG; LIVE awaits authorization.</span></div>
   </Panel>
 }
 
@@ -112,7 +112,7 @@ function ConnectionPanel({ connection, refresh }: { connection: Connection; refr
 
 function Overview({ connection, refresh }: { connection: Connection; refresh: () => void }) {
   return <>
-    <div className="page-meta"><span className="page-tag"><span className="status-dot online" />D05 · SEMANTIC SEARCH LAB</span>
+    <div className="page-meta"><span className="page-tag"><span className="status-dot online" />D06 · SEARCH + LOCAL RAG</span>
       <span className="mono meta-right">A WORKBENCH FOR VECTOR DATABASES</span></div>
     <div className="overview-top">
       <section className="intro"><span className="eyebrow accent">LEARN BY LOOKING INSIDE</span>
@@ -130,11 +130,11 @@ function Overview({ connection, refresh }: { connection: Connection; refresh: ()
         <span className="section-aside">Choose a lab to see what comes next.</span></div>
       <div className="lab-grid">{labs.map(lab => <Link to={lab.path} key={lab.path} className="lab-card">
         <div className="lab-card-top"><span className="lab-icon"><lab.icon size={21} strokeWidth={1.5} /></span><ArrowUpRight size={17} /></div>
-        <h3>{lab.title}</h3><p>{lab.description}</p><div className="lab-card-bottom"><Badge>{lab.path === '/documents' ? 'D02 IMPLEMENTED' : lab.path === '/vectors' ? 'D03–D04 IMPLEMENTED' : lab.path === '/search' ? 'D05 IMPLEMENTED · D06 PLANNED' : 'PLANNED'}</Badge><span className="mono">{lab.phase}</span></div>
+        <h3>{lab.title}</h3><p>{lab.description}</p><div className="lab-card-bottom"><Badge>{lab.path === '/documents' ? 'D02 IMPLEMENTED' : lab.path === '/vectors' ? 'D03–D04 IMPLEMENTED' : lab.path === '/search' ? 'D05 SEARCH · D06 OPTIONAL RAG' : 'PLANNED'}</Badge><span className="mono">{lab.phase}</span></div>
       </Link>)}</div>
     </section>
     <div className="mode-strip"><span className="mode-symbol"><Network size={18} /></span>
-      <div><strong>Three perspectives. Clearly separated.</strong><p>Local storage and semantic search are available. Live awaits authorization; RAG and simulation remain planned.</p></div>
+      <div><strong>Three perspectives. Clearly separated.</strong><p>Local storage and semantic search are available. Optional local RAG is available; live and real Ollama await authorization. Simulation remains planned.</p></div>
       <Link to="/architecture" className="text-link">View architecture<ArrowRight size={16} /></Link></div>
   </>
 }
@@ -183,8 +183,8 @@ export default function App() {
       </nav>
       <div className="sidebar-guide"><span className="guide-icon"><BookOpen size={18} /></span><strong>Built to explain.</strong>
         <p>Follow the data. Understand<br />the decisions along the way.</p><Link to="/architecture" onClick={() => setMenuOpen(false)}>See the roadmap<ArrowUpRight size={15} /></Link></div>
-      <div className="sidebar-bottom"><a href={`${repo}/issues/9`} target="_blank" rel="noreferrer"><CircleHelp size={17} />D05 specification<ArrowUpRight size={13} /></a>
-        <div><span className="version-mark">pvl</span><span className="mono">v0.5.0 · Semantic search</span></div></div>
+      <div className="sidebar-bottom"><a href={`${repo}/issues/11`} target="_blank" rel="noreferrer"><CircleHelp size={17} />D06 specification<ArrowUpRight size={13} /></a>
+        <div><span className="version-mark">pvl</span><span className="mono">v0.6.0 · Optional local RAG</span></div></div>
     </aside>
     <div className="main-shell"><header className="topbar"><div className="breadcrumbs"><span>Workspace</span><ChevronRight size={14} /><span>{currentLab?.title ?? 'Overview'}</span></div>
       <div className="topbar-actions"><span className="local-chip"><span className="status-dot" />LOCAL WORKSPACE</span>

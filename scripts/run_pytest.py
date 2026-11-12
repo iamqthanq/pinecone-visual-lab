@@ -10,6 +10,7 @@ root = Path(__file__).resolve().parents[1]
 os.environ["PVL_DISABLE_CLOUD"] = "1"
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["PVL_OLLAMA_ENABLED"] = "0"  # only explicit injected mock transports in tests
 os.environ.pop("PINECONE_API_KEY", None)
 run = root / ".cache" / "pytest" / uuid4().hex
 run.mkdir(parents=True, exist_ok=False)

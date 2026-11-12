@@ -25,7 +25,7 @@ export function StoredVectorInspector({ fetched, onNotice }: { fetched: FetchedV
     }}>Copy stored vector JSON</Button></div>
     {table ? <div className="vector-table-scroll" tabIndex={0} role="region" aria-label="Stored vector numeric values"><table><caption>All 384 dimensions · zero-based index</caption><thead><tr><th scope="col">Dimension</th><th scope="col">Value</th></tr></thead><tbody>{record.values.map((value, index) => <tr key={index}><th scope="row">{index}</th><td>{value.toPrecision(9)}</td></tr>)}</tbody></table></div>
       : <><div className="vector-heatmap" role="group" aria-label="Stored vector 384 dimensions">{record.values.map((value, index) => <span key={index} role="img" aria-label={`Dimension ${index}: ${value.toFixed(6)}`} title={`${index}: ${value}`} style={{ background: value >= 0 ? `rgba(124,231,203,${0.15 + Math.min(0.85, Math.abs(value) * 5)})` : `rgba(158,142,247,${0.15 + Math.min(0.85, Math.abs(value) * 5)})` }} />)}</div><p className="config-hint">Indices 0–383, row by row. Mint ≥ 0; violet &lt; 0. Color encodes magnitude. Table exposes every numeric value.</p></>}
-    <p className="config-hint">A fetched record proves storage, not search quality. Cosine is geometry, not a probability. Top-k search comes in D05. <Link to="/documents">Inspect original documents</Link>.</p>
+    <p className="config-hint">A fetched record proves storage, not search quality. Cosine is geometry, not a probability. Top-k retrieval is available in Search Lab. <Link to="/documents">Inspect original documents</Link>.</p>
   </Panel>
 }
 

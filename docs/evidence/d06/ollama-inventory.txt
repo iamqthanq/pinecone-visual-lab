@@ -1,0 +1,10 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File docs/evidence/d06/ollama-inventory.ps1
+ollama in PATH: False
+Visible Ollama-named process count: 0
+Default per-user Windows binary exists: False
+No binary invoked, daemon probed, models enumerated/downloaded/loaded or service started.
+This inventory does not prove absence of another installation.
+REAL OLLAMA NOT VERIFIED - NEEDS USER INSTALL/APPROVAL
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.38

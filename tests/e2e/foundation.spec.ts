@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
-const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d05'
+const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d06'
 
 test('live API health, desktop navigation, accessibility, and screenshot', async ({ page, request }) => {
   const errors: string[] = []
@@ -9,7 +9,7 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
   const response = await request.get('http://127.0.0.1:8001/api/health')
   expect(response.ok()).toBeTruthy()
   expect(await response.json()).toMatchObject({
-    status: 'ok', phase: 'D05', documents: 'available', pinecone: 'not_configured',
+    status: 'ok', phase: 'D06', documents: 'available', pinecone: 'not_configured',
   })
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/')

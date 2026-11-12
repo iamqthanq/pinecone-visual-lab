@@ -5,7 +5,7 @@ import App from './App'
 import { getHealth } from './api'
 
 const health = {
-  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.5.0', phase: 'D05', search: 'available', vector_store: 'local_available', documents: 'available',
+  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.6.0', phase: 'D06', rag: 'optional_local', search: 'available', vector_store: 'local_available', documents: 'available',
   timestamp: new Date().toISOString(), pinecone: 'not_configured', embedding: 'not_loaded', embedding_mode: 'e5',
 }
 
@@ -29,7 +29,7 @@ describe('D01 foundation', () => {
     expect(await screen.findByText('ONLINE')).toBeInTheDocument()
     expect(screen.getByText('NOT CONFIGURED')).toBeInTheDocument()
     expect(screen.getByText('NOT LOADED')).toBeInTheDocument()
-    expect(screen.getByText('Documents, storage and semantic search; LIVE awaits authorization.')).toBeInTheDocument()
+    expect(screen.getByText('Search and optional local RAG; LIVE awaits authorization.')).toBeInTheDocument()
   })
 
   it('shows disconnected help and can reconnect through the retry control', async () => {

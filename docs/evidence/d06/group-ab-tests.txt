@@ -1,0 +1,16 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py apps/api/tests/test_ollama.py apps/api/tests/test_rag.py
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\0b8fe8ce259045b38d3c4bbee74792e8\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 54 items
+
+apps\api\tests\test_ollama.py ............................               [ 51%]
+apps\api\tests\test_rag.py ..........................                    [100%]
+
+============================= 54 passed in 22.51s =============================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 24.66

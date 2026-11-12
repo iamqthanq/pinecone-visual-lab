@@ -3,9 +3,9 @@
 Follow `GITHUB_COLLAB_WORKFLOW_STANDARD.md` for Issue → push → ChatGPT PR/review → user merge; obey project branch protections.
 
 - Work in this existing Windows checkout with PowerShell and Git for Windows. Read `docs/BRANCH_POLICY.md` first.
-- One phase = one Issue = one feature branch = one Draft PR. Active: D05, Issue #9, `feature/issue-9-semantic-search`, integration base `main` (D04 merged in PR #8).
+- One phase = one Issue = one feature branch = one Draft PR. Active: D06, Issue #11, `feature/issue-11-local-rag-chat`, integration base `main` (D05 merged in PR #10).
 - Agent implements/tests/commits/pushes through `scripts/push_issue_branch.ps1`. ChatGPT opens the Draft PR and independently reviews. Only the user decides merge.
 - Do not push main, force-push, bypass hooks, reset/clean/stash user changes, open PRs, close Issues, or start another phase without assignment.
 - Keep the authentic workflow file unchanged. Project-specific configuration belongs in `docs/BRANCH_POLICY.md`.
 - Run `scripts/check.ps1` before push. Never fabricate test status, data, model availability, or cloud telemetry.
-- D05 adds ACTIVE-manifest semantic search, pre-ranking metadata filters and measured trace, preserving D01–D04 history/evidence. D06–D09 remain planned. LIVE search/read requires explicit owner opt-in and UI confirmation; never auto-discover/query cloud. Existing verified E5 cache approval persists; never download on import/startup/API. No cloud startup/tests. Live writes/resource creation/deletion require separate target-specific user authorization; absent authorization/key report LIVE NOT VERIFIED. Never request keys in chat or expose them to frontend/logs. No paid resource provisioning or automatic cleanup.
+- D06 adds optional loopback Ollama RAG on the exact D05 SearchService, preserving D01–D05 history/evidence. D07–D09 remain planned. Never install/pull/start/load Ollama without separate user approval. Offline CI uses MOCK OLLAMA / NOT REAL LLM and NOT E5; real cached E5 tests remain separate. REAL OLLAMA NOT VERIFIED is an explicit non-blocking limitation until authorized. LIVE search/read requires owner opt-in and UI confirmation; never auto-discover/query cloud. Existing E5 cache approval persists; never download on import/startup/API. No cloud startup/tests, keys in frontend/logs, paid provisioning or automatic cleanup.
