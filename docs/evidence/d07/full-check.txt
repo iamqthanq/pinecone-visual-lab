@@ -1,0 +1,113 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
+[D07] Frontend lint
+
+> pinecone-visual-lab@0.7.0 lint
+> npm run lint --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.7.0 lint
+> eslint .
+
+[D07] TypeScript strict
+
+> pinecone-visual-lab@0.7.0 typecheck
+> npm run typecheck --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.7.0 typecheck
+> tsc --noEmit
+
+[D07] Frontend unit tests
+
+> pinecone-visual-lab@0.7.0 test
+> npm run test --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.7.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/Corel/HK1_NAM4/PR/Giữa kì/pinecone-visual-lab/apps/web
+
+
+ Test Files  12 passed (12)
+      Tests  68 passed (68)
+   Start at  22:42:50
+   Duration  39.33s (environment 62%, tests 16%, setup 15%, import 4%, transform 2%)
+
+Environment  jsdom was created 12 times · 46.76s total, 62% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+[D07] Python lint
+All checks passed!
+[D07] Backend API + Git guard tests
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\be5658ae35164611a342d7309b6fed5b\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 225 items / 6 deselected / 219 selected
+
+apps\api\tests\test_chunking.py ............                             [  5%]
+apps\api\tests\test_documents.py ..........................              [ 17%]
+apps\api\tests\test_embeddings.py ...................                    [ 26%]
+apps\api\tests\test_guided.py ...............                            [ 32%]
+apps\api\tests\test_health.py ...                                        [ 34%]
+apps\api\tests\test_ollama.py ............................               [ 47%]
+apps\api\tests\test_rag.py ..........................                    [ 58%]
+apps\api\tests\test_search.py ....................................       [ 75%]
+apps\api\tests\test_search_live.py ........                              [ 78%]
+apps\api\tests\test_vector_adapters.py ........................          [ 89%]
+apps\api\tests\test_vector_service.py ........                           [ 93%]
+apps\api\tests\test_git_guard.py ..............                          [100%]
+
+================ 219 passed, 6 deselected in 124.60s (0:02:04) ================
+[D07] Production frontend build
+
+> pinecone-visual-lab@0.7.0 build
+> npm run build --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.7.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 2142 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                     0.68 kB │ gzip:   0.40 kB
+dist/assets/ibm-plex-mono-vietnamese-400-normal-DDuiU_S-.woff       5.62 kB
+dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-DMdlQ8Kv.woff     5.82 kB
+dist/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2      5.86 kB
+dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-xuaO2J-f.woff2    6.91 kB
+dist/assets/ibm-plex-mono-cyrillic-400-normal-CEL4l2ZJ.woff         7.20 kB
+dist/assets/ibm-plex-mono-cyrillic-400-normal-BSMlKf0J.woff2        8.35 kB
+dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2           8.52 kB
+dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2                9.44 kB
+dist/assets/ibm-plex-mono-latin-ext-400-normal-D3D2R8hC.woff       11.76 kB
+dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff           13.14 kB
+dist/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2      13.34 kB
+dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2            14.50 kB
+dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2          14.70 kB
+dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2           15.12 kB
+dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2               24.83 kB
+dist/assets/index-BbmNN3MS.css                                     73.57 kB │ gzip:  17.94 kB
+dist/assets/index-BHBSqUm6.js                                     660.06 kB │ gzip: 210.61 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.61s
+[D07] Secret / artifact scan
+Checked 383 tracked/unignored paths; findings: 0
+[D07] Diff whitespace
+[D07] Staged diff whitespace
+[D07] All local required checks PASS. Browser E2E: npm run test:e2e (isolated ports/data).
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 206.30

@@ -1,4 +1,4 @@
-"""D06 document/embedding/storage/search/RAG labs; no automatic cloud calls or model downloads."""
+"""D07 labs and explicit local guided actions; no cloud startup or model downloads."""
 
 import os
 from contextlib import asynccontextmanager
@@ -17,6 +17,8 @@ from app.documents import MAX_BYTES, DocumentError, Store
 from app.embedding_api import embedding_router
 from app.embedding_provider import TorchProvider
 from app.embeddings import EmbeddingService
+from app.guided import GuidedService
+from app.guided_api import guided_router
 from app.ollama_local import OllamaLocalProvider
 from app.rag_api import rag_router
 from app.rag_service import RagService
@@ -43,8 +45,8 @@ if not origins or "*" in origins:
 class Health(BaseModel):
     status: Literal["ok"] = "ok"
     service: Literal["pinecone-visual-lab-api"] = "pinecone-visual-lab-api"
-    version: Literal["0.6.0"] = "0.6.0"
-    phase: Literal["D06"] = "D06"
+    version: Literal["0.7.0"] = "0.7.0"
+    phase: Literal["D07"] = "D07"
     rag: Literal["optional_local"] = "optional_local"
     search: Literal["available"] = "available"
     timestamp: datetime
@@ -80,7 +82,7 @@ def create_app(
         live.close()
         await llm.close()
 
-    app = FastAPI(title="Pinecone Visual Lab", version="0.6.0", lifespan=lifespan)
+    app = FastAPI(title="Pinecone Visual Lab", version="0.7.0", lifespan=lifespan)
     app.add_middleware(UploadLimit, max_bytes=cap)
     app.add_middleware(
         CORSMiddleware,
@@ -127,6 +129,9 @@ def create_app(
     rag = RagService(search, llm)
     app.state.rag_service = rag
     app.include_router(rag_router(rag))
+    guided = GuidedService(vectors, search, rag)
+    app.state.guided_service = guided
+    app.include_router(guided_router(guided))
     return app
 
 

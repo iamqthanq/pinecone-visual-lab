@@ -1,0 +1,6 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d07/verify-dependencies.py
+Lock/integrity/installed license metadata: 21 added packages verified.
+React Flow MIT; GSAP standard no-charge license, distinct from MIT skill repository.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 2.42

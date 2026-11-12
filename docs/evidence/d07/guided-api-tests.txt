@@ -1,0 +1,15 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py apps/api/tests/test_guided.py
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\d3143ecbb36244f9a30f595646237fb2\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 14 items
+
+apps\api\tests\test_guided.py ..............                             [100%]
+
+============================= 14 passed in 21.24s =============================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 28.02

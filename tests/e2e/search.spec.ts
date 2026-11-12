@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 
 const fixture = process.env.PVL_E2E_FIXTURE === '1'
-const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d06'
+const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d07'
 
 test('Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace', async ({ page, request }) => {
   test.setTimeout(240000)
@@ -71,7 +71,7 @@ test('Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → e
   await filtered.getByRole('button', { name: 'Copy citation rank 1 Filtered results' }).click()
   await expect(page.getByText('Source text and citation copied.')).toBeVisible()
   await mkdir(evidence, { recursive: true })
-  await writeFile(fixture ? 'docs/evidence/d06/fixture-search-example.json' : 'docs/evidence/d06/browser-search-example.json', JSON.stringify({ label: fixture ? 'OFFLINE FIXTURE — NOT E5 / NO CLOUD' : 'REAL E5 / LOCAL SQLite / NO CLOUD', request: response.request().postDataJSON(), response: result }, null, 2) + '\n', 'utf8')
+  await writeFile(fixture ? 'docs/evidence/d07/fixture-search-example.json' : 'docs/evidence/d07/browser-search-example.json', JSON.stringify({ label: fixture ? 'OFFLINE FIXTURE — NOT E5 / NO CLOUD' : 'REAL E5 / LOCAL SQLite / NO CLOUD', request: response.request().postDataJSON(), response: result }, null, 2) + '\n', 'utf8')
   await page.evaluate(() => { (document.activeElement as HTMLElement)?.blur(); window.scrollTo(0, 0) })
   await page.screenshot({ path: `${evidence}/search-desktop-1440.png`, fullPage: true })
   const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()

@@ -1,0 +1,29 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py -m "real_tokenizer or real_model" -v -s
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0 -- D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.venv\Scripts\python.exe
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\8cc0d5fa22bc4129ab55447c65fc494f\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 224 items / 218 deselected / 6 selected
+
+apps\api\tests\test_chunking.py::test_real_e5_correctness_and_metadata PASSED
+apps\api\tests\test_real_embeddings.py::test_real_e5_reference_pooling_prefix_batch_repeatability_and_vietnamese Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   1%|          | 1/199 [00:00<02:06,  1.57it/s]Loading weights:   3%|▎         | 5/199 [00:00<00:22,  8.59it/s]Loading weights:   9%|▉         | 18/199 [00:00<00:05, 31.71it/s]Loading weights:  16%|█▌        | 32/199 [00:00<00:03, 52.80it/s]Loading weights:  23%|██▎       | 46/199 [00:01<00:02, 72.17it/s]Loading weights:  36%|███▌      | 72/199 [00:01<00:01, 111.18it/s]Loading weights:  47%|████▋     | 93/199 [00:01<00:00, 134.67it/s]Loading weights:  57%|█████▋    | 114/199 [00:01<00:00, 153.46it/s]Loading weights:  66%|██████▋   | 132/199 [00:01<00:00, 146.51it/s]Loading weights: 100%|██████████| 199/199 [00:01<00:00, 127.26it/s]
+Worker measurements: {"inference_ms": 597.2515999892494, "load_ms": 0.0, "worker_peak_working_set_bytes": 1103867904}
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   6%|▌         | 11/199 [00:00<00:01, 106.09it/s]Loading weights:  14%|█▍        | 28/199 [00:00<00:01, 133.50it/s]Loading weights:  22%|██▏       | 43/199 [00:00<00:01, 138.54it/s]Loading weights:  29%|██▊       | 57/199 [00:00<00:01, 136.59it/s]Loading weights:  36%|███▌      | 71/199 [00:00<00:01, 117.22it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 340.43it/s]
+Observed Vietnamese experiment (not a general theorem): {"related": 0.9472104609462585, "unrelated": 0.8403406367374009}
+Actual CPU batch inference ms: 6138.049699991825 load ms: 48127.476199995726
+PASSED
+apps\api\tests\test_real_guided.py::test_real_e5_guided_pipeline_receipts_search_source_and_reset Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2414.84it/s]
+PASSED
+apps\api\tests\test_real_rag.py::test_real_e5_rag_context_citation_fallback_and_no_cloud Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2473.85it/s]
+PASSED
+apps\api\tests\test_real_search.py::test_real_e5_search_pdf_txt_known_example_filters_trace_and_exact_active_sources Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2181.14it/s]
+PASSED
+apps\api\tests\test_real_vector_store.py::test_real_e5_confirmed_source_sqlite_storage_restart_namespace_and_owned_delete Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2098.01it/s]
+PASSED
+
+================ 6 passed, 218 deselected in 405.38s (0:06:45) ================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 413.85

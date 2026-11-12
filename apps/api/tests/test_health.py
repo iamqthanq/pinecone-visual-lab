@@ -15,7 +15,7 @@ def test_health_reports_real_process_and_explicit_capabilities():
     data = response.json()
     assert data["status"] == "ok"
     assert data["service"] == "pinecone-visual-lab-api"
-    assert data["phase"] == "D06"
+    assert data["phase"] == "D07"
     assert data["documents"] == "available"
     assert data["rag"] == "optional_local"
     assert data["pinecone"] == "not_configured"

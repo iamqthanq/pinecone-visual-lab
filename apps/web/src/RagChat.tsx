@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ArrowUpRight, BookOpen, Copy, LoaderCircle, MessageSquare, RefreshCw, X } from 'lucide-react'
 import { Badge, Button, Panel, TextField } from './components'
 import { documentAPI } from './documents-api'
@@ -7,9 +7,11 @@ import type { DocumentSummary } from './documents-api'
 import { searchAPI } from './search-api'
 import type { SearchStatus } from './search-api'
 import type { IndexInfo, StoreTarget } from './vector-store-api'
+import { defaultLocalIndex } from './vector-store-api'
 import { ragAPI } from './rag-api'
 import type { OllamaStatus, RagResult } from './rag-api'
 import './rag.css'
+import { demoSelection } from './guided-state'
 
 interface Turn { question: string; response: RagResult }
 const models = ['qwen2.5:1.5b', 'qwen2.5:3b']
@@ -36,14 +38,15 @@ function Reply({ turn, onNotice }: { turn: Turn; onNotice: (text: string) => voi
 }
 
 export default function RagChat() {
+  const selection = demoSelection(useLocation().search)
   const [readiness, setReadiness] = useState<SearchStatus | null>(null)
   const [ollama, setOllama] = useState<OllamaStatus | null>(null)
   const [documents, setDocuments] = useState<DocumentSummary[]>([])
   const [indexes, setIndexes] = useState<IndexInfo[]>([])
   const [mode, setMode] = useState<StoreTarget['mode']>('local')
   const [index, setIndex] = useState('')
-  const [namespace, setNamespace] = useState('')
-  const [documentId, setDocumentId] = useState('')
+  const [namespace, setNamespace] = useState(selection.namespace)
+  const [documentId, setDocumentId] = useState(selection.document)
   const [filename, setFilename] = useState('')
   const [from, setFrom] = useState('')
   const [to, setTo] = useState('')
@@ -60,7 +63,7 @@ export default function RagChat() {
   const operation = useRef(0)
   useEffect(() => {
     let active = true
-    Promise.all([searchAPI.status(), documentAPI.list()]).then(([state, list]) => { if (active) { setReadiness(state); setIndexes(state.local_indexes); setIndex(state.local_indexes.find(i => i.compatible)?.name ?? ''); setDocuments(list.documents) } }).catch(() => { if (active) setError('Backend offline. Start FastAPI and reopen this tab.') })
+    Promise.all([searchAPI.status(), documentAPI.list()]).then(([state, list]) => { if (active) { setReadiness(state); setIndexes(state.local_indexes); setIndex(defaultLocalIndex(state.local_indexes)); setDocuments(list.documents) } }).catch(() => { if (active) setError('Backend offline. Start FastAPI and reopen this tab.') })
     return () => { active = false; controller.current?.abort() }
   }, [])
   function clear() { setTurns([]); setNotice(''); setError('') }
@@ -90,7 +93,7 @@ export default function RagChat() {
     {busy && <div className="doc-message" role="status"><LoaderCircle className="spin" size={16} />{busy}{busy.startsWith('Retrieving') && <Button onClick={() => controller.current?.abort()}><X size={14} />Cancel RAG</Button>}</div>}
     <form onSubmit={event => { event.preventDefault(); void send() }}><fieldset className="rag-controls" disabled={Boolean(busy)}><legend className="sr-only">RAG Chat controls</legend><Panel className="search-panel"><div className="document-panel-heading"><h2>Ask the source collection</h2><label className="search-checkbox"><input type="checkbox" checked={enabled} onChange={event => { setEnabled(event.target.checked); clear() }} />LLM enabled</label></div>
       <label htmlFor="rag-question">RAG question in Vietnamese</label><textarea id="rag-question" rows={3} maxLength={2000} value={question} onChange={event => setQuestion(event.target.value)} placeholder="Tìm kiếm vector khác tìm kiếm từ khóa như thế nào?" /><p className="config-hint">Fresh D05 retrieval each turn; E5 limit 512 input tokens. Responses are verified verbatim excerpts, not unrestricted model prose.</p>
-      <div className="search-target-grid"><label>RAG retrieval mode<select value={mode} onChange={event => { const next = event.target.value as StoreTarget['mode']; setMode(next); setIndexes(next === 'local' ? readiness?.local_indexes ?? [] : []); setIndex(next === 'local' ? readiness?.local_indexes.find(i => i.compatible)?.name ?? '' : ''); setNamespace(''); setLive(false); clear() }}><option value="local">LOCAL DEMO</option><option value="live">LIVE PINECONE · requires authorization</option></select></label><label>RAG index<select value={index} onChange={event => { setIndex(event.target.value); clear() }}><option value="">Select an ACTIVE index</option>{indexes.map(i => <option key={i.name} value={i.name} disabled={!i.compatible}>{i.name}</option>)}</select></label><TextField label="RAG namespace" value={namespace} maxLength={64} pattern="[a-zA-Z0-9_.-]*" onChange={event => { setNamespace(event.target.value); clear() }} /><label>RAG Top-K<select value={topK} onChange={event => { setTopK(Number(event.target.value)); clear() }}>{Array.from({ length: 10 }, (_, i) => <option key={i} value={i + 1}>{i + 1}</option>)}</select></label></div>
+      <div className="search-target-grid"><label>RAG retrieval mode<select value={mode} onChange={event => { const next = event.target.value as StoreTarget['mode']; setMode(next); setIndexes(next === 'local' ? readiness?.local_indexes ?? [] : []); setIndex(next === 'local' ? defaultLocalIndex(readiness?.local_indexes) : ''); setNamespace(''); setLive(false); clear() }}><option value="local">LOCAL DEMO</option><option value="live">LIVE PINECONE · requires authorization</option></select></label><label>RAG index<select value={index} onChange={event => { setIndex(event.target.value); clear() }}><option value="">Select an ACTIVE index</option>{indexes.map(i => <option key={i.name} value={i.name} disabled={!i.compatible}>{i.name}</option>)}</select></label><TextField label="RAG namespace" value={namespace} maxLength={64} pattern="[a-zA-Z0-9_.-]*" onChange={event => { setNamespace(event.target.value); clear() }} /><label>RAG Top-K<select value={topK} onChange={event => { setTopK(Number(event.target.value)); clear() }}>{Array.from({ length: 10 }, (_, i) => <option key={i} value={i + 1}>{i + 1}</option>)}</select></label></div>
       {mode === 'live' && <><p className="doc-warning">LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION. No automatic discovery.</p><label className="search-checkbox"><input type="checkbox" checked={live} onChange={event => { setLive(event.target.checked); clear() }} />I confirm authorized LIVE reads for this target.</label><Button type="button" disabled={!liveAllowed || Boolean(busy)} onClick={() => { setBusy('Explicit LIVE catalog read…'); void searchAPI.indexes('live', true).then(state => { setIndexes(state.indexes); setIndex(state.indexes.find(i => i.compatible)?.name ?? '') }).catch(failure => setError((failure as Error).message)).finally(() => setBusy('')) }}>Load RAG LIVE indexes</Button></>}
       <div className="search-filter-grid"><label>RAG document filter<select value={documentId} onChange={event => { setDocumentId(event.target.value); clear() }}><option value="">All ACTIVE documents</option>{documents.map(d => <option key={d.id} value={d.id}>{d.name}</option>)}</select></label><TextField label="RAG exact filename" maxLength={120} value={filename} onChange={event => { setFilename(event.target.value); clear() }} /><TextField label="RAG page from" type="number" min={1} max={200} value={from} onChange={event => { setFrom(event.target.value); clear() }} /><TextField label="RAG page to" type="number" min={1} max={200} value={to} onChange={event => { setTo(event.target.value); clear() }} /></div>
       {(invalidPage || invalidFile) && <p className="doc-warning" role="alert">Invalid filter: safe filename and both integer page endpoints, 1 ≤ from ≤ to ≤200.</p>}

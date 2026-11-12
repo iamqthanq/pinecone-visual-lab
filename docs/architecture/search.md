@@ -1,6 +1,6 @@
 # D05 — ACTIVE-manifest semantic search
 
-`POST /api/search` powers `/search`. LOCAL DEMO is exact cosine over persisted SQLite vectors, using real local E5 queries in production. LIVE uses the pinned Pinecone SDK ANN operation, gated by owner opt-in and explicit read consent. **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION.** No cloud smoke was performed. No LLM, Ollama or RAG dependency is introduced; D06 remains planned.
+`POST /api/search` powers `/search`. LOCAL DEMO is exact cosine over persisted SQLite vectors, using real local E5 queries in production. LIVE uses the pinned Pinecone SDK ANN operation, gated by owner opt-in and explicit read consent. **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION.** No cloud smoke was performed. Search itself has no LLM/Ollama dependency. [D06 optional RAG](rag.md) and [D07 Guided Demo](guided-demo.md) reuse this exact SearchService.
 
 ## Query contract
 
@@ -79,4 +79,4 @@ Trace stages use `perf_counter`: validation/token budget, active selection, SQL 
 
 Use D02–D04 upload → chunk → confirm → E5 → SQLite ACTIVE ingest. Open `http://127.0.0.1:5173/search`, select the ingested namespace, enter a question, optionally filter/compare, Search and Open exact source. No Ollama install is required. Commands are in README. Tests use isolated ignored data/temp and installed Edge; real cached E5 and offline NOT E5 fixture tracks are separate. [D05 report/logs/examples/screenshots](../evidence/d05/REPORT.md). D01–D04 evidence remains immutable.
 
-Pending: authorized LIVE smoke, actual GitHub CI run, public/multi-user hosting/security, semantic relevance benchmarking, FTS/reranking, RAG and Slab. No D06 work is included.
+Pending: authorized LIVE smoke, actual GitHub CI run, public/multi-user hosting/security, semantic relevance benchmarking and FTS/reranking. RAG and educational Slab simulation are separate D06/D07 features; neither changes the meaning of Search scores or supplies Pinecone telemetry.

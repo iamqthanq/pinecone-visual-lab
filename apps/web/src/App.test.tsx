@@ -5,7 +5,7 @@ import App from './App'
 import { getHealth } from './api'
 
 const health = {
-  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.6.0', phase: 'D06', rag: 'optional_local', search: 'available', vector_store: 'local_available', documents: 'available',
+  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.7.0', phase: 'D07', rag: 'optional_local', search: 'available', vector_store: 'local_available', documents: 'available',
   timestamp: new Date().toISOString(), pinecone: 'not_configured', embedding: 'not_loaded', embedding_mode: 'e5',
 }
 
@@ -43,7 +43,7 @@ describe('D01 foundation', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2)
   })
 
-  it('navigates to working Documents and Vectors Labs while keeping Architecture planned', async () => {
+  it('navigates to Documents, Vectors, Search and the implemented educational Architecture Lab', async () => {
     vi.stubGlobal('fetch', vi.fn().mockImplementation((url: string) => Promise.resolve(Response.json(
       url.includes('/documents') ? { documents: [], max_file_bytes: 10485760 }
         : url.includes('/api/search/status') ? { model: { state: 'not_cached', mode: 'e5', message: 'Explicit model setup required' }, local_indexes: [] }
@@ -59,7 +59,9 @@ describe('D01 foundation', () => {
     fireEvent.click(screen.getByRole('link', { name: 'Search Lab' }))
     expect(await screen.findByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('link', { name: 'Architecture Lab' }))
-    expect(await screen.findByText('This lab is on the roadmap.')).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Follow a write. Unpack a read.' })).toBeInTheDocument()
+    expect(screen.getByText('SIMULATION — EDUCATIONAL MODEL — NOT PINECONE TELEMETRY')).toBeVisible()
+    expect(screen.getByRole('button', { name: 'Next' })).toBeEnabled()
   })
 
   it('renders a meaningful unknown-route fallback', async () => {
