@@ -2,7 +2,7 @@ import { defineConfig } from '@playwright/test'
 import { resolve } from 'node:path'
 
 const python = process.platform === 'win32' ? '".\\.venv\\Scripts\\python.exe"' : 'python'
-const apiModule = process.env.PVL_E2E_FIXTURE === '1' ? 'testsupport.fixture_server:app' : 'app.main:app'
+const apiModule = 'testsupport.rag_server:app' // Test entry only: real E5/NOT-E5 + MOCK OLLAMA
 
 export default defineConfig({
   testDir: './tests/e2e',
@@ -22,7 +22,7 @@ export default defineConfig({
       command: `${python} -m uvicorn ${apiModule} --app-dir apps/api --host 127.0.0.1 --port 8001`,
       url: 'http://127.0.0.1:8001/api/health',
       reuseExistingServer: false,
-      env: { PVL_DATA_DIR: resolve('.cache/e2e-d05', String(process.pid)), PVL_DISABLE_CLOUD: '1', PINECONE_API_KEY: '', PVL_LIVE_SEARCH_ENABLED: '0', HF_HUB_OFFLINE: '1', TRANSFORMERS_OFFLINE: '1' },
+      env: { PVL_DATA_DIR: resolve('.cache/e2e-d06', String(process.pid)), PVL_DISABLE_CLOUD: '1', PINECONE_API_KEY: '', PVL_LIVE_SEARCH_ENABLED: '0', PVL_OLLAMA_ENABLED: '0', HF_HUB_OFFLINE: '1', TRANSFORMERS_OFFLINE: '1' },
       timeout: 30000,
     },
     {

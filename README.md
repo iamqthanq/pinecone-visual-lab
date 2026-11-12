@@ -1,8 +1,8 @@
 # Pinecone Visual Lab
 
-A local vector-database seminar workbench. **D05 implements real local Semantic Search, Top-K, metadata prefilters, exact source navigation and measured Search Trace**, preserving D01–D04 documents, confirmed chunks, E5 and vector storage. The Pinecone query adapter is implemented with offline SDK transport tests; **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. RAG/Ollama, Slab and tour remain **PLANNED (D06–D09)**.
+A local vector-database seminar workbench. **D06 adds optional local RAG Chat to D05 Semantic Search**, with bounded evidence context, server-verified excerpts/citations and safe search-only fallback, preserving all D01–D05 document, E5, storage and search features. The Pinecone query adapter is implemented with offline SDK transport tests; **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. **REAL OLLAMA NOT VERIFIED — NEEDS USER INSTALL/APPROVAL**. Slab, tour and packaging remain **PLANNED (D07–D09)**.
 
-![D05 Search Lab](docs/evidence/d05/search-desktop-1440.png)
+![D06 RAG Chat: real E5 retrieval + Mock Ollama, NOT REAL LLM](docs/evidence/d06/rag-desktop-1440.png)
 
 ## Windows setup
 
@@ -91,6 +91,30 @@ LIVE uses pinned `pinecone==10.3.0` / API 2026-07 and server-only `PINECONE_API_
 
 Original UUID-named files and SQLite stay in ignored **`.data/`**. Back up local data yourself before upgrades. The [JSONL sample](docs/evidence/d02/synthetic-confirmed.jsonl) contains only synthetic E2E data. [Schema, provenance and limits](docs/architecture/documents.md).
 
+## Optional local RAG / Ollama (D06)
+
+Search Lab has **Semantic Search** and **RAG Chat** tabs. RAG uses D05's exact ACTIVE/confirmed retrieval, inherited Top-K/filters and real cached E5, then optionally calls local Ollama. Choose a collection, enter a Vietnamese question and Send. Turn LLM off for search-only results. Inspect the exact context, verified excerpt citations, source links and measured trace. The last4 turns are memory-only and never sent as facts/history or saved. Changing target/filter/model or leaving the tab clears them. No Ollama call happens merely by opening/switching tabs.
+
+Default backend `PVL_OLLAMA_ENABLED=0`: missing/disabled Ollama preserves retrieval with an honest unavailable state. **REAL OLLAMA NOT VERIFIED — NEEDS USER INSTALL/APPROVAL.** All current RAG evidence uses **MOCK OLLAMA / NOT REAL LLM**, separately labeled from real E5 retrieval. We do not claim real Qwen answer quality or injection immunity. [API/context limits and extractive grounding policy](docs/architecture/rag.md).
+
+**Operator-only, after separate approval:** review the official [Windows installer/manual archive](https://docs.ollama.com/windows) and [model library/licenses](https://ollama.com/library/qwen2.5). Default `qwen2.5:1.5b` is approximately986MB/Apache-2.0; optional3b approximately1.9GB/**Qwen license**. Reserve at least4GB for the Windows binary installation plus model size and runtime/cache overhead and about4GB available RAM for1.5b (more for3b); this is planning guidance, not a measured guarantee. Windows installer may start the app and add login startup behavior; review it before install and do not enable persistent autostart as part of this project. Nothing below runs automatically or was executed by the coding agent.
+
+After owner approval and manual installation, in an operator terminal (a foreground daemon, only if one is not already running):
+
+```powershell
+# Optional operations ONLY AFTER approval; not setup/startup/CI steps.
+ollama serve
+# Separate terminal; downloads the selected model and uses disk/network:
+ollama pull qwen2.5:1.5b
+ollama list
+# Backend terminal, only after operator approves local inference:
+$env:PVL_OLLAMA_ENABLED='1'
+$env:PVL_OLLAMA_URL='http://127.0.0.1:11434'
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --app-dir apps/api --host 127.0.0.1 --port 8000
+```
+
+Use **Refresh Ollama readiness** explicitly; it lists downloaded allowlisted models, not loaded status. Send explicitly loads/runs the selected model. Backend fixes4096 context/512 reply reserve/2 CPU threads/60s timeout/one LLM request/keep_alive0. Only literal loopback endpoint configuration is accepted; redirects, proxy environment and remote/DNS URLs are rejected. No install/pull/autostart endpoint exists. Keep API bound to loopback. Stop only the foreground daemon you started, using its terminal; do not kill unrelated services.
+
 ## Configuration
 
 `.env.example` lists placeholders. No credentials are needed. Backend reads **process environment**, not `.env` automatically: e.g. `$env:PVL_MAX_UPLOAD_BYTES='10485760'` (allowed 1 byte–50 MiB). `PVL_DATA_DIR` changes the storage root; keep custom locations out of Git. `PVL_TOKENIZER_DIR` may point to the exact verified `tokenizer.json` directory; leave unset for default cache.
@@ -108,7 +132,7 @@ npm.cmd audit --audit-level=moderate
 
 `RemoteSigned` applies only to that PowerShell process, preserving persistent policy/hooks. `check.ps1` fails on any required ESLint, strict typecheck, Vitest, Ruff, Pytest/API/Git guards, build, artifact/secret scan or whitespace check failure. Separate real-tokenizer/model tests require explicitly installed cached assets (otherwise SKIPPED); no download occurs. Default tests exclude both markers. The Pytest helper creates fresh ignored temp/cache directories, avoiding shared Windows Temp ACL problems without changing user Temp.
 
-Playwright uses installed **Edge**, starts isolated web/API on **5174/8001**, stores synthetic data under ignored `.cache/e2e-d05/` and stops its owned servers. Occupied ports cause failure instead of server reuse. Local default E2E uses actual E5 tokenizer and weights; ensure model setup before running. It checks the full D01–D05 flow, including confirmed source → E5 → ACTIVE storage → semantic search/filter/compare → exact source navigation, as well as384 values/table/copy, cosine and missing-model behavior. Fixtures use installed Windows Arial for Vietnamese PDFs (font not redistributed). Tests cover upload → pages → generate → inspect/overlap/copy → confirm → export → reload, draft recovery, delete confirmation, axe serious/critical checks, navigation, reduced motion, responsive widths and injected network failure/recovery. Actual screenshots go to `docs/evidence/d05/`; historical D01–D04 evidence is unchanged. D04 additionally tests confirmed-source ingest, actual adapter fetch, namespace isolation, owned deletion, index preview and LIVE disabled behavior.
+Playwright uses installed **Edge**, starts isolated web/API on **5174/8001**, stores synthetic data under ignored `.cache/e2e-d06/` and stops its owned servers. Occupied ports cause failure instead of server reuse. Local default E2E uses actual E5 tokenizer and weights; ensure model setup before running. It checks the full D01–D06 flow, including confirmed source → E5 → ACTIVE storage → semantic search/filter/compare → exact source navigation, as well as384 values/table/copy, cosine and missing-model behavior. Fixtures use installed Windows Arial for Vietnamese PDFs (font not redistributed). Tests cover upload → pages → generate → inspect/overlap/copy → confirm → export → reload, draft recovery, delete confirmation, axe serious/critical checks, navigation, reduced motion, responsive widths and injected network failure/recovery. Current screenshots go to `docs/evidence/d06/`; historical D01–D05 evidence is unchanged. Both Edge modes use an explicit Mock Ollama transport (NOT REAL LLM), never a daemon. D04 additionally tests confirmed-source ingest, actual adapter fetch, namespace isolation, owned deletion, index preview and LIVE disabled behavior.
 
 Reproduce CI's **explicit fixture mode**, which requires no AI assets:
 
@@ -129,7 +153,7 @@ Individual commands: `npm.cmd run lint`, `npm.cmd run typecheck`, `npm.cmd test`
 
 Read [authentic workflow](GITHUB_COLLAB_WORKFLOW_STANDARD.md), [branch policy](docs/BRANCH_POLICY.md), [AGENTS.md](AGENTS.md). Original workflow SHA-256: `5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78`. Original workflow/master-plan whitespace is preserved by `.gitattributes` exceptions.
 
-Active: **[Issue #9](https://github.com/iamqthanq/pinecone-visual-lab/issues/9)**, **`feature/issue-9-semantic-search`**, base **`main`** after verified D04 PR #8 merge `5b1ef8122d45a8a5704f6c4258b7a759a8adb2ec`. Configure checkout guards per policy. After review/tests/commit:
+Active: **[Issue #11](https://github.com/iamqthanq/pinecone-visual-lab/issues/11)**, **`feature/issue-11-local-rag-chat`**, base **`main`** after verified D05 PR #10 merge `4619ca17688f6667b28e4f68ec35d29badb0c909`. Configure checkout guards per policy. After review/tests/commit:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/push_issue_branch.ps1
@@ -139,11 +163,11 @@ The no-argument script validates checkout/active Issue/branch/remote/HEAD and pu
 
 ## Architecture and evidence
 
-Current: [D05 report/logs](docs/evidence/d05/REPORT.md), [Search contracts/architecture](docs/architecture/search.md), [desktop1440](docs/evidence/d05/search-desktop-1440.png), [mobile390](docs/evidence/d05/search-mobile-390.png). [D04 evidence](docs/evidence/d04/REPORT.md) and [vector-store schema/authorization](docs/architecture/vector-store.md) remain available. [D03 report](docs/evidence/d03/REPORT.md) and D01/D02 links below are historical.
+Current: [D06 report/logs](docs/evidence/d06/REPORT.md), [RAG architecture/API](docs/architecture/rag.md), [RAG desktop1440](docs/evidence/d06/rag-desktop-1440.png), [RAG mobile390](docs/evidence/d06/rag-mobile-390.png). Historical: [D05 report/logs](docs/evidence/d05/REPORT.md), [Search contracts/architecture](docs/architecture/search.md), [desktop1440](docs/evidence/d05/search-desktop-1440.png), [mobile390](docs/evidence/d05/search-mobile-390.png). [D04 evidence](docs/evidence/d04/REPORT.md) and [vector-store schema/authorization](docs/architecture/vector-store.md) remain available. [D03 report](docs/evidence/d03/REPORT.md) and D01/D02 links below are historical.
 
 - [Current architecture/health](docs/architecture/overview.md), [D02 schema/provenance](docs/architecture/documents.md), [tokenizer/licenses](docs/tokenizer.md)
 - [Free-first ADR](docs/decisions/0001-free-first-stack.md), [Taste source/design](docs/design-foundation.md)
 - [D02 requirement/test report](docs/evidence/d02/REPORT.md), [desktop](docs/evidence/d02/desktop-1440.png), [mobile](docs/evidence/d02/mobile-390.png)
 - [Historical D01 report](docs/evidence/d01/REPORT.md)
 
-D04 ships real LOCAL DEMO upsert/list/fetch/delete with E5, plus an implemented LIVE adapter awaiting authorized account smoke. D05 adds LOCAL exact Top-K search. RAG and SLAB SIMULATOR remain planned. No OCR or production hosting. PDF reading order follows the text layer and may differ from visual layout. API is for loopback/local use without multi-user authentication. Resource caps do not constitute a hostile-PDF execution sandbox. Repository scan is focused, not a comprehensive security audit.
+D04 ships real LOCAL DEMO upsert/list/fetch/delete with E5, plus an implemented LIVE adapter awaiting authorized account smoke. D05 adds LOCAL exact Top-K search. D06 optional RAG orchestration is implemented; real Ollama awaits separate approval/setup. SLAB SIMULATOR remains planned. No OCR or production hosting. PDF reading order follows the text layer and may differ from visual layout. API is for loopback/local use without multi-user authentication. Resource caps do not constitute a hostile-PDF execution sandbox. Repository scan is focused, not a comprehensive security audit.

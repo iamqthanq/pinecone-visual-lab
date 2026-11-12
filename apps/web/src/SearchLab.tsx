@@ -8,6 +8,7 @@ import { searchAPI } from './search-api'
 import type { SearchFilters, SearchHit, SearchResult, SearchStatus } from './search-api'
 import type { IndexInfo, StoreTarget } from './vector-store-api'
 import './search.css'
+import RagChat from './RagChat'
 
 const timeLabel = (ms: number) => ms > 0 && ms < 0.01 ? '<0.01' : ms.toFixed(2)
 
@@ -29,6 +30,15 @@ function HitList({ title, hits, result, onNotice }: { title: string; hits: Searc
 }
 
 export default function SearchLab() {
+  const [tab, setTab] = useState('semantic')
+  return <><div className="rag-tabs" role="tablist" aria-label="Search Lab views">{[
+    ['semantic', 'Semantic Search'], ['rag', 'RAG Chat'],
+  ].map(([id, label]) => <button key={id} id={`tab-${id}`} role="tab" aria-selected={tab === id} aria-controls={`panel-${id}`} tabIndex={tab === id ? 0 : -1} onClick={() => setTab(id)} onKeyDown={event => {
+    if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) { event.preventDefault(); const next = event.key === 'Home' ? 'semantic' : event.key === 'End' ? 'rag' : tab === 'semantic' ? 'rag' : 'semantic'; setTab(next); document.getElementById(`tab-${next}`)?.focus() }
+  }}>{label}</button>)}</div><div id="panel-semantic" role="tabpanel" aria-labelledby="tab-semantic" hidden={tab !== 'semantic'}><SemanticSearch /></div><div id="panel-rag" role="tabpanel" aria-labelledby="tab-rag" hidden={tab !== 'rag'}>{tab === 'rag' && <RagChat />}</div></>
+}
+
+function SemanticSearch() {
   const [status, setStatus] = useState<SearchStatus | null>(null)
   const [documents, setDocuments] = useState<DocumentSummary[]>([])
   const [indexes, setIndexes] = useState<IndexInfo[]>([])
@@ -75,7 +85,7 @@ export default function SearchLab() {
   return <>
     <div className="page-meta"><Badge>D05 · SEMANTIC SEARCH</Badge><span className="mono">QUESTION → ACTIVE VECTORS → ORIGINAL SOURCE</span></div>
     <div className="documents-title"><div><span className="eyebrow accent">SEARCH LAB</span><h1>Find meaning. Follow the source.</h1><p>Ask in Vietnamese. Inspect ranked chunks, raw cosine and every measured stage. No LLM required.</p></div><Button disabled={Boolean(busy)} onClick={() => void run('Refreshing local readiness…', async () => { const [state, list] = await Promise.all([searchAPI.status(), documentAPI.list()]); setStatus(state); setDocuments(list.documents); if (mode === 'local') { setIndexes(state.local_indexes); if (!index) setIndex(state.local_indexes.find(item => item.compatible)?.name ?? '') } })}><RefreshCw size={14} />Refresh search status</Button></div>
-    <div className="search-mode-strip"><Badge tone={mode === 'local' ? 'green' : 'amber'}>{mode === 'local' ? 'LOCAL DEMO' : 'LIVE PINECONE'}</Badge><p>{mode === 'local' ? 'Exact cosine over persisted SQLite vectors in verified ACTIVE manifests. Filters run before Top-K.' : 'LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION. ANN ranking; no automatic cloud reads.'}</p><Badge>RAG · PLANNED D06</Badge></div>
+    <div className="search-mode-strip"><Badge tone={mode === 'local' ? 'green' : 'amber'}>{mode === 'local' ? 'LOCAL DEMO' : 'LIVE PINECONE'}</Badge><p>{mode === 'local' ? 'Exact cosine over persisted SQLite vectors in verified ACTIVE manifests. Filters run before Top-K.' : 'LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION. ANN ranking; no automatic cloud reads.'}</p><Badge>RAG · OPTIONAL LOCAL</Badge></div>
     {status?.model.mode === 'test-fixture-not-e5' && <p className="doc-warning">TEST FIXTURE — NOT E5. Deterministic test vectors have no semantic relevance claim.</p>}
     {status && <div className="search-readiness"><Badge>{status.model.state.replace(/_/g, ' ').toUpperCase()}</Badge><span>{status.model.message}</span>{status.model.setup_command && modelUnavailable && <code>{status.model.setup_command}</code>}</div>}
     {error && <div className="doc-message error" role="alert">{error}</div>}

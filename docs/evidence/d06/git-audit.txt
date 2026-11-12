@@ -1,0 +1,65 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File docs/evidence/d06/git-audit.ps1
+WORKDIR: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+BRANCH: feature/issue-11-local-rag-chat
+ORIGIN: https://github.com/iamqthanq/pinecone-visual-lab
+## feature/issue-11-local-rag-chat...origin/main
+ M .env.example
+ M .github/workflows/ci.yml
+ M AGENTS.md
+ M README.md
+ M apps/api/app/document_api.py
+ M apps/api/app/main.py
+ M apps/api/tests/test_health.py
+ M apps/api/tests/test_real_embeddings.py
+ M apps/api/tests/test_real_search.py
+ M apps/api/tests/test_real_vector_store.py
+ M apps/web/package.json
+ M apps/web/src/App.test.tsx
+ M apps/web/src/App.tsx
+ M apps/web/src/SearchLab.tsx
+ M apps/web/src/VectorStoreLab.tsx
+ M apps/web/src/VectorsLab.tsx
+ M apps/web/src/api.ts
+ M docs/BRANCH_POLICY.md
+ M docs/architecture/overview.md
+ M package-lock.json
+ M package.json
+ M playwright.config.ts
+ M scripts/check.ps1
+ M scripts/run_pytest.py
+ M tests/e2e/documents.spec.ts
+ M tests/e2e/embeddings.spec.ts
+ M tests/e2e/foundation.spec.ts
+ M tests/e2e/search.spec.ts
+ M tests/e2e/vector-store.spec.ts
+ M tests/test_git_guard.py
+?? apps/api/app/ollama_local.py
+?? apps/api/app/rag_api.py
+?? apps/api/app/rag_contracts.py
+?? apps/api/app/rag_service.py
+?? apps/api/tests/test_ollama.py
+?? apps/api/tests/test_rag.py
+?? apps/api/tests/test_real_rag.py
+?? apps/api/testsupport/ollama_mock.py
+?? apps/api/testsupport/rag_server.py
+?? apps/web/src/RagChat.test.tsx
+?? apps/web/src/RagChat.tsx
+?? apps/web/src/rag-api.ts
+?? apps/web/src/rag.css
+?? docs/architecture/rag.md
+?? docs/evidence/d06/
+?? tests/e2e/rag.spec.ts
+HEAD and fetched origin/main (HEAD is pre-publication; final SHA is in handoff):
+4619ca17688f6667b28e4f68ec35d29badb0c909
+4619ca17688f6667b28e4f68ec35d29badb0c909
+pinecone.issue: 11
+pinecone.branch: feature/issue-11-local-rag-chat
+pinecone.workdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+core.hooksPath: .githooks
+push.default: nothing
+refs/heads/feature/issue-11-local-rag-chat
+WORKFLOW_SHA256: 5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78
+Historical workflow/master plan/evidence/guard implementation unchanged. Git audit PASS.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 1.55

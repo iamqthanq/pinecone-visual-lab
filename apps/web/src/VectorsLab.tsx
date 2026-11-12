@@ -104,7 +104,7 @@ export default function VectorsLab() {
       <div className="sentence-grid"><label>Sentence A<textarea aria-label="Sentence A" maxLength={20000} disabled={Boolean(busy)} value={sentenceA} onChange={event => { setSentenceA(event.target.value); setScore(null) }} /></label><label>Sentence B<textarea aria-label="Sentence B" maxLength={20000} disabled={Boolean(busy)} value={sentenceB} onChange={event => { setSentenceB(event.target.value); setScore(null) }} /></label></div>
       <Button className="button-primary" disabled={!canRun || !sentenceA.trim() || !sentenceB.trim()} onClick={() => void run('Embedding sentence batch / computing cosine…', async signal => { const result = await embeddingAPI.encode([sentenceA, sentenceB], signal); setScore(await embeddingAPI.compare(result.records[0], result.records[1], signal)) })}>Compare sentences</Button>
       {score && <div className="cosine-result" role="status"><span>RAW COSINE · {score.mode === 'e5' ? 'LOCAL E5' : 'TEST FIXTURE — NOT E5'}</span><output aria-label="Cosine similarity">{score.cosine.toFixed(6)}</output><p>{score.meaning}</p></div>}
-      <p className="config-hint">Embedding = a 384D representation. Cosine = a geometric comparison in [-1,+1], not probability. D04 Vector Explorer stores and fetches confirmed vectors. Top-k search comes in D05. No Pinecone operation occurs in this embedding view.</p>
+      <p className="config-hint">Embedding = a 384D representation. Cosine = a geometric comparison in [-1,+1], not probability. D04 Vector Explorer stores and fetches confirmed vectors. Top-k retrieval is available in Search Lab. No Pinecone operation occurs in this embedding view.</p>
     </Panel>
   </>
 }

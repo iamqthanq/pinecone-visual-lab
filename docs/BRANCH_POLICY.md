@@ -7,7 +7,7 @@
 | INTEGRATION_BRANCH | `main` (GitHub default verified) |
 | RELEASE_BRANCH | `main`; never push directly |
 | FEATURE_BRANCH_PATTERN | `feature/issue-<actual-number>-<slug>` |
-| Active assignment | D05 / Issue #9 / `feature/issue-9-semantic-search` |
+| Active assignment | D06 / Issue #11 / `feature/issue-11-local-rag-chat` |
 | TEST_COMMANDS | `scripts/check.ps1`; npm/Python subcommands in README |
 | PUSH_COMMAND | `powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/push_issue_branch.ps1` |
 | MERGE_POLICY | User-only; agent never opens PR or closes Issue |
@@ -21,8 +21,8 @@ After inspecting any existing hooks/configuration, configure this checkout:
 ```powershell
 git config --local push.default nothing
 git config --local core.hooksPath .githooks
-git config --local pinecone.issue 9
-git config --local pinecone.branch feature/issue-9-semantic-search
+git config --local pinecone.issue 11
+git config --local pinecone.branch feature/issue-11-local-rag-chat
 git config --local pinecone.workdir (Get-Location).Path
 ```
 

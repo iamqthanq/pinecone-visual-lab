@@ -1,4 +1,4 @@
-"""D05 document/embedding/storage/search labs; no automatic cloud calls or model downloads."""
+"""D06 document/embedding/storage/search/RAG labs; no automatic cloud calls or model downloads."""
 
 import os
 from contextlib import asynccontextmanager
@@ -17,6 +17,9 @@ from app.documents import MAX_BYTES, DocumentError, Store
 from app.embedding_api import embedding_router
 from app.embedding_provider import TorchProvider
 from app.embeddings import EmbeddingService
+from app.ollama_local import OllamaLocalProvider
+from app.rag_api import rag_router
+from app.rag_service import RagService
 from app.search_api import search_router
 from app.search_service import SearchService
 from app.tokenization import real_tokenizer
@@ -40,8 +43,9 @@ if not origins or "*" in origins:
 class Health(BaseModel):
     status: Literal["ok"] = "ok"
     service: Literal["pinecone-visual-lab-api"] = "pinecone-visual-lab-api"
-    version: Literal["0.5.0"] = "0.5.0"
-    phase: Literal["D05"] = "D05"
+    version: Literal["0.6.0"] = "0.6.0"
+    phase: Literal["D06"] = "D06"
+    rag: Literal["optional_local"] = "optional_local"
     search: Literal["available"] = "available"
     timestamp: datetime
     pinecone: str = "not_configured"
@@ -57,6 +61,7 @@ def create_app(
     max_bytes: int | None = None,
     embedding_provider=None,
     live_adapter=None,
+    llm_provider=None,
 ) -> FastAPI:
     root = data_dir or Path(
         os.getenv("PVL_DATA_DIR", Path(__file__).resolve().parents[3] / ".data")
@@ -66,14 +71,16 @@ def create_app(
         raise ValueError("Upload cap must be between 1 byte and 50 MiB")
     provider = embedding_provider or TorchProvider()
     live = live_adapter or PineconeLiveAdapter()
+    llm = llm_provider or OllamaLocalProvider()
 
     @asynccontextmanager
     async def lifespan(_app):
         yield
         provider.close()
         live.close()
+        await llm.close()
 
-    app = FastAPI(title="Pinecone Visual Lab", version="0.5.0", lifespan=lifespan)
+    app = FastAPI(title="Pinecone Visual Lab", version="0.6.0", lifespan=lifespan)
     app.add_middleware(UploadLimit, max_bytes=cap)
     app.add_middleware(
         CORSMiddleware,
@@ -117,6 +124,9 @@ def create_app(
     search = SearchService(vectors)
     app.state.search_service = search
     app.include_router(search_router(search))
+    rag = RagService(search, llm)
+    app.state.rag_service = rag
+    app.include_router(rag_router(rag))
     return app
 
 

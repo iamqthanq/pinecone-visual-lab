@@ -1,0 +1,96 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
+[D06] Frontend lint
+
+> pinecone-visual-lab@0.6.0 lint
+> npm run lint --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.6.0 lint
+> eslint .
+
+[D06] TypeScript strict
+
+> pinecone-visual-lab@0.6.0 typecheck
+> npm run typecheck --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.6.0 typecheck
+> tsc --noEmit
+
+[D06] Frontend unit tests
+
+> pinecone-visual-lab@0.6.0 test
+> npm run test --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.6.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/Corel/HK1_NAM4/PR/Giữa kì/pinecone-visual-lab/apps/web
+
+
+ Test Files  7 passed (7)
+      Tests  40 passed (40)
+   Start at  18:39:19
+   Duration  16.68s (environment 49%, tests 35%, setup 10%, import 5%, transform 1%)
+
+Environment  jsdom was created 7 times · 14.33s total, 49% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+[D06] Python lint
+All checks passed!
+[D06] Backend API + Git guard tests
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\86b5d7060a8743d79c8575e74a90938d\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 205 items / 5 deselected / 200 selected
+
+apps\api\tests\test_chunking.py ............                             [  6%]
+apps\api\tests\test_documents.py ..........................              [ 19%]
+apps\api\tests\test_embeddings.py ...................                    [ 28%]
+apps\api\tests\test_health.py ...                                        [ 30%]
+apps\api\tests\test_ollama.py ............................               [ 44%]
+apps\api\tests\test_rag.py .......................                       [ 55%]
+apps\api\tests\test_search.py ....................................       [ 73%]
+apps\api\tests\test_search_live.py ........                              [ 77%]
+apps\api\tests\test_vector_adapters.py ........................          [ 89%]
+apps\api\tests\test_vector_service.py ........                           [ 93%]
+apps\api\tests\test_git_guard.py .....F.......                           [100%]
+
+================================== FAILURES ===================================
+_ GitGuardTests.test_d06_assignment_requires_issue_eleven_and_rejects_prior_refs _
+
+self = <test_git_guard.GitGuardTests testMethod=test_d06_assignment_requires_issue_eleven_and_rejects_prior_refs>
+
+    def test_d06_assignment_requires_issue_eleven_and_rejects_prior_refs(self):
+        branch = 'feature/issue-11-local-rag-chat'
+        self.run_git('switch', '-q', '-c', branch)
+        self.run_git('config', 'pinecone.issue', '11')
+        self.run_git('config', 'pinecone.branch', branch)
+        ref = f'refs/heads/{branch}'
+        sha = self.run_git('rev-parse', 'HEAD')
+>       self.assertEqual(guard.validate('origin', URL, f'{ref} {sha} {ref} {ZERO}\n'), branch)
+E       AssertionError: 'refs/heads/feature/issue-11-local-rag-chat' != 'feature/issue-11-local-rag-chat'
+E       - refs/heads/feature/issue-11-local-rag-chat
+E       ? -----------
+E       + feature/issue-11-local-rag-chat
+
+tests\test_git_guard.py:172: AssertionError
+=========================== short test summary info ===========================
+FAILED apps\api\tests\test_git_guard.py::GitGuardTests::test_d06_assignment_requires_issue_eleven_and_rejects_prior_refs
+=========== 1 failed, 199 passed, 5 deselected in 131.18s (0:02:11) ===========
+Backend API + Git guard tests FAILED (exit 1)
+At D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\scripts\check.ps1:12 char:30
++ ... f ($LASTEXITCODE -ne 0) { throw "$Name FAILED (exit $LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Backend API + G...FAILED (exit 1):String) [], RuntimeException
+    + FullyQualifiedErrorId : Backend API + Git guard tests FAILED (exit 1)
+
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 167.07

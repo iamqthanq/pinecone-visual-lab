@@ -36,7 +36,9 @@ class UploadLimit:
             else (
                 1024 * 1024
                 if path == "/api/search"
-                or path.startswith(("/api/embeddings/", "/api/vector-store/", "/api/search/"))
+                or path.startswith(
+                    ("/api/embeddings/", "/api/vector-store/", "/api/search/", "/api/rag/")
+                )
                 else None
             )
         )
