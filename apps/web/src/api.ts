@@ -2,7 +2,8 @@ export interface Health {
   status: 'ok'
   service: 'pinecone-visual-lab-api'
   version: string
-  phase: 'D04'
+  phase: 'D05'
+  search: 'available'
   documents: 'available'
   timestamp: string
   pinecone: 'not_configured' | 'configured_not_verified'
@@ -22,7 +23,7 @@ export async function getHealth(signal: AbortSignal): Promise<Health> {
   if (!body || typeof body !== 'object') throw new Error('Invalid health response')
   const health = body as Partial<Health>
   if (health.status !== 'ok' || health.service !== 'pinecone-visual-lab-api'
-    || health.phase !== 'D04' || health.documents !== 'available' || !['not_configured', 'configured_not_verified'].includes(health.pinecone ?? '')
+    || health.phase !== 'D05' || health.search !== 'available' || health.documents !== 'available' || !['not_configured', 'configured_not_verified'].includes(health.pinecone ?? '')
     || health.vector_store !== 'local_available'
     || !['not_cached', 'not_loaded', 'loading', 'loaded', 'unavailable'].includes(health.embedding ?? '')
     || !['e5', 'test-fixture-not-e5'].includes(health.embedding_mode ?? '') || typeof health.version !== 'string'

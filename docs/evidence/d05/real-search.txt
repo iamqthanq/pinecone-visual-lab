@@ -1,0 +1,16 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py apps/api/tests/test_real_search.py -m real_model -s
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\4e7c230fccfe49b0b518f5beaf6e9870\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 1 item
+
+apps\api\tests\test_real_search.py Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   1%|          | 1/199 [00:03<11:26,  3.47s/it]Loading weights:   3%|▎         | 5/199 [00:03<01:49,  1.77it/s]Loading weights:   6%|▌         | 12/199 [00:03<00:36,  5.16it/s]Loading weights:  14%|█▍        | 28/199 [00:03<00:11, 15.47it/s]Loading weights:  22%|██▏       | 43/199 [00:04<00:05, 26.26it/s]Loading weights:  30%|██▉       | 59/199 [00:04<00:03, 40.11it/s]Loading weights: 100%|██████████| 199/199 [00:04<00:00, 47.46it/s]
+.
+
+============================= 1 passed in 53.97s ==============================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 62.11

@@ -1,8 +1,8 @@
 # Pinecone Visual Lab
 
-A local vector-database seminar workbench. **D04 adds a persistent SQLite vector store and Vector Explorer**, preserving D01–D03 documents, confirmed chunks, real local E5 and the embedding/cosine inspector. The Pinecone SDK adapter is implemented, with **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. Top-k retrieval, RAG and Slab remain **PLANNED (D05–D09)**. This project is independent of Pinecone's console.
+A local vector-database seminar workbench. **D05 implements real local Semantic Search, Top-K, metadata prefilters, exact source navigation and measured Search Trace**, preserving D01–D04 documents, confirmed chunks, E5 and vector storage. The Pinecone query adapter is implemented with offline SDK transport tests; **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. RAG/Ollama, Slab and tour remain **PLANNED (D06–D09)**.
 
-![D04 Vector Explorer](docs/evidence/d04/vector-store-desktop-1440.png)
+![D05 Search Lab](docs/evidence/d05/search-desktop-1440.png)
 
 ## Windows setup
 
@@ -51,6 +51,22 @@ Open **http://127.0.0.1:5173/vectors**. Choose document → confirmed version �
 
 Batches1–8, total≤512 input tokens including prefix/specials, no truncation; oversized input fails. Timeout120s, frontend cancellation130s, explicit Cancel stops owned inference worker. Only confirmed chunk vectors persist idempotently in SQLite schema3 (forward migration preserves D02/D03); ad hoc queries never persist. Earlier confirmed versions/D02 drafts remain intact. [D03 evidence](docs/evidence/d03/REPORT.md).
 
+## Semantic Search / Search Lab (D05)
+
+Open **http://127.0.0.1:5173/search** after ingesting a confirmed version to **ACTIVE** in Vector Explorer:
+
+1. Choose LOCAL DEMO, the stored index and namespace (blank = default), Top-K1–10 and a raw Vietnamese question. Production uses real cached E5 with `query: ` and the512-token prefix/special budget.
+2. Optionally select document, exact case-sensitive filename as stored, and both page endpoints. Cross-page chunks match any overlap. Filters apply **before** Top-K; pending/failed/superseded/deleting/deleted/foreign-model vectors are excluded by ACTIVE pointer + verified manifest + confirmed source joins.
+3. Click **Search** for actual SQLite vectors ranked by exact cosine, not probability/percentage. **Compare with / without filters** reuses the query embedding. Both passes remain bounded; no LLM or Ollama is needed.
+4. Inspect literal source snippet/full text, pages, model and signed score. **Open exact source** selects the correct document/retained confirmed version/chunk/page, even when a newer confirmed version has not been ingested. Copy includes text/provenance.
+5. Search Trace records monotonic stage/total times. Missing sources are omitted with a warning. Empty namespace/no match/offline/missing model/invalid filter are explicit; changing inputs clears stale results and reload does not auto-search.
+
+Config: `PVL_SEARCH_MAX_CANDIDATES=2000` (1–10000), plus32MiB UTF-8 candidate JSON per pass. Excess returns413; narrow filters rather than silently search a dataset prefix. Search is read-only. The two-request service cap and existing bounded CPU worker protect local resources.
+
+LIVE Search defaults disabled (`PVL_LIVE_SEARCH_ENABLED=0`). Only after separate owner-approved target/quota disclosure may an operator opt in, with a backend-only key and explicit UI read confirmation; compare needs additional consent. No cloud call is made on page/mode/reload/status. No live smoke was authorized/run. **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**.
+
+SDK10.3 `_values` is the legacy BYOV translation and uses `Index.query`/POST `/query`, validated against the actual pinned SDK with fake HTTP transport/DNS blocked. A version-guarded compatibility shim fixes Index dropping parent retry settings; SDK upgrades must revalidate it. [Full API/filter grammar, source/ACTIVE consistency, ANN limits and timings](docs/architecture/search.md). [Real vs fixture evidence](docs/evidence/d05/REPORT.md).
+
 ## Vector Explorer / vector storage (D04)
 
 Open **http://127.0.0.1:5173/vectors/store** (or **Open Vector Explorer** from Vectors Lab). LOCAL DEMO is the default and requires no cloud key:
@@ -92,7 +108,7 @@ npm.cmd audit --audit-level=moderate
 
 `RemoteSigned` applies only to that PowerShell process, preserving persistent policy/hooks. `check.ps1` fails on any required ESLint, strict typecheck, Vitest, Ruff, Pytest/API/Git guards, build, artifact/secret scan or whitespace check failure. Separate real-tokenizer/model tests require explicitly installed cached assets (otherwise SKIPPED); no download occurs. Default tests exclude both markers. The Pytest helper creates fresh ignored temp/cache directories, avoiding shared Windows Temp ACL problems without changing user Temp.
 
-Playwright uses installed **Edge**, starts isolated web/API on **5174/8001**, stores synthetic data under ignored `.cache/e2e-d04/` and stops its owned servers. Occupied ports cause failure instead of server reuse. Local default E2E uses actual E5 tokenizer and weights; ensure model setup before running. It additionally checks confirmed source → 384 values/table/copy → query → cosine and model-unavailable behavior. Fixtures use installed Windows Arial for Vietnamese PDFs (font not redistributed). Tests cover upload → pages → generate → inspect/overlap/copy → confirm → export → reload, draft recovery, delete confirmation, axe serious/critical checks, navigation, reduced motion, responsive widths and injected network failure/recovery. Actual screenshots go to `docs/evidence/d04/`; historical D01–D03 evidence is unchanged. D04 additionally tests confirmed-source ingest, actual adapter fetch, namespace isolation, owned deletion, index preview and LIVE disabled behavior.
+Playwright uses installed **Edge**, starts isolated web/API on **5174/8001**, stores synthetic data under ignored `.cache/e2e-d05/` and stops its owned servers. Occupied ports cause failure instead of server reuse. Local default E2E uses actual E5 tokenizer and weights; ensure model setup before running. It checks the full D01–D05 flow, including confirmed source → E5 → ACTIVE storage → semantic search/filter/compare → exact source navigation, as well as384 values/table/copy, cosine and missing-model behavior. Fixtures use installed Windows Arial for Vietnamese PDFs (font not redistributed). Tests cover upload → pages → generate → inspect/overlap/copy → confirm → export → reload, draft recovery, delete confirmation, axe serious/critical checks, navigation, reduced motion, responsive widths and injected network failure/recovery. Actual screenshots go to `docs/evidence/d05/`; historical D01–D04 evidence is unchanged. D04 additionally tests confirmed-source ingest, actual adapter fetch, namespace isolation, owned deletion, index preview and LIVE disabled behavior.
 
 Reproduce CI's **explicit fixture mode**, which requires no AI assets:
 
@@ -113,7 +129,7 @@ Individual commands: `npm.cmd run lint`, `npm.cmd run typecheck`, `npm.cmd test`
 
 Read [authentic workflow](GITHUB_COLLAB_WORKFLOW_STANDARD.md), [branch policy](docs/BRANCH_POLICY.md), [AGENTS.md](AGENTS.md). Original workflow SHA-256: `5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78`. Original workflow/master-plan whitespace is preserved by `.gitattributes` exceptions.
 
-Active: **[Issue #7](https://github.com/iamqthanq/pinecone-visual-lab/issues/7)**, **`feature/issue-7-pinecone-vector-store`**, base **`main`** after verified D03 PR #6 merge `ada6c0afa4a7c1a17834497498ab27f0ccf316c4`. Configure checkout guards per policy. After review/tests/commit:
+Active: **[Issue #9](https://github.com/iamqthanq/pinecone-visual-lab/issues/9)**, **`feature/issue-9-semantic-search`**, base **`main`** after verified D04 PR #8 merge `5b1ef8122d45a8a5704f6c4258b7a759a8adb2ec`. Configure checkout guards per policy. After review/tests/commit:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/push_issue_branch.ps1
@@ -123,11 +139,11 @@ The no-argument script validates checkout/active Issue/branch/remote/HEAD and pu
 
 ## Architecture and evidence
 
-Current: [D04 report/logs](docs/evidence/d04/REPORT.md), [vector-store design/schema3/SDK/authorization](docs/architecture/vector-store.md), [desktop1440](docs/evidence/d04/vector-store-desktop-1440.png), [mobile390](docs/evidence/d04/vector-store-mobile-390.png). [D03 report](docs/evidence/d03/REPORT.md) and D01/D02 links below are historical.
+Current: [D05 report/logs](docs/evidence/d05/REPORT.md), [Search contracts/architecture](docs/architecture/search.md), [desktop1440](docs/evidence/d05/search-desktop-1440.png), [mobile390](docs/evidence/d05/search-mobile-390.png). [D04 evidence](docs/evidence/d04/REPORT.md) and [vector-store schema/authorization](docs/architecture/vector-store.md) remain available. [D03 report](docs/evidence/d03/REPORT.md) and D01/D02 links below are historical.
 
 - [Current architecture/health](docs/architecture/overview.md), [D02 schema/provenance](docs/architecture/documents.md), [tokenizer/licenses](docs/tokenizer.md)
 - [Free-first ADR](docs/decisions/0001-free-first-stack.md), [Taste source/design](docs/design-foundation.md)
 - [D02 requirement/test report](docs/evidence/d02/REPORT.md), [desktop](docs/evidence/d02/desktop-1440.png), [mobile](docs/evidence/d02/mobile-390.png)
 - [Historical D01 report](docs/evidence/d01/REPORT.md)
 
-D04 ships real LOCAL DEMO upsert/list/fetch/delete with E5, plus an implemented LIVE adapter awaiting authorized account smoke. Top-k search, RAG and SLAB SIMULATOR remain planned. No OCR or production hosting. PDF reading order follows the text layer and may differ from visual layout. API is for loopback/local use without multi-user authentication. Resource caps do not constitute a hostile-PDF execution sandbox. Repository scan is focused, not a comprehensive security audit.
+D04 ships real LOCAL DEMO upsert/list/fetch/delete with E5, plus an implemented LIVE adapter awaiting authorized account smoke. D05 adds LOCAL exact Top-K search. RAG and SLAB SIMULATOR remain planned. No OCR or production hosting. PDF reading order follows the text layer and may differ from visual layout. API is for loopback/local use without multi-user authentication. Resource caps do not constitute a hostile-PDF execution sandbox. Repository scan is focused, not a comprehensive security audit.

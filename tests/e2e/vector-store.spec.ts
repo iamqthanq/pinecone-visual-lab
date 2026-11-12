@@ -4,7 +4,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { execFileSync } from 'node:child_process'
 
 const fixture = process.env.PVL_E2E_FIXTURE === '1'
-const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d04'
+const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d05'
 
 test('confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete', async ({ page, request }) => {
   test.setTimeout(180000)

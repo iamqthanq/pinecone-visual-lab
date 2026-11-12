@@ -1,4 +1,4 @@
-"""D04 document/embedding/storage labs; no automatic cloud calls or model downloads."""
+"""D05 document/embedding/storage/search labs; no automatic cloud calls or model downloads."""
 
 import os
 from contextlib import asynccontextmanager
@@ -17,6 +17,8 @@ from app.documents import MAX_BYTES, DocumentError, Store
 from app.embedding_api import embedding_router
 from app.embedding_provider import TorchProvider
 from app.embeddings import EmbeddingService
+from app.search_api import search_router
+from app.search_service import SearchService
 from app.tokenization import real_tokenizer
 from app.vector_api import vector_router
 from app.vector_live import PineconeLiveAdapter
@@ -38,8 +40,9 @@ if not origins or "*" in origins:
 class Health(BaseModel):
     status: Literal["ok"] = "ok"
     service: Literal["pinecone-visual-lab-api"] = "pinecone-visual-lab-api"
-    version: Literal["0.4.0"] = "0.4.0"
-    phase: Literal["D04"] = "D04"
+    version: Literal["0.5.0"] = "0.5.0"
+    phase: Literal["D05"] = "D05"
+    search: Literal["available"] = "available"
     timestamp: datetime
     pinecone: str = "not_configured"
     vector_store: Literal["local_available"] = "local_available"
@@ -70,7 +73,7 @@ def create_app(
         provider.close()
         live.close()
 
-    app = FastAPI(title="Pinecone Visual Lab", version="0.4.0", lifespan=lifespan)
+    app = FastAPI(title="Pinecone Visual Lab", version="0.5.0", lifespan=lifespan)
     app.add_middleware(UploadLimit, max_bytes=cap)
     app.add_middleware(
         CORSMiddleware,
@@ -111,6 +114,9 @@ def create_app(
     vectors = VectorService(store, embeddings, LocalDemoAdapter(store), live)
     app.state.vector_service = vectors
     app.include_router(vector_router(vectors))
+    search = SearchService(vectors)
+    app.state.search_service = search
+    app.include_router(search_router(search))
     return app
 
 

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
-const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d04'
+const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d05'
 
 test('live API health, desktop navigation, accessibility, and screenshot', async ({ page, request }) => {
   const errors: string[] = []
@@ -9,7 +9,7 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
   const response = await request.get('http://127.0.0.1:8001/api/health')
   expect(response.ok()).toBeTruthy()
   expect(await response.json()).toMatchObject({
-    status: 'ok', phase: 'D04', documents: 'available', pinecone: 'not_configured',
+    status: 'ok', phase: 'D05', documents: 'available', pinecone: 'not_configured',
   })
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/')
@@ -26,12 +26,14 @@ test('live API health, desktop navigation, accessibility, and screenshot', async
       await expect(page.getByRole('button', { name: 'Choose file' })).toBeEnabled()
     } else if (title === 'Vectors Lab') {
       await expect(page.getByRole('heading', { name: 'Turn text into coordinates.' })).toBeVisible()
+    } else if (title === 'Search Lab') {
+      await expect(page.getByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeVisible()
     } else {
       await expect(page.getByRole('heading', { name: title, exact: true })).toBeVisible()
       await expect(page.getByText('This lab is on the roadmap.')).toBeVisible()
     }
   }
-  await expect(page.getByText('SIMULATOR PLANNED · LOCAL STORE AVAILABLE')).toBeVisible()
+  await expect(page.getByText('SIMULATOR PLANNED · LOCAL SEARCH AVAILABLE')).toBeVisible()
   expect(errors).toEqual([])
 })
 

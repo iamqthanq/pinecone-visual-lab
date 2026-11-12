@@ -1,5 +1,7 @@
 # D04 vector storage
 
+D05 adds the [read-only Search layer](search.md) without changing schema3 or source/manifest data. It also corrects SDK10.3 Index retry inheritance through a pinned compatibility shim; D04 evidence below remains historical.
+
 LOCAL DEMO is a persistent SQLite vector store. LIVE PINECONE is an official SDK adapter whose account integration is **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. No actual cloud read, create, upsert or delete was performed for this delivery. Search Lab, top-k, RAG and Slab are D05–D09 and remain planned.
 
 ## Contracts and boundaries

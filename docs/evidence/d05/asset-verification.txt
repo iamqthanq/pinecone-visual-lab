@@ -1,0 +1,6 @@
+COMMAND: .venv/Scripts/python.exe .cache/d05-manifest.py
+Pinned model + tokenizer sizes and SHA-256 verified from existing ignored cache. No downloads.
+Pinecone SDK 10.3.0 license Apache-2.0 ; LIVE NOT VERIFIED
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 11.19

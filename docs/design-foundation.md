@@ -37,3 +37,7 @@ Vectors Lab reuses the pinned Taste source-guided D01/D02 shell, components and 
 ## D04 extension
 
 Vector Explorer at `/vectors/store` reuses the pinned source-guided Taste adaptation and established D01–D03 navy/mint/violet surfaces and components. Mode/target precede confirmed-source ingest, manifest confirmation/progress and actual adapter fetch. Separate preview/confirmation protects index creation and exact owned deletion. Target changes clear stale results; full metadata, 384D heatmap/table/copy and persistent history remain readable on mobile. Edge checks populated 1440/390 captures, 320–1440 overflow and axe serious/critical results. No upstream Taste gate or GSAP result is claimed; GSAP remains unused in D04.
+
+## D05 extension
+
+Search Lab inherits the pinned Taste source-guided D01–D04 adaptation and components. Navy/mint surfaces separate target/query, pre-ranking filters, ranked source cards and observed trace. Signed raw scores never become percentages. Source metadata and full confirmed text remain readable on mobile; exact source links reset the document workbench without stale versions. Explicit compare/LIVE consent and honest fixture/unavailable states explain processing. No new skill installer or GSAP runtime was run and no upstream Taste gate is claimed. Edge captures actual1440/390 UI and checks keyboard, overflow and axe.

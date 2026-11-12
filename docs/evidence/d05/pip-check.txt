@@ -1,0 +1,5 @@
+COMMAND: .venv/Scripts/python.exe -m pip check
+No broken requirements found.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 6.33

@@ -13,6 +13,7 @@ import { Badge, Button, LoadingState, Panel } from './components'
 import DocumentsLab from './DocumentsLab'
 import VectorsLab from './VectorsLab'
 import VectorStoreLab from './VectorStoreLab'
+import SearchLab from './SearchLab'
 
 const repo = 'https://github.com/iamqthanq/pinecone-visual-lab'
 const labs: { path: string; title: string; short: string; icon: LucideIcon;
@@ -73,7 +74,7 @@ function Pipeline() {
   ]
   return <Panel className="pipeline-panel" label="Learning pipeline roadmap">
     <div className="section-heading"><div><span className="eyebrow">THE LEARNING PATH</span>
-      <h2>One document. Every step visible.</h2></div><Badge>D04 LOCAL READY · D05–D06 PLANNED</Badge></div>
+      <h2>One document. Every step visible.</h2></div><Badge>D05 LOCAL READY · D06 PLANNED</Badge></div>
     <ol className="pipeline" id="pipeline">{stages.map((stage, index) =>
       <li key={stage.name}><Link to={stage.to} className="pipeline-stage">
         <span className="stage-top"><span className="mono">0{index + 1}</span><ArrowUpRight size={14} /></span>
@@ -82,7 +83,7 @@ function Pipeline() {
       </Link>{index < stages.length - 1 && <ChevronRight className="stage-arrow" size={17} aria-hidden="true" />}</li>,
     )}</ol>
     <div className="pipeline-foot"><ShieldCheck size={15} /><span>Every result will link back to its source.</span>
-      <span className="pipeline-note">Documents, embeddings and local storage; LIVE awaits authorization.</span></div>
+      <span className="pipeline-note">Documents, storage and semantic search; LIVE awaits authorization.</span></div>
   </Panel>
 }
 
@@ -111,7 +112,7 @@ function ConnectionPanel({ connection, refresh }: { connection: Connection; refr
 
 function Overview({ connection, refresh }: { connection: Connection; refresh: () => void }) {
   return <>
-    <div className="page-meta"><span className="page-tag"><span className="status-dot online" />D04 · VECTOR STORAGE LAB</span>
+    <div className="page-meta"><span className="page-tag"><span className="status-dot online" />D05 · SEMANTIC SEARCH LAB</span>
       <span className="mono meta-right">A WORKBENCH FOR VECTOR DATABASES</span></div>
     <div className="overview-top">
       <section className="intro"><span className="eyebrow accent">LEARN BY LOOKING INSIDE</span>
@@ -119,7 +120,7 @@ function Overview({ connection, refresh }: { connection: Connection; refresh: ()
         <p>From a document to a relevant answer.<br className="desktop-break" /> See how the pieces connect, then inspect each one.</p>
         <div className="intro-actions"><a href="#pipeline" className="button button-primary">View learning path<ArrowDown size={16} /></a>
           <a href={`${repo}/blob/main/README.md`} target="_blank" rel="noreferrer" className="text-link">Project repository<ArrowUpRight size={16} /></a></div>
-        <div className="foundation-note"><span className="note-line" /><span>Documents + Vectors Labs.<br />Inspect sources, embeddings and storage.</span></div>
+        <div className="foundation-note"><span className="note-line" /><span>Documents, Vectors + Search.<br />Inspect sources, storage and retrieval.</span></div>
       </section>
       <ConnectionPanel connection={connection} refresh={refresh} />
     </div>
@@ -129,11 +130,11 @@ function Overview({ connection, refresh }: { connection: Connection; refresh: ()
         <span className="section-aside">Choose a lab to see what comes next.</span></div>
       <div className="lab-grid">{labs.map(lab => <Link to={lab.path} key={lab.path} className="lab-card">
         <div className="lab-card-top"><span className="lab-icon"><lab.icon size={21} strokeWidth={1.5} /></span><ArrowUpRight size={17} /></div>
-        <h3>{lab.title}</h3><p>{lab.description}</p><div className="lab-card-bottom"><Badge>{lab.path === '/documents' ? 'D02 IMPLEMENTED' : lab.path === '/vectors' ? 'D03–D04 IMPLEMENTED' : 'PLANNED'}</Badge><span className="mono">{lab.phase}</span></div>
+        <h3>{lab.title}</h3><p>{lab.description}</p><div className="lab-card-bottom"><Badge>{lab.path === '/documents' ? 'D02 IMPLEMENTED' : lab.path === '/vectors' ? 'D03–D04 IMPLEMENTED' : lab.path === '/search' ? 'D05 IMPLEMENTED · D06 PLANNED' : 'PLANNED'}</Badge><span className="mono">{lab.phase}</span></div>
       </Link>)}</div>
     </section>
     <div className="mode-strip"><span className="mode-symbol"><Network size={18} /></span>
-      <div><strong>Three perspectives. Clearly separated.</strong><p>Local storage is available. Live Pinecone awaits authorization; search and simulation remain planned.</p></div>
+      <div><strong>Three perspectives. Clearly separated.</strong><p>Local storage and semantic search are available. Live awaits authorization; RAG and simulation remain planned.</p></div>
       <Link to="/architecture" className="text-link">View architecture<ArrowRight size={16} /></Link></div>
   </>
 }
@@ -150,12 +151,12 @@ function PlannedLab({ lab }: { lab: typeof labs[number] }) {
       <div className="empty-state"><Code2 size={23} /><span>No processing is available in this lab yet. No data has been uploaded or generated.</span></div>
       <Link to="/" className="button button-secondary">Back to overview<ArrowRight size={16} /></Link>
     </Panel>
-    {lab.path === '/architecture' && <Panel className="mode-explainer" label="Planned retrieval modes">
-      <h2>What each mode will mean</h2><dl>
-        <div><dt>LIVE PINECONE</dt><dd>Real Pinecone API requests, index, namespace, and retrieval results.</dd></div>
-        <div><dt>LOCAL DEMO</dt><dd>Local vector retrieval; prebuilt fixtures will be explicitly labeled.</dd></div>
+    {lab.path === '/architecture' && <Panel className="mode-explainer" label="Retrieval modes and boundaries">
+      <h2>What each mode means</h2><dl>
+        <div><dt>LIVE PINECONE</dt><dd>Pinecone SDK adapter; LIVE account search remains NOT VERIFIED until authorized.</dd></div>
+        <div><dt>LOCAL DEMO</dt><dd>Implemented SQLite exact cosine search over verified ACTIVE E5 vectors. Test fixtures say NOT E5.</dd></div>
         <div><dt>SLAB SIMULATOR</dt><dd>An educational simulation, separate from live Pinecone telemetry.</dd></div>
-      </dl><Badge>SIMULATOR PLANNED · LOCAL STORE AVAILABLE</Badge></Panel>}
+      </dl><Badge>SIMULATOR PLANNED · LOCAL SEARCH AVAILABLE</Badge></Panel>}
   </>
 }
 
@@ -182,15 +183,15 @@ export default function App() {
       </nav>
       <div className="sidebar-guide"><span className="guide-icon"><BookOpen size={18} /></span><strong>Built to explain.</strong>
         <p>Follow the data. Understand<br />the decisions along the way.</p><Link to="/architecture" onClick={() => setMenuOpen(false)}>See the roadmap<ArrowUpRight size={15} /></Link></div>
-      <div className="sidebar-bottom"><a href={`${repo}/issues/7`} target="_blank" rel="noreferrer"><CircleHelp size={17} />D04 specification<ArrowUpRight size={13} /></a>
-        <div><span className="version-mark">pvl</span><span className="mono">v0.4.0 · Vector storage</span></div></div>
+      <div className="sidebar-bottom"><a href={`${repo}/issues/9`} target="_blank" rel="noreferrer"><CircleHelp size={17} />D05 specification<ArrowUpRight size={13} /></a>
+        <div><span className="version-mark">pvl</span><span className="mono">v0.5.0 · Semantic search</span></div></div>
     </aside>
     <div className="main-shell"><header className="topbar"><div className="breadcrumbs"><span>Workspace</span><ChevronRight size={14} /><span>{currentLab?.title ?? 'Overview'}</span></div>
       <div className="topbar-actions"><span className="local-chip"><span className="status-dot" />LOCAL WORKSPACE</span>
         <a href={repo} target="_blank" rel="noreferrer" className="repo-link" aria-label="Open GitHub repository"><Code2 size={18} /><span>Repository</span><ArrowUpRight size={13} /></a></div></header>
       <main id="main" tabIndex={-1}><Routes><Route path="/" element={<Overview connection={connection} refresh={refresh} />} />
         <Route path="/vectors/store" element={<VectorStoreLab />} />
-        {labs.map(lab => <Route key={lab.path} path={lab.path} element={lab.path === '/documents' ? <DocumentsLab /> : lab.path === '/vectors' ? <VectorsLab /> : <PlannedLab lab={lab} />} />)}
+        {labs.map(lab => <Route key={lab.path} path={lab.path} element={lab.path === '/documents' ? <DocumentsLab /> : lab.path === '/vectors' ? <VectorsLab /> : lab.path === '/search' ? <SearchLab /> : <PlannedLab lab={lab} />} />)}
         <Route path="*" element={<Panel className="planned-panel"><h1>Page not found</h1><p>This route is not part of the lab.</p><Link to="/" className="button">Back to overview</Link></Panel>} />
       </Routes>
       <footer className="app-footer"><span><span className="footer-dot" />Pinecone Visual Lab</span><span>Vector databases, made visible.<span className="footer-divider">/</span>Seminar edition</span></footer>
