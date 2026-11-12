@@ -10,3 +10,4 @@ reportlab
 torch==2.15.0
 transformers==5.22.2
 safetensors>=0.8.0
+pinecone==10.3.0

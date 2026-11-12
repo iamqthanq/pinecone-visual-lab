@@ -89,6 +89,23 @@ class GitGuardTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 guard.validate('origin', URL, self.line(source=old, destination=old))
 
+    def test_d04_assignment_allows_issue_seven_and_rejects_prior_assignments(self):
+        branch = "feature/issue-7-pinecone-vector-store"
+        self.run_git("switch", "-q", "-c", branch)
+        self.run_git("config", "pinecone.issue", "7")
+        self.run_git("config", "pinecone.branch", branch)
+        ref = f"refs/heads/{branch}"
+        self.assertEqual(
+            guard.validate("origin", URL, self.line(source=ref, destination=ref)), ref
+        )
+        for old in [
+            REF,
+            "refs/heads/feature/issue-3-document-chunking",
+            "refs/heads/feature/issue-5-local-embeddings",
+        ]:
+            with self.assertRaises(ValueError):
+                guard.validate("origin", URL, self.line(source=old, destination=old))
+
     def test_wrong_refs_tags_deletion_multiple_and_sha(self):
         cases = [
             self.line(destination="refs/heads/main"),

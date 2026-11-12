@@ -1,0 +1,38 @@
+COMMAND: npm.cmd run test:e2e
+
+> pinecone-visual-lab@0.4.0 test:e2e
+> playwright test
+
+[WebServer] INFO:     Started server process [6800]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:19780) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:10636) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:76) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (10.2s)
+  ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (3.6s)
+[WebServer] Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][WebServer] Loading weights:   1%|          | 1/199 [00:03<12:09,  3.69s/it][WebServer] Loading weights:   9%|▊         | 17/199 [00:03<00:29,  6.17it/s][WebServer] Loading weights:  16%|█▌        | 31/199 [00:03<00:13, 12.71it/s][WebServer] Loading weights:  21%|██        | 41/199 [00:04<00:08, 17.91it/s][WebServer] Loading weights:  29%|██▊       | 57/199 [00:04<00:05, 26.59it/s][WebServer] Loading weights:  35%|███▌      | 70/199 [00:04<00:04, 31.33it/s][WebServer] Loading weights: 100%|██████████| 199/199 [00:04<00:00, 42.85it/s]
+  ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (1.1m)
+  ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (2.0s)
+  ok  5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (6.5s)
+  ok  6 tests\e2e\foundation.spec.ts:38:1 › mobile menu, deep links, reduced motion and layout at four widths (19.2s)
+  ok  7 tests\e2e\foundation.spec.ts:60:1 › network failure and recovery (explicitly intercepted fault injection) (2.2s)
+  ok  8 tests\e2e\foundation.spec.ts:72:1 › keyboard skip link is first and visible (1.5s)
+  ok  9 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (13.8s)
+  ok 10 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (1.7s)
+  ok 11 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (3.1s)
+
+  ok 12 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (7.7s)
+
+  12 passed (2.4m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 143.81

@@ -1,0 +1,74 @@
+COMMAND: npm.cmd run test:e2e
+
+> pinecone-visual-lab@0.4.0 test:e2e
+> playwright test
+
+[WebServer] INFO:     Started server process [26100]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:9468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:5552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:10196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (7.8s)
+  ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (2.1s)
+  ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (10.8s)
+  ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (911ms)
+  ok  5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (2.5s)
+  ok  6 tests\e2e\foundation.spec.ts:38:1 › mobile menu, deep links, reduced motion and layout at four widths (13.3s)
+  ok  7 tests\e2e\foundation.spec.ts:60:1 › network failure and recovery (explicitly intercepted fault injection) (1.8s)
+  ok  8 tests\e2e\foundation.spec.ts:72:1 › keyboard skip link is first and visible (1.4s)
+  ok  9 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (9.9s)
+  ok 10 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (1.4s)
+  ok 11 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (2.2s)
+
+  x  12 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (7.5s)
+
+
+  1) tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('store-vietnamese.pdf', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByText('store-vietnamese.pdf', { exact: true }) resolved to 2 elements:
+        1) <option value="7b5dee2d-1388-4686-8ae3-6e8be384f73b">store-vietnamese.pdf</option> aka getByLabel('Source document')
+        2) <dd>store-vietnamese.pdf</dd> aka getByRole('region', { name: 'Stored vector inspector' }).getByText('store-vietnamese.pdf')
+
+    Call log:
+      - Expect "toBeVisible" getByText('store-vietnamese.pdf', { exact: true }) with timeout 5000ms
+      - waiting for getByText('store-vietnamese.pdf', { exact: true })
+
+
+      153 |   await page.getByRole('button', { name: `Fetch vector ${job.ids[0]}`, exact: true }).click()
+      154 |   await expect(page.getByRole('heading', { name: 'Fetched vector', exact: true })).toBeVisible()
+    > 155 |   await expect(page.getByText('store-vietnamese.pdf', { exact: true })).toBeVisible()
+          |                                                                         ^
+      156 |   const removal = await (await request.post(`/api/vector-store/jobs/${job.id}/delete-preview`)).json()
+      157 |   for (let i = 0; i < 100; i++) {
+      158 |     const deletion = await request.post(`/api/vector-store/deletions/${removal.id}/step`, { data: { confirmed: true } })
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\vector-store.spec.ts:155:73
+
+    Error Context: test-results\vector-store-multi-page-Vi-85cde-ored-with-real-source-pages\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\vector-store-multi-page-Vi-85cde-ored-with-real-source-pages\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\vector-store-multi-page-Vi-85cde-ored-with-real-source-pages\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages
+  11 passed (1.1m)
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 71.28

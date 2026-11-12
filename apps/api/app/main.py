@@ -1,4 +1,4 @@
-"""D03 local document/embedding labs; no cloud operations or automatic downloads."""
+"""D04 document/embedding/storage labs; no automatic cloud calls or model downloads."""
 
 import os
 from contextlib import asynccontextmanager
@@ -18,6 +18,10 @@ from app.embedding_api import embedding_router
 from app.embedding_provider import TorchProvider
 from app.embeddings import EmbeddingService
 from app.tokenization import real_tokenizer
+from app.vector_api import vector_router
+from app.vector_live import PineconeLiveAdapter
+from app.vector_local import LocalDemoAdapter
+from app.vector_service import VectorService
 
 DEFAULT_ORIGINS = (
     "http://127.0.0.1:5173,http://localhost:5173,http://127.0.0.1:4173,http://localhost:4173"
@@ -34,10 +38,11 @@ if not origins or "*" in origins:
 class Health(BaseModel):
     status: Literal["ok"] = "ok"
     service: Literal["pinecone-visual-lab-api"] = "pinecone-visual-lab-api"
-    version: Literal["0.3.0"] = "0.3.0"
-    phase: Literal["D03"] = "D03"
+    version: Literal["0.4.0"] = "0.4.0"
+    phase: Literal["D04"] = "D04"
     timestamp: datetime
-    pinecone: Literal["not_configured"] = "not_configured"
+    pinecone: str = "not_configured"
+    vector_store: Literal["local_available"] = "local_available"
     embedding: str = "not_loaded"
     embedding_mode: str = "e5"
     documents: Literal["available"] = "available"
@@ -48,6 +53,7 @@ def create_app(
     engine_provider=real_tokenizer,
     max_bytes: int | None = None,
     embedding_provider=None,
+    live_adapter=None,
 ) -> FastAPI:
     root = data_dir or Path(
         os.getenv("PVL_DATA_DIR", Path(__file__).resolve().parents[3] / ".data")
@@ -56,13 +62,15 @@ def create_app(
     if not 0 < cap <= 50 * 1024 * 1024:
         raise ValueError("Upload cap must be between 1 byte and 50 MiB")
     provider = embedding_provider or TorchProvider()
+    live = live_adapter or PineconeLiveAdapter()
 
     @asynccontextmanager
     async def lifespan(_app):
         yield
         provider.close()
+        live.close()
 
-    app = FastAPI(title="Pinecone Visual Lab", version="0.3.0", lifespan=lifespan)
+    app = FastAPI(title="Pinecone Visual Lab", version="0.4.0", lifespan=lifespan)
     app.add_middleware(UploadLimit, max_bytes=cap)
     app.add_middleware(
         CORSMiddleware,
@@ -80,9 +88,7 @@ def create_app(
     async def invalid_input(_request, _error):
         # Do not echo query text/vectors (including JSON NaN) into validation errors.
         return JSONResponse(
-            {
-                "detail": "Invalid fields: check types, IDs, limits and finite vector values."
-            },
+            {"detail": "Invalid fields: check types, IDs, limits and finite vector values."},
             status_code=422,
         )
 
@@ -90,12 +96,21 @@ def create_app(
     def health() -> Health:
         status = provider.status()
         return Health(
-            timestamp=datetime.now(UTC), embedding=status["state"], embedding_mode=status["mode"]
+            timestamp=datetime.now(UTC),
+            embedding=status["state"],
+            embedding_mode=status["mode"],
+            pinecone="configured_not_verified"
+            if os.getenv("PINECONE_API_KEY")
+            else "not_configured",
         )
 
     store = Store(root)
     app.include_router(document_router(store, engine_provider, cap))
-    app.include_router(embedding_router(EmbeddingService(store, engine_provider, provider)))
+    embeddings = EmbeddingService(store, engine_provider, provider)
+    app.include_router(embedding_router(embeddings))
+    vectors = VectorService(store, embeddings, LocalDemoAdapter(store), live)
+    app.state.vector_service = vectors
+    app.include_router(vector_router(vectors))
     return app
 
 

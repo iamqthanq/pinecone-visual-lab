@@ -1,5 +1,7 @@
 # D03 local embeddings and inspector
 
+D04 reuses this service unchanged for explicit confirmed-version ingest. Current SQLite schema3 preserves schema2 records and adds [vector storage/manifests](vector-store.md); this page describes the retained D03 inference contract.
+
 ## Model and approval
 
 User explicitly approved downloading/running official E5 weights and the CPU runtime on2026-11-11 after disclosure of ~471MB weights, <1GB expected total download,3GB disk and3–4GB available RAM (8GB system recommended). `scripts/setup_embedding_model.py --accept-download` is the sole setup path. It requests only the exact allowlisted assets from `https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/`, verifies pinned sizes/SHA-256 before atomic replacement, removes incomplete `.part` files, reuses verified cache and checks free disk. On interrupted setup, rerun the same explicit command; already valid files are reused. There is no startup/API/CI download or remote-code execution.

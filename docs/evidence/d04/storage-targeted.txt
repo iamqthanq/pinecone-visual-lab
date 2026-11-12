@@ -1,0 +1,16 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py apps/api/tests/test_vector_service.py apps/api/tests/test_vector_adapters.py
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\acda1abf4f5c4242855ca99b860d67c6\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 29 items
+
+apps\api\tests\test_vector_service.py ......                             [ 20%]
+apps\api\tests\test_vector_adapters.py .......................           [100%]
+
+============================= 29 passed in 19.12s =============================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 23.68

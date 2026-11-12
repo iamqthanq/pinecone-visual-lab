@@ -1,6 +1,6 @@
 # D02 documents: extraction, SQLite and provenance
 
-D03 retains these extraction/version contracts. Schema1 described below is the D02 baseline; current schema2 adds only versioned embedding records through a forward migration, documented in [embedding architecture](embeddings.md). Unknown newer schemas still fail safely.
+D03 retains these extraction/version contracts. Schema1 described below is the D02 baseline; schema2 adds versioned embedding records through a forward migration, documented in [embedding architecture](embeddings.md). D04 schema3 adds explicit vector storage/manifests without changing these source contracts; see [vector storage](vector-store.md). Unknown newer schemas still fail safely.
 
 ## Storage and limits
 

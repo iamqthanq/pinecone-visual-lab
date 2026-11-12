@@ -135,7 +135,7 @@ def test_forward_schema_migration_preserves_d02_records_and_rejects_future(tmp_p
     assert store.get(doc["id"]) == before
     assert store.version(doc["id"], draft["id"])["chunks"] == draft["chunks"]
     with store.db() as db:
-        assert db.execute("PRAGMA user_version").fetchone()[0] == 2
+        assert db.execute("PRAGMA user_version").fetchone()[0] == 3
     with sqlite3.connect(tmp_path / "documents.sqlite3") as db:
         db.execute("PRAGMA user_version=999")
     with pytest.raises(DocumentError, match="Unsupported database schema"):

@@ -1,0 +1,23 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py -m "real_tokenizer or real_model" -s
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\fbf331f8a5924c1683ac996e2f741c0c\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 105 items / 102 deselected / 3 selected
+
+apps\api\tests\test_chunking.py .
+apps\api\tests\test_real_embeddings.py Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2142.96it/s]
+Worker measurements: {"inference_ms": 1071.010200001183, "load_ms": 0.0, "worker_peak_working_set_bytes": 1102524416}
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2035.40it/s]
+Observed Vietnamese experiment (not a general theorem): {"related": 0.9472104609462585, "unrelated": 0.8403406367374009}
+Actual CPU batch inference ms: 1149.0804999993998 load ms: 13175.462200000766
+.
+apps\api\tests\test_real_vector_store.py Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  29%|██▊       | 57/199 [00:00<00:00, 562.60it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1815.54it/s]
+.
+
+===================== 3 passed, 102 deselected in 59.72s ======================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 64.09

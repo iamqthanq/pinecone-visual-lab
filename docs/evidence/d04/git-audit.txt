@@ -1,0 +1,66 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File docs/evidence/d04/git-audit.ps1
+WORKDIR: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+BRANCH: feature/issue-7-pinecone-vector-store
+ORIGIN: https://github.com/iamqthanq/pinecone-visual-lab
+## feature/issue-7-pinecone-vector-store...origin/main
+ M .env.example
+ M .github/workflows/ci.yml
+ M AGENTS.md
+ M README.md
+ M apps/api/app/document_api.py
+ M apps/api/app/documents.py
+ M apps/api/app/main.py
+ M apps/api/requirements.in
+ M apps/api/requirements.lock
+ M apps/api/tests/test_embeddings.py
+ M apps/api/tests/test_health.py
+ M apps/api/tests/test_real_embeddings.py
+ M apps/web/package.json
+ M apps/web/src/App.test.tsx
+ M apps/web/src/App.tsx
+ M apps/web/src/VectorsLab.tsx
+ M apps/web/src/api.ts
+ M docs/BRANCH_POLICY.md
+ M docs/architecture/documents.md
+ M docs/architecture/embeddings.md
+ M docs/architecture/overview.md
+ M docs/design-foundation.md
+ M package-lock.json
+ M package.json
+ M playwright.config.ts
+ M scripts/check.ps1
+ M scripts/run_pytest.py
+ M tests/e2e/documents.spec.ts
+ M tests/e2e/embeddings.spec.ts
+ M tests/e2e/foundation.spec.ts
+ M tests/test_git_guard.py
+?? apps/api/app/vector_api.py
+?? apps/api/app/vector_contracts.py
+?? apps/api/app/vector_live.py
+?? apps/api/app/vector_local.py
+?? apps/api/app/vector_schema.py
+?? apps/api/app/vector_service.py
+?? apps/api/tests/test_real_vector_store.py
+?? apps/api/tests/test_vector_adapters.py
+?? apps/api/tests/test_vector_service.py
+?? apps/web/src/VectorStoreLab.test.tsx
+?? apps/web/src/VectorStoreLab.tsx
+?? apps/web/src/vector-store-api.ts
+?? apps/web/src/vector-store.css
+?? docs/architecture/vector-store.md
+?? docs/evidence/d04/
+?? tests/e2e/vector-store.spec.ts
+HEAD and fetched origin/main (HEAD is pre-publication; final SHA is in handoff):
+ada6c0afa4a7c1a17834497498ab27f0ccf316c4
+ada6c0afa4a7c1a17834497498ab27f0ccf316c4
+pinecone.issue: 7
+pinecone.branch: feature/issue-7-pinecone-vector-store
+pinecone.workdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab
+core.hooksPath: .githooks
+push.default: nothing
+refs/heads/feature/issue-7-pinecone-vector-store
+WORKFLOW_SHA256: 5CB214CB8CF499A83A480F1B244DA5C274DD66C8FCC211DB83ED246C82E20E78
+Historical workflow/master plan/evidence/guard implementation unchanged. Git audit PASS.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 3.89

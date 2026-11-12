@@ -33,3 +33,7 @@ Highlighted overlap has an actual/requested token legend. Draft/confirmed badges
 ## D03 extension
 
 Vectors Lab reuses the pinned Taste source-guided D01/D02 shell, components and tokens. Explicit source selection, distinct passage/query prefixes, real model state,384D heatmap/table and copy, provenance, measured timing and raw cosine explain the local inference step. Tables/heatmaps stack on mobile and remain keyboard accessible. E2E checks populated desktop/mobile flows and axe; a prohibited ARIA label on generic heatmap spans was fixed with explicit image roles, retaining per-dimension descriptions. Fixture labels say NOT E5; no synthetic latency/model success or Pinecone scores are presented. GSAP remains unused; no upstream Taste gate is claimed.
+
+## D04 extension
+
+Vector Explorer at `/vectors/store` reuses the pinned source-guided Taste adaptation and established D01–D03 navy/mint/violet surfaces and components. Mode/target precede confirmed-source ingest, manifest confirmation/progress and actual adapter fetch. Separate preview/confirmation protects index creation and exact owned deletion. Target changes clear stale results; full metadata, 384D heatmap/table/copy and persistent history remain readable on mobile. Edge checks populated 1440/390 captures, 320–1440 overflow and axe serious/critical results. No upstream Taste gate or GSAP result is claimed; GSAP remains unused in D04.
