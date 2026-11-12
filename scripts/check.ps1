@@ -7,7 +7,7 @@ if (-not (Test-Path -LiteralPath $taskPython)) { throw 'Create the Windows venv 
 
 function Invoke-Gate {
   param([string]$Name, [scriptblock]$Command)
-  Write-Host "[D04] $Name"
+  Write-Host "[D05] $Name"
   & $Command
   if ($LASTEXITCODE -ne 0) { throw "$Name FAILED (exit $LASTEXITCODE)" }
 }
@@ -21,4 +21,4 @@ Invoke-Gate 'Production frontend build' { npm.cmd run build }
 Invoke-Gate 'Secret / artifact scan' { & $taskPython scripts/verify_repository.py }
 Invoke-Gate 'Diff whitespace' { git diff --check }
 Invoke-Gate 'Staged diff whitespace' { git diff --cached --check }
-Write-Host '[D04] All local required checks PASS. Browser E2E: npm run test:e2e (isolated ports/data).'
+Write-Host '[D05] All local required checks PASS. Browser E2E: npm run test:e2e (isolated ports/data).'

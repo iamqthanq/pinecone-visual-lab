@@ -57,5 +57,5 @@ jobs:
         with:
           name: lab-browser-evidence
           path: |
-            docs/evidence/d04/*.png
+            docs/evidence/d05/fixture-search-example.json
             test-results/

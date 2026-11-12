@@ -1,0 +1,7 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d05/verify-artifacts.py
+Build secret scan: 19 files, zero findings; no credential values printed.
+Four real E5 evidence samples validated: 384 finite unit values; JSONL 3 lines parse/budget PASS.
+Search request/response/trace samples: 2 real E5 + 1 explicit NOT E5 fixture PASS.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.22

@@ -5,7 +5,7 @@ import App from './App'
 import { getHealth } from './api'
 
 const health = {
-  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.4.0', phase: 'D04', vector_store: 'local_available', documents: 'available',
+  status: 'ok', service: 'pinecone-visual-lab-api', version: '0.5.0', phase: 'D05', search: 'available', vector_store: 'local_available', documents: 'available',
   timestamp: new Date().toISOString(), pinecone: 'not_configured', embedding: 'not_loaded', embedding_mode: 'e5',
 }
 
@@ -29,7 +29,7 @@ describe('D01 foundation', () => {
     expect(await screen.findByText('ONLINE')).toBeInTheDocument()
     expect(screen.getByText('NOT CONFIGURED')).toBeInTheDocument()
     expect(screen.getByText('NOT LOADED')).toBeInTheDocument()
-    expect(screen.getByText('Documents, embeddings and local storage; LIVE awaits authorization.')).toBeInTheDocument()
+    expect(screen.getByText('Documents, storage and semantic search; LIVE awaits authorization.')).toBeInTheDocument()
   })
 
   it('shows disconnected help and can reconnect through the retry control', async () => {
@@ -43,9 +43,10 @@ describe('D01 foundation', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2)
   })
 
-  it('navigates to working Documents and Vectors Labs while keeping Search planned', async () => {
+  it('navigates to working Documents and Vectors Labs while keeping Architecture planned', async () => {
     vi.stubGlobal('fetch', vi.fn().mockImplementation((url: string) => Promise.resolve(Response.json(
       url.includes('/documents') ? { documents: [], max_file_bytes: 10485760 }
+        : url.includes('/api/search/status') ? { model: { state: 'not_cached', mode: 'e5', message: 'Explicit model setup required' }, local_indexes: [] }
         : url.includes('/tokenizer') ? { available: true, mode: 'e5' }
           : url.includes('/embeddings/status') ? { state: 'not_cached', mode: 'e5' } : health,
     ))))
@@ -56,6 +57,8 @@ describe('D01 foundation', () => {
     fireEvent.click(screen.getByRole('link', { name: 'Vectors Lab' }))
     expect(await screen.findByRole('heading', { name: 'Turn text into coordinates.' })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('link', { name: 'Search Lab' }))
+    expect(await screen.findByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('link', { name: 'Architecture Lab' }))
     expect(await screen.findByText('This lab is on the roadmap.')).toBeInTheDocument()
   })
 

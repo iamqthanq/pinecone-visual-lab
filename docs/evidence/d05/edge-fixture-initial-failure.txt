@@ -1,0 +1,151 @@
+COMMAND: npm.cmd run test:e2e
+
+> pinecone-visual-lab@0.5.0 test:e2e
+> playwright test
+
+[WebServer] INFO:     Started server process [7604]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[WebServer] (node:4480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:17004) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (16.2s)
+  ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (2.7s)
+  ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (16.3s)
+  ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (2.2s)
+  x   5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (377ms)
+(node:7380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   6 tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at four widths (7.3s)
+(node:26504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   7 tests\e2e\foundation.spec.ts:62:1 › network failure and recovery (explicitly intercepted fault injection) (8.2s)
+(node:16232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 tests\e2e\foundation.spec.ts:74:1 › keyboard skip link is first and visible (2.1s)
+
+  ok  9 tests\e2e\search.spec.ts:9:1 › Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace (44.3s)
+  ok 10 tests\e2e\search.spec.ts:108:1 › Search reload and LIVE switch make no automatic cloud query; invalid deep links fail closed (2.8s)
+  ok 11 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (14.4s)
+  ok 12 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (1.5s)
+  ok 13 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (1.8s)
+
+  ok 14 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (7.4s)
+
+
+  1) tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot
+
+    Error: expect(received).toMatchObject(expected)
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "documents": "available",
+    -   "phase": "D05",
+    +   "phase": "D04",
+        "pinecone": "not_configured",
+        "status": "ok",
+      }
+
+       9 |   const response = await request.get('http://127.0.0.1:8001/api/health')
+      10 |   expect(response.ok()).toBeTruthy()
+    > 11 |   expect(await response.json()).toMatchObject({
+         |                                 ^
+      12 |     status: 'ok', phase: 'D05', documents: 'available', pinecone: 'not_configured',
+      13 |   })
+      14 |   await page.setViewportSize({ width: 1440, height: 1000 })
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\foundation.spec.ts:11:33
+
+    Error Context: test-results\foundation-live-API-health-1fbb6-ccessibility-and-screenshot\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\foundation-live-API-health-1fbb6-ccessibility-and-screenshot\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\foundation-live-API-health-1fbb6-ccessibility-and-screenshot\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at four widths
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('ONLINE', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('ONLINE', { exact: true }) with timeout 5000ms
+      - waiting for getByText('ONLINE', { exact: true })
+
+
+      42 |   await page.setViewportSize({ width: 390, height: 844 })
+      43 |   await page.goto('/')
+    > 44 |   await expect(page.getByText('ONLINE', { exact: true })).toBeVisible()
+         |                                                           ^
+      45 |   await page.evaluate(() => document.fonts.ready)
+      46 |   await page.screenshot({ path: `${evidence}/overview-mobile-390.png`, fullPage: true })
+      47 |   await page.getByRole('button', { name: 'Open navigation' }).click()
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\foundation.spec.ts:44:59
+
+    Error Context: test-results\foundation-mobile-menu-dee-2b4e7-n-and-layout-at-four-widths\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\foundation-mobile-menu-dee-2b4e7-n-and-layout-at-four-widths\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\foundation-mobile-menu-dee-2b4e7-n-and-layout-at-four-widths\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\e2e\foundation.spec.ts:62:1 › network failure and recovery (explicitly intercepted fault injection)
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('ONLINE', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('ONLINE', { exact: true }) with timeout 5000ms
+      - waiting for getByText('ONLINE', { exact: true })
+
+
+      69 |   await page.unroute('**/api/health')
+      70 |   await page.getByRole('button', { name: 'Check connection' }).click()
+    > 71 |   await expect(page.getByText('ONLINE', { exact: true })).toBeVisible()
+         |                                                           ^
+      72 | })
+      73 |
+      74 | test('keyboard skip link is first and visible', async ({ page }) => {
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\e2e\foundation.spec.ts:71:59
+
+    Error Context: test-results\foundation-network-failure-433aa-ntercepted-fault-injection-\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\foundation-network-failure-433aa-ntercepted-fault-injection-\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\foundation-network-failure-433aa-ntercepted-fault-injection-\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot
+    tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at four widths
+    tests\e2e\foundation.spec.ts:62:1 › network failure and recovery (explicitly intercepted fault injection)
+  11 passed (2.5m)
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 158.49

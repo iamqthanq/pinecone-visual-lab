@@ -1,6 +1,7 @@
 """Official SDK adapter. Lazy, backend-only, fail-closed target authorization, no startup calls."""
 
 import json
+import math
 import os
 import re
 from datetime import UTC, datetime
@@ -9,6 +10,7 @@ from urllib.parse import urlsplit
 
 from app.embedding_assets import SIGNATURE
 from app.embedding_math import checked_vector
+from app.pinecone_compat import disable_hidden_index_retries
 from app.tokenization import MODEL_ID, REVISION
 from app.vector_contracts import Target, VectorError, records_checked
 
@@ -199,6 +201,7 @@ class PineconeLiveAdapter:
         info = self.valid(name)
         client = self.client.index(host=info["host"])
         try:
+            disable_hidden_index_retries(client)
             return self.call(lambda: operation(client))
         finally:
             client.close()
@@ -272,6 +275,47 @@ class PineconeLiveAdapter:
             ids=[item["id"] for item in result.get("vectors", [])],
             next=(result.get("pagination") or {}).get("next"),
         )
+
+    def query(
+        self,
+        target: Target,
+        values: list[float],
+        top_k: int,
+        metadata_filter: dict,
+        *,
+        confirmed: bool = False,
+    ) -> list[dict]:
+        if os.getenv("PVL_DISABLE_CLOUD") == "1":
+            raise VectorError("cloud_disabled_in_this_process", 403)
+        if os.getenv("PVL_LIVE_SEARCH_ENABLED") != "1" or not confirmed:
+            raise VectorError("live_read_requires_owner_opt_in_and_explicit_confirmation", 403)
+        checked_vector(values)
+        if abs(math.hypot(*values) - 1) > 1e-5 or type(top_k) is not int or not 1 <= top_k <= 10:
+            raise VectorError("invalid_search_vector_or_top_k", 422)
+        if not metadata_filter or len(json.dumps(metadata_filter).encode()) > 32768:
+            raise VectorError("bounded_active_metadata_filter_required", 422)
+        data = plain(
+            self.data_call(
+                target.index,
+                lambda client: client.query(
+                    vector=values,
+                    namespace=target.namespace,
+                    top_k=top_k,
+                    filter=metadata_filter,
+                    include_metadata=True,
+                    include_values=False,
+                    timeout=5,
+                ),
+            )
+        )
+        if data.get("namespace", "") != target.namespace or len(data.get("matches", [])) > top_k:
+            raise VectorError("provider_namespace_or_result_count_mismatch", 409)
+        matches = []
+        for match in data.get("matches", []):
+            if not isinstance(match.get("metadata"), dict) or not math.isfinite(match["score"]):
+                raise VectorError("provider_search_result_invalid", 409)
+            matches.append(dict(id=match["id"], score=match["score"], metadata=match["metadata"]))
+        return matches
 
     def delete(self, target, ids, owner):
         info = self.valid(target.index)

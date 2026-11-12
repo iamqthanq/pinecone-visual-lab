@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 
 const fixture = process.env.PVL_E2E_FIXTURE === '1'
-const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d04'
+const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d05'
 
 test('confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector', async ({ page, request }) => {
   test.setTimeout(180000)

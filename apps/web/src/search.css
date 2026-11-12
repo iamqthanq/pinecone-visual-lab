@@ -1,0 +1,46 @@
+.search-mode-strip { display: flex; gap: 15px; align-items: center; padding: 18px; border: 1px solid #30445b; border-left: 3px solid #7ce7cb; border-radius: 8px; background: #13202e; margin-bottom: 20px; }
+.search-mode-strip p { flex: 1; margin: 0; font-size: 13px; color: #c1cedd; line-height: 1.7; }
+.search-readiness { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; color: #b4c3d5; font-size: 13px; line-height: 1.8; }
+.search-readiness code { overflow-wrap: anywhere; }
+.search-form { border: 0; min-width: 0; padding: 0; margin: 0; }
+.search-panel { padding: 24px; margin: 22px 0; min-width: 0; }
+.search-panel h2 { font-size: 17px; margin-top: 0; }
+.search-panel label { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; color: #dce5f1; font-size: 13px; }
+.search-panel textarea, .search-panel select, .search-panel input:not([type=checkbox]) { width: 100%; min-width: 0; padding: 12px; color: #e5edf7; background: #0d1725; border: 1px solid #3d5068; border-radius: 6px; font: inherit; }
+.search-panel textarea { resize: vertical; line-height: 1.8; min-height: 95px; }
+.search-target-grid { display: grid; grid-template-columns: 1.2fr 1.3fr 1.2fr .5fr; gap: 16px; align-items: start; }
+.search-filter-grid { display: grid; grid-template-columns: 1.1fr 1.1fr .5fr .5fr; gap: 16px; align-items: start; }
+.search-panel .text-field { margin-top: 16px; }
+.search-panel .text-field label { margin: 0 0 8px; }
+.search-panel .field-hint { font-size: 12px; line-height: 1.7; display: block; margin-top: 8px; color: #acbfd5; }
+.search-actions, .search-hit-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.search-panel .search-checkbox { flex-direction: row; align-items: flex-start; line-height: 1.7; gap: 10px; }
+.search-checkbox input { width: 18px; height: 18px; margin-top: 3px; accent-color: #7ce7cb; flex-shrink: 0; }
+.search-live-consent { padding: 14px; border: 1px solid #705c44; border-radius: 8px; font-size: 13px; line-height: 1.8; }
+.search-empty { text-align: center; padding: 32px 20px; color: #bdcadb; line-height: 1.8; }
+.search-empty svg { color: #7ce7cb; margin-bottom: 10px; }
+.search-empty strong { display: block; }
+.search-result-heading { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; margin-top: 28px; font-size: 13px; color: #c0cede; }
+.search-hits { padding: 0; list-style: none; margin-bottom: 0; }
+.search-hit { padding: 22px 0; border-top: 1px solid #2b3d53; }
+.search-hit-heading { display: flex; align-items: center; gap: 12px; }
+.search-hit-heading h3 { flex: 1; margin: 0; font-size: 16px; overflow-wrap: anywhere; min-width: 0; }
+.search-rank { font-size: 12px; padding: 8px; color: #7ce7cb; background: #1c3435; border-radius: 5px; }
+.search-score { flex-shrink: 0; text-align: right; }
+.search-score small { display: block; font-size: 9px; letter-spacing: .09em; color: #9fafc3; }
+.search-score output { font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #7ce7cb; }
+.search-snippet { font-size: 14px; line-height: 1.9; white-space: pre-wrap; overflow-wrap: anywhere; color: #dae4f0; }
+.search-source-summary { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.search-source-summary .mono { overflow-wrap: anywhere; font-size: 11px; color: #a9bcd3; }
+.search-source-metadata { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
+.search-source-metadata dt { color: #a2b5cc; font-size: 11px; }
+.search-source-metadata dd { margin: 4px 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; overflow-wrap: anywhere; line-height: 1.8; }
+.search-full-text { max-height: 280px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px; font-size: 12px; line-height: 1.9; background: #0c1624; border-radius: 7px; }
+.search-panel summary { color: #b6c9e0; font-size: 13px; cursor: pointer; padding: 8px 0; }
+.search-compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.search-trace p { color: #b4c5db; font-size: 13px; line-height: 1.8; }
+.search-trace ol { padding: 0; list-style: none; }
+.search-trace li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #29394e; font-size: 13px; }
+.search-trace li .mono { text-align: right; font-size: 12px; color: #7ce7cb; }
+@media (max-width: 1100px) { .search-target-grid, .search-filter-grid { grid-template-columns: 1fr 1fr; } .search-compare-grid { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 550px) { .search-panel { padding: 18px; } .search-mode-strip { flex-wrap: wrap; } .search-mode-strip p { flex-basis: 100%; } .search-target-grid, .search-filter-grid { grid-template-columns: 1fr; gap: 0; } .search-source-metadata { grid-template-columns: 1fr; } .search-score output { font-size: 15px; } .search-hit-heading { flex-wrap: wrap; } .search-hit-heading h3 { flex-basis: 50%; } .search-trace li { flex-wrap: wrap; } }

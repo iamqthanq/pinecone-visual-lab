@@ -1,0 +1,16 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py apps/api/tests/test_search.py apps/api/tests/test_search_live.py
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\0cdbedd1dd9c400eaa0849b94e87745c\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 39 items
+
+apps\api\tests\test_search.py ...............................            [ 79%]
+apps\api\tests\test_search_live.py ........                              [100%]
+
+============================= 39 passed in 23.79s =============================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 26.32

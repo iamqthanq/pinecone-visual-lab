@@ -1,0 +1,183 @@
+{
+  "label": "REAL E5 / LOCAL SQLite / NO CLOUD",
+  "request": {
+    "query": "Cơ sở dữ liệu vector tìm kiếm thông tin theo ngữ nghĩa như thế nào?",
+    "top_k": 1,
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "search-seminar"
+    },
+    "filters": {
+      "document_id": "597c31e6-8d35-497a-9851-c8d972731eec",
+      "source_name": "search-vietnamese.pdf",
+      "page_from": 2,
+      "page_to": 2
+    },
+    "compare": true,
+    "confirm_live_read": false,
+    "confirm_live_compare": false
+  },
+  "response": {
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "search-seminar"
+    },
+    "top_k": 1,
+    "filters": {
+      "document_id": "597c31e6-8d35-497a-9851-c8d972731eec",
+      "version_id": null,
+      "source_name": "search-vietnamese.pdf",
+      "page_from": 2,
+      "page_to": 2
+    },
+    "retrieval_mode": "LOCAL EXACT COSINE",
+    "data_origin": "SQLite local_vectors + confirmed chunks",
+    "embedding": {
+      "mode": "e5",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+      "prefix": "query: ",
+      "input_token_count": 22,
+      "inference_ms": 99.85890000098152
+    },
+    "score_meaning": "Raw cosine similarity [-1,+1], not probability or percentage",
+    "hits": [
+      {
+        "id": "pvl-4b42d361-4228-59aa-92a0-c76e41971194",
+        "rank": 1,
+        "score": 0.8606639905773829,
+        "document_id": "597c31e6-8d35-497a-9851-c8d972731eec",
+        "version_id": "976754ae-cb16-4157-b462-ba3c22b65de5",
+        "chunk_id": "3af1bb3e-e49e-5e1d-b065-22b1420bdb98",
+        "source_name": "search-vietnamese.pdf",
+        "page_start": 2,
+        "page_end": 2,
+        "text": " vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\n",
+        "snippet": " vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở",
+        "source_url": "/documents?document=597c31e6-8d35-497a-9851-c8d972731eec&version=976754ae-cb16-4157-b462-ba3c22b65de5&chunk=3af1bb3e-e49e-5e1d-b065-22b1420bdb98&page=2",
+        "metadata": {
+          "owner_job": "ec13750b-6f1d-55c4-b206-c013d221832a",
+          "document_id": "597c31e6-8d35-497a-9851-c8d972731eec",
+          "version_id": "976754ae-cb16-4157-b462-ba3c22b65de5",
+          "chunk_id": "3af1bb3e-e49e-5e1d-b065-22b1420bdb98",
+          "source_name": "search-vietnamese.pdf",
+          "page_start": 2,
+          "page_end": 2,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      }
+    ],
+    "comparison": [
+      {
+        "id": "pvl-194402c2-497b-5d5c-ac9b-649a67ea9352",
+        "rank": 1,
+        "score": 0.866708607040924,
+        "document_id": "597c31e6-8d35-497a-9851-c8d972731eec",
+        "version_id": "976754ae-cb16-4157-b462-ba3c22b65de5",
+        "chunk_id": "298e2142-c75f-59ab-a457-13a4ad3ae501",
+        "source_name": "search-vietnamese.pdf",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "Trang 1\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ",
+        "snippet": "Trang 1\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu ",
+        "source_url": "/documents?document=597c31e6-8d35-497a-9851-c8d972731eec&version=976754ae-cb16-4157-b462-ba3c22b65de5&chunk=298e2142-c75f-59ab-a457-13a4ad3ae501&page=1",
+        "metadata": {
+          "owner_job": "ec13750b-6f1d-55c4-b206-c013d221832a",
+          "document_id": "597c31e6-8d35-497a-9851-c8d972731eec",
+          "version_id": "976754ae-cb16-4157-b462-ba3c22b65de5",
+          "chunk_id": "298e2142-c75f-59ab-a457-13a4ad3ae501",
+          "source_name": "search-vietnamese.pdf",
+          "page_start": 1,
+          "page_end": 1,
+          "model_id": "intfloat/multilingual-e5-small",
+          "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "model_signature": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477:mean-mask-l2-f32-v1",
+          "embedding_mode": "e5"
+        }
+      }
+    ],
+    "empty_reason": null,
+    "trace": {
+      "stages": [
+        {
+          "name": "input_validation",
+          "ms": 0.1945000039995648,
+          "status": "measured"
+        },
+        {
+          "name": "active_manifest_selection",
+          "ms": 0.8017000000108965,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter",
+          "ms": 1.6834999987622723,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup",
+          "ms": 0.8484999998472631,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter_unfiltered",
+          "ms": 1.068099998519756,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup_unfiltered",
+          "ms": 1.55570000060834,
+          "status": "measured"
+        },
+        {
+          "name": "query_embedding",
+          "ms": 103.44869999971706,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query",
+          "ms": 0.5209000009926967,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration",
+          "ms": 0.03840000135824084,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query_unfiltered",
+          "ms": 0.9497999999439344,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration_unfiltered",
+          "ms": 0.023399996280204505,
+          "status": "measured"
+        },
+        {
+          "name": "active_source_revalidation",
+          "ms": 1.0204999998677522,
+          "status": "measured"
+        },
+        {
+          "name": "response_assembly",
+          "ms": 0.005900001269765198,
+          "status": "measured"
+        }
+      ],
+      "total_ms": 112.96240000228863,
+      "scope": "Server handler; excludes HTTP transfer and browser rendering",
+      "candidate_count": 2,
+      "candidate_count_kind": "exact stored eligible count",
+      "manifest_count": 2,
+      "discarded_count": 0,
+      "warnings": []
+    }
+  }
+}

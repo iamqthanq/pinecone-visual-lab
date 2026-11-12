@@ -34,7 +34,10 @@ class UploadLimit:
             self.limit
             if path == "/api/documents"
             else (
-                1024 * 1024 if path.startswith(("/api/embeddings/", "/api/vector-store/")) else None
+                1024 * 1024
+                if path == "/api/search"
+                or path.startswith(("/api/embeddings/", "/api/vector-store/", "/api/search/"))
+                else None
             )
         )
         if limit is None:

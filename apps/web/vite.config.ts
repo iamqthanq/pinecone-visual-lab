@@ -8,6 +8,7 @@ export default defineConfig({
     proxy: { '/api': { target: process.env.PVL_API_PROXY_TARGET ?? 'http://127.0.0.1:8000' } },
   },
   test: {
+    maxWorkers: 2,
     environment: 'jsdom',
     setupFiles: './src/test/setup.ts',
     restoreMocks: true,

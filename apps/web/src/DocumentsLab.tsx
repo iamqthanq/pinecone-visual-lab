@@ -1,19 +1,27 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Check, ChevronLeft, ChevronRight, Copy, Download, FileText, LoaderCircle, RefreshCw, Split, Trash2, Upload, X } from 'lucide-react'
 import { Badge, Button, Panel, TextField } from './components'
 import { documentAPI } from './documents-api'
 import type { ChunkVersion, DocumentSummary, SourceDocument, TokenizerStatus } from './documents-api'
 import './documents.css'
+import { parseDocumentLink } from './document-link'
 
 export default function DocumentsLab() {
+  const location = useLocation()
+  return <DocumentWorkbench key={location.search} search={location.search} />
+}
+
+function DocumentWorkbench({ search }: { search: string }) {
+  const deepLink = useMemo(() => parseDocumentLink(search), [search])
   const [documents, setDocuments] = useState<DocumentSummary[]>([])
-  const [selected, setSelected] = useState('')
+  const [selected, setSelected] = useState(deepLink.source?.document ?? '')
   const [doc, setDoc] = useState<SourceDocument | null>(null)
   const [tokenizer, setTokenizer] = useState<TokenizerStatus | null>(null)
   const [ready, setReady] = useState(false)
   const [busy, setBusy] = useState('')
   const [notice, setNotice] = useState('')
-  const [error, setError] = useState('')
+  const [error, setError] = useState(deepLink.error ?? '')
   const [pageIndex, setPageIndex] = useState(0)
   const [raw, setRaw] = useState(false)
   const [size, setSize] = useState(300)
@@ -46,14 +54,21 @@ export default function DocumentsLab() {
     const current = ++generation.current
     documentAPI.get(selected, controller.signal).then(async source => {
       let saved: ChunkVersion | null = null
-      const savedId = source.confirmed_id ?? source.versions[0]?.id
+      const linked = deepLink.source?.document === selected ? deepLink.source : undefined
+      const savedId = linked?.version ?? source.confirmed_id ?? source.versions[0]?.id
       if (savedId) saved = await documentAPI.version(source.id, savedId, controller.signal)
+      const linkedIndex = linked ? saved?.chunks.findIndex(item => item.chunk_id === linked.chunk) ?? -1 : 0
+      if (linked && (!saved || saved.state !== 'confirmed' || linkedIndex < 0
+        || linked.page > source.page_count || linked.page < saved.chunks[linkedIndex].page_start
+        || linked.page > saved.chunks[linkedIndex].page_end)) {
+        throw new Error('Source link does not match a confirmed chunk/page. No alternate source was selected.')
+      }
       if (current !== generation.current || controller.signal.aborted) return
-      setDoc(source); setPageIndex(0); setRaw(false); setVersion(saved); setChunkIndex(0)
+      setDoc(source); setPageIndex(linked ? linked.page - 1 : 0); setRaw(false); setVersion(saved); setChunkIndex(linkedIndex)
       setSize(saved?.config.size ?? 300); setOverlap(saved?.config.overlap ?? 50)
     }).catch(failure => { if (!controller.signal.aborted) setError((failure as Error).message) })
     return () => controller.abort()
-  }, [selected])
+  }, [selected, deepLink])
 
   async function upload(file?: File) {
     if (!file || busy || !ready) return

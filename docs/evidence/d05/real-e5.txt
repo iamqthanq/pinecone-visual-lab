@@ -1,0 +1,25 @@
+COMMAND: .venv/Scripts/python.exe scripts/run_pytest.py -m "real_tokenizer or real_model" -s
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.2.0, pluggy-1.7.0
+cachedir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\.cache\pytest\9bad50a1092340cc812b3ed17474e30a\cache
+rootdir: D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collected 147 items / 143 deselected / 4 selected
+
+apps\api\tests\test_chunking.py .
+apps\api\tests\test_real_embeddings.py Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   5%|▍         | 9/199 [00:00<00:05, 33.41it/s]Loading weights:  15%|█▍        | 29/199 [00:00<00:01, 87.09it/s]Loading weights:  21%|██        | 42/199 [00:00<00:01, 98.05it/s]Loading weights:  27%|██▋       | 54/199 [00:00<00:02, 59.02it/s]Loading weights:  98%|█████████▊| 196/199 [00:00<00:00, 329.54it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 210.88it/s]
+Worker measurements: {"inference_ms": 375.232500002312, "load_ms": 0.0, "worker_peak_working_set_bytes": 1102438400}
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   5%|▌         | 10/199 [00:00<00:03, 62.10it/s]Loading weights:  16%|█▌        | 32/199 [00:00<00:01, 95.04it/s]Loading weights:  27%|██▋       | 53/199 [00:00<00:01, 129.11it/s]Loading weights:  36%|███▌      | 72/199 [00:00<00:00, 147.52it/s]Loading weights:  48%|████▊     | 96/199 [00:00<00:00, 148.46it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 267.61it/s]
+Observed Vietnamese experiment (not a general theorem): {"related": 0.9472104609462585, "unrelated": 0.8403406367374009}
+Actual CPU batch inference ms: 3249.703399997088 load ms: 22999.993299999915
+.
+apps\api\tests\test_real_search.py Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2245.54it/s]
+.
+apps\api\tests\test_real_vector_store.py Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  50%|████▉     | 99/199 [00:00<00:00, 969.35it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1290.09it/s]
+.
+
+================ 4 passed, 143 deselected in 103.40s (0:01:43) ================
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 106.99
