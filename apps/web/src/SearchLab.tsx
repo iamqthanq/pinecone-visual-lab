@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowUpRight, Clock3, Copy, Filter, LoaderCircle, RefreshCw, Search } from 'lucide-react'
 import { Badge, Button, Panel, TextField } from './components'
@@ -9,13 +9,18 @@ import type { SearchFilters, SearchHit, SearchResult, SearchStatus } from './sea
 import type { IndexInfo, StoreTarget } from './vector-store-api'
 import { defaultLocalIndex } from './vector-store-api'
 import './search.css'
-import RagChat from './RagChat'
+import LabBoundary from './LabBoundary'
+import { MotionActive, useDataMotion } from './useDataMotion'
 import { demoSelection } from './guided-state'
+
+const RagChat = lazy(() => import('./RagChat'))
 
 const timeLabel = (ms: number) => ms > 0 && ms < 0.01 ? '<0.01' : ms.toFixed(2)
 
 function HitList({ title, hits, result, onNotice }: { title: string; hits: SearchHit[]; result: SearchResult; onNotice: (text: string) => void }) {
-  return <Panel className="search-panel" label={title}><div className="document-panel-heading"><h2>{title}</h2><Badge>{hits.length} RETURNED</Badge></div>
+  const reveal = useRef<HTMLElement>(null)
+  useDataMotion(reveal, result, { selector: '.search-hit' })
+  return <Panel ref={reveal} className="search-panel" label={title}><div className="document-panel-heading"><h2>{title}</h2><Badge>{hits.length} RETURNED</Badge></div>
     <p className="config-hint">{result.target.index} / {result.target.namespace || '(default namespace)'} · {result.data_origin}</p>
     {!hits.length && <div className="search-empty"><Search size={24} /><strong>No matching chunks.</strong><p>Check ACTIVE ingestion, namespace and filters. A returned hit count is not the total number of matching documents.</p><Link to="/vectors/store">Open Vector Explorer →</Link></div>}
     <ol className="search-hits">{hits.map(hit => <li key={hit.id} className="search-hit">
@@ -38,7 +43,7 @@ export default function SearchLab() {
     ['semantic', 'Semantic Search'], ['rag', 'RAG Chat'],
   ].map(([id, label]) => <button key={id} id={`tab-${id}`} role="tab" aria-selected={tab === id} aria-controls={`panel-${id}`} tabIndex={tab === id ? 0 : -1} onClick={() => setTab(id)} onKeyDown={event => {
     if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) { event.preventDefault(); const next = event.key === 'Home' ? 'semantic' : event.key === 'End' ? 'rag' : tab === 'semantic' ? 'rag' : 'semantic'; setTab(next); document.getElementById(`tab-${next}`)?.focus() }
-  }}>{label}</button>)}</div><div id="panel-semantic" role="tabpanel" aria-labelledby="tab-semantic" hidden={tab !== 'semantic'}><SemanticSearch /></div><div id="panel-rag" role="tabpanel" aria-labelledby="tab-rag" hidden={tab !== 'rag'}>{tab === 'rag' && <RagChat />}</div></>
+  }}>{label}</button>)}</div><div id="panel-semantic" role="tabpanel" aria-labelledby="tab-semantic" hidden={tab !== 'semantic'}><MotionActive.Provider value={tab === 'semantic'}><SemanticSearch /></MotionActive.Provider></div><div id="panel-rag" role="tabpanel" aria-labelledby="tab-rag" hidden={tab !== 'rag'}>{tab === 'rag' && <LabBoundary label="RAG Chat"><Suspense fallback={<p role="status" className="lab-loading">Opening RAG Chat…</p>}><RagChat /></Suspense></LabBoundary>}</div></>
 }
 
 function SemanticSearch() {
@@ -89,6 +94,7 @@ function SemanticSearch() {
   return <>
     <div className="page-meta"><Badge>D05 · SEMANTIC SEARCH</Badge><span className="mono">QUESTION → ACTIVE VECTORS → ORIGINAL SOURCE</span></div>
     <div className="documents-title"><div><span className="eyebrow accent">SEARCH LAB</span><h1>Find meaning. Follow the source.</h1><p>Ask in Vietnamese. Inspect ranked chunks, raw cosine and every measured stage. No LLM required.</p></div><Button disabled={Boolean(busy)} onClick={() => void run('Refreshing local readiness…', async () => { const [state, list] = await Promise.all([searchAPI.status(), documentAPI.list()]); setStatus(state); setDocuments(list.documents); if (mode === 'local') { setIndexes(state.local_indexes); if (!index) setIndex(defaultLocalIndex(state.local_indexes)) } })}><RefreshCw size={14} />Refresh search status</Button></div>
+    {result && <a className="result-jump" href="#search-results">Jump to {result.hits.length} results and source evidence ↓</a>}
     <div className="search-mode-strip"><Badge tone={mode === 'local' ? 'green' : 'amber'}>{mode === 'local' ? 'LOCAL DEMO' : 'LIVE PINECONE'}</Badge><p>{mode === 'local' ? 'Exact cosine over persisted SQLite vectors in verified ACTIVE manifests. Filters run before Top-K.' : 'LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION. ANN ranking; no automatic cloud reads.'}</p><Badge>RAG · OPTIONAL LOCAL</Badge></div>
     {status?.model.mode === 'test-fixture-not-e5' && <p className="doc-warning">TEST FIXTURE — NOT E5. Deterministic test vectors have no semantic relevance claim.</p>}
     {status && <div className="search-readiness"><Badge>{status.model.state.replace(/_/g, ' ').toUpperCase()}</Badge><span>{status.model.message}</span>{status.model.setup_command && modelUnavailable && <code>{status.model.setup_command}</code>}</div>}
@@ -121,7 +127,7 @@ function SemanticSearch() {
       </fieldset>
     </form>
     {result ? <>
-      <div className="search-result-heading"><Badge tone="green">{result.retrieval_mode}</Badge><span>{result.score_meaning}</span></div>
+      <div id="search-results" tabIndex={-1} className="search-result-heading"><Badge tone="green">{result.retrieval_mode}</Badge><span>{result.score_meaning}</span></div>
       <div className={result.comparison ? 'search-compare-grid' : ''}><HitList title="Filtered results" hits={result.hits} result={result} onNotice={setNotice} />{result.comparison && <HitList title="Without filters" hits={result.comparison} result={result} onNotice={setNotice} />}</div>
       <Panel className="search-panel search-trace" label="Search Trace"><div className="document-panel-heading"><h2><Clock3 size={18} />Search Trace</h2><strong>{timeLabel(result.trace.total_ms)} ms total</strong></div><p>{result.trace.scope}. These are observed process timings, not Pinecone internal telemetry.</p>
         <p className="config-hint">Model {result.embedding.model_id} · {result.embedding.model_revision}<br />Prefix <code>{result.embedding.prefix}</code> · {result.embedding.input_token_count ?? 'not run'} input tokens · {result.embedding.mode === 'e5' ? 'REAL E5' : 'NOT E5'}</p>

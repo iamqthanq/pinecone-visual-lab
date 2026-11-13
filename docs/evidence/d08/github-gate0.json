@@ -1,0 +1,30 @@
+{
+  "repository": "iamqthanq/pinecone-visual-lab",
+  "issue": {
+    "url": "https://github.com/iamqthanq/pinecone-visual-lab/issues/15",
+    "number": 15,
+    "title": "[D08] Taste + GSAP Premium UI Polish, Visual Regression & Bundle Performance (Windows)",
+    "state": "open",
+    "updated_at": "2026-11-12T16:25:34Z",
+    "scope": "Full A–F body read directly before coding"
+  },
+  "prerequisite": {
+    "pr": "https://github.com/iamqthanq/pinecone-visual-lab/pull/14",
+    "merged": true,
+    "merge_commit_sha": "24d56a9af81d0277224dc0f3b7eff5fd0f395bf3",
+    "merged_at": "2026-11-12T16:21:12Z",
+    "issue": "https://github.com/iamqthanq/pinecone-visual-lab/issues/13",
+    "state": "closed",
+    "closed_at": "2026-11-12T16:20:53Z"
+  },
+  "base": {
+    "name": "main",
+    "sha": "24d56a9af81d0277224dc0f3b7eff5fd0f395bf3",
+    "protected": false,
+    "rulesets": [],
+    "protection_details": "403 Resource not accessible by integration; no server policy change"
+  },
+  "feature": "feature/issue-15-taste-gsap-polish",
+  "initial_worktree": "clean, existing checkout; safe fetched origin/main; feature created from verified main",
+  "publication": "Agent safe-push only; ChatGPT independently reviews/opens PR; owner merges"
+}

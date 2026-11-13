@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   foundation:
-    runs-on: windows-latest
+    runs-on: windows-2025
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +40,13 @@ jobs:
           TRANSFORMERS_OFFLINE: '1'
           PVL_OLLAMA_ENABLED: '0'
         run: ./scripts/check.ps1
+      - name: Dependency advisory and installed requirement checks
+        shell: pwsh
+        run: |
+          npm audit --audit-level=moderate
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .venv/Scripts/python.exe -m pip check
+          exit $LASTEXITCODE
       - name: Browser integration and actual API smoke
         shell: pwsh
         env:
@@ -53,13 +60,20 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           npm run test:e2e
           exit $LASTEXITCODE
+      - name: Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)
+        shell: pwsh
+        env:
+          PVL_E2E_FIXTURE: '1'
+          PVL_VISUAL_STAGE: verify
+          PVL_VISUAL_REPLAY: '1'
+        run: npm run test:visual
       - name: Preserve browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: lab-browser-evidence
           path: |
-            docs/evidence/d07/fixture-search-example.json
-            docs/evidence/d07/fixture-rag-example.json
-            docs/evidence/d07/fixture-guided-example.json
+            docs/evidence/d08/review-r1/regression/fixture-search-example.json
+            docs/evidence/d08/review-r1/regression/fixture-rag-example.json
+            docs/evidence/d08/review-r1/regression/fixture-guided-example.json
             test-results/

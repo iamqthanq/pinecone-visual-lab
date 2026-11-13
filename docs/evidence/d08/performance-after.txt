@@ -1,0 +1,23 @@
+COMMAND: npm.cmd run test:performance
+
+> pinecone-visual-lab@0.8.0 test:performance
+> playwright test --config playwright.performance.config.ts
+
+[WebServer] INFO:     Started server process [11052]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+[WebServer] (node:9556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:23580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][WebServer] Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2077.57it/s]
+  ok 1 tests\performance\production.spec.ts:6:1 › production cold-entry, route CPU/network and bounded simulator frame profile (45.4s)
+
+  1 passed (52.1s)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 54.36

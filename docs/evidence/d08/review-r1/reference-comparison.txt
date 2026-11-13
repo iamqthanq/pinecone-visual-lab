@@ -1,0 +1,7 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d08/review-r1/compare-references.py
+64 original golden blobs unchanged;64 software proposals with equal image dimensions and identical fixture IDs.
+64 separate raw difference images/sha256 records saved; no approval, tolerance increase or golden overwrite.
+Architecture write proposal SHA equals both CI attempt actuals exactly: c3ba27ba2c8dd973db35eb9d4ebe1b4e9de76b3e4c4f8e56de36949bd910ca51
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 29.36

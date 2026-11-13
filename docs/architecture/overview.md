@@ -1,4 +1,4 @@
-# Current architecture — D07
+# Current architecture — D08 frontend / D07 API
 
 ```text
 React / TypeScript / Tailwind + D01 shell
@@ -18,11 +18,13 @@ Health keeps D01 behavior and declares `version: 0.7.0`, `phase: D07`, `rag: opt
 
 LOCAL DEMO is operational with real E5. The LIVE adapter is implemented against SDK10.3/API2026-07 and tested with offline HTTP transport, but **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. No account telemetry is fabricated. Project label comes from server configuration and must be checked against the key's project in Pinecone console. The UI never receives credentials or accepts arbitrary SDK hosts. Index writes/deletes require separate specific owner approval and explicit confirmations.
 
-## Simulator and Guided Demo (D07); planned D08–D09
+## Simulator and Guided Demo (D07); frontend polish (D08)
 
 LOCAL exact semantic Top-K/filter/trace is implemented in D05 through verified ACTIVE vectors and original confirmed sources; LIVE query has SDK contract tests but no authorized account smoke. D06 optional local RAG reuses D05 Search, with bounded context, verified verbatim citations and post-generation ACTIVE checks. Real Ollama awaits approval/setup. [RAG API/trust boundaries](rag.md) describe the active Search Lab tab.
 
-D07 adds a pure typed [Slab simulator](slab-simulator.md), snapshot/reducer → React Flow graph → scoped finite GSAP presentation. It uses explicit2D toy records, no API/telemetry. The opt-in [Guided Demo](guided-demo.md) invokes the existing Store/EmbeddingService/VectorService/SearchService/RagService through explicit local actions, with a separate schema1 receipt journal and fixed owned LOCAL namespace. Backend data credit is recomputed; browser state stores only navigation/simulation pointers. Reset/cancel never deletes stored data. [Vietnamese seminar script](../demo/d07-seminar.md). D08 overall polish and D09 packaging remain planned.
+D07 adds a pure typed [Slab simulator](slab-simulator.md), snapshot/reducer → React Flow graph → scoped finite GSAP presentation. It uses explicit2D toy records, no API/telemetry. The opt-in [Guided Demo](guided-demo.md) invokes the existing Store/EmbeddingService/VectorService/SearchService/RagService through explicit local actions, with a separate schema1 receipt journal and fixed owned LOCAL namespace. Backend data credit is recomputed; browser state stores only navigation/simulation pointers. Reset/cancel never deletes stored data. [Vietnamese seminar script](../demo/d07-seminar.md).
+
+D08 adds module-scope React.lazy/Suspense boundaries for every lab, a separately lazy RAG tab/Guided panel, shared memoized384D inspectors and optional scoped data-motion. Main entry does not import React Flow/GSAP eagerly. Failure/loading boundaries preserve navigation, guide cancellation and saved IDs. `workbench.css` defines the shared readable navy/mint system and responsive controls. Simulator mode edges and camera change presentation only; `simulator.ts` and all backend algorithms/schema remain unchanged. [Design audit](../design/d08-visual-audit.md), [performance architecture](d08-performance.md), [D08 evidence](../evidence/d08/REPORT.md). D09 packaging remains planned.
 
 ## Verification boundaries
 

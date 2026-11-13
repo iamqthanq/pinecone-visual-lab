@@ -192,6 +192,23 @@ class GitGuardTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             guard.validate()
 
+    def test_d08_assignment_accepts_only_issue_fifteen_matching_refs(self):
+        branch = 'feature/issue-15-taste-gsap-polish'
+        self.run_git('switch', '-q', '-c', branch)
+        self.run_git('config', 'pinecone.issue', '15')
+        self.run_git('config', 'pinecone.branch', branch)
+        ref = f'refs/heads/{branch}'
+        self.assertEqual(guard.validate('origin', URL, self.line(source=ref, destination=ref)), ref)
+        for old in [BRANCH, 'feature/issue-3-document-chunking',
+                    'feature/issue-5-local-embeddings', 'feature/issue-7-pinecone-vector-store',
+                    'feature/issue-9-semantic-search', 'feature/issue-11-local-rag-chat',
+                    'feature/issue-13-slab-guided-demo', 'main']:
+            with self.assertRaises(ValueError):
+                guard.validate('origin', URL, self.line(source=ref, destination=f'refs/heads/{old}'))
+        self.run_git('config', 'pinecone.issue', '13')
+        with self.assertRaises(ValueError):
+            guard.validate()
+
     def test_non_fast_forward(self):
         self.run_git("switch", "-q", "-c", "other")
         self.run_git("commit", "-q", "--allow-empty", "-m", "divergence")

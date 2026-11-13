@@ -1,0 +1,32 @@
+[
+  {
+    "name": "default",
+    "base": 0,
+    "ci": "101 pixels (ratio 0.01 of all image pixels) are different."
+  },
+  {
+    "name": "software",
+    "base": "101 pixels (ratio 0.01 of all image pixels) are different.",
+    "ci": 0
+  },
+  {
+    "name": "swiftshader",
+    "base": "33 pixels (ratio 0.01 of all image pixels) are different.",
+    "ci": "135 pixels (ratio 0.01 of all image pixels) are different."
+  },
+  {
+    "name": "d3d11",
+    "base": 0,
+    "ci": "101 pixels (ratio 0.01 of all image pixels) are different."
+  },
+  {
+    "name": "skia",
+    "base": 0,
+    "ci": "101 pixels (ratio 0.01 of all image pixels) are different."
+  },
+  {
+    "name": "noLCD",
+    "base": "37570 pixels (ratio 0.01 of all image pixels) are different.",
+    "ci": "37215 pixels (ratio 0.01 of all image pixels) are different."
+  }
+]

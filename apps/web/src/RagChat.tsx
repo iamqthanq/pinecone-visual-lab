@@ -12,6 +12,7 @@ import { ragAPI } from './rag-api'
 import type { OllamaStatus, RagResult } from './rag-api'
 import './rag.css'
 import { demoSelection } from './guided-state'
+import { useDataMotion } from './useDataMotion'
 
 interface Turn { question: string; response: RagResult }
 const models = ['qwen2.5:1.5b', 'qwen2.5:3b']
@@ -19,8 +20,10 @@ const ms = (value: number) => value > 0 && value < 0.01 ? '<0.01' : value.toFixe
 
 function Reply({ turn, onNotice }: { turn: Turn; onNotice: (text: string) => void }) {
   const r = turn.response
+  const reveal = useRef<HTMLElement>(null)
+  useDataMotion(reveal, r, { selector: '.rag-answer, .rag-citations, .rag-source' })
   const included = new Set(r.used_sources.map(s => s.hit.id))
-  return <article className="rag-turn" aria-label="RAG response">
+  return <article ref={reveal} className="rag-turn" aria-label="RAG response">
     <div className="rag-question"><MessageSquare size={16} aria-hidden="true" /><p>{turn.question}</p></div>
     <Panel className="search-panel" label="Evidence answer"><div className="document-panel-heading"><h2>Evidence answer</h2><Badge tone={r.status === 'answered' ? 'green' : 'amber'}>{r.status.replace(/_/g, ' ').toUpperCase()}</Badge></div>
       <p className="config-hint">{r.grounding_policy} Each turn retrieves fresh evidence; prior messages are not sent to the model.</p>
@@ -91,6 +94,7 @@ export default function RagChat() {
     <Panel className="search-panel" label="Ollama readiness"><div className="document-panel-heading"><h2>Local model readiness</h2><Badge>{ollama?.state.replace(/_/g, ' ').toUpperCase() ?? 'NOT CHECKED'}</Badge></div><p>{ollama?.message ?? 'Explicit refresh checks local inventory only after operator opt-in. Downloaded does not mean loaded.'}</p>{ollama?.mode === 'mock-ollama-not-real-llm' && <p className="doc-warning">MOCK OLLAMA / NOT REAL LLM</p>}<Button disabled={Boolean(busy)} onClick={() => { clear(); setBusy('Checking local inventory…'); void ragAPI.status().then(state => { setOllama(state); if (state.models.length) setModel(state.models[0].name) }).catch(failure => setError((failure as Error).message)).finally(() => setBusy('')) }}><RefreshCw size={14} />Refresh Ollama readiness</Button><details><summary>Optional model setup and resource approval</summary><p>REAL OLLAMA NOT VERIFIED. Ask the project owner before installing Ollama, pulling or loading a model. Default qwen2.5:1.5b ≈986MB (Apache-2.0); 3b ≈1.9GB uses the Qwen license. Allow extra RAM/runtime overhead. Follow the Windows README after approval; no API key belongs here.</p></details></Panel>
     {error && <div role="alert" className="doc-message error">{error}</div>}{notice && <p role="status" className="doc-message success">{notice}</p>}
     {busy && <div className="doc-message" role="status"><LoaderCircle className="spin" size={16} />{busy}{busy.startsWith('Retrieving') && <Button onClick={() => controller.current?.abort()}><X size={14} />Cancel RAG</Button>}</div>}
+    {turns.length > 0 && <a className="result-jump" href="#rag-responses">Jump to answers, citations and context ↓</a>}
     <form onSubmit={event => { event.preventDefault(); void send() }}><fieldset className="rag-controls" disabled={Boolean(busy)}><legend className="sr-only">RAG Chat controls</legend><Panel className="search-panel"><div className="document-panel-heading"><h2>Ask the source collection</h2><label className="search-checkbox"><input type="checkbox" checked={enabled} onChange={event => { setEnabled(event.target.checked); clear() }} />LLM enabled</label></div>
       <label htmlFor="rag-question">RAG question in Vietnamese</label><textarea id="rag-question" rows={3} maxLength={2000} value={question} onChange={event => setQuestion(event.target.value)} placeholder="Tìm kiếm vector khác tìm kiếm từ khóa như thế nào?" /><p className="config-hint">Fresh D05 retrieval each turn; E5 limit 512 input tokens. Responses are verified verbatim excerpts, not unrestricted model prose.</p>
       <div className="search-target-grid"><label>RAG retrieval mode<select value={mode} onChange={event => { const next = event.target.value as StoreTarget['mode']; setMode(next); setIndexes(next === 'local' ? readiness?.local_indexes ?? [] : []); setIndex(next === 'local' ? defaultLocalIndex(readiness?.local_indexes) : ''); setNamespace(''); setLive(false); clear() }}><option value="local">LOCAL DEMO</option><option value="live">LIVE PINECONE · requires authorization</option></select></label><label>RAG index<select value={index} onChange={event => { setIndex(event.target.value); clear() }}><option value="">Select an ACTIVE index</option>{indexes.map(i => <option key={i.name} value={i.name} disabled={!i.compatible}>{i.name}</option>)}</select></label><TextField label="RAG namespace" value={namespace} maxLength={64} pattern="[a-zA-Z0-9_.-]*" onChange={event => { setNamespace(event.target.value); clear() }} /><label>RAG Top-K<select value={topK} onChange={event => { setTopK(Number(event.target.value)); clear() }}>{Array.from({ length: 10 }, (_, i) => <option key={i} value={i + 1}>{i + 1}</option>)}</select></label></div>
@@ -100,6 +104,6 @@ export default function RagChat() {
       <div className="rag-model-row"><label>Local LLM model<select value={model} disabled={!enabled} onChange={event => { setModel(event.target.value); clear() }}>{models.map(name => <option value={name} key={name} disabled={Boolean(ollama?.state === 'available' && !ollama.models.some(m => m.name === name))}>{name}{ollama?.models.some(m => m.name === name) ? ' · downloaded (load not verified)' : ' · availability not verified'}</option>)}</select></label><Button type="submit" className="button-primary" disabled={!canSend}>Send RAG question<ArrowUpRight size={14} /></Button><Button type="button" onClick={clear}>Clear conversation</Button></div><p className="config-hint">Last 4 turns in memory only. Leaving the tab clears them; changing target, filters, model or LLM mode starts a new session. History is never sent or persisted.</p>
     </Panel></fieldset></form>
     {!turns.length && <Panel className="search-panel search-empty"><BookOpen size={26} /><h2>Your evidence starts here.</h2><p>Choose an ingested ACTIVE collection and send a question. No generated answer appears until evidence and citations pass validation.</p><Link to="/vectors/store">Open Vector Explorer →</Link></Panel>}
-    <div className="rag-history" aria-label="Temporary conversation">{turns.map((turn, i) => <Reply key={i} turn={turn} onNotice={setNotice} />)}</div>
+    <div id="rag-responses" tabIndex={-1} className="rag-history" aria-label="Temporary conversation">{turns.map((turn, i) => <Reply key={i} turn={turn} onNotice={setNotice} />)}</div>
   </>
 }

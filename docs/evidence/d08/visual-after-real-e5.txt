@@ -1,0 +1,19 @@
+COMMAND: npx.cmd playwright test --config playwright.visual.config.ts
+[WebServer] INFO:     Started server process [12304]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+[WebServer] (node:16076) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:28084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][WebServer] Loading weights:   7%|▋         | 13/199 [00:00<00:01, 108.78it/s][WebServer] Loading weights:  12%|█▏        | 24/199 [00:00<00:02, 74.98it/s] [WebServer] Loading weights:  18%|█▊        | 36/199 [00:00<00:01, 90.28it/s][WebServer] Loading weights:  24%|██▍       | 48/199 [00:00<00:01, 92.61it/s][WebServer] Loading weights:  35%|███▍      | 69/199 [00:00<00:01, 127.43it/s][WebServer] Loading weights: 100%|██████████| 199/199 [00:00<00:00, 277.51it/s]
+  ok 1 tests\visual\audit.spec.ts:50:1 › paired production visual audit on owned persistent synthetic data (2.0m)
+
+  1 passed (2.1m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 129.67

@@ -1,0 +1,296 @@
+COMMAND: .venv\Scripts\python.exe docs/evidence/d08/review-r1/verify-staged.py
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:92: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8903086Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:96: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8904281Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:99: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905071Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:101: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905333Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:103: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905576Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:105: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8907764Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:107: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:27:51.8908161Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:166: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:28:19.4102189Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:168: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:28:19.4103730Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:171: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:28:19.4112208Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:373: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:24.7951105Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:375: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:24.8009492Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:393: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:25.7101667Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:396: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:25.7102608Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:397: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:25.9674366Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:400: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:25.9675245Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:402: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:35.6343016Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:405: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:35.8892626Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:406: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:35.8892646Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:409: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:35.8893648Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:411: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:40.4846869Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:414: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:40.4850727Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:415: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:40.7405767Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:418: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:40.7406742Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:419: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:41.1930874Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:421: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:41.1934920Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:452: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:58.3313719Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:457: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:58.3330480Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:461: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:29:58.3334076Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:472: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:00.6984666Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:485: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:43.6509312Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:488: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:44.6413269Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:491: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:44.6414276Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:492: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:44.8908714Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:495: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:44.8909705Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:542: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:30:50.0952438Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:584: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:12.7565048Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:585: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:12.7576243Z ProductVersion   FileVersion      FileName
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:586: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:12.7577602Z --------------   -----------      --------
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:587: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:12.7579655Z 157.0.4341.46    157.0.4341.46    C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:588: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:12.7580804Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:589: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:12.7581373Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:614: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:16.2289361Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:617: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:16.2293740Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:622: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:21.9449374Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:624: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:21.9450076Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:625: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:32:29.6380036Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:640: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:28.7512728Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:646: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:41.3452039Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:648: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:41.9448475Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:663: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:42.6100570Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:666: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:42.6102221Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:667: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:44.3099744Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:669: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:33:44.3100631Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:677: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0184814Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:678: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0190267Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:679: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0200585Z   1) tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:680: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0202584Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:682: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0203390Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:684: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0204026Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:686: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0204506Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:702: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0215110Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:703: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0215120Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:713: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0223451Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:719: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0229125Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:721: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0230505Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:725: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0232880Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:727: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0234443Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:729: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0235333Z
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:731: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:34:38.0236212Z     tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data
+docs/evidence/d08/review-r1/original-ci/attempt-1.txt:741: trailing whitespace.
++foundation	UNKNOWN STEP
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:92: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7266950Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:96: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7269074Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:99: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7270396Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:101: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7270919Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:103: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7271367Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:105: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7272938Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:107: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:27.7273756Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:166: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:56.1441365Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:168: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:56.1442637Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:171: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:47:56.1454851Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:373: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:01.5079703Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:375: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:01.5151809Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:393: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:02.5405089Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:396: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:02.5406305Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:397: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:02.8541682Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:400: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:02.8542764Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:402: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:13.3538432Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:405: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:13.3539608Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:406: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:13.6748371Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:409: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:13.6749445Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:411: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:19.5726668Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:414: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:19.5727968Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:415: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:19.8803705Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:418: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:19.8804801Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:419: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:20.4265547Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:421: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:20.4271150Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:455: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:41.1223206Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:460: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:41.1245552Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:464: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:41.1250357Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:475: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:49:43.5977373Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:488: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:50:32.2678220Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:491: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:50:33.2225736Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:494: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:50:33.2227010Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:495: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:50:33.5289187Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:498: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:50:33.5290953Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:545: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:50:39.8615353Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:587: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:11.7556334Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:588: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:11.7566512Z ProductVersion   FileVersion      FileName
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:589: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:11.7570133Z --------------   -----------      --------
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:590: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:11.7572711Z 157.0.4341.46    157.0.4341.46    C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:591: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:11.7574002Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:592: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:11.7575236Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:617: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:13.2459689Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:620: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:13.2461589Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:625: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:18.2016653Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:627: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:18.2017681Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:628: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:52:27.0576866Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:643: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:35.6757306Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:649: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:50.7692008Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:651: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:51.5563967Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:666: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:52.3569132Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:669: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:52.3571117Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:670: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:54.3794740Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:672: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:53:54.3796046Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:680: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6599295Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:681: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6605739Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:682: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6617792Z   1) tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:683: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6618414Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:685: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6618868Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:687: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6619583Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:689: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6620074Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:705: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6627550Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:706: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6627557Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:716: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6633199Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:722: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6637217Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:724: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6638351Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:728: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6640147Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:730: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6641089Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:732: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6641696Z
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:734: trailing whitespace.
++foundation	UNKNOWN STEP	2026-11-12T18:54:57.6643181Z     tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data
+docs/evidence/d08/review-r1/original-ci/attempt-2.txt:744: trailing whitespace.
++foundation	UNKNOWN STEP
+Traceback (most recent call last):
+  File "D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\docs\evidence\d08\review-r1\verify-staged.py", line 45, in <module>
+    subprocess.run(['git', 'diff', '--cached', '--check'], cwd=ROOT, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 0.58

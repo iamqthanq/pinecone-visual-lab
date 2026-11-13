@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useReducer, useRef, useState } from 'react'
 import { Background, Controls, Handle, Position, ReactFlow } from '@xyflow/react'
-import type { Node, NodeProps } from '@xyflow/react'
+import type { Node, NodeProps, ReactFlowInstance } from '@xyflow/react'
 import { gsap } from 'gsap'
 import { Badge, Button, Panel } from './components'
 import { diagram } from './simulator-graph'
@@ -9,9 +9,9 @@ import type { Mode, SimulatorState } from './simulator'
 import '@xyflow/react/dist/style.css'
 import './simulator.css'
 
-type SimNode = Node<{ label: string; active: boolean }, 'simulation'>
+type SimNode = Node<{ label: string; active: boolean; relevant?: boolean }, 'simulation'>
 function SimulationNode({ data }: NodeProps<SimNode>) {
-  return <div className={`sim-node ${data.active ? 'sim-active' : ''}`}><Handle type="target" position={Position.Top} /><div className="sim-node-content">{data.label}<small>{data.active ? 'CURRENT TOY STEP' : 'CONCEPTUAL COMPONENT'}</small></div><Handle type="source" position={Position.Bottom} /></div>
+  return <div className={`sim-node ${data.active ? 'sim-active' : ''} ${data.relevant === false ? 'sim-inactive' : ''}`}><Handle type="target" position={Position.Left} /><div className="sim-node-content">{data.label}<small>{data.active ? 'CURRENT TOY STEP' : 'CONCEPTUAL COMPONENT'}</small></div><Handle type="source" position={Position.Right} /></div>
 }
 const nodeTypes = { simulation: SimulationNode }
 const source = 'https://www.pinecone.io/learn/slab-architecture/'
@@ -20,10 +20,24 @@ export default function ArchitectureLab({ initial, onChange }: { initial?: Simul
   const [state, dispatch] = useReducer(simulatorReducer, initial ?? initialSimulator())
   const [reduced, setReduced] = useState(() => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false)
   const root = useRef<HTMLDivElement>(null)
+  const graphArea = useRef<HTMLDivElement>(null)
+  const graphHandle = useRef<ReactFlowInstance<SimNode> | null>(null)
+  const previousStep = useRef('')
   const steps = useMemo(() => program(state.mode, state.seed), [state.mode, state.seed])
   const data = useMemo(() => snapshot(state), [state])
   const current = state.cursor ? steps[state.cursor - 1] : undefined
-  const graph = useMemo(() => diagram(data, current), [data, current])
+  const graph = useMemo(() => diagram(data, current, state.mode), [data, current, state.mode])
+  useEffect(() => {
+    if (!graphArea.current) return
+    const resize = new ResizeObserver(() => {
+      const area = graphArea.current
+      if (!area) return // A queued resize can arrive after route unmount clears the ref.
+      const focus = area.clientWidth < 600 && current?.active.length ? current.active.map(id => ({ id })) : undefined
+      void graphHandle.current?.fitView({ nodes: focus, duration: 0, padding: focus ? 0.4 : 0.16 })
+    })
+    resize.observe(graphArea.current)
+    return () => resize.disconnect()
+  }, [current])
   useEffect(() => { onChange?.(state) }, [state, onChange])
   useEffect(() => {
     const media = window.matchMedia?.('(prefers-reduced-motion: reduce)')
@@ -42,7 +56,10 @@ export default function ArchitectureLab({ initial, onChange }: { initial?: Simul
     return () => window.clearTimeout(timer)
   }, [state.playing, state.cursor, state.speed, state.mode])
   useEffect(() => {
-    if (reduced || !state.playing || document.hidden || !root.current) return
+    const stepKey = `${state.mode}:${state.cursor}`
+    const changed = previousStep.current !== stepKey
+    previousStep.current = stepKey
+    if (reduced || (!state.playing && !changed) || !state.cursor || document.hidden || !root.current) return
     // Animate inner labels, never React Flow positioning transforms. No state callback.
     const ctx = gsap.context(() => {
       const nodes = root.current?.querySelectorAll('.sim-active .sim-node-content')
@@ -61,7 +78,7 @@ export default function ArchitectureLab({ initial, onChange }: { initial?: Simul
       <label className="sim-seek">Seek step · {state.cursor}/{steps.length}<input aria-label="Seek simulation step" type="range" min={0} max={steps.length} value={state.cursor} onChange={e => dispatch({ type: 'seek', cursor: Number(e.target.value) })} /></label><p>Speed controls animation/presentation delay only, never scores or storage logic. {reduced ? 'REDUCED MOTION: movement disabled; all steps remain available.' : 'No autoplay; playback is finite. Hidden tabs pause.'}</p>
     </Panel>
     <div className="sim-step" aria-live="polite" aria-atomic="true"><Badge>{current?.concept ?? 'toy simulation rule'}</Badge><h2>{current?.title ?? 'Ready to explore'}</h2><p>{current?.detail ?? (state.mode === 'write' ? 'Start with an empty toy WAL. Next logs a write; acknowledgment and memtable staging follow.' : 'This preset starts from a deterministic preloaded toy dataset, not real application records. Inspect its baseline below, then Next.')}</p></div>
-    <Panel className="sim-graph-panel" label="Interactive simulation diagram"><h2>Conceptual data paths</h2><p>Pan or use zoom controls. Mint marks the current step. A readable linear alternative and all data follow below.</p><div className="sim-graph"><ReactFlow nodes={graph.nodes} edges={graph.edges} nodeTypes={nodeTypes} fitView minZoom={0.15} maxZoom={1.5} nodesDraggable={false} nodesConnectable={false} edgesFocusable={false} proOptions={{ hideAttribution: false }} ariaLabelConfig={{ 'controls.zoomIn.ariaLabel': 'Zoom simulation in', 'controls.zoomOut.ariaLabel': 'Zoom simulation out', 'controls.fitView.ariaLabel': 'Fit simulation diagram' }}><Background color="#34475b" gap={24} /><Controls showInteractive={false} /></ReactFlow></div></Panel>
+    <Panel className="sim-graph-panel" label="Interactive simulation diagram"><h2>Conceptual data paths</h2><p>Arrows show the selected {state.mode} path; other components remain for context. Mint marks the current toy step. Pan/zoom or focus it; narrow screens follow the current stage. Show all components for an overview. The complete text alternative follows.</p><div className="sim-focus-controls"><Button disabled={!current?.active.length} onClick={() => { void graphHandle.current?.fitView({ nodes: graph.nodes.filter(n => n.data.active), duration: 0, padding: 0.4 }) }}>Focus current stage</Button><Button onClick={() => { void graphHandle.current?.fitView({ duration: 0, padding: 0.16 }) }}>Show all components</Button></div><div ref={graphArea} className="sim-graph"><ReactFlow<SimNode> onInit={instance => { graphHandle.current = instance }} nodes={graph.nodes} edges={graph.edges} nodeTypes={nodeTypes} fitView minZoom={0.15} maxZoom={1.5} nodesDraggable={false} nodesConnectable={false} edgesFocusable={false} proOptions={{ hideAttribution: false }} ariaLabelConfig={{ 'controls.zoomIn.ariaLabel': 'Zoom simulation in', 'controls.zoomOut.ariaLabel': 'Zoom simulation out', 'controls.fitView.ariaLabel': 'Fit simulation diagram' }}><Background color="#34475b" gap={24} /><Controls showInteractive={false} /></ReactFlow></div></Panel>
     <div className="sim-data-grid"><Panel className="search-panel" label="Toy data state"><div className="document-panel-heading"><h2>Toy data state</h2><Badge>SIMULATION COUNTS ONLY</Badge></div><p>{graph.counts.wal} logged toy writes · {data.acknowledged.length} acknowledged · {graph.counts.memtable} memtable records (all namespaces) · {graph.counts.activeSlabs} live toy slabs.</p><h3>Visible in namespace lesson</h3><ul>{visible(data).map(r => <li key={r.id}><code>{r.id}</code> · seq {r.seq} · [{r.values?.join(', ')}]</li>)}</ul><h3>Immutable files / manifest</h3><ul>{data.slabs.map(s => <li key={s.id}><strong>{s.id}</strong> · L{s.level} · {data.retired.includes(s.id) ? 'RETIRED, original snapshot retained' : 'LIVE'}<ul>{s.records.map(r => <li key={`${r.id}-${r.seq}`}>{r.id} / seq {r.seq} / {r.values ? `[${r.values.join(', ')}]` : 'TOMBSTONE (retained)'}</li>)}</ul></li>)}</ul><details><summary>Complete deterministic snapshot</summary><pre data-testid="simulation-snapshot">{JSON.stringify(data, null, 2)}</pre></details></Panel>
       <Panel className="search-panel" label="Toy query results"><h2>2D cosine oracle</h2><p>cos(q,x) = (q₁x₁ + q₂x₂) / (‖q‖‖x‖). Query [1,0], Top-2; equal scores sort by ID. Exact toy scoring illustrates candidate merging; production Pinecone uses more sophisticated ANN methods.</p><h3>Candidate lists</h3><ul>{data.candidates.map(r => <li key={`${r.executor}-${r.id}`}>{r.executor}: {r.id} / seq {r.seq} / cosine {r.score.toFixed(6)}</li>)}</ul><h3>Returned toy Top-K</h3><ol>{data.top.map(r => <li key={r.id}>{r.id}: <strong>{r.score.toFixed(6)}</strong></li>)}</ol><p className="config-hint">Stale versions and tombstones are resolved globally before toy ranking; foreign namespaces are excluded. Compaction never alters the latest live view.</p></Panel></div>
     <Panel className="search-panel" label="Linear simulation event log"><h2>Event log / text alternative</h2><p>No background reads or writes. Seek revisits the same snapshots; retired files stay inspectable.</p><ol className="sim-event-log">{steps.map((step, i) => <li key={i} aria-current={state.cursor === i + 1 ? 'step' : undefined}><button onClick={() => dispatch({ type: 'seek', cursor: i + 1 })}>Step {i + 1}: {step.title}</button><p>{step.detail}</p></li>)}</ol></Panel>

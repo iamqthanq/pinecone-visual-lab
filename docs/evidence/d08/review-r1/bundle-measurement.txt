@@ -1,0 +1,5 @@
+COMMAND: .venv\Scripts\python.exe docs/evidence/d08/review-r1/measure-bundle.py after apps/web/dist
+{"entry": "index-h0-vE7h6.js", "total_js_bytes": 671000, "chunks": 24}
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 2.26

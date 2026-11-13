@@ -7,6 +7,7 @@ import type { ChunkVersion, DocumentSummary, SourceDocument, TokenizerStatus } f
 import './documents.css'
 import { parseDocumentLink } from './document-link'
 import { demoSelection } from './guided-state'
+import { useDataMotion } from './useDataMotion'
 
 export default function DocumentsLab() {
   const location = useLocation()
@@ -34,6 +35,21 @@ function DocumentWorkbench({ search }: { search: string }) {
   const [drag, setDrag] = useState(false)
   const [cap, setCap] = useState(10 * 1024 * 1024)
   const chooser = useRef<HTMLInputElement>(null)
+  const confirmation = useRef<HTMLDialogElement>(null)
+  useEffect(() => {
+    if (!deleteOpen || !confirmation.current) return
+    const dialog = confirmation.current
+    const prior = document.activeElement as HTMLElement | null
+    if (typeof dialog.showModal === 'function') dialog.showModal()
+    else dialog.setAttribute('open', '')
+    dialog.querySelector<HTMLButtonElement>('[data-cancel]')?.focus()
+    return () => {
+      if (dialog.open && typeof dialog.close === 'function') dialog.close()
+      if (prior?.isConnected) prior.focus()
+    }
+  }, [deleteOpen])
+  const content = useRef<HTMLDivElement>(null)
+  useDataMotion(content, version?.id, { selector: '.chunk-list > button, .chunk-detail' })
   const generation = useRef(0)
 
   const reload = useCallback(async () => {
@@ -153,11 +169,18 @@ function DocumentWorkbench({ search }: { search: string }) {
         </button>)}</div>
         <div className="library-foot"><span className="status-dot online" />Local files + SQLite persistence</div>
       </Panel>
-      <div className="document-content">
+      <div ref={content} className="document-content">
         {!doc ? <Panel className="document-welcome"><span className="lab-icon large"><Split size={30} /></span><h2>Give every chunk a source.</h2><p>{selected && !error ? 'Loading source pages and saved versions…' : 'Choose a file to see extracted pages and a reproducible token-based preview.'}</p><ol><li>Upload PDF / TXT</li><li>Inspect source pages</li><li>Generate → confirm → export</li></ol></Panel> : <>
           <Panel className="source-panel" label="Source page preview">
             <div className="source-title"><div><h2>{doc.name}</h2><span className="mono">{doc.page_count} PAGES · {(doc.pages.reduce((count, item) => count + item.character_count, 0) + 2 * (doc.page_count - 1)).toLocaleString()} CHARACTERS</span></div><Button aria-label="Delete selected document" onClick={() => setDeleteOpen(true)} disabled={Boolean(busy)}><Trash2 size={16} /></Button></div>
-            {deleteOpen && <div className="delete-confirmation" role="group" aria-label="Delete confirmation"><p>Delete <strong>{doc.name}</strong>, its file, pages, and all chunk versions? This cannot be undone.</p><Button onClick={() => void remove()} disabled={Boolean(busy)}>Confirm delete</Button><Button onClick={() => setDeleteOpen(false)}>Cancel</Button></div>}
+            {deleteOpen && <dialog ref={confirmation} className="delete-confirmation" aria-label="Confirm document deletion" onCancel={event => { event.preventDefault(); setDeleteOpen(false) }} onKeyDown={event => {
+              if (event.key !== 'Tab') return
+              const controls = event.currentTarget.querySelectorAll<HTMLButtonElement>('button:not(:disabled)')
+              const first = controls[0], last = controls[controls.length - 1]
+              if ((!event.shiftKey && document.activeElement === last) || (event.shiftKey && document.activeElement === first)) {
+                event.preventDefault(); (event.shiftKey ? last : first)?.focus()
+              }
+            }}><div role="group" aria-label="Delete confirmation"><p>Delete <strong>{doc.name}</strong>, its file, pages, and all chunk versions? This cannot be undone.</p><Button onClick={() => void remove()} disabled={Boolean(busy)}>Confirm delete</Button><Button data-cancel onClick={() => setDeleteOpen(false)}>Cancel</Button></div></dialog>}
             {doc.warnings.map(warning => <p className="doc-warning" key={warning}>{warning}</p>)}
             <div className="source-toolbar"><div className="page-controls"><Button aria-label="Previous page" disabled={pageIndex === 0} onClick={() => setPageIndex(pageIndex - 1)}><ChevronLeft size={16} /></Button><span>Page {pageIndex + 1} / {doc.page_count}</span><Button aria-label="Next page" disabled={pageIndex >= doc.page_count - 1} onClick={() => setPageIndex(pageIndex + 1)}><ChevronRight size={16} /></Button></div>
               <label className="source-toggle"><input type="checkbox" checked={raw} onChange={event => setRaw(event.target.checked)} />Raw extracted text</label></div>

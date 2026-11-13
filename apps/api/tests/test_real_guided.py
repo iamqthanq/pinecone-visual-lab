@@ -33,7 +33,8 @@ def test_real_e5_guided_pipeline_receipts_search_source_and_reset(tmp_path):
         reset = act(client, sid, "reset").json()
         assert not any(reset["session"]["completed"].values())
         assert app.state.guided_service.store.list() == before
-        path = Path(__file__).resolve().parents[3] / "docs/evidence/d07/real-guided-example.json"
+        path = (Path(__file__).resolve().parents[3]
+                / "docs/evidence/d08/review-r1/regression/real-guided-example.json")
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(
             json.dumps(

@@ -1,0 +1,11 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d08/verify-artifacts.py
+Build secret scan: 42 files, zero findings; no credential values printed.
+Four real E5 evidence samples validated: 384 finite unit values; JSONL 3 lines parse/budget PASS.
+Search request/response/trace samples: 2 real E5 + 1 explicit NOT E5 fixture PASS.
+RAG samples: 2 real-E5 + 1 NOT-E5, all MOCK OLLAMA / NOT REAL LLM; context/citation/budget PASS.
+Guided browser evidence: real-E5 and NOT-E5 separate; source, ACTIVE/fetch, search-only and safe reset PASS.
+Three simulator snapshots verified as TOY 2D; independent Top-K arithmetic and L2 tombstone checks PASS.
+20 actual PNG dimensions/checksums verified; named desktop1440/mobile390 widths PASS.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 1.83

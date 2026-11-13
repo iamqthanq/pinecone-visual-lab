@@ -1,0 +1,4658 @@
+[
+  {
+    "file": "overview-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "8f603443302c102c198c09a3cc4658aecad2d9059fc6a9f741073d5fc4072f56"
+  },
+  {
+    "file": "overview-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "afc29fa76481cf5d9f006ebb6e71d48ebd53f88054ada3213b4f2968f01b6d6f"
+  },
+  {
+    "file": "overview-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "b36349f6aa4ef952cbdcd2820c4b40b8bac0f5b11ab1e01b670b46b23b2965a3"
+  },
+  {
+    "file": "overview-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "157cad2dd0266b537bbf1c467fee4a8dba6b6b8e91933d5c04be3134875c707f"
+  },
+  {
+    "file": "documents-unselected-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "a97935611b8e0d65dfecd8744f3d3cdf2c43315b204c8046b13a31f44d14dafe"
+  },
+  {
+    "file": "documents-unselected-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "33e585860c87a251d4d20917f7435b242208f6e614d0c1dcfc28f2e1c4e817c4"
+  },
+  {
+    "file": "documents-unselected-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "5a05a3673a440d3d1933cb099b70ff6a66c783d1cdfe5656db9ac4b1151fc1d5"
+  },
+  {
+    "file": "documents-unselected-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "ef18e9e69f927a8d4b83c27ffab1f411d615bbad320559f3268baef24a97c022"
+  },
+  {
+    "file": "documents-source-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "de8cd0fff32ffb35522e6e72a2dc3a05672defc44ce7bec3a23ec65a45e6d52c"
+  },
+  {
+    "file": "documents-source-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "574a0f0cfab2e0d148a0c0c2229c68d3c04ec83efeb75092f60692d796623d3d"
+  },
+  {
+    "file": "documents-source-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "b24c2724cde77e79d221100ea6af4837e267bd6cf4b0675a93eedcfd10ce79a4"
+  },
+  {
+    "file": "documents-source-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "2a90602a7a7c36518b8451d0cdc4a6339c8280a3ced09ec60322a3338135b702"
+  },
+  {
+    "file": "chunks-versions-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "14ece68b2c4ce07e33df718ddfc2ed6406a7adb03ad10f235e92ad877ee3674e"
+  },
+  {
+    "file": "chunks-versions-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "459a77a9bd3b812df3c60d48dd0a089743d5ebcf69f8a763db84c9d766157019"
+  },
+  {
+    "file": "chunks-versions-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "ec20126a044267d28a815fe694d1507a3db93de63ca5058dfa6c5e7bfca54b25"
+  },
+  {
+    "file": "chunks-versions-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "bea94ed630136757149c2ef496efd895950d4090546ca5a5adb6b3d17adb9714"
+  },
+  {
+    "file": "embeddings-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "fd70e29f375e0e7f96d21d3e0d66363e4b68ff7a0d9925186335b198d6eeb4fe"
+  },
+  {
+    "file": "embeddings-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "cb7e91c89282219862b958a31512f53eab4e01c9c688a5a4a57660832494ffc4"
+  },
+  {
+    "file": "embeddings-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "a672629eba7682e4399ab2c2e582d1db3d8d1bdd9f6e56831ba17862a36fc859"
+  },
+  {
+    "file": "embeddings-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "ad55f33d0d95bffb887ecdeedd356d617892ede79389873af9391b906d0c988d"
+  },
+  {
+    "file": "vector-explorer-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "ea42f5b7091c88da352d2408dc09a7865adc870a400964fb0a80fa90b90ab922"
+  },
+  {
+    "file": "vector-explorer-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "ae8d03314702771d3e0e34b23a6a5f1166e01690dfd8ed0b9e9b4349c20bae9d"
+  },
+  {
+    "file": "vector-explorer-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "49206770b737c2efb156343b3fb5ddc39ce1c1f236e3e7ad87c5a42916f71944"
+  },
+  {
+    "file": "vector-explorer-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "495d1f60ba1e6750beb3e423e5aea91c2a654738a7576b0283beb4ba86c302e5"
+  },
+  {
+    "file": "semantic-search-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "0b37e918e4f9764cea37e8cf0516dd7f60249d5c3aad8eb40df45eef447fd105"
+  },
+  {
+    "file": "semantic-search-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "738d6241abd6c479b7f13a42600860c35097fe14aa12c94b369e67a815c7ad09"
+  },
+  {
+    "file": "semantic-search-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "d63cfe98929021b5f2e5352f50ac00763d0c236f595b0ec013715d95abce6e7f"
+  },
+  {
+    "file": "semantic-search-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "b6c73b2a10214436d5b026a206d043692ca88538f2cdd5bdc95c0ba864c3f928"
+  },
+  {
+    "file": "rag-chat-visible-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "81d0b04b134bbe58e5b1e1c7a11e9f758690f21cfec8e3c102800529ba6df532"
+  },
+  {
+    "file": "rag-chat-visible-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "7b1fba7d58d966bb1df9a2a2be3eb60ecd9eef8d01ff168959841bdcf3b12c60"
+  },
+  {
+    "file": "rag-chat-visible-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "8d91cd470a3ee035aece8b4dfcb35ad585c2ac68e0cc1db148204b33708efb96"
+  },
+  {
+    "file": "rag-chat-visible-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "bb446da9e996aa4eb6669459ab6273242bdabef62dc7b354111c3bee94c48680"
+  },
+  {
+    "file": "architecture-write-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(75px, 67.4038px) scale(0.730769);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "17",
+        "mode": "write",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "c3ba27ba2c8dd973db35eb9d4ebe1b4e9de76b3e4c4f8e56de36949bd910ca51"
+  },
+  {
+    "file": "architecture-write-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(49px, 129.72px) scale(0.48);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "17",
+        "mode": "write",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "a9c50a4829f7a52ffc16002b4f3d4bd2efacaa2055a26e63e025daa5e353adf8"
+  },
+  {
+    "file": "architecture-write-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(46px, 137.366px) scale(0.449231);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "17",
+        "mode": "write",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "7846c37f1e2de0b66b38c6a2ecaa0affad4f9746c896990229f4e07d919df631"
+  },
+  {
+    "file": "architecture-write-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(-239.727px, 174.982px) scale(1.05455);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "17",
+        "mode": "write",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "f3e4eb15e5782e0097a088e5fad9503615829c14303af655d5459527e97dc4d5"
+  },
+  {
+    "file": "architecture-read-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(75px, 67.4038px) scale(0.730769);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "4",
+        "mode": "read",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "d5da6605e8a51139dfd0a4b10ca77bf23ac5873f7a26309d9240da2625d346e8"
+  },
+  {
+    "file": "architecture-read-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(49px, 129.72px) scale(0.48);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "4",
+        "mode": "read",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "9f0999481fcfe5006618b35776453b1ed0ef35337c2ab61201964d8e9f2a1605"
+  },
+  {
+    "file": "architecture-read-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(46px, 137.366px) scale(0.449231);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "4",
+        "mode": "read",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "f7be892ba24ef81bbb897a528b111a099710a83764653a2255f8734a602d5d5e"
+  },
+  {
+    "file": "architecture-read-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(-1093.91px, -35.9273px) scale(1.05455);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "4",
+        "mode": "read",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "2dd8f720c481e8be67be05f22e31a7f22311d518c6f3b977543d93b5744468e5"
+  },
+  {
+    "file": "architecture-compaction-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(75px, 67.4038px) scale(0.730769);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "dbcc046df31327b621abf01f6dfe7147ecb5d270ab6b51ac43ee2e86a1a35ec4"
+  },
+  {
+    "file": "architecture-compaction-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(49px, 129.72px) scale(0.48);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "31979b8c91650fa168a8e965820ba957dd74d21c5e7319bd76598aff56a3da16"
+  },
+  {
+    "file": "architecture-compaction-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(46px, 137.366px) scale(0.449231);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "2bc7b05ade87b595c0a6c43f16df95fcc7c251652400250ab4158b77e89e1298"
+  },
+  {
+    "file": "architecture-compaction-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(-607.228px, 61px) scale(0.64557);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "e291efa05a503ded80f42dd51a6a9e7c9c8ac3d485987e3a10ec5ce666c5174d"
+  },
+  {
+    "file": "guided-embedding-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "fb0e6b6d0714a8db744dfce64553b0e72ad2773effd5f40229f213612560e9e8"
+  },
+  {
+    "file": "guided-embedding-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "262b25e94c0944dacf66588c1c0996b3afc36541c33d8dedbc62eeb53c659161"
+  },
+  {
+    "file": "guided-embedding-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "c3975152d7839219bbd616e3d7dd8bb23369b5701981127dab61b534255dd62a"
+  },
+  {
+    "file": "guided-embedding-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "4123b0d36350da259ca754ae12998a463163fa6b35ca400d6d019cbeabcc8a40"
+  },
+  {
+    "file": "guided-complete-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(75px, 67.4038px) scale(0.730769);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "1c78ef890be9111cd20b206302f40fcbca26429588efed73ac3758c35131b70b"
+  },
+  {
+    "file": "guided-complete-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(49px, 129.72px) scale(0.48);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "520bf06f89f76a2752a518d4ce868065a1a355aaefd6eb88c19ffc013682876d"
+  },
+  {
+    "file": "guided-complete-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(46px, 137.366px) scale(0.449231);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "a601c456d9192dd29a306e14a40c247461ed379c9d786c48c189352f3a8a0b75"
+  },
+  {
+    "file": "guided-complete-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": {
+        "viewport": "transform: translate(-607.228px, 61px) scale(0.64557);",
+        "nodes": 13,
+        "font": "15px / 22.5px \"Manrope Variable\", \"Segoe UI\", sans-serif",
+        "step": "6",
+        "mode": "compaction",
+        "runningAnimations": 0
+      }
+    },
+    "sha256": "55abd9a4f8122eb1a7604bb4c231d3fd1eeb8b743fac43bc46210d9c66555998"
+  },
+  {
+    "file": "offline-fault-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "432f3193d7d1884543d04c1f92bb9c60d9c4354d9e0c87979699ac90a8271ca8"
+  },
+  {
+    "file": "offline-fault-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "4b4e1c4867235f82987152b4ec3498d71e4bebadc24bf40afd3a653dc1f911b5"
+  },
+  {
+    "file": "offline-fault-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "1c0192460e407b00b4049d54cd66fff2d02806a5077bef626039d593a1239f76"
+  },
+  {
+    "file": "offline-fault-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "f9f13fdd7cbefcda948db14fb798f5f84672738b1304cc4252a2389574ea8075"
+  },
+  {
+    "file": "invalid-config-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "340ac71dc9a2f7b23fa2dca226df2f9af1cd5eb1bd00242b1e2f8bb28eec73e4"
+  },
+  {
+    "file": "invalid-config-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "2c80d5d1fe485d4e9dd0b0006fa7920ca48cf8f1bdc663b12db300da3c7f84f8"
+  },
+  {
+    "file": "invalid-config-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "58bbaa25ca024f3736e87069e83c5204a2628d3c26cd224a7d41487771170b1a"
+  },
+  {
+    "file": "invalid-config-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "492995ce12d2732d745aa8c196733e1e367df45dcedc38b191ee3d6e2af32241"
+  },
+  {
+    "file": "delete-confirmation-1440.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "7d645de6dd658b7ad1d34c0f43eb7336baa5e72cbda32272375463db378a4b61"
+  },
+  {
+    "file": "delete-confirmation-1024.png",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "edd9ce9ce502aea2411725716f6dcf2801a9c64cd9d713105e403e679dd19cbc"
+  },
+  {
+    "file": "delete-confirmation-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "a63cabc38dd237dcfa981525a569d785c096ef81d2887192fd1d6ff37bab97ad"
+  },
+  {
+    "file": "delete-confirmation-390.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "renderingState": {
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "fontsStatus": "loaded",
+      "faces": [
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "unloaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope Variable",
+          "weight": "200 800",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "400",
+          "status": "loaded"
+        }
+      ],
+      "graph": null
+    },
+    "sha256": "1046133842befe7ea696f1b145792c70c7e7e0a3658112372870f181fc01285f"
+  }
+]

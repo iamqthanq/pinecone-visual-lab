@@ -1,0 +1,183 @@
+{
+  "label": "OFFLINE FIXTURE — NOT E5 / NO CLOUD",
+  "request": {
+    "query": "Cơ sở dữ liệu vector tìm kiếm thông tin theo ngữ nghĩa như thế nào?",
+    "top_k": 1,
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "search-seminar"
+    },
+    "filters": {
+      "document_id": "aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3",
+      "source_name": "search-vietnamese.pdf",
+      "page_from": 2,
+      "page_to": 2
+    },
+    "compare": true,
+    "confirm_live_read": false,
+    "confirm_live_compare": false
+  },
+  "response": {
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "search-seminar"
+    },
+    "top_k": 1,
+    "filters": {
+      "document_id": "aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3",
+      "version_id": null,
+      "source_name": "search-vietnamese.pdf",
+      "page_from": 2,
+      "page_to": 2
+    },
+    "retrieval_mode": "LOCAL EXACT COSINE",
+    "data_origin": "SQLite local_vectors + confirmed chunks",
+    "embedding": {
+      "mode": "test-fixture-not-e5",
+      "model_id": "deterministic-384-NOT-E5",
+      "model_revision": "fixture-v1",
+      "model_signature": "deterministic-384-NOT-E5@fixture-v1",
+      "prefix": "query: ",
+      "input_token_count": 94,
+      "inference_ms": 1.5100000018719584
+    },
+    "score_meaning": "Raw cosine similarity [-1,+1], not probability or percentage",
+    "hits": [
+      {
+        "id": "pvl-dac0ec45-06a1-5cec-9b97-e7a4080cd957",
+        "rank": 1,
+        "score": 0.010874928455184977,
+        "document_id": "aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3",
+        "version_id": "6143b111-5299-453b-bbbe-062f866a76f4",
+        "chunk_id": "93d61322-85a8-57b7-8a3c-815d678cab7b",
+        "source_name": "search-vietnamese.pdf",
+        "page_start": 1,
+        "page_end": 2,
+        "text": " liệu vector lưu biểu diễn ngữ nghĩa.\n\n\nTrang 2\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\n",
+        "snippet": " liệu vector lưu biểu diễn ngữ nghĩa.\n\n\nTrang 2\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\n",
+        "source_url": "/documents?document=aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3&version=6143b111-5299-453b-bbbe-062f866a76f4&chunk=93d61322-85a8-57b7-8a3c-815d678cab7b&page=1",
+        "metadata": {
+          "owner_job": "f44db91e-37cf-59e0-822f-09df632d7899",
+          "document_id": "aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3",
+          "version_id": "6143b111-5299-453b-bbbe-062f866a76f4",
+          "chunk_id": "93d61322-85a8-57b7-8a3c-815d678cab7b",
+          "source_name": "search-vietnamese.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "model_id": "deterministic-384-NOT-E5",
+          "model_revision": "fixture-v1",
+          "model_signature": "deterministic-384-NOT-E5@fixture-v1",
+          "embedding_mode": "test-fixture-not-e5"
+        }
+      }
+    ],
+    "comparison": [
+      {
+        "id": "pvl-dac0ec45-06a1-5cec-9b97-e7a4080cd957",
+        "rank": 1,
+        "score": 0.010874928455184977,
+        "document_id": "aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3",
+        "version_id": "6143b111-5299-453b-bbbe-062f866a76f4",
+        "chunk_id": "93d61322-85a8-57b7-8a3c-815d678cab7b",
+        "source_name": "search-vietnamese.pdf",
+        "page_start": 1,
+        "page_end": 2,
+        "text": " liệu vector lưu biểu diễn ngữ nghĩa.\n\n\nTrang 2\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\n",
+        "snippet": " liệu vector lưu biểu diễn ngữ nghĩa.\n\n\nTrang 2\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\nCơ sở dữ liệu vector lưu biểu diễn ngữ nghĩa.\n",
+        "source_url": "/documents?document=aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3&version=6143b111-5299-453b-bbbe-062f866a76f4&chunk=93d61322-85a8-57b7-8a3c-815d678cab7b&page=1",
+        "metadata": {
+          "owner_job": "f44db91e-37cf-59e0-822f-09df632d7899",
+          "document_id": "aa3a6e21-5bbc-4c61-81d4-275eb1f4d5c3",
+          "version_id": "6143b111-5299-453b-bbbe-062f866a76f4",
+          "chunk_id": "93d61322-85a8-57b7-8a3c-815d678cab7b",
+          "source_name": "search-vietnamese.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "model_id": "deterministic-384-NOT-E5",
+          "model_revision": "fixture-v1",
+          "model_signature": "deterministic-384-NOT-E5@fixture-v1",
+          "embedding_mode": "test-fixture-not-e5"
+        }
+      }
+    ],
+    "empty_reason": null,
+    "trace": {
+      "stages": [
+        {
+          "name": "input_validation",
+          "ms": 0.6652000010944903,
+          "status": "measured"
+        },
+        {
+          "name": "active_manifest_selection",
+          "ms": 0.9420999995199963,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter",
+          "ms": 2.1859999978914857,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup",
+          "ms": 5.160699991392903,
+          "status": "measured"
+        },
+        {
+          "name": "metadata_prefilter_unfiltered",
+          "ms": 3.536599993822165,
+          "status": "measured"
+        },
+        {
+          "name": "source_lookup_unfiltered",
+          "ms": 10.176800002227537,
+          "status": "measured"
+        },
+        {
+          "name": "query_embedding",
+          "ms": 2.7771999884862453,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query",
+          "ms": 4.343699998571537,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration",
+          "ms": 0.03510000533424318,
+          "status": "measured"
+        },
+        {
+          "name": "vector_query_unfiltered",
+          "ms": 4.262899994500913,
+          "status": "measured"
+        },
+        {
+          "name": "source_hydration_unfiltered",
+          "ms": 0.03189999551977962,
+          "status": "measured"
+        },
+        {
+          "name": "active_source_revalidation",
+          "ms": 1.0638999956427142,
+          "status": "measured"
+        },
+        {
+          "name": "response_assembly",
+          "ms": 0.004699992132373154,
+          "status": "measured"
+        }
+      ],
+      "total_ms": 36.177799993311055,
+      "scope": "Server handler; excludes HTTP transfer and browser rendering",
+      "candidate_count": 9,
+      "candidate_count_kind": "exact stored eligible count",
+      "manifest_count": 2,
+      "discarded_count": 0,
+      "warnings": []
+    }
+  }
+}

@@ -1,0 +1,50 @@
+COMMAND: npm.cmd test
+
+> pinecone-visual-lab@0.7.0 test
+> npm run test --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.7.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/Corel/HK1_NAM4/PR/Giữa kì/pinecone-visual-lab/apps/web
+
+ ❯ src/ArchitectureLab.test.tsx (4 tests | 1 failed) 1431ms
+   ❯ Architecture simulator rendering/controller (real diagram is separately browser-tested) (4)
+     × finite play/pause/replay, StrictMode and unmount cancel all owned timers/timelines 278ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/ArchitectureLab.test.tsx > Architecture simulator rendering/controller (real diagram is separately browser-tested) > finite play/pause/replay, StrictMode and unmount cancel all owned timers/timelines
+AssertionError: expected 1 to be greater than 1
+ ❯ src/ArchitectureLab.test.tsx:62:44
+     60|     unmount()
+     61|     expect(vi.getTimerCount()).toBe(0)
+     62|     expect(mocks.revert.mock.calls.length).toBeGreaterThan(1)
+       |                                            ^
+     63|   })
+     64|   it('reduced motion removes animation but keeps steps; hidden tabs pa…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 11 passed (12)
+      Tests  1 failed | 67 passed (68)
+   Start at  00:00:21
+   Duration  46.78s (environment 56%, tests 24%, setup 14%, import 3%, transform 2%)
+
+Environment  jsdom was created 12 times · 48.98s total, 56% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error workspace @pinecone-visual-lab/web@0.7.0
+npm error location D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error command failed
+npm error command C:\Windows\system32\cmd.exe /d /s /c vitest run
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 52.17

@@ -1,0 +1,1709 @@
+{
+  "stage": "after",
+  "mode": "real-e5",
+  "label": "REAL E5 / LOCAL SQLITE / MOCK OLLAMA NOT REAL LLM / NO CLOUD",
+  "source_base": "24d56a9af81d0277224dc0f3b7eff5fd0f395bf3",
+  "browser": "157.0.4341.42",
+  "head": "24d56a9af81d0277224dc0f3b7eff5fd0f395bf3",
+  "seed": {
+    "id": "dda8422e-7947-49ad-8a3d-6c03ebcbfdb4",
+    "created_at": "2026-11-12T16:43:28.188454+00:00",
+    "target": {
+      "mode": "local",
+      "index": "local-e5",
+      "namespace": "pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    "document_id": "ae334fe3-f467-4340-8b03-fe6cb6d01771",
+    "draft_id": "38235292-2f52-4a38-832d-2a3edac8fb4c",
+    "version_id": "38235292-2f52-4a38-832d-2a3edac8fb4c",
+    "chunk_id": "1616a250-4683-5205-948d-9cabb7a57c6e",
+    "job_id": "54a29d08-a3b3-5f3b-bbb9-d749df39e3be",
+    "completed": {
+      "upload": true,
+      "extract": true,
+      "chunks": true,
+      "embedding": true,
+      "upsert": true,
+      "search": false,
+      "rag": false
+    },
+    "source_error": null,
+    "embedding_mode": "e5",
+    "rag_outcome": null,
+    "provenance": "Project-authored CC0-1.0 synthetic Vietnamese sample; LOCAL DEMO only",
+    "reset_policy": "Tour metadata/simulation only. No data deletion endpoint.",
+    "draft": "6cd01e69-c9de-4a0c-a961-87aaf8e17420",
+    "vector": "pvl-6df92478-b483-5ed7-8899-74fe6257d65d"
+  },
+  "captures": [
+    {
+      "file": "overview-1440.png",
+      "screen": "overview",
+      "state": "Actual local health and loaded model, guide off",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "file": "overview-1024.png",
+      "screen": "overview",
+      "state": "Actual local health and loaded model, guide off",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "file": "overview-768.png",
+      "screen": "overview",
+      "state": "Actual local health and loaded model, guide off",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "file": "overview-390.png",
+      "screen": "overview",
+      "state": "Actual local health and loaded model, guide off",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "screen": "overview",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "documents-unselected-1440.png",
+      "screen": "documents-unselected",
+      "state": "Stored sample exists; source inspector intentionally unselected",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents"
+    },
+    {
+      "file": "documents-unselected-1024.png",
+      "screen": "documents-unselected",
+      "state": "Stored sample exists; source inspector intentionally unselected",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents"
+    },
+    {
+      "file": "documents-unselected-768.png",
+      "screen": "documents-unselected",
+      "state": "Stored sample exists; source inspector intentionally unselected",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents"
+    },
+    {
+      "file": "documents-unselected-390.png",
+      "screen": "documents-unselected",
+      "state": "Stored sample exists; source inspector intentionally unselected",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents"
+    },
+    {
+      "screen": "documents-unselected",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "documents-source-1440.png",
+      "screen": "documents-source",
+      "state": "Pinned confirmed source/page/chunk",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "documents-source-1024.png",
+      "screen": "documents-source",
+      "state": "Pinned confirmed source/page/chunk",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "documents-source-768.png",
+      "screen": "documents-source",
+      "state": "Pinned confirmed source/page/chunk",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "documents-source-390.png",
+      "screen": "documents-source",
+      "state": "Pinned confirmed source/page/chunk",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "screen": "documents-source",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "chunks-versions-1440.png",
+      "screen": "chunks-versions",
+      "state": "Retained draft180/30; confirmed300/50 remains ACTIVE",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "chunks-versions-1024.png",
+      "screen": "chunks-versions",
+      "state": "Retained draft180/30; confirmed300/50 remains ACTIVE",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "chunks-versions-768.png",
+      "screen": "chunks-versions",
+      "state": "Retained draft180/30; confirmed300/50 remains ACTIVE",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "chunks-versions-390.png",
+      "screen": "chunks-versions",
+      "state": "Retained draft180/30; confirmed300/50 remains ACTIVE",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "screen": "chunks-versions",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "embeddings-1440.png",
+      "screen": "embeddings",
+      "state": "Actual cached passage embedding384D, heatmap and source",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "embeddings-1024.png",
+      "screen": "embeddings",
+      "state": "Actual cached passage embedding384D, heatmap and source",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "embeddings-768.png",
+      "screen": "embeddings",
+      "state": "Actual cached passage embedding384D, heatmap and source",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "embeddings-390.png",
+      "screen": "embeddings",
+      "state": "Actual cached passage embedding384D, heatmap and source",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "screen": "embeddings",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "vector-explorer-1440.png",
+      "screen": "vector-explorer",
+      "state": "Verified ACTIVE manifest and actual SQLite adapter fetch384D",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors/store?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "vector-explorer-1024.png",
+      "screen": "vector-explorer",
+      "state": "Verified ACTIVE manifest and actual SQLite adapter fetch384D",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors/store?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "vector-explorer-768.png",
+      "screen": "vector-explorer",
+      "state": "Verified ACTIVE manifest and actual SQLite adapter fetch384D",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors/store?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "vector-explorer-390.png",
+      "screen": "vector-explorer",
+      "state": "Verified ACTIVE manifest and actual SQLite adapter fetch384D",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors/store?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "screen": "vector-explorer",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "semantic-search-1440.png",
+      "screen": "semantic-search",
+      "state": "Actual Top1/source/filter comparison and measured trace; only time numerals masked",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "semantic-search-1024.png",
+      "screen": "semantic-search",
+      "state": "Actual Top1/source/filter comparison and measured trace; only time numerals masked",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "semantic-search-768.png",
+      "screen": "semantic-search",
+      "state": "Actual Top1/source/filter comparison and measured trace; only time numerals masked",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "semantic-search-390.png",
+      "screen": "semantic-search",
+      "state": "Actual Top1/source/filter comparison and measured trace; only time numerals masked",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "screen": "semantic-search",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "rag-chat-1440.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "rag-chat-1024.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "rag-chat-768.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "rag-chat-390.png",
+      "screen": "rag-chat",
+      "state": "Real retrieval or labeled NOT-E5; always Mock Ollama NOT REAL LLM; verified context open",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/search?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "screen": "rag-chat",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "architecture-write-1440.png",
+      "screen": "architecture-write",
+      "state": "SIMULATION toy2D seed7 write final; not telemetry",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-write-1024.png",
+      "screen": "architecture-write",
+      "state": "SIMULATION toy2D seed7 write final; not telemetry",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-write-768.png",
+      "screen": "architecture-write",
+      "state": "SIMULATION toy2D seed7 write final; not telemetry",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-write-390.png",
+      "screen": "architecture-write",
+      "state": "SIMULATION toy2D seed7 write final; not telemetry",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "screen": "architecture-write",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "architecture-read-1440.png",
+      "screen": "architecture-read",
+      "state": "SIMULATION toy2D seed7 read final; not telemetry",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-read-1024.png",
+      "screen": "architecture-read",
+      "state": "SIMULATION toy2D seed7 read final; not telemetry",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-read-768.png",
+      "screen": "architecture-read",
+      "state": "SIMULATION toy2D seed7 read final; not telemetry",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-read-390.png",
+      "screen": "architecture-read",
+      "state": "SIMULATION toy2D seed7 read final; not telemetry",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "screen": "architecture-read",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "architecture-compaction-1440.png",
+      "screen": "architecture-compaction",
+      "state": "SIMULATION toy2D seed7 compaction final; not telemetry",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-compaction-1024.png",
+      "screen": "architecture-compaction",
+      "state": "SIMULATION toy2D seed7 compaction final; not telemetry",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-compaction-768.png",
+      "screen": "architecture-compaction",
+      "state": "SIMULATION toy2D seed7 compaction final; not telemetry",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "file": "architecture-compaction-390.png",
+      "screen": "architecture-compaction",
+      "state": "SIMULATION toy2D seed7 compaction final; not telemetry",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture"
+    },
+    {
+      "screen": "architecture-compaction",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "guided-embedding-1440.png",
+      "screen": "guided-embedding",
+      "state": "Restored real backend receipts, same session/source; explicit cached embedding",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "guided-embedding-1024.png",
+      "screen": "guided-embedding",
+      "state": "Restored real backend receipts, same session/source; explicit cached embedding",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "guided-embedding-768.png",
+      "screen": "guided-embedding",
+      "state": "Restored real backend receipts, same session/source; explicit cached embedding",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "guided-embedding-390.png",
+      "screen": "guided-embedding",
+      "state": "Restored real backend receipts, same session/source; explicit cached embedding",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/vectors?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "screen": "guided-embedding",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "guided-complete-1440.png",
+      "screen": "guided-complete",
+      "state": "All seven real actions verified; three simulation finals inspected through controls",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "guided-complete-1024.png",
+      "screen": "guided-complete",
+      "state": "All seven real actions verified; three simulation finals inspected through controls",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "guided-complete-768.png",
+      "screen": "guided-complete",
+      "state": "All seven real actions verified; three simulation finals inspected through controls",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "file": "guided-complete-390.png",
+      "screen": "guided-complete",
+      "state": "All seven real actions verified; three simulation finals inspected through controls",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/architecture?demoDocument=ae334fe3-f467-4340-8b03-fe6cb6d01771&demoVersion=38235292-2f52-4a38-832d-2a3edac8fb4c&demoChunk=1616a250-4683-5205-948d-9cabb7a57c6e&demoNamespace=pvl-demo-dda8422e794749ad8a3d6c03ebcbfdb4"
+    },
+    {
+      "screen": "guided-complete",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "offline-fault-1440.png",
+      "screen": "offline-fault",
+      "state": "Explicit health-request fault injection; backend remains running",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "file": "offline-fault-1024.png",
+      "screen": "offline-fault",
+      "state": "Explicit health-request fault injection; backend remains running",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "file": "offline-fault-768.png",
+      "screen": "offline-fault",
+      "state": "Explicit health-request fault injection; backend remains running",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "file": "offline-fault-390.png",
+      "screen": "offline-fault",
+      "state": "Explicit health-request fault injection; backend remains running",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/"
+    },
+    {
+      "screen": "offline-fault",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "invalid-config-1440.png",
+      "screen": "invalid-config",
+      "state": "Real client validation, retained confirmed data; no invalid request sent",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "invalid-config-1024.png",
+      "screen": "invalid-config",
+      "state": "Real client validation, retained confirmed data; no invalid request sent",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "invalid-config-768.png",
+      "screen": "invalid-config",
+      "state": "Real client validation, retained confirmed data; no invalid request sent",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "invalid-config-390.png",
+      "screen": "invalid-config",
+      "state": "Real client validation, retained confirmed data; no invalid request sent",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "screen": "invalid-config",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    },
+    {
+      "file": "delete-confirmation-1440.png",
+      "screen": "delete-confirmation",
+      "state": "Unconfirmed existing document deletion UI; never submit delete",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "delete-confirmation-1024.png",
+      "screen": "delete-confirmation",
+      "state": "Unconfirmed existing document deletion UI; never submit delete",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "delete-confirmation-768.png",
+      "screen": "delete-confirmation",
+      "state": "Unconfirmed existing document deletion UI; never submit delete",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "file": "delete-confirmation-390.png",
+      "screen": "delete-confirmation",
+      "state": "Unconfirmed existing document deletion UI; never submit delete",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "masks": [
+        ".connection-message small",
+        ".search-trace .document-panel-heading > strong",
+        ".search-trace li > span:last-child",
+        ".vector-metrics > span:nth-child(3) strong",
+        ".vector-metrics > span:nth-child(4) strong"
+      ],
+      "url": "/documents?document=ae334fe3-f467-4340-8b03-fe6cb6d01771&version=38235292-2f52-4a38-832d-2a3edac8fb4c&chunk=1616a250-4683-5205-948d-9cabb7a57c6e&page=1"
+    },
+    {
+      "screen": "delete-confirmation",
+      "width": 320,
+      "overflow": false,
+      "purpose": "overflow only, no image"
+    }
+  ],
+  "accessibility": [
+    {
+      "screen": "overview",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "overview",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "documents-unselected",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "documents-unselected",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "documents-source",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "documents-source",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "chunks-versions",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "chunks-versions",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "embeddings",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "embeddings",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "vector-explorer",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "vector-explorer",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "semantic-search",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "semantic-search",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "rag-chat",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "rag-chat",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "architecture-write",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "architecture-write",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "architecture-read",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "architecture-read",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "architecture-compaction",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "architecture-compaction",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "guided-embedding",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "guided-embedding",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "guided-complete",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "guided-complete",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "offline-fault",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "offline-fault",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "invalid-config",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "invalid-config",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "delete-confirmation",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "screen": "delete-confirmation",
+      "width": 390,
+      "violations": []
+    }
+  ],
+  "provenance": "Bundled project-authored CC0 Vietnamese sample; separate ignored data root; BEFORE never overwritten",
+  "transport": "Actual isolated backend services",
+  "review": "Candidate for independent ChatGPT/owner visual review, not automatically approved"
+}

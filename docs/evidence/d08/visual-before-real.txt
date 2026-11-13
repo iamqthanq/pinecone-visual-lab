@@ -1,0 +1,20 @@
+COMMAND: node node_modules/@playwright/test/cli.js test --config=playwright.visual.config.ts
+[WebServer] INFO:     Started server process [11176]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+[WebServer] (node:12100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:10428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][WebServer] Loading weights:  34%|███▎      | 67/199 [00:00<00:00, 663.69it/s][WebServer] Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1756.63it/s]
+  ok 1 tests\visual\audit.spec.ts:46:1 › paired production visual audit on owned persistent synthetic data (2.3m)
+  ok 2 tests\visual\performance.spec.ts:6:1 › production cold-entry, route CPU/network and bounded simulator frame profile (20.4s)
+
+  2 passed (2.7m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 164.29

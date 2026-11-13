@@ -1,0 +1,445 @@
+COMMAND: powershell -NoProfile -ExecutionPolicy RemoteSigned -File scripts/check.ps1
+[D08] Frontend lint
+
+> pinecone-visual-lab@0.8.0 lint
+> npm run lint --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 lint
+> eslint .
+
+[D08] TypeScript strict
+
+> pinecone-visual-lab@0.8.0 typecheck
+> npm run typecheck --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 typecheck
+> tsc --noEmit
+
+[D08] Visual harness TypeScript strict
+
+> pinecone-visual-lab@0.8.0 typecheck:visual
+> tsc --project tsconfig.visual.json
+
+[D08] Frontend unit tests
+
+> pinecone-visual-lab@0.8.0 test
+> npm run test --workspace apps/web
+
+
+> @pinecone-visual-lab/web@0.8.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/Corel/HK1_NAM4/PR/Giữa kì/pinecone-visual-lab/apps/web
+
+ ❯ src/App.test.tsx (7 tests | 1 failed) 3839ms
+   ❯ D01 foundation (7)
+     × navigates to Documents, Vectors, Search and the implemented educational Architecture Lab 2497ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/App.test.tsx > D01 foundation > navigates to Documents, Vectors, Search and the implemented educational Architecture Lab
+TestingLibraryElementError: Unable to find role="heading" and name "Follow a write. Unpack a read."
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"mobile-header"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33maria-label[39m=[32m"Pinecone Visual Lab home"[39m
+          [33mclass[39m=[32m"brand"[39m
+          [33mdata-discover[39m=[32m"true"[39m
+          [33mhref[39m=[32m"/"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"lucide lucide-blocks"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"23"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33mstroke-linejoin[39m=[32m"round"[39m
+              [33mstroke-width[39m=[32m"1.5"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [33mwidth[39m=[32m"23"[39m
+              [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"[39m
+              [36m/>[39m
+              [36m<rect[39m
+                [33mheight[39m=[32m"8"[39m
+                [33mrx[39m=[32m"1"[39m
+                [33mwidth[39m=[32m"8"[39m
+                [33mx[39m=[32m"14"[39m
+                [33my[39m=[32m"2"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+          [36m</span>[39m
+          [36m<span>[39m
+            [0mPinecone[0m
+            [36m<span[39m
+              [33mclass[39m=[32m"brand-subtitle"[39m
+            [36m>[39m
+              [0mVISUAL LAB[0m
+            [36m</span>[39m
+          [36m</span>[39m
+        [36m</a>[39m
+        [36m<button[39m
+          [33maria-controls[39m=[32m"sidebar"[39m
+          [33maria-expanded[39m=[32m"false"[39m
+          [33maria-label[39m=[32m"Open navigation"[39m
+          [33mclass[39m=[32m"button icon-button"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"lucide lucide-menu"[39m
+            [33mfill[39m=[32m"none"[39m
+            [33mheight[39m=[32m"21"[39m
+            [33mstroke[39m=[32m"currentColor"[39m
+            [33mstroke-linecap[39m=[32m"round"[39m
+            [33mstroke-linejoin[39m=[32m"round"[39m
+            [33mstroke-width[39m=[32m"2"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+            [33mwidth[39m=[32m"21"[39m
+            [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M4 5h16"[39m
+            [36m/>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M4 12h16"[39m
+            [36m/>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M4 19h16"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</button>[39m
+      [36m</header>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"sidebar "[39m
+        [33mid[39m=[32m"sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"sidebar-brand"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33maria-label[39m=[32m"Pinecone Visual Lab home"[39m
+            [33mclass[39m=[32m"brand"[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"brand-mark"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-blocks"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"23"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"1.5"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"23"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"[39m
+                [36m/>[39m
+                [36m<rect[39m
+                  [33mheight[39m=[32m"8"[39m
+                  [33mrx[39m=[32m"1"[39m
+                  [33mwidth[39m=[32m"8"[39m
+                  [33mx[39m=[32m"14"[39m
+                  [33my[39m=[32m"2"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</span>[39m
+            [36m<span>[39m
+              [0mPinecone[0m
+              [36m<span[39m
+                [33mclass[39m=[32m"brand-subtitle"[39m
+              [36m>[39m
+                [0mVISUAL LAB[0m
+              [36m</span>[39m
+            [36m</span>[39m
+          [36m</a>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-label"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"workspace-avatar"[39m
+          [36m>[39m
+            [0mVL[0m
+          [36m</span>[39m
+          [36m<span>[39m
+            [0mSeminar workspace[0m
+            [36m<small>[39m
+              [0mLocal development[0m
+            [36m</small>[39m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"workspace-dot"[39m
+          [36m/>[39m
+        [36m</div>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"nav-label"[39m
+        [36m>[39m
+          [0mWORKBENCH[0m
+        [36m</span>[39m
+        [36m<nav[39m
+          [33maria-label[39m=[32m"Main navigation"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m""[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"19"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33...
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"mobile-header"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33maria-label[39m=[32m"Pinecone Visual Lab home"[39m
+          [33mclass[39m=[32m"brand"[39m
+          [33mdata-discover[39m=[32m"true"[39m
+          [33mhref[39m=[32m"/"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"lucide lucide-blocks"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"23"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33mstroke-linejoin[39m=[32m"round"[39m
+              [33mstroke-width[39m=[32m"1.5"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [33mwidth[39m=[32m"23"[39m
+              [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"[39m
+              [36m/>[39m
+              [36m<rect[39m
+                [33mheight[39m=[32m"8"[39m
+                [33mrx[39m=[32m"1"[39m
+                [33mwidth[39m=[32m"8"[39m
+                [33mx[39m=[32m"14"[39m
+                [33my[39m=[32m"2"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+          [36m</span>[39m
+          [36m<span>[39m
+            [0mPinecone[0m
+            [36m<span[39m
+              [33mclass[39m=[32m"brand-subtitle"[39m
+            [36m>[39m
+              [0mVISUAL LAB[0m
+            [36m</span>[39m
+          [36m</span>[39m
+        [36m</a>[39m
+        [36m<button[39m
+          [33maria-controls[39m=[32m"sidebar"[39m
+          [33maria-expanded[39m=[32m"false"[39m
+          [33maria-label[39m=[32m"Open navigation"[39m
+          [33mclass[39m=[32m"button icon-button"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"lucide lucide-menu"[39m
+            [33mfill[39m=[32m"none"[39m
+            [33mheight[39m=[32m"21"[39m
+            [33mstroke[39m=[32m"currentColor"[39m
+            [33mstroke-linecap[39m=[32m"round"[39m
+            [33mstroke-linejoin[39m=[32m"round"[39m
+            [33mstroke-width[39m=[32m"2"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+            [33mwidth[39m=[32m"21"[39m
+            [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M4 5h16"[39m
+            [36m/>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M4 12h16"[39m
+            [36m/>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M4 19h16"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</button>[39m
+      [36m</header>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"sidebar "[39m
+        [33mid[39m=[32m"sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"sidebar-brand"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33maria-label[39m=[32m"Pinecone Visual Lab home"[39m
+            [33mclass[39m=[32m"brand"[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"brand-mark"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-blocks"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"23"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"1.5"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"23"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"[39m
+                [36m/>[39m
+                [36m<rect[39m
+                  [33mheight[39m=[32m"8"[39m
+                  [33mrx[39m=[32m"1"[39m
+                  [33mwidth[39m=[32m"8"[39m
+                  [33mx[39m=[32m"14"[39m
+                  [33my[39m=[32m"2"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</span>[39m
+            [36m<span>[39m
+              [0mPinecone[0m
+              [36m<span[39m
+                [33mclass[39m=[32m"brand-subtitle"[39m
+              [36m>[39m
+                [0mVISUAL LAB[0m
+              [36m</span>[39m
+            [36m</span>[39m
+          [36m</a>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-label"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"workspace-avatar"[39m
+          [36m>[39m
+            [0mVL[0m
+          [36m</span>[39m
+          [36m<span>[39m
+            [0mSeminar workspace[0m
+            [36m<small>[39m
+              [0mLocal development[0m
+            [36m</small>[39m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"workspace-dot"[39m
+          [36m/>[39m
+        [36m</div>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"nav-label"[39m
+        [36m>[39m
+          [0mWORKBENCH[0m
+        [36m</span>[39m
+        [36m<nav[39m
+          [33maria-label[39m=[32m"Main navigation"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m""[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"19"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33...
+ ❯ waitForWrapper ../../node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ ../../node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/App.test.tsx:62:25
+     60|     expect(await screen.findByRole('heading', { name: 'Find meaning. F…
+     61|     fireEvent.click(screen.getByRole('link', { name: 'Architecture Lab…
+     62|     expect(await screen.findByRole('heading', { name: 'Follow a write.…
+       |                         ^
+     63|     expect(screen.getByText('SIMULATION — EDUCATIONAL MODEL — NOT PINE…
+     64|     expect(screen.getByRole('button', { name: 'Next' })).toBeEnabled()
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 13 passed (14)
+      Tests  1 failed | 76 passed (77)
+   Start at  06:30:26
+   Duration  39.65s (environment 55%, tests 28%, setup 12%, import 3%, transform 1%)
+
+Environment  jsdom was created 14 times · 41.40s total, 55% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error workspace @pinecone-visual-lab/web@0.8.0
+npm error location D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\apps\web
+npm error command failed
+npm error command C:\Windows\system32\cmd.exe /d /s /c vitest run
+Frontend unit tests FAILED (exit 1)
+At D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\scripts\check.ps1:12 char:30
++ ... f ($LASTEXITCODE -ne 0) { throw "$Name FAILED (exit $LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Frontend unit tests FAILED (exit 1):String) [], RuntimeException
+    + FullyQualifiedErrorId : Frontend unit tests FAILED (exit 1)
+
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 70.70

@@ -1,0 +1,88 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d08/compare-evidence.py
+{
+  "bundle_before": {
+    "initial_files": [
+      "index-BHBSqUm6.js"
+    ],
+    "initial_bytes": 660065,
+    "initial_gzip_bytes": 207628,
+    "total_js_bytes": 660065,
+    "total_js_gzip_bytes": 207628,
+    "maps": []
+  },
+  "bundle_after": {
+    "initial_files": [
+      "components-Dkxyj7JT.js",
+      "index-DAPfpF_0.js"
+    ],
+    "initial_bytes": 305605,
+    "initial_gzip_bytes": 97532,
+    "total_js_bytes": 670979,
+    "total_js_gzip_bytes": 223095,
+    "maps": []
+  },
+  "initial_bytes_reduction_percent": 53.7,
+  "profile_before": {
+    "browser": "157.0.4341.42",
+    "runs": 5,
+    "initial_ready_median_ms": 571.935,
+    "architecture_ready_median_ms": 242.923,
+    "initial_js_decoded_bytes": [
+      660065,
+      660065,
+      660065,
+      660065,
+      660065
+    ],
+    "long_task_counts": [
+      3,
+      1,
+      2,
+      3,
+      2
+    ],
+    "long_task_total_median_ms": 120,
+    "frame_gap_median_per_run_ms": [
+      16.7,
+      16.7,
+      16.7,
+      16.7,
+      16.7
+    ],
+    "final_task_duration_median_s": 0.991
+  },
+  "profile_after": {
+    "browser": "157.0.4341.42",
+    "runs": 5,
+    "initial_ready_median_ms": 483.845,
+    "architecture_ready_median_ms": 466.184,
+    "initial_js_decoded_bytes": [
+      305605,
+      305605,
+      305605,
+      305605,
+      305605
+    ],
+    "long_task_counts": [
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    "long_task_total_median_ms": 0,
+    "frame_gap_median_per_run_ms": [
+      16.7,
+      16.7,
+      16.7,
+      16.7,
+      16.7
+    ],
+    "final_task_duration_median_s": 0.828
+  },
+  "scope": "Local five-sample observations only; no FPS/real-user/cloud benchmark claim"
+}
+Compared 68 BEFORE/AFTER fixture images; frozen 64 proposed references
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 24.12

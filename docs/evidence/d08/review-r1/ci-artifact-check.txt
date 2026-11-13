@@ -1,0 +1,7 @@
+COMMAND: .venv\Scripts\python.exe docs/evidence/d08/review-r1/verify-ci-artifact.py .cache/d08-r1/ci-43338671216.zip 49d2ff57467e642cbbe7e6655d587cf4008997e1396c368ab24fba038b381421 docs/evidence/d08/review-r1/ci-artifact-verification.json
+GitHub ZIP digest verified: 49d2ff57467e642cbbe7e6655d587cf4008997e1396c368ab24fba038b381421; Edge 157.0.4341.46; software GPU/raster confirmed.
+Visual 9 passed, 0 unexpected/skipped/flaky; 49/64 actual PNGs byte-identical to software proposals.
+Architecture Write1440 exact original CI bytes: True.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.21

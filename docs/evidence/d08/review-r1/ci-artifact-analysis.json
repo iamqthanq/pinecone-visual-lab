@@ -1,0 +1,584 @@
+[
+  {
+    "attempt": 1,
+    "zip_sha256": "087723671c43a395ffd50f5613954e86206bd24fd2246736e08790fc5ab30ece",
+    "files": {
+      "actual": {
+        "path": "docs/evidence/d08/review-r1/original-ci/attempt-1-actual.png",
+        "sha256": "c3ba27ba2c8dd973db35eb9d4ebe1b4e9de76b3e4c4f8e56de36949bd910ca51"
+      },
+      "expected": {
+        "path": "docs/evidence/d08/review-r1/original-ci/attempt-1-expected.png",
+        "sha256": "3ce06f24506c47f4b73d5a8bdaebdedcf86fea407436c112b52b9ba1055aace4"
+      },
+      "diff": {
+        "path": "docs/evidence/d08/review-r1/original-ci/attempt-1-diff.png",
+        "sha256": "6a1a6a7c283977ae482be4ed7189206e639ec7640a06b66858b8d9d31050afb8"
+      }
+    },
+    "trace_sha256": "fd9cad674881122f228dda0b19859cb07e32260f39557543b530924d9feb61f9",
+    "fonts": {
+      "attempt": 1,
+      "userAgents": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      ],
+      "fonts": [
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2",
+          "content": {
+            "size": 5868,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/6c8912d7cfd869389674ecdfce9e29157bcb9aa4.woff2"
+          },
+          "sha256": "62632b6375305e70ddcafdd895218e6ae41a184fcd280a69c739460604ca00a9",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2",
+          "content": {
+            "size": 13348,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/4af8cef522bd8912cb2fad41e06b9025640feb62.woff2"
+          },
+          "sha256": "6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+          "content": {
+            "size": 15120,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/1f62546fa0a051004f4faa3f40a4a8074a2e06ea.woff2"
+          },
+          "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+          "content": {
+            "size": 8520,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/89cd8db6d29cfed5ebf56c2795bddb38034c9147.woff2"
+          },
+          "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+          "content": {
+            "size": 15120,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/1f62546fa0a051004f4faa3f40a4a8074a2e06ea.woff2"
+          },
+          "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+          "content": {
+            "size": 8520,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/89cd8db6d29cfed5ebf56c2795bddb38034c9147.woff2"
+          },
+          "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2",
+          "content": {
+            "size": 5868,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/6c8912d7cfd869389674ecdfce9e29157bcb9aa4.woff2"
+          },
+          "sha256": "62632b6375305e70ddcafdd895218e6ae41a184fcd280a69c739460604ca00a9",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2",
+          "content": {
+            "size": 13348,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/4af8cef522bd8912cb2fad41e06b9025640feb62.woff2"
+          },
+          "sha256": "6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+          "content": {
+            "size": 15120,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/1f62546fa0a051004f4faa3f40a4a8074a2e06ea.woff2"
+          },
+          "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+          "content": {
+            "size": 8520,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/89cd8db6d29cfed5ebf56c2795bddb38034c9147.woff2"
+          },
+          "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        }
+      ]
+    }
+  },
+  {
+    "attempt": 2,
+    "zip_sha256": "d0c2ec4d17d951c7d80bc5254ff27896c04ce9dfede0498a9f9ed24418fb16be",
+    "files": {
+      "actual": {
+        "path": "docs/evidence/d08/review-r1/original-ci/attempt-2-actual.png",
+        "sha256": "c3ba27ba2c8dd973db35eb9d4ebe1b4e9de76b3e4c4f8e56de36949bd910ca51"
+      },
+      "expected": {
+        "path": "docs/evidence/d08/review-r1/original-ci/attempt-2-expected.png",
+        "sha256": "3ce06f24506c47f4b73d5a8bdaebdedcf86fea407436c112b52b9ba1055aace4"
+      },
+      "diff": {
+        "path": "docs/evidence/d08/review-r1/original-ci/attempt-2-diff.png",
+        "sha256": "6a1a6a7c283977ae482be4ed7189206e639ec7640a06b66858b8d9d31050afb8"
+      }
+    },
+    "trace_sha256": "41631a6ede2eacfa6c765d53c55e82efce521187ca7ca3d6bbea3dcd377c3031",
+    "fonts": {
+      "attempt": 2,
+      "userAgents": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+      ],
+      "fonts": [
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2",
+          "content": {
+            "size": 5868,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/6c8912d7cfd869389674ecdfce9e29157bcb9aa4.woff2"
+          },
+          "sha256": "62632b6375305e70ddcafdd895218e6ae41a184fcd280a69c739460604ca00a9",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2",
+          "content": {
+            "size": 13348,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/4af8cef522bd8912cb2fad41e06b9025640feb62.woff2"
+          },
+          "sha256": "6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+          "content": {
+            "size": 15120,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/1f62546fa0a051004f4faa3f40a4a8074a2e06ea.woff2"
+          },
+          "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+          "content": {
+            "size": 8520,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/89cd8db6d29cfed5ebf56c2795bddb38034c9147.woff2"
+          },
+          "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+          "content": {
+            "size": 15120,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/1f62546fa0a051004f4faa3f40a4a8074a2e06ea.woff2"
+          },
+          "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+          "content": {
+            "size": 8520,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/89cd8db6d29cfed5ebf56c2795bddb38034c9147.woff2"
+          },
+          "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2",
+          "content": {
+            "size": 5868,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/6c8912d7cfd869389674ecdfce9e29157bcb9aa4.woff2"
+          },
+          "sha256": "62632b6375305e70ddcafdd895218e6ae41a184fcd280a69c739460604ca00a9",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2",
+          "content": {
+            "size": 13348,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/4af8cef522bd8912cb2fad41e06b9025640feb62.woff2"
+          },
+          "sha256": "6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+          "content": {
+            "size": 15120,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/1f62546fa0a051004f4faa3f40a4a8074a2e06ea.woff2"
+          },
+          "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+          "content": {
+            "size": 8520,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/89cd8db6d29cfed5ebf56c2795bddb38034c9147.woff2"
+          },
+          "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+          "content": {
+            "size": 24836,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/b42951014c5eca12749d87a4706caf22dc4fe081.woff2"
+          },
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "matches_local": true
+        },
+        {
+          "url": "http://127.0.0.1:5175/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "content": {
+            "size": 14708,
+            "mimeType": "font/woff2",
+            "compression": 0,
+            "_file": "resources/bb87500e3204a3a7c65d6633c79c5c840c3be8d3.woff2"
+          },
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "matches_local": true
+        }
+      ]
+    }
+  }
+]

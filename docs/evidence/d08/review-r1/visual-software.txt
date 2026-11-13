@@ -1,0 +1,25 @@
+COMMAND: npm.cmd run test:visual
+
+> pinecone-visual-lab@0.8.0 test:visual
+> playwright test --config playwright.visual.config.ts
+
+[WebServer] (node:21696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:16720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\visual\audit.spec.ts:53:1 › paired production visual audit on owned persistent synthetic data (4.2m)
+  ok 2 tests\visual\regression.spec.ts:4:1 › visual comparator accepts the frozen candidate and rejects a deliberate panel-color defect (3.1s)
+  ok 3 tests\visual\rendering.spec.ts:4:1 › visual profile fixes the effective software compositor, locale, scale and reduced motion (298ms)
+  ok 4 tests\visual\resilience.spec.ts:4:1 › production initial graph defers labs, diagram, GSAP and RAG; slow route cannot replace newer navigation (2.3s)
+  ok 5 tests\visual\resilience.spec.ts:27:1 › failed lazy asset keeps shell usable and explicit reload recovers the same URL (1.3s)
+  ok 6 tests\visual\resilience.spec.ts:41:1 › native confirmation traps keyboard focus, Escape restores invoker, mobile navigation works without pointer (2.2s)
+  ok 7 tests\visual\resilience.spec.ts:73:1 › real GSAP motion settles and reduced-motion change leaves all source data visible (2.5s)
+  ok 8 tests\visual\resilience.spec.ts:89:1 › Guided Demo can be cancelled while its lazy panel is pending without deleting source data (1.5s)
+
+  8 passed (4.5m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 272.70

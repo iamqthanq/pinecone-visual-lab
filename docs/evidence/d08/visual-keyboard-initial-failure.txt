@@ -1,0 +1,54 @@
+COMMAND: npm.cmd run test:visual
+
+> pinecone-visual-lab@0.8.0 test:visual
+> playwright test --config playwright.visual.config.ts
+
+[WebServer] (node:3464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:28444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\visual\audit.spec.ts:50:1 › paired production visual audit on owned persistent synthetic data (2.2m)
+  ok 2 tests\visual\regression.spec.ts:4:1 › visual comparator accepts the frozen candidate and rejects a deliberate panel-color defect (2.4s)
+  ok 3 tests\visual\resilience.spec.ts:4:1 › production initial graph defers labs, diagram, GSAP and RAG; slow route cannot replace newer navigation (2.0s)
+  ok 4 tests\visual\resilience.spec.ts:27:1 › failed lazy asset keeps shell usable and explicit reload recovers the same URL (1.1s)
+  x  5 tests\visual\resilience.spec.ts:41:1 › native confirmation traps keyboard focus, Escape restores invoker, mobile navigation works without pointer (1.2s)
+(node:11988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 6 tests\visual\resilience.spec.ts:68:1 › real GSAP motion settles and reduced-motion change leaves all source data visible (2.7s)
+
+
+  1) tests\visual\resilience.spec.ts:41:1 › native confirmation traps keyboard focus, Escape restores invoker, mobile navigation works without pointer
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      51 |   for (let i = 0; i < 5; i++) {
+      52 |     await page.keyboard.press('Tab')
+    > 53 |     expect(await dialog.evaluate(node => node.contains(document.activeElement))).toBe(true)
+         |                                                                                  ^
+      54 |   }
+      55 |   await page.keyboard.press('Escape'); await expect(dialog).toHaveCount(0); await expect(remove).toBeFocused()
+      56 |   expect(deletes).toEqual([])
+        at D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\tests\visual\resilience.spec.ts:53:82
+
+    Error Context: test-results\d08-visual\resilience-native-confirma-a0778-ation-works-without-pointer\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\d08-visual\resilience-native-confirma-a0778-ation-works-without-pointer\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\d08-visual\resilience-native-confirma-a0778-ation-works-without-pointer\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\visual\resilience.spec.ts:41:1 › native confirmation traps keyboard focus, Escape restores invoker, mobile navigation works without pointer
+  5 passed (2.4m)
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 146.78

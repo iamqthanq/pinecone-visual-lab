@@ -1,0 +1,15 @@
+COMMAND: .venv/Scripts/python.exe docs/evidence/d08/verify-staged.py
+docs/evidence/d08/git-audit.ps1:42: new blank line at EOF.
+docs/evidence/d08/verify-artifacts.py:133: new blank line at EOF.
+docs/evidence/d08/verify-runtime.py:54: new blank line at EOF.
+Traceback (most recent call last):
+  File "D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab\docs\evidence\d08\verify-staged.py", line 20, in <module>
+    subprocess.run(["git", "diff", "--cached", "--check"], check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.
+
+EXIT_CODE: 1
+ELAPSED_SECONDS: 1.07

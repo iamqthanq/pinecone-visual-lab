@@ -1,0 +1,278 @@
+{
+  "review": {
+    "url": "https://github.com/iamqthanq/pinecone-visual-lab/pull/16#pullrequestreview-5880290833",
+    "body": "## D08 — Independent Adversarial Review / Round 1: FIX REQUIRED (CI visual reproducibility)\n\n**PR:** #16 (DRAFT, still OPEN); **Issue:** #15 (OPEN); **head:** `8625597393d1d467b90ae83630fd280177d5b590`; base `main` at D07 merge `24d56a9af81d0277224dc0f3b7eff5fd0f395bf3`. One commit ahead, no missing base commits, 500 changed files mostly screenshot evidence.\n\n### Independently verified PASS on actual Windows machine\n- `scripts/check.ps1` EXIT **0**: **76/76 frontend** tests, **220/220 backend/API/Git guards**, ESLint, TypeScript strict, Ruff, production Vite build, secret/artifact scan **852 paths / 0 findings**, diff checks.\n- Actual cached E5 CPU (HF/Transformers OFFLINE, cloud and Ollama disabled): **6/6 real-model integrations PASS, exit 0**. E5 384D, SQLite/ACTIVE, search/verified source, guided session, RAG search-only/mock and previous phase regressions.\n- Actual Microsoft Edge **20/20 real-E5 E2E PASS, exit 0**; actual local backend/SQLite, not a mocked model.\n- Independent Edge visual suite with `PVL_E2E_FIXTURE=1`, `PVL_VISUAL_STAGE=verify`, `PVL_VISUAL_REPLAY=1`: **7/7 PASS, exit 0**, 64 strict screenshot comparisons, deliberate-color negative oracle, lazy import/recovery, GSAP cleanup, keyboard/dialog, reduced motion, safe guide cancellation. Local working tree still clean after review.\n- `npm audit --audit-level=moderate`: 0 vulnerabilities, exit 0. `pip check`: no broken requirements.\n- Production JS entry **292.49 kB** and initial static JS **305.605 kB** vs D07 **660.065 kB**, a measured **53.70% reduction**; code splitting is real, warning threshold unchanged. Total JS modestly rises; the first Architecture navigation is slower (documented +223ms in 5 local samples), not concealed.\n- Inspected actual BEFORE/AFTER Overview and after Documents mobile, E5 vector desktop, Search mobile, RAG mobile, Simulator mobile, Guided/citations. No verified D08 business logic regression or disappearance of source/score/NOT-E5/Mock Ollama/Slab SIMULATION distinctions. The 390px graph pans/zooms with a full text alternative.\n\n### CI BLOCKER within the D08 Definition of Done — identical failure on **two separate attempts**\n[Offline quality GitHub Actions run **43280051381**](https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381) **FAIL on attempt 1 AND retry attempt 2**, at `Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)`.\n- Both attempts: GitHub Windows runner quality/build/security and fixture integration **20/20 PASS**. The visual suite then returns **6 PASS / 1 FAIL**, same state, same reported pixel count.\n- Failure: `tests/visual/audit.spec.ts:78` during `architecture-write-1440.png`; `expect(page).toHaveScreenshot(...)` reports **101 differing pixels**, with `maxDiffPixels=100`, `threshold=0.1`. Candidate: `docs/evidence/d08/after/fixture/architecture-write-1440.png`. Playwright did wait for fonts and a stable screenshot.\n- Independently downloaded actual/expected/diff and trace from first GitHub Actions artifact: https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381/artifacts/13974080022 . The rendered page content/layout appears equivalent. Diff is dispersed around fine text/icon/graph edges, **consistent with** Windows/Edge raster or font rendering differences (not yet proven exact root cause). The same **101/100** failure on retry rules out treating the failure as a single unrepeatable timing incident.\n- The local suite's 7/7 pass does **not** override a GitHub CI required gate. Live Pinecone and real Ollama remain **NOT VERIFIED**, correctly distinguished from local E5, fixture and mock.\n\n### Required narrow follow-up — fix without weakening visual acceptance\n1. On current **Issue #15** and current feature branch only, inspect the two CI attempt logs, captured expected/actual/diff/trace, and compare exact Windows runner/Edge build, locale/font raster, deviceScaleFactor, React Flow SVG/labels, layout settle and animation sources. Reproduce/diagnose the **same** 101-pixel discrepancy.\n2. Make deterministic screenshot capture/comparison **reproducible on GitHub Windows runners**. Preserve the 64 substantive screenshot states and the deliberate-color mutation negative oracle. Retain the existing `maxDiffPixels=100` / `threshold=0.1` unless an independent evidence-backed change has been explicitly reviewed and accepted; **do not simply raise tolerances**, mask large portions of graph, skip CI/test, invoke `--update-snapshots`, silently replace baseline or accept arbitrary visual changes as PASS.\n3. If a new Windows canonical reference is genuinely required, first produce a separate inspectable actual/expected/diff and explicit before/after justification; leave original evidence traceable. Do not claim an unreviewed updated golden is approved. Preserve readable source IDs, simulator labels, controls, accessibility/320px checks, GSAP lifecycle and deterministic snapshots.\n4. After the minimal fix, rerun frontend/backend/Git, real cached E5, local Edge real E5 + CI NOT-E5 fixture 20/20, visual local and GitHub Actions. Provide exact new SHA, logs, visual diff evidence, check count/exit codes. Keep `docs/evidence/d08/REPORT.md` accurate and record this R1 CI reproducibility issue and its verified fix.\n5. Safe commit/push **only** `feature/issue-15-taste-gsap-polish` using `scripts/push_issue_branch.ps1`, verify HEAD == origin and clean worktree. **Do not create another PR, merge, close #15, modify main, start D09 or install/pull AI models/cloud services.** Return `READY FOR CHATGPT INDEPENDENT RE-REVIEW`.\n\n**VERDICT: FIX REQUIRED / NOT READY TO MERGE.** This is a required CI visual stability gate, **not an independently verified D08 production correctness BLOCKER**. All other independently checked gates PASS. Owner retains merge decision after successful re-review.",
+    "commit": "8625597393d1d467b90ae83630fd280177d5b590"
+  },
+  "run": {
+    "id": 43280051381,
+    "head": "8625597393d1d467b90ae83630fd280177d5b590",
+    "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 131398613752,
+          "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381/job/131398613752",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-12T18:27:43Z",
+              "completed_at": "2026-11-12T18:27:44Z"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-12T18:27:44Z",
+              "completed_at": "2026-11-12T18:27:51Z"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-12T18:27:51Z",
+              "completed_at": "2026-11-12T18:28:01Z"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-12T18:28:01Z",
+              "completed_at": "2026-11-12T18:28:04Z"
+            },
+            {
+              "name": "Install exact locked dependencies (no AI models)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-12T18:28:04Z",
+              "completed_at": "2026-11-12T18:29:25Z"
+            },
+            {
+              "name": "Local quality gates",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-12T18:29:25Z",
+              "completed_at": "2026-11-12T18:30:51Z"
+            },
+            {
+              "name": "Dependency advisory and installed requirement checks",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-12T18:30:51Z",
+              "completed_at": "2026-11-12T18:30:53Z"
+            },
+            {
+              "name": "Browser integration and actual API smoke",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-12T18:30:53Z",
+              "completed_at": "2026-11-12T18:33:41Z"
+            },
+            {
+              "name": "Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 9,
+              "started_at": "2026-11-12T18:33:41Z",
+              "completed_at": "2026-11-12T18:34:38Z"
+            },
+            {
+              "name": "Preserve browser evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10,
+              "started_at": "2026-11-12T18:34:38Z",
+              "completed_at": "2026-11-12T18:34:40Z"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 18,
+              "started_at": "2026-11-12T18:34:40Z",
+              "completed_at": "2026-11-12T18:34:40Z"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 19,
+              "started_at": "2026-11-12T18:34:40Z",
+              "completed_at": "2026-11-12T18:34:40Z"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20,
+              "started_at": "2026-11-12T18:34:40Z",
+              "completed_at": "2026-11-12T18:34:42Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21,
+              "started_at": "2026-11-12T18:34:42Z",
+              "completed_at": "2026-11-12T18:34:42Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "jobs": [
+        {
+          "id": 131410437368,
+          "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381/job/131410437368",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-12T18:47:16Z",
+              "completed_at": "2026-11-12T18:47:18Z"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-12T18:47:18Z",
+              "completed_at": "2026-11-12T18:47:27Z"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-12T18:47:27Z",
+              "completed_at": "2026-11-12T18:47:37Z"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-12T18:47:37Z",
+              "completed_at": "2026-11-12T18:47:40Z"
+            },
+            {
+              "name": "Install exact locked dependencies (no AI models)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-12T18:47:40Z",
+              "completed_at": "2026-11-12T18:49:01Z"
+            },
+            {
+              "name": "Local quality gates",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-12T18:49:01Z",
+              "completed_at": "2026-11-12T18:50:41Z"
+            },
+            {
+              "name": "Dependency advisory and installed requirement checks",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-12T18:50:41Z",
+              "completed_at": "2026-11-12T18:50:43Z"
+            },
+            {
+              "name": "Browser integration and actual API smoke",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-12T18:50:43Z",
+              "completed_at": "2026-11-12T18:53:51Z"
+            },
+            {
+              "name": "Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 9,
+              "started_at": "2026-11-12T18:53:51Z",
+              "completed_at": "2026-11-12T18:54:57Z"
+            },
+            {
+              "name": "Preserve browser evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10,
+              "started_at": "2026-11-12T18:54:57Z",
+              "completed_at": "2026-11-12T18:55:00Z"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 18,
+              "started_at": "2026-11-12T18:55:00Z",
+              "completed_at": "2026-11-12T18:55:00Z"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 19,
+              "started_at": "2026-11-12T18:55:00Z",
+              "completed_at": "2026-11-12T18:55:00Z"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20,
+              "started_at": "2026-11-12T18:55:00Z",
+              "completed_at": "2026-11-12T18:55:02Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21,
+              "started_at": "2026-11-12T18:55:02Z",
+              "completed_at": "2026-11-12T18:55:02Z"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 13974080022,
+      "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381/artifacts/13974080022",
+      "size": 26116280,
+      "digest": "sha256:087723671c43a395ffd50f5613954e86206bd24fd2246736e08790fc5ab30ece",
+      "created": "2026-11-12T18:34:39Z"
+    },
+    {
+      "id": 13972899285,
+      "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381/artifacts/13972899285",
+      "size": 26000398,
+      "digest": "sha256:d0c2ec4d17d951c7d80bc5254ff27896c04ce9dfede0498a9f9ed24418fb16be",
+      "created": "2026-11-12T18:55:00Z"
+    }
+  ]
+}

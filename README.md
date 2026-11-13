@@ -1,8 +1,28 @@
 # Pinecone Visual Lab
 
-A local vector-database seminar workbench. **D07 adds an educational Slab Architecture Simulator and an opt-in cross-lab Guided Demo**, preserving D01–D06 document, E5, SQLite storage, semantic search and optional grounded RAG features. The Pinecone adapter has offline SDK transport tests; **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. **REAL OLLAMA NOT VERIFIED — NEEDS USER INSTALL/APPROVAL**. D08 polish and D09 packaging remain planned.
+A local vector-database seminar workbench. **D08 refines the navy/mint workbench, source inspectors, guided journey and Slab diagram**, with finite data-driven GSAP motion and production route splitting. D01–D07 document, E5, SQLite storage, semantic search, optional grounded RAG and educational simulator remain operational. The Pinecone adapter has offline SDK transport tests; **LIVE NOT VERIFIED — AWAITING USER AUTHORIZATION**. **REAL OLLAMA NOT VERIFIED — NEEDS USER INSTALL/APPROVAL**. D09 packaging remains planned.
 
-![D07 educational Slab Architecture Simulator, not Pinecone telemetry](docs/evidence/d07/simulator-desktop-1440.png)
+![D08 workbench, actual local E5 status; no cloud telemetry](docs/evidence/d08/after/real-e5/overview-1440.png)
+
+## D08 UI, motion and production measurements
+
+Frontend release0.8.0 retains the backend0.7.0/D07 health contract: D08 changes presentation/loading, not the API/schema/model algorithms. Labs load on navigation, RAG on explicit tab selection, the Guided Demo panel only when active, and GSAP on an actual data transition or Architecture navigation. Route-loading/error states retain shell navigation; reload retries a failed asset without replacing stored data. Delete confirmation uses a keyboard-contained dialog with Escape/focus return. Reduced motion keeps every data result visible.
+
+[Visual audit](docs/design/d08-visual-audit.md), [bundle/measurement method](docs/architecture/d08-performance.md), [test/evidence report](docs/evidence/d08/REPORT.md). BEFORE screenshots are immutable D07 captures. AFTER references are proposed for independent review; verification never rewrites them. Recorded visual fixtures are **NOT E5 / MOCK OLLAMA**, distinct from actual API/real-E5 browser tests.
+
+After the normal build, verify the recorded fixture references without an API/model/cloud:
+
+```powershell
+$env:PVL_E2E_FIXTURE='1'
+$env:PVL_VISUAL_STAGE='verify'
+$env:PVL_VISUAL_REPLAY='1'
+npm.cmd run test:visual
+Remove-Item Env:PVL_E2E_FIXTURE, Env:PVL_VISUAL_STAGE, Env:PVL_VISUAL_REPLAY
+```
+
+This starts an owned production preview at127.0.0.1:5175, then stops it. Existing end-to-end integration tests use separate live local API/SQLite at5174/8001. Image comparison requires the recorded Windows/Edge/font environment; browser/platform differences need review, not automatic snapshot updates. See the report for candidate capture and local five-sample performance commands. Current CI status and exact tested SHA are recorded in the Round1 report below; local results alone never establish CI success.
+
+D08 Round1 fixes a confirmed GPU/software raster mismatch with a visual-only Edge `--disable-gpu` profile (en-US, scale1), measured through CDP on Windows. Verification uses64 separately proposed [software references](docs/evidence/d08/review-r1/software-references/manifest.json); original hardware images remain preserved. Threshold100 pixels/0.1 is unchanged. Normal application, real-E5 E2E and performance profiling retain native rendering. [Diagnosis, comparisons and current CI evidence](docs/evidence/d08/review-r1/REPORT.md). `npm.cmd run typecheck:visual` checks the harness without launching a browser/model. Baseline creation is explicit local `PVL_VISUAL_STAGE=proposal` with fixture/replay enabled, refuses overwrite and is forbidden in CI; no automatic snapshot-update command is supported.
 
 ## Windows setup
 

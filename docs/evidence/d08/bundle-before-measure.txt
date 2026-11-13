@@ -1,0 +1,5 @@
+COMMAND: .venv/Scripts/python.exe scripts/measure_bundle.py before .cache/d08-before-dist
+{"entry": "index-BHBSqUm6.js", "total_js_bytes": 660065, "chunks": 2}
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.67

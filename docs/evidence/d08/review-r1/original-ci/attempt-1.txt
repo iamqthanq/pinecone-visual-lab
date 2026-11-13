@@ -1,0 +1,787 @@
+foundation	UNKNOWN STEP	﻿2026-11-12T18:27:43.6397057Z Current runner version: '2.338.2'
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6425925Z ##[group]Runner Image Provisioner
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6426923Z Hosted Compute Agent
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6427583Z Version: 20261103.629
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6428293Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6429149Z Build Date: 2026-11-03T17:26:59Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6430305Z Worker ID: {813fa6a5-32e6-4759-b2c7-4e4ee499c29f}
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6431152Z Region: eastus
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6431731Z Cloud: Azure
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6432331Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6433884Z ##[group]Operating System
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6434688Z Microsoft Windows Server 2025
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6435370Z 10.0.26100
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6435934Z Datacenter
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6436508Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6437093Z ##[group]Runner Image
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6437763Z Image: windows-2025-vs2026
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6438431Z Version: 20261103.298.1
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6440168Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6442397Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6443591Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6444863Z ##[group]GITHUB_TOKEN Permissions
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6446760Z Contents: read
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6447389Z Metadata: read
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6447976Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6450677Z Secret source: Actions
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6451613Z Cache mode: write
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6452424Z Prepare workflow directory
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6716712Z Prepare all required actions
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.6756355Z Getting action download info
+foundation	UNKNOWN STEP	2026-11-12T18:27:43.8518378Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.0189259Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.1648916Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.3980827Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.7293745Z Complete job name: foundation
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8825035Z ##[group]Run actions/checkout@v4
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8826008Z with:
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8826397Z   repository: iamqthanq/pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8831602Z   token: ***
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8831942Z   ssh-strict: true
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8832294Z   ssh-user: git
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8832668Z   persist-credentials: true
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8833091Z   clean: true
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8833445Z   sparse-checkout-cone-mode: true
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8833903Z   fetch-depth: 1
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8834292Z   fetch-tags: false
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8834648Z   show-progress: true
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8835036Z   lfs: false
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8835373Z   submodules: false
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8835781Z   set-safe-directory: true
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8836223Z   allow-unsafe-pr-checkout: false
+foundation	UNKNOWN STEP	2026-11-12T18:27:44.8836850Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.0114559Z Syncing repository: iamqthanq/pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.0116268Z ##[group]Getting Git version info
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.0116993Z Working directory is 'D:\a\pinecone-visual-lab\pinecone-visual-lab'
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.0672567Z [command]"C:\Program Files\Git\bin\git.exe" version
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.4514896Z git version 2.56.0.windows.4
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.4554754Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.4570941Z Temporarily overriding HOME='D:\a\_temp\c4e7cf5a-103d-4b52-8405-4137e43d2e73' before making global git config changes
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.4572237Z Adding repository directory to the temporary git global config as a safe directory
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.4579625Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\pinecone-visual-lab\pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.5216491Z Deleting the contents of 'D:\a\pinecone-visual-lab\pinecone-visual-lab'
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.5221264Z ##[group]Initializing the repository
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.5228744Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\pinecone-visual-lab\pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.6028686Z Initialized empty Git repository in D:/a/pinecone-visual-lab/pinecone-visual-lab/.git/
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.6061826Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/iamqthanq/pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.7715697Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.7716977Z ##[group]Disabling automatic garbage collection
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.7723333Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.8038609Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.8039843Z ##[group]Setting up auth
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.8049130Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+foundation	UNKNOWN STEP	2026-11-12T18:27:45.8359783Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+foundation	UNKNOWN STEP	2026-11-12T18:27:47.2971636Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+foundation	UNKNOWN STEP	2026-11-12T18:27:47.3260251Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+foundation	UNKNOWN STEP	2026-11-12T18:27:47.7653630Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+foundation	UNKNOWN STEP	2026-11-12T18:27:47.7960111Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+foundation	UNKNOWN STEP	2026-11-12T18:27:48.2588333Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+foundation	UNKNOWN STEP	2026-11-12T18:27:48.2898545Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:48.2908723Z ##[group]Fetching the repository
+foundation	UNKNOWN STEP	2026-11-12T18:27:48.2911263Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cf4259dac4aa6873a512ebf72065acc6e41fe937:refs/remotes/pull/16/merge
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.8622764Z From https://github.com/iamqthanq/pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.8623679Z  * [new ref]         cf4259dac4aa6873a512ebf72065acc6e41fe937 -> pull/16/merge
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.8660134Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.8660462Z ##[group]Determining the checkout info
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.8662693Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.8674408Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.9164613Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.9482729Z ##[group]Checking out the ref
+foundation	UNKNOWN STEP	2026-11-12T18:27:50.9490671Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/16/merge
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8902774Z Note: switching to 'refs/remotes/pull/16/merge'.
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8903086Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8903320Z You are in 'detached HEAD' state. You can look around, make experimental
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8903698Z changes and commit them, and you can discard any commits you make in this
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8904043Z state without impacting any branches by switching back to a branch.
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8904281Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8904435Z If you want to create a new branch to retain commits you create, you may
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8904875Z do so (now or later) by using -c with the switch command. Example:
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905071Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905180Z   git switch -c <new-branch-name>
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905333Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905411Z Or undo this operation with:
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8905576Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8906390Z   git switch -
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8907764Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8907935Z Turn off this advice by setting config variable advice.detachedHead to false
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.8908161Z
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.9057283Z HEAD is now at cf4259d Merge 8625597393d1d467b90ae83630fd280177d5b590 into 24d56a9af81d0277224dc0f3b7eff5fd0f395bf3
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.9058677Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.9385591Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+foundation	UNKNOWN STEP	2026-11-12T18:27:51.9663544Z cf4259dac4aa6873a512ebf72065acc6e41fe937
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0065988Z ##[group]Run actions/setup-node@v4
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0066257Z with:
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0066425Z   node-version: 22.20.0
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0066589Z   cache: npm
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0066740Z   always-auth: false
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0066896Z   check-latest: false
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0068801Z   token: ***
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.0068947Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.1437631Z Attempting to download 22.20.0...
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.1620403Z (node:7304) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.1621252Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.7162697Z Acquiring 22.20.0 - x64 from https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-win32-x64.7z
+foundation	UNKNOWN STEP	2026-11-12T18:27:52.9507839Z Extracting ...
+foundation	UNKNOWN STEP	2026-11-12T18:27:55.5163570Z Adding to the cache ...
+foundation	UNKNOWN STEP	2026-11-12T18:27:59.4584640Z ##[group]Environment details
+foundation	UNKNOWN STEP	2026-11-12T18:28:00.5890833Z node: v22.20.0
+foundation	UNKNOWN STEP	2026-11-12T18:28:00.5891054Z npm: 10.9.3
+foundation	UNKNOWN STEP	2026-11-12T18:28:00.5891196Z yarn: 1.22.22
+foundation	UNKNOWN STEP	2026-11-12T18:28:00.5891582Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:28:00.6286438Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\22.20.0\x64\npm.cmd config get cache"
+foundation	UNKNOWN STEP	2026-11-12T18:28:00.9352482Z C:\npm\cache
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.1968222Z npm cache is not found
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2258584Z ##[group]Run actions/setup-python@v5
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2258876Z with:
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2259041Z   python-version: 3.13
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2259211Z   cache: pip
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2259398Z   cache-dependency-path: apps/api/requirements.lock
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2259639Z   check-latest: false
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2261505Z   token: ***
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2261664Z   update-environment: true
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2261843Z   allow-prereleases: false
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2262002Z   freethreaded: false
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.2262153Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.3544578Z ##[group]Installed versions
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.3746241Z (node:1000) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.3746863Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.3747250Z Successfully set up CPython (3.13.17)
+foundation	UNKNOWN STEP	2026-11-12T18:28:01.3747614Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3292524Z pip cache is not found
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3547868Z ##[group]Run npm ci
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3548127Z npm ci
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3548342Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3548592Z python -m venv .venv
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3548808Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3549147Z .venv/Scripts/python.exe -m pip install -r apps/api/requirements.lock
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.3549448Z exit $LASTEXITCODE
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4152525Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4152826Z env:
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4153061Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4153443Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4153793Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4154166Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4154706Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:28:04.4154960Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4102189Z
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4103375Z added 279 packages, and audited 287 packages in 14s
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4103730Z
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4103915Z 60 packages are looking for funding
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4104218Z   run `npm fund` for details
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4112208Z
+foundation	UNKNOWN STEP	2026-11-12T18:28:19.4112445Z found 0 vulnerabilities
+foundation	UNKNOWN STEP	2026-11-12T18:28:25.9460229Z Collecting annotated-doc==0.0.6 (from -r apps/api/requirements.lock (line 1))
+foundation	UNKNOWN STEP	2026-11-12T18:28:25.9798051Z   Downloading annotated_doc-0.0.6-py3-none-any.whl.metadata (6.5 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.0384746Z Collecting annotated-types==0.8.0 (from -r apps/api/requirements.lock (line 2))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.0441662Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.1049045Z Collecting anyio==4.16.0 (from -r apps/api/requirements.lock (line 3))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.1098990Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.1716540Z Collecting certifi==2026.10.23 (from -r apps/api/requirements.lock (line 4))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.1763405Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.3350810Z Collecting charset-normalizer==3.5.2 (from -r apps/api/requirements.lock (line 5))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.3424068Z   Downloading charset_normalizer-3.5.2-cp313-cp313-win_amd64.whl.metadata (47 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.4133012Z Collecting click==8.5.1 (from -r apps/api/requirements.lock (line 6))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.4195425Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.4756846Z Collecting colorama==0.4.6 (from -r apps/api/requirements.lock (line 7))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.4828827Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.5663984Z Collecting fastapi==0.162.4 (from -r apps/api/requirements.lock (line 8))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.5718321Z   Downloading fastapi-0.162.4-py3-none-any.whl.metadata (27 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.6367034Z Collecting filelock==4.2.10 (from -r apps/api/requirements.lock (line 9))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.6528903Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.7255903Z Collecting fsspec==2026.9.0 (from -r apps/api/requirements.lock (line 10))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.7305632Z   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.7982246Z Collecting h11==0.16.0 (from -r apps/api/requirements.lock (line 11))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.8032491Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.8646238Z Collecting h2==4.4.1 (from -r apps/api/requirements.lock (line 12))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.8694675Z   Downloading h2-4.4.1-py3-none-any.whl.metadata (3.8 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.9493785Z Collecting hf-xet==1.8.0 (from -r apps/api/requirements.lock (line 13))
+foundation	UNKNOWN STEP	2026-11-12T18:28:26.9636759Z   Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.0254483Z Collecting hpack==4.2.0 (from -r apps/api/requirements.lock (line 14))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.0305565Z   Downloading hpack-4.2.0-py3-none-any.whl.metadata (3.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.0960674Z Collecting httpcore==1.0.9 (from -r apps/api/requirements.lock (line 15))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.1805922Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.2413162Z Collecting httpcore2==2.16.0 (from -r apps/api/requirements.lock (line 16))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.2469658Z   Downloading httpcore2-2.16.0-py3-none-any.whl.metadata (27 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.3118296Z Collecting httpx==0.28.1 (from -r apps/api/requirements.lock (line 17))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.3230688Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.3823437Z Collecting httpx2==2.16.0 (from -r apps/api/requirements.lock (line 18))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.4015553Z   Downloading httpx2-2.16.0-py3-none-any.whl.metadata (10 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.4766837Z Collecting huggingface_hub==2.4.0 (from -r apps/api/requirements.lock (line 19))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.4816096Z   Downloading huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.5421602Z Collecting hyperframe==6.1.0 (from -r apps/api/requirements.lock (line 20))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.5473706Z   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.6091675Z Collecting idna==3.20 (from -r apps/api/requirements.lock (line 21))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.6157210Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.6864010Z Collecting iniconfig==2.3.1 (from -r apps/api/requirements.lock (line 22))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.6912604Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.7477265Z Collecting Jinja2==3.1.6 (from -r apps/api/requirements.lock (line 23))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.7548600Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.8246330Z Collecting markdown-it-py==4.3.0 (from -r apps/api/requirements.lock (line 24))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.8296409Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.9228346Z Collecting MarkupSafe==3.0.4 (from -r apps/api/requirements.lock (line 25))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.9278058Z   Downloading markupsafe-3.0.4-cp313-cp313-win_amd64.whl.metadata (2.8 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.9793769Z Collecting mdurl==0.1.2 (from -r apps/api/requirements.lock (line 26))
+foundation	UNKNOWN STEP	2026-11-12T18:28:27.9899695Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.0472576Z Collecting mpmath==1.3.0 (from -r apps/api/requirements.lock (line 27))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.0534581Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.1545351Z Collecting msgspec==0.22.0 (from -r apps/api/requirements.lock (line 28))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.1616848Z   Downloading msgspec-0.22.0-cp313-cp313-win_amd64.whl.metadata (6.1 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.2290795Z Collecting networkx==3.7 (from -r apps/api/requirements.lock (line 29))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.2359387Z   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.4409639Z Collecting numpy==2.5.4 (from -r apps/api/requirements.lock (line 30))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.4474444Z   Downloading numpy-2.5.4-cp313-cp313-win_amd64.whl.metadata (6.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.5459790Z Collecting opentelemetry-api==1.45.2 (from -r apps/api/requirements.lock (line 31))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.5509402Z   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.7762992Z Collecting orjson==3.13.0 (from -r apps/api/requirements.lock (line 32))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.7870761Z   Downloading orjson-3.13.0-cp313-cp313-win_amd64.whl.metadata (43 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.8621826Z Collecting packaging==26.3 (from -r apps/api/requirements.lock (line 33))
+foundation	UNKNOWN STEP	2026-11-12T18:28:28.8698460Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.0536173Z Collecting pillow==13.0.0 (from -r apps/api/requirements.lock (line 34))
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.0604955Z   Downloading pillow-13.0.0-cp313-cp313-win_amd64.whl.metadata (9.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.1311859Z Collecting pinecone==10.3.0 (from -r apps/api/requirements.lock (line 35))
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.1480795Z   Downloading pinecone-10.3.0-cp310-abi3-win_amd64.whl.metadata (7.0 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.2037923Z Collecting pluggy==1.7.0 (from -r apps/api/requirements.lock (line 36))
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.2084051Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.3472795Z Collecting pydantic==2.14.3 (from -r apps/api/requirements.lock (line 37))
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.3524374Z   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:29.9969216Z Collecting pydantic_core==2.50.4 (from -r apps/api/requirements.lock (line 38))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.0026775Z   Downloading pydantic_core-2.50.4-cp313-cp313-win_amd64.whl.metadata (6.7 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.0653965Z Collecting Pygments==2.21.0 (from -r apps/api/requirements.lock (line 39))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.0705562Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.1327712Z Collecting pypdf==7.0.1 (from -r apps/api/requirements.lock (line 40))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.1379870Z   Downloading pypdf-7.0.1-py3-none-any.whl.metadata (7.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.2124040Z Collecting pytest==9.2.0 (from -r apps/api/requirements.lock (line 41))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.2189887Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.2788565Z Collecting python-multipart==0.0.33 (from -r apps/api/requirements.lock (line 42))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.2837171Z   Downloading python_multipart-0.0.33-py3-none-any.whl.metadata (6.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.3552791Z Collecting PyYAML==6.0.3 (from -r apps/api/requirements.lock (line 43))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.3612210Z   Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl.metadata (2.4 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.6981440Z Collecting regex==2026.11.9 (from -r apps/api/requirements.lock (line 44))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.7053858Z   Downloading regex-2026.11.9-cp313-cp313-win_amd64.whl.metadata (41 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.8315021Z Collecting reportlab==5.1.0 (from -r apps/api/requirements.lock (line 45))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.8370985Z   Downloading reportlab-5.1.0-py3-none-any.whl.metadata (1.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.9014614Z Collecting rich==15.0.0 (from -r apps/api/requirements.lock (line 46))
+foundation	UNKNOWN STEP	2026-11-12T18:28:30.9065963Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.1940903Z Collecting ruff==0.17.4 (from -r apps/api/requirements.lock (line 47))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.1995601Z   Downloading ruff-0.17.4-py3-none-win_amd64.whl.metadata (21 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.3889771Z Collecting safetensors==0.8.0 (from -r apps/api/requirements.lock (line 48))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.3955434Z   Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl.metadata (4.2 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.4953124Z Collecting setuptools==84.2.1 (from -r apps/api/requirements.lock (line 49))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.5050431Z   Downloading setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.5643058Z Collecting shellingham==1.5.4 (from -r apps/api/requirements.lock (line 50))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.5690366Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.6286483Z Collecting starlette==1.10.0 (from -r apps/api/requirements.lock (line 51))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.6351864Z   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.6989094Z Collecting sympy==1.14.0 (from -r apps/api/requirements.lock (line 52))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.7037085Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.8729263Z Collecting tokenizers==0.23.3 (from -r apps/api/requirements.lock (line 53))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.8803895Z   Downloading tokenizers-0.23.3-cp310-abi3-win_amd64.whl.metadata (10 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.9770084Z Collecting torch==2.15.0 (from -r apps/api/requirements.lock (line 54))
+foundation	UNKNOWN STEP	2026-11-12T18:28:31.9961074Z   Downloading torch-2.15.0-cp313-cp313-win_amd64.whl.metadata (36 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.1107894Z Collecting tqdm==4.70.1 (from -r apps/api/requirements.lock (line 55))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.1158709Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.1910080Z Collecting transformers==5.22.2 (from -r apps/api/requirements.lock (line 56))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.1958149Z   Downloading transformers-5.22.2-py3-none-any.whl.metadata (31 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.2772619Z Collecting truststore==0.10.5 (from -r apps/api/requirements.lock (line 57))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.2847000Z   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.3506615Z Collecting typer==0.29.1 (from -r apps/api/requirements.lock (line 58))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.3553334Z   Downloading typer-0.29.1-py3-none-any.whl.metadata (16 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.4125651Z Collecting typing-inspection==0.4.5 (from -r apps/api/requirements.lock (line 59))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.4185002Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.4834062Z Collecting typing_extensions==4.16.0 (from -r apps/api/requirements.lock (line 60))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.4881889Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.5582930Z Collecting uvicorn==0.54.0 (from -r apps/api/requirements.lock (line 61))
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.5630614Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.6589400Z Downloading annotated_doc-0.0.6-py3-none-any.whl (5.3 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.6844935Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.7090158Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.7431500Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.7694778Z Downloading charset_normalizer-3.5.2-cp313-cp313-win_amd64.whl (206 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.8017257Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.8331265Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.8637568Z Downloading fastapi-0.162.4-py3-none-any.whl (151 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.8897819Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.9203452Z Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.9587224Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:32.9851367Z Downloading h2-4.4.1-py3-none-any.whl (62 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.0166208Z Downloading hpack-4.2.0-py3-none-any.whl (34 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.0484010Z Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.0775913Z Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl (3.9 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.1523105Z    ---------------------------------------- 3.9/3.9 MB 52.2 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.1600501Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.1893422Z Downloading httpcore2-2.16.0-py3-none-any.whl (85 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.2153805Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.2385066Z Downloading httpx2-2.16.0-py3-none-any.whl (97 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.2676593Z Downloading huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.2997048Z    ---------------------------------------- 857.0/857.0 kB 20.4 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.3049498Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.3290915Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.3591369Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.3913433Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.4163856Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.4394423Z Downloading markupsafe-3.0.4-cp313-cp313-win_amd64.whl (14 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.4714717Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.5050027Z    ---------------------------------------- 536.2/536.2 kB 8.9 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.5105035Z Downloading msgspec-0.22.0-cp313-cp313-win_amd64.whl (192 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.5385355Z Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.5790954Z    ---------------------------------------- 2.1/2.1 MB 49.7 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.5905064Z Downloading numpy-2.5.4-cp313-cp313-win_amd64.whl (12.6 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.7602804Z    ---------------------------------------- 12.6/12.6 MB 73.8 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.7695708Z Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.7987964Z Downloading orjson-3.13.0-cp313-cp313-win_amd64.whl (121 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.8236183Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.8639869Z Downloading pillow-13.0.0-cp313-cp313-win_amd64.whl (7.3 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.9766973Z    ---------------------------------------- 7.3/7.3 MB 63.8 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:33.9836318Z Downloading pinecone-10.3.0-cp310-abi3-win_amd64.whl (3.0 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.0341286Z    ---------------------------------------- 3.0/3.0 MB 56.9 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.0400249Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.0641163Z Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.1133962Z Downloading pydantic_core-2.50.4-cp313-cp313-win_amd64.whl (2.3 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.1764570Z    ---------------------------------------- 2.3/2.3 MB 33.1 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.1864797Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.2259779Z    ---------------------------------------- 1.3/1.3 MB 26.8 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.2314603Z Downloading pypdf-7.0.1-py3-none-any.whl (416 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.2632019Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.3105637Z Downloading python_multipart-0.0.33-py3-none-any.whl (32 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.5187900Z Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl (154 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.5494929Z Downloading regex-2026.11.9-cp313-cp313-win_amd64.whl (280 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.5768053Z Downloading reportlab-5.1.0-py3-none-any.whl (2.0 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.6203143Z    ---------------------------------------- 2.0/2.0 MB 43.3 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.6261551Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.6631603Z Downloading ruff-0.17.4-py3-none-win_amd64.whl (10.3 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.7888711Z    ---------------------------------------- 10.3/10.3 MB 81.6 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.7964698Z Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl (355 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.8237699Z Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.8604424Z    ---------------------------------------- 876.3/876.3 kB 18.1 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.8655002Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.8863855Z Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.9179337Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.9761404Z    ---------------------------------------- 6.3/6.3 MB 109.7 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:34.9813862Z Downloading tokenizers-0.23.3-cp310-abi3-win_amd64.whl (2.9 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:35.0334621Z    ---------------------------------------- 2.9/2.9 MB 53.0 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:35.0404555Z Downloading torch-2.15.0-cp313-cp313-win_amd64.whl (126.7 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.7884728Z    ---------------------------------------- 126.7/126.7 MB 46.1 MB/s  0:00:02
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.8039217Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.8354364Z Downloading transformers-5.22.2-py3-none-any.whl (13.1 MB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.9339038Z    ---------------------------------------- 13.1/13.1 MB 134.3 MB/s  0:00:00
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.9402257Z Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.9671580Z Downloading typer-0.29.1-py3-none-any.whl (121 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:37.9958907Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:38.0208757Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:38.0460334Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+foundation	UNKNOWN STEP	2026-11-12T18:28:38.6972255Z Installing collected packages: mpmath, typing_extensions, truststore, sympy, shellingham, setuptools, safetensors, ruff, regex, PyYAML, python-multipart, pypdf, Pygments, pluggy, pillow, packaging, orjson, numpy, networkx, msgspec, mdurl, MarkupSafe, iniconfig, idna, hyperframe, hpack, hf-xet, h11, fsspec, filelock, colorama, click, charset-normalizer, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, tqdm, reportlab, pytest, pydantic_core, opentelemetry-api, markdown-it-py, Jinja2, httpcore2, httpcore, h2, anyio, torch, starlette, rich, pydantic, httpx2, httpx, typer, huggingface_hub, fastapi, tokenizers, pinecone, transformers
+foundation	UNKNOWN STEP	2026-11-12T18:29:24.7951105Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:24.7996168Z Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 PyYAML-6.0.3 Pygments-2.21.0 annotated-doc-0.0.6 annotated-types-0.8.0 anyio-4.16.0 certifi-2026.10.23 charset-normalizer-3.5.2 click-8.5.1 colorama-0.4.6 fastapi-0.162.4 filelock-4.2.10 fsspec-2026.9.0 h11-0.16.0 h2-4.4.1 hf-xet-1.8.0 hpack-4.2.0 httpcore-1.0.9 httpcore2-2.16.0 httpx-0.28.1 httpx2-2.16.0 huggingface_hub-2.4.0 hyperframe-6.1.0 idna-3.20 iniconfig-2.3.1 markdown-it-py-4.3.0 mdurl-0.1.2 mpmath-1.3.0 msgspec-0.22.0 networkx-3.7 numpy-2.5.4 opentelemetry-api-1.45.2 orjson-3.13.0 packaging-26.3 pillow-13.0.0 pinecone-10.3.0 pluggy-1.7.0 pydantic-2.14.3 pydantic_core-2.50.4 pypdf-7.0.1 pytest-9.2.0 python-multipart-0.0.33 regex-2026.11.9 reportlab-5.1.0 rich-15.0.0 ruff-0.17.4 safetensors-0.8.0 setuptools-84.2.1 shellingham-1.5.4 starlette-1.10.0 sympy-1.14.0 tokenizers-0.23.3 torch-2.15.0 tqdm-4.70.1 transformers-5.22.2 truststore-0.10.5 typer-0.29.1 typing-inspection-0.4.5 typing_extensions-4.16.0 uvicorn-0.54.0
+foundation	UNKNOWN STEP	2026-11-12T18:29:24.8009492Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:24.8010670Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+foundation	UNKNOWN STEP	2026-11-12T18:29:24.8011487Z [notice] To update, run: D:\a\pinecone-visual-lab\pinecone-visual-lab\.venv\Scripts\python.exe -m pip install --upgrade pip
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1593112Z ##[group]Run ./scripts/check.ps1
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1593409Z ./scripts/check.ps1
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1655572Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1655850Z env:
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1656068Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1656429Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1656776Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1657083Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1657386Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1657633Z   PVL_DISABLE_CLOUD: 1
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1657823Z   HF_HUB_OFFLINE: 1
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1657983Z   TRANSFORMERS_OFFLINE: 1
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1658153Z   PVL_OLLAMA_ENABLED: 0
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.1658319Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.4750910Z [D08] Frontend lint
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.7101667Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.7102106Z > pinecone-visual-lab@0.8.0 lint
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.7102457Z > npm run lint --workspace apps/web
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.7102608Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.9674366Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.9674850Z > @pinecone-visual-lab/web@0.8.0 lint
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.9675150Z > eslint .
+foundation	UNKNOWN STEP	2026-11-12T18:29:25.9675245Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.3767059Z [D08] TypeScript strict
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.6343016Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.6343659Z > pinecone-visual-lab@0.8.0 typecheck
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.6344153Z > npm run typecheck --workspace apps/web
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.8892626Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.8892646Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.8893169Z > @pinecone-visual-lab/web@0.8.0 typecheck
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.8893492Z > tsc --noEmit
+foundation	UNKNOWN STEP	2026-11-12T18:29:35.8893648Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.2482491Z [D08] Frontend unit tests
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.4846869Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.4847485Z > pinecone-visual-lab@0.8.0 test
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.4850468Z > npm run test --workspace apps/web
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.4850727Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.7405767Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.7406329Z > @pinecone-visual-lab/web@0.8.0 test
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.7406633Z > vitest run
+foundation	UNKNOWN STEP	2026-11-12T18:29:40.7406742Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:41.1930874Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:41.1934258Z  RUN  v5.1.0 D:/a/pinecone-visual-lab/pinecone-visual-lab/apps/web
+foundation	UNKNOWN STEP	2026-11-12T18:29:41.1934920Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.1807254Z  ✓ src/VectorStoreLab.test.tsx (6 tests) 2268ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.1808232Z    ✓ D04 Vector Explorer (6)
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.1825944Z      ✓ defaults to local and switching to LIVE alone never discovers cloud 303ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.1830421Z      ✓ requires exact confirmation, ingests, fetches from adapter and deletes only owned IDs 1471ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.6375928Z  ✓ src/RagChat.test.tsx (11 tests) 2684ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.6376412Z    ✓ D06 RAG Chat (11)
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.6378101Z      ✓ uses explicit actions only; validates tabs and preserves Semantic Search state 608ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:45.6379400Z      ✓ keeps history bounded, resets on namespace/filter/model changes and clears explicitly 1181ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:48.0110127Z  ✓ src/SearchLab.test.tsx (7 tests) 1369ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:48.0111133Z    ✓ D05 Search Lab (7)
+foundation	UNKNOWN STEP	2026-11-12T18:29:48.0112037Z      ✓ sends explicit query/filter/top-k, shows real source, raw score, deep link and trace 526ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:48.1913408Z  ✓ src/GuidedProvider.test.tsx (5 tests) 920ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:48.1918115Z    ✓ opt-in cross-route guide with backend-authoritative completion (5)
+foundation	UNKNOWN STEP	2026-11-12T18:29:48.1919376Z      ✓ has no guide/backend traffic when off; route visits cannot complete steps 354ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:50.2873551Z  ✓ src/ArchitectureLab.test.tsx (4 tests) 750ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:50.2875436Z    ✓ Architecture simulator rendering/controller (real diagram is separately browser-tested) (4)
+foundation	UNKNOWN STEP	2026-11-12T18:29:50.2886777Z      ✓ maps all conceptual nodes and edges, banner and accessible linear steps 318ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:50.5003429Z  ✓ src/DocumentsLab.test.tsx (5 tests) 753ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:50.5004882Z    ✓ loads actual source text, rejects invalid settings before generating, and requires confirmation for delete 340ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:51.6313283Z  ✓ src/simulator.test.ts (7 tests) 81ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:53.2755918Z  ✓ src/useDataMotion.test.tsx (6 tests) 180ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:54.4985316Z  ✓ src/App.test.tsx (7 tests) 2486ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:54.4986096Z    ✓ D01 foundation (7)
+foundation	UNKNOWN STEP	2026-11-12T18:29:54.4987303Z      ✓ navigates to Documents, Vectors, Search and the implemented educational Architecture Lab 1666ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:55.8752533Z  ✓ src/VectorsLab.test.tsx (3 tests) 1137ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:55.8753662Z    ✓ shows every vector value and marks incompatible test fixtures explicitly 846ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:56.2429686Z  ✓ src/LabBoundary.test.tsx (2 tests) 182ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:57.1494640Z  ✓ src/guided-state.test.ts (11 tests) 9ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:57.7794119Z  ✓ src/components.test.tsx (1 test) 141ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3266140Z  ✓ src/vector-target.test.ts (1 test) 3ms
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3313719Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3317707Z  Test Files  14 passed (14)
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3319304Z       Tests  76 passed (76)
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3319728Z    Start at  18:29:41
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3324016Z    Duration  17.13s (environment 42%, tests 41%, setup 8%, import 6%, transform 3%)
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3330480Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3332039Z Environment  jsdom was created 14 times · 13.36s total, 42% of tracked time
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3332970Z              create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3333782Z              learn more: https://vitest.dev/guide/improving-performance#test-environments
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.3334076Z
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.4113675Z [D08] Python lint
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.5004500Z All checks passed!
+foundation	UNKNOWN STEP	2026-11-12T18:29:58.5129539Z [D08] Backend API + Git guard tests
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6981251Z ============================= test session starts =============================
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6981688Z platform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6982228Z cachedir: D:\a\pinecone-visual-lab\pinecone-visual-lab\.cache\pytest\ef428f6eef8643f5a95b7a8ad5ba2b51\cache
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6982752Z rootdir: D:\a\pinecone-visual-lab\pinecone-visual-lab\apps\api
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6983042Z configfile: pyproject.toml
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6983259Z plugins: anyio-4.16.0
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6984468Z collected 226 items / 6 deselected / 220 selected
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.6984666Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:00.7502390Z apps\api\tests\test_chunking.py ............                             [  5%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:01.8932222Z apps\api\tests\test_documents.py ..........................              [ 17%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:03.8443163Z apps\api\tests\test_embeddings.py ...................                    [ 25%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:05.5021618Z apps\api\tests\test_guided.py ...............                            [ 32%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:05.5472967Z apps\api\tests\test_health.py ...                                        [ 34%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:05.6269844Z apps\api\tests\test_ollama.py ............................               [ 46%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:08.1749256Z apps\api\tests\test_rag.py ..........................                    [ 58%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:10.9128816Z apps\api\tests\test_search.py ....................................       [ 75%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:11.0990365Z apps\api\tests\test_search_live.py ........                              [ 78%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:11.2567118Z apps\api\tests\test_vector_adapters.py ........................          [ 89%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:12.7136798Z apps\api\tests\test_vector_service.py ........                           [ 93%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:43.6509025Z apps\api\tests\test_git_guard.py ...............                         [100%]
+foundation	UNKNOWN STEP	2026-11-12T18:30:43.6509312Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:43.6509518Z ===================== 220 passed, 6 deselected in 43.89s ======================
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.4018784Z [D08] Production frontend build
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.6413269Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.6413775Z > pinecone-visual-lab@0.8.0 build
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.6414117Z > npm run build --workspace apps/web
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.6414276Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.8908714Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.8909228Z > @pinecone-visual-lab/web@0.8.0 build
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.8909566Z > tsc --noEmit && vite build
+foundation	UNKNOWN STEP	2026-11-12T18:30:44.8909705Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:49.5804003Z vite v8.3.8 building client environment for production...
+foundation	UNKNOWN STEP	2026-11-12T18:30:49.6003884Z transforming...
+foundation	UNKNOWN STEP	2026-11-12T18:30:49.9376600Z ✓ 2149 modules transformed.
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0036999Z rendering chunks...
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0870835Z computing gzip size...
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0924353Z dist/index.html                                                     0.76 kB │ gzip:  0.43 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0926430Z dist/assets/ibm-plex-mono-vietnamese-400-normal-DDuiU_S-.woff       5.62 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0927011Z dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-DMdlQ8Kv.woff     5.82 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0927535Z dist/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2      5.86 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0928294Z dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-xuaO2J-f.woff2    6.91 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0929235Z dist/assets/ibm-plex-mono-cyrillic-400-normal-CEL4l2ZJ.woff         7.20 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0929738Z dist/assets/ibm-plex-mono-cyrillic-400-normal-BSMlKf0J.woff2        8.35 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0930261Z dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2           8.52 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0930751Z dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2                9.44 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0931367Z dist/.vite/manifest.json                                           10.02 kB │ gzip:  1.27 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0931900Z dist/assets/ibm-plex-mono-latin-ext-400-normal-D3D2R8hC.woff       11.76 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0932384Z dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff           13.14 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0932860Z dist/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2      13.34 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0933340Z dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2            14.50 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0933823Z dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2          14.70 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0934309Z dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2           15.12 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0934976Z dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2               24.83 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0935598Z dist/assets/RagChat-BXxVIHDQ.css                                    1.86 kB │ gzip:  0.70 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0936201Z dist/assets/StoredVectorInspector-DxWK2FWG.css                      2.80 kB │ gzip:  0.98 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0936815Z dist/assets/GuidedPanel-BhfmGV-F.css                                2.84 kB │ gzip:  0.96 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0937405Z dist/assets/vectors-DmKxnioJ.css                                    3.63 kB │ gzip:  1.08 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0937983Z dist/assets/SearchLab-CY9mMbyc.css                                  4.30 kB │ gzip:  1.27 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0938549Z dist/assets/DocumentsLab-Cnjb3pCN.css                               8.52 kB │ gzip:  2.23 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0939124Z dist/assets/ArchitectureLab-BuN918to.css                           18.59 kB │ gzip:  3.49 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0939692Z dist/assets/index-BGaVrgfh.css                                     49.59 kB │ gzip: 13.60 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0940276Z dist/assets/copy-BO7Ipngl.js                                        0.27 kB │ gzip:  0.23 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0940827Z dist/assets/documents-api-Dnl7A59J.js                               1.09 kB │ gzip:  0.58 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0941634Z dist/assets/vectors-DPeHDYna.js                                     1.37 kB │ gzip:  0.67 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0942363Z dist/assets/vector-store-api-Cc-VkiJo.js                            1.51 kB │ gzip:  0.79 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0943152Z dist/assets/StoredVectorInspector-rshPi53d.js                       2.65 kB │ gzip:  1.15 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0943962Z dist/assets/VectorInspector-D_Y9Jb4V.js                             2.84 kB │ gzip:  1.21 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0944728Z dist/assets/VectorsLab-B1yj6-JV.js                                 10.82 kB │ gzip:  3.93 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0946714Z dist/assets/GuidedPanel-DoEWv-Gq.js                                11.87 kB │ gzip:  4.10 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0947562Z dist/assets/components-Dkxyj7JT.js                                 13.11 kB │ gzip:  5.15 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0948521Z dist/assets/VectorStoreLab-4g7RoxGX.js                             15.62 kB │ gzip:  5.12 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0949113Z dist/assets/RagChat-D9NAX--a.js                                    16.41 kB │ gzip:  5.74 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0949698Z dist/assets/DocumentsLab-Cr5dKBJP.js                               16.45 kB │ gzip:  5.71 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0950269Z dist/assets/SearchLab-Cen1b60c.js                                  18.59 kB │ gzip:  6.55 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0950808Z dist/assets/gsap-OWHkPl-m.js                                       69.99 kB │ gzip: 27.44 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0951387Z dist/assets/ArchitectureLab-oBWh_LQo.js                           195.84 kB │ gzip: 63.67 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0952171Z dist/assets/index-DAPfpF_0.js                                     292.49 kB │ gzip: 93.61 kB
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0952438Z
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.0953824Z ✓ built in 514ms
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.7055397Z [D08] Secret / artifact scan
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.8541558Z Checked 852 tracked/unignored paths; findings: 0
+foundation	UNKNOWN STEP	2026-11-12T18:30:50.8633651Z [D08] Diff whitespace
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.6433931Z [D08] Staged diff whitespace
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.6784980Z [D08] All local required checks PASS. Browser E2E: npm run test:e2e (isolated ports/data).
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7205693Z ##[group]Run npm audit --audit-level=moderate
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7206097Z npm audit --audit-level=moderate
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7206368Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7206644Z .venv/Scripts/python.exe -m pip check
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7206873Z exit $LASTEXITCODE
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7268641Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7268945Z env:
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7269169Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7269533Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7269874Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7270178Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7270477Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:51.7270761Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:30:52.7646637Z found 0 vulnerabilities
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.1228085Z No broken requirements found.
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2133465Z ##[group]Run npx playwright install msedge
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2133812Z npx playwright install msedge
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2134090Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2134342Z npm run test:e2e
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2134547Z exit $LASTEXITCODE
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2192108Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2192408Z env:
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2192642Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2193013Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2193361Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2193672Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2193974Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2194225Z   PVL_E2E_FIXTURE: 1
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2194447Z   PVL_DISABLE_CLOUD: 1
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2194606Z   HF_HUB_OFFLINE: 1
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2194761Z   TRANSFORMERS_OFFLINE: 1
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2194933Z   PVL_OLLAMA_ENABLED: 0
+foundation	UNKNOWN STEP	2026-11-12T18:30:53.2195097Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:30:55.0242480Z Downloading Microsoft Edge
+foundation	UNKNOWN STEP	2026-11-12T18:30:56.3142918Z Installing Microsoft Edge
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7565048Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7576243Z ProductVersion   FileVersion      FileName
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7577602Z --------------   -----------      --------
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7579655Z 157.0.4341.46    157.0.4341.46    C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7580804Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7581373Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:12.7803806Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-win64.zip
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2048241Z |                                                                                |   0% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2346765Z |■■■■■■■■                                                                        |  10% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2482750Z |■■■■■■■■■■■■■■■■                                                                |  20% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2594331Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2640578Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2656613Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2672093Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2742293Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2757494Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2772669Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:13.2787697Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 1.6 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.0980996Z FFmpeg (playwright ffmpeg v1013) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\ffmpeg-1013
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.0987860Z Downloading Winldd (playwright winldd v1007) from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5661733Z |                                                                                |   1% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5678232Z |■■■■■■■■                                                                        |  10% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5699105Z |■■■■■■■■■■■■■■■■                                                                |  20% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5703107Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  31% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5726203Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5754071Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  61% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5756109Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  74% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5813470Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  87% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.5817756Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 0.1 MiB
+foundation	UNKNOWN STEP	2026-11-12T18:32:14.6203172Z Winldd (playwright winldd v1007) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\winldd-1007
+foundation	UNKNOWN STEP	2026-11-12T18:32:16.2289361Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:16.2291729Z > pinecone-visual-lab@0.8.0 test:e2e
+foundation	UNKNOWN STEP	2026-11-12T18:32:16.2293019Z > playwright test
+foundation	UNKNOWN STEP	2026-11-12T18:32:16.2293740Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:18.8394539Z [WebServer] INFO:     Started server process [5980]
+foundation	UNKNOWN STEP	2026-11-12T18:32:18.8395285Z [WebServer] INFO:     Waiting for application startup.
+foundation	UNKNOWN STEP	2026-11-12T18:32:18.8397278Z [WebServer] INFO:     Application startup complete.
+foundation	UNKNOWN STEP	2026-11-12T18:32:18.8397739Z [WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+foundation	UNKNOWN STEP	2026-11-12T18:32:21.9449374Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:21.9449865Z Running 20 tests using 1 worker
+foundation	UNKNOWN STEP	2026-11-12T18:32:21.9450076Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:29.6380036Z
+foundation	UNKNOWN STEP	2026-11-12T18:32:29.6381839Z   ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (6.7s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:31.2844754Z   ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (1.6s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:38.8908819Z   ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (7.6s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:39.9465363Z   ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (1.0s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:43.1817249Z   ok  5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (3.2s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:54.3100563Z   ok  6 tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at five widths (11.1s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:55.3569526Z   ok  7 tests\e2e\foundation.spec.ts:63:1 › network failure and recovery (explicitly intercepted fault injection) (1.0s)
+foundation	UNKNOWN STEP	2026-11-12T18:32:56.1544899Z   ok  8 tests\e2e\foundation.spec.ts:75:1 › keyboard skip link is first and visible (784ms)
+foundation	UNKNOWN STEP	2026-11-12T18:33:05.9615604Z   ok  9 tests\e2e\guided.spec.ts:26:1 › complete guided local pipeline, reload/source linking, optional RAG, three simulations and safe reset (9.8s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:11.8277479Z   ok 10 tests\e2e\guided.spec.ts:160:1 › standalone simulation finite play/pause/back/replay/reset, reduced motion and no backend writes (5.9s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:13.4028643Z   ok 11 tests\e2e\guided.spec.ts:191:1 › malformed guide storage and backend failure remain cancellable without implicit data/model calls (1.6s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:18.6804623Z   ok 12 tests\e2e\rag.spec.ts:8:1 › RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → verified citations/context → exact source (5.3s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:20.9619926Z   ok 13 tests\e2e\rag.spec.ts:81:1 › RAG: search-only, no source, error/cancel and tab keyboard recovery (2.3s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:22.5796438Z   ok 14 tests\e2e\rag.spec.ts:111:1 › RAG: untrusted source with forged citation fails closed through actual backend (1.6s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:28.7512728Z
+foundation	UNKNOWN STEP	2026-11-12T18:33:28.7515183Z   ok 15 tests\e2e\search.spec.ts:9:1 › Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace (6.2s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:30.1993528Z   ok 16 tests\e2e\search.spec.ts:108:1 › Search reload and LIVE switch make no automatic cloud query; invalid deep links fail closed (1.4s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:36.9836704Z   ok 17 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (6.8s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:37.8443851Z   ok 18 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (848ms)
+foundation	UNKNOWN STEP	2026-11-12T18:33:39.0497104Z   ok 19 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (1.2s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:41.3452039Z
+foundation	UNKNOWN STEP	2026-11-12T18:33:41.3455931Z   ok 20 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (2.3s)
+foundation	UNKNOWN STEP	2026-11-12T18:33:41.9448475Z
+foundation	UNKNOWN STEP	2026-11-12T18:33:41.9452779Z   20 passed (1.4m)
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0091419Z ##[group]Run npm run test:visual
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0091725Z npm run test:visual
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0153837Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0154131Z env:
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0154361Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0155397Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0155802Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0156170Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0156530Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0156847Z   PVL_E2E_FIXTURE: 1
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0157071Z   PVL_VISUAL_STAGE: verify
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0157296Z   PVL_VISUAL_REPLAY: 1
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.0157481Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.6100570Z
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.6101361Z > pinecone-visual-lab@0.8.0 test:visual
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.6101945Z > playwright test --config playwright.visual.config.ts
+foundation	UNKNOWN STEP	2026-11-12T18:33:42.6102221Z
+foundation	UNKNOWN STEP	2026-11-12T18:33:44.3099744Z
+foundation	UNKNOWN STEP	2026-11-12T18:33:44.3100413Z Running 7 tests using 1 worker
+foundation	UNKNOWN STEP	2026-11-12T18:33:44.3100631Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:29.0995865Z   x  1 tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data (41.6s)
+foundation	UNKNOWN STEP	2026-11-12T18:34:32.0080915Z   ok 2 tests\visual\regression.spec.ts:4:1 › visual comparator accepts the frozen candidate and rejects a deliberate panel-color defect (2.0s)
+foundation	UNKNOWN STEP	2026-11-12T18:34:33.3216739Z   ok 3 tests\visual\resilience.spec.ts:4:1 › production initial graph defers labs, diagram, GSAP and RAG; slow route cannot replace newer navigation (1.3s)
+foundation	UNKNOWN STEP	2026-11-12T18:34:34.4545862Z   ok 4 tests\visual\resilience.spec.ts:27:1 › failed lazy asset keeps shell usable and explicit reload recovers the same URL (1.1s)
+foundation	UNKNOWN STEP	2026-11-12T18:34:35.2839972Z   ok 5 tests\visual\resilience.spec.ts:41:1 › native confirmation traps keyboard focus, Escape restores invoker, mobile navigation works without pointer (814ms)
+foundation	UNKNOWN STEP	2026-11-12T18:34:37.1300567Z   ok 6 tests\visual\resilience.spec.ts:73:1 › real GSAP motion settles and reduced-motion change leaves all source data visible (1.8s)
+foundation	UNKNOWN STEP	2026-11-12T18:34:37.6446914Z   ok 7 tests\visual\resilience.spec.ts:89:1 › Guided Demo can be cancelled while its lazy panel is pending without deleting source data (502ms)
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0184814Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0190267Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0200585Z   1) tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0202584Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0203045Z     Error: expect(page).toHaveScreenshot(expected) failed
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0203390Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0203660Z       101 pixels (ratio 0.01 of all image pixels) are different.
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0204026Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0204254Z       Snapshot: architecture-write-1440.png
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0204506Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0204660Z     Call log:
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0205143Z       - Expect "toHaveScreenshot(architecture-write-1440.png)" with timeout 5000ms
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0206050Z         - verifying given screenshot expectation
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0206549Z       - taking page screenshot
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0207014Z         - disabled all CSS animations
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0207487Z       - waiting for fonts to load...
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0207863Z       - fonts loaded
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0208315Z       - 101 pixels (ratio 0.01 of all image pixels) are different.
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0208876Z       - waiting 100ms before taking screenshot
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0209326Z       - taking page screenshot
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0209729Z         - disabled all CSS animations
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0210087Z       - waiting for fonts to load...
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0210459Z       - fonts loaded
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0210804Z       - captured a stable screenshot
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0214570Z       - 101 pixels (ratio 0.01 of all image pixels) are different.
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0215110Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0215120Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0215293Z       76 |       }
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0216513Z       77 |       const options = { fullPage: true, animations: 'disabled' as const, mask: masks.map(s => page.locator(cleanRag ? `${s}:visible` : s)), maskColor: '#30485c' }
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0217911Z     > 78 |       if (stage === 'verify') await expect(page).toHaveScreenshot(file, options)
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0218454Z          |                                                  ^
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0218996Z       79 |       await page.screenshot({ path: `${output}/${file}`, ...options })
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0220255Z       80 |       captures.push({ file, screen, state, viewport, overflow, scroll: { x: 0, y: 0 }, masks: cleanRag ? masks.map(s => `${s}:visible`) : masks, url: new URL(page.url()).pathname + new URL(page.url()).search })
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0221372Z       81 |       if (scan && [1440, 390].includes(viewport.width)) {
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0222123Z         at shots (D:\a\pinecone-visual-lab\pinecone-visual-lab\tests\visual\audit.spec.ts:78:50)
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0223020Z         at D:\a\pinecone-visual-lab\pinecone-visual-lab\tests\visual\audit.spec.ts:136:5
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0223451Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0224196Z     attachment #1: architecture-write-1440 (image/png) ─────────────────────────────────────────────
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0224998Z     Expected: docs\evidence\d08\after\fixture\architecture-write-1440.png
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0226081Z     Received: test-results\d08-visual\audit-paired-production-vi-058e9-d-persistent-synthetic-data\architecture-write-1440-actual.png
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0227499Z     Diff:     test-results\d08-visual\audit-paired-production-vi-058e9-d-persistent-synthetic-data\architecture-write-1440-diff.png
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0228716Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0229125Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0229790Z     Error Context: test-results\d08-visual\audit-paired-production-vi-058e9-d-persistent-synthetic-data\error-context.md
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0230505Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0231021Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0232089Z     test-results\d08-visual\audit-paired-production-vi-058e9-d-persistent-synthetic-data\trace.zip
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0232773Z     Usage:
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0232880Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0233765Z         npx playwright show-trace test-results\d08-visual\audit-paired-production-vi-058e9-d-persistent-synthetic-data\trace.zip
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0234443Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0234913Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0235333Z
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0235478Z   1 failed
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0236212Z     tests\visual\audit.spec.ts:52:1 › paired production visual audit on owned persistent synthetic data
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0236885Z   6 passed (54.8s)
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0768503Z ##[error]Process completed with exit code 1.
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0960398Z ##[group]Run actions/upload-artifact@v4
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0960674Z with:
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0960850Z   name: lab-browser-evidence
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0962157Z   path: docs/evidence/d08/regression/fixture-search-example.json
+foundation	UNKNOWN STEP	docs/evidence/d08/regression/fixture-rag-example.json
+foundation	UNKNOWN STEP	docs/evidence/d08/regression/fixture-guided-example.json
+foundation	UNKNOWN STEP	test-results/
+foundation	UNKNOWN STEP
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0962769Z   if-no-files-found: warn
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0962951Z   compression-level: 6
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0963116Z   overwrite: false
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0963279Z   include-hidden-files: false
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0963451Z env:
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0963656Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0964008Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0964374Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0964713Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0965028Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.0965266Z ##[endgroup]
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2668327Z (node:1676) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2668994Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2793232Z Multiple search paths detected. Calculating the least common ancestor of all paths
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2796038Z The least common ancestor is D:\a\pinecone-visual-lab\pinecone-visual-lab. This will be the root directory of the artifact
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2797435Z With the provided path, there will be 30 files uploaded
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2801363Z Artifact name is valid!
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.2802409Z Root directory input is valid!
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.5294137Z Beginning upload of artifact content to blob storage
+foundation	UNKNOWN STEP	2026-11-12T18:34:38.7771375Z (node:1676) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.1235051Z Uploaded bytes 8388608
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.2433946Z Uploaded bytes 16777216
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.5643271Z Uploaded bytes 25165824
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.6285193Z Uploaded bytes 26116280
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.6478551Z Finished uploading artifact content to blob storage!
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.6479624Z SHA256 digest of uploaded artifact zip is 087723671c43a395ffd50f5613954e86206bd24fd2246736e08790fc5ab30ece
+foundation	UNKNOWN STEP	2026-11-12T18:34:39.6481357Z Finalizing artifact upload
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.0090849Z Artifact lab-browser-evidence.zip successfully finalized. Artifact ID 13974080022
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.0091732Z Artifact lab-browser-evidence has been successfully uploaded! Final size is 26116280 bytes. Artifact ID is 13974080022
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.0100945Z Artifact download URL: https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381/artifacts/13974080022
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.0440795Z Post job cleanup.
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.1830880Z [command]"C:\Program Files\Git\bin\git.exe" version
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.2127304Z git version 2.56.0.windows.4
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.2189634Z Temporarily overriding HOME='D:\a\_temp\d1784030-5100-43e6-a694-697fd1f3457f' before making global git config changes
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.2190451Z Adding repository directory to the temporary git global config as a safe directory
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.2198941Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\pinecone-visual-lab\pinecone-visual-lab
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.2555767Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.2899514Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.8469039Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.8777406Z http.https://github.com/.extraheader
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.8828680Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+foundation	UNKNOWN STEP	2026-11-12T18:34:40.9198133Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+foundation	UNKNOWN STEP	2026-11-12T18:34:41.4487258Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+foundation	UNKNOWN STEP	2026-11-12T18:34:41.4847668Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+foundation	UNKNOWN STEP	2026-11-12T18:34:42.0655591Z Cleaning up orphan processes
+foundation	UNKNOWN STEP	2026-11-12T18:34:42.1421734Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

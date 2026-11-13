@@ -1,0 +1,147 @@
+{
+  "recorded": "2026-11-13",
+  "source_sha": "01033a770e2408b3d28bee3baf1c140c86389497",
+  "run": {
+    "id": 43338671216,
+    "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43338671216",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "attempt": 1,
+    "created_at": "2026-11-13T00:38:35Z",
+    "updated_at": "2026-11-13T00:47:20Z"
+  },
+  "job": {
+    "id": 131601229783,
+    "url": "https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43338671216/job/131601229783",
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-11-13T00:38:39Z",
+    "completed_at": "2026-11-13T00:47:20Z",
+    "labels": [
+      "windows-2025"
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:38:40Z",
+        "completed_at": "2026-11-13T00:38:41Z"
+      },
+      {
+        "number": 2,
+        "name": "Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:38:41Z",
+        "completed_at": "2026-11-13T00:38:58Z"
+      },
+      {
+        "number": 3,
+        "name": "Run actions/setup-node@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:38:58Z",
+        "completed_at": "2026-11-13T00:39:08Z"
+      },
+      {
+        "number": 4,
+        "name": "Run actions/setup-python@v5",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:39:08Z",
+        "completed_at": "2026-11-13T00:39:11Z"
+      },
+      {
+        "number": 5,
+        "name": "Install exact locked dependencies (no AI models)",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:39:11Z",
+        "completed_at": "2026-11-13T00:40:30Z"
+      },
+      {
+        "number": 6,
+        "name": "Local quality gates",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:40:30Z",
+        "completed_at": "2026-11-13T00:42:17Z"
+      },
+      {
+        "number": 7,
+        "name": "Dependency advisory and installed requirement checks",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:42:17Z",
+        "completed_at": "2026-11-13T00:42:19Z"
+      },
+      {
+        "number": 8,
+        "name": "Browser integration and actual API smoke",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:42:19Z",
+        "completed_at": "2026-11-13T00:45:28Z"
+      },
+      {
+        "number": 9,
+        "name": "Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:45:28Z",
+        "completed_at": "2026-11-13T00:47:05Z"
+      },
+      {
+        "number": 10,
+        "name": "Preserve browser evidence",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:47:05Z",
+        "completed_at": "2026-11-13T00:47:08Z"
+      },
+      {
+        "number": 18,
+        "name": "Post Run actions/setup-python@v5",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:47:08Z",
+        "completed_at": "2026-11-13T00:47:12Z"
+      },
+      {
+        "number": 19,
+        "name": "Post Run actions/setup-node@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:47:12Z",
+        "completed_at": "2026-11-13T00:47:16Z"
+      },
+      {
+        "number": 20,
+        "name": "Post Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:47:16Z",
+        "completed_at": "2026-11-13T00:47:18Z"
+      },
+      {
+        "number": 21,
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-13T00:47:18Z",
+        "completed_at": "2026-11-13T00:47:18Z"
+      }
+    ]
+  },
+  "artifact": {
+    "id": 13999080910,
+    "name": "lab-browser-evidence",
+    "size_in_bytes": 4896217,
+    "digest": "sha256:49d2ff57467e642cbbe7e6655d587cf4008997e1396c368ab24fba038b381421",
+    "expired": false
+  },
+  "scope": "Actual completed GitHub CI for implementation commit. Separate local real-E5 runs; CI fixture is NOT E5 / MOCK OLLAMA. Subsequent documentation-only publication must preserve this tested code tree."
+}

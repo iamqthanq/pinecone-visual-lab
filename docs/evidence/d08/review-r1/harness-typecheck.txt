@@ -1,0 +1,8 @@
+COMMAND: npm.cmd run typecheck:visual
+
+> pinecone-visual-lab@0.8.0 typecheck:visual
+> tsc --project tsconfig.visual.json
+
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 7.57

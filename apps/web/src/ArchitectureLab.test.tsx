@@ -5,19 +5,33 @@ import ArchitectureLab from './ArchitectureLab'
 import { SIMULATION_LABEL, initialSimulator, program, snapshot } from './simulator'
 import { diagram, components } from './simulator-graph'
 
-const mocks = vi.hoisted(() => ({ revert: vi.fn(), tween: vi.fn() }))
-vi.mock('gsap', () => ({ gsap: { context: (action: () => void) => { action(); return { revert: mocks.revert } }, timeline: () => ({ fromTo: mocks.tween }) } }))
+const mocks = vi.hoisted(() => ({ created: vi.fn(), revert: vi.fn(), tween: vi.fn() }))
+vi.mock('gsap', () => ({ gsap: { context: (action: () => void) => { mocks.created(); action(); return { revert: mocks.revert } }, timeline: () => ({ fromTo: mocks.tween }) } }))
 vi.mock('@xyflow/react', () => ({
   ReactFlow: ({ nodes, children }: { nodes: { id: string; data: { label: string; active: boolean } }[]; children: React.ReactNode }) => <div aria-label="Test diagram mapping">{nodes.map(n => <div key={n.id} className={n.data.active ? 'sim-active' : ''}><span className="sim-node-content">{n.data.label}</span></div>)}{children}</div>,
-  Controls: () => null, Background: () => null, Handle: () => null, Position: { Top: 'top', Bottom: 'bottom' },
+  Controls: () => null, Background: () => null, Handle: () => null, Position: { Top: 'top', Bottom: 'bottom', Left: 'left', Right: 'right' }, MarkerType: { ArrowClosed: 'arrowclosed' },
 }))
 beforeEach(() => {
-  mocks.revert.mockClear(); mocks.tween.mockClear()
+  mocks.created.mockClear(); mocks.revert.mockClear(); mocks.tween.mockClear()
   vi.stubGlobal('matchMedia', vi.fn(() => ({ matches: false, addEventListener: vi.fn(), removeEventListener: vi.fn() })))
 })
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals() })
 
 describe('Architecture simulator rendering/controller (real diagram is separately browser-tested)', () => {
+  it('ignores a queued resize after unmount and disconnects the observer', () => {
+    let callback: ResizeObserverCallback | undefined
+    const disconnect = vi.fn()
+    vi.stubGlobal('ResizeObserver', class {
+      constructor(value: ResizeObserverCallback) { callback = value }
+      observe() {}
+      disconnect = disconnect
+    })
+    const { unmount } = render(<ArchitectureLab />)
+    const resize = callback!
+    unmount()
+    expect(disconnect).toHaveBeenCalledOnce()
+    expect(() => resize([], {} as ResizeObserver)).not.toThrow()
+  })
   it('maps all conceptual nodes and edges, banner and accessible linear steps', () => {
     const s = initialSimulator('read')
     const graph = diagram(snapshot(s), program('read', 7)[0])
@@ -59,7 +73,9 @@ describe('Architecture simulator rendering/controller (real diagram is separatel
     expect(mocks.revert).toHaveBeenCalled()
     unmount()
     expect(vi.getTimerCount()).toBe(0)
-    expect(mocks.revert.mock.calls.length).toBeGreaterThan(1)
+    // D08 skips idle/zero-step motion; every created context must still be reverted.
+    expect(mocks.created.mock.calls.length).toBeGreaterThan(0)
+    expect(mocks.revert).toHaveBeenCalledTimes(mocks.created.mock.calls.length)
   })
   it('reduced motion removes animation but keeps steps; hidden tabs pause', () => {
     vi.useFakeTimers()

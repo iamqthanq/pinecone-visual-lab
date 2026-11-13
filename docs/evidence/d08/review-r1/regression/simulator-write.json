@@ -1,0 +1,136 @@
+{
+  "label": "SIMULATION / TOY 2D / NOT E5 / NOT PINECONE TELEMETRY",
+  "snapshot": {
+    "wal": [
+      {
+        "id": "a-7",
+        "namespace": "lesson",
+        "values": [
+          1,
+          0
+        ],
+        "seq": 1
+      },
+      {
+        "id": "b-7",
+        "namespace": "lesson",
+        "values": [
+          0,
+          1
+        ],
+        "seq": 2
+      },
+      {
+        "id": "a-7",
+        "namespace": "lesson",
+        "values": [
+          0,
+          1
+        ],
+        "seq": 3
+      },
+      {
+        "id": "c-7",
+        "namespace": "lesson",
+        "values": [
+          1,
+          1
+        ],
+        "seq": 4
+      },
+      {
+        "id": "foreign-7",
+        "namespace": "other",
+        "values": [
+          1,
+          0
+        ],
+        "seq": 5
+      }
+    ],
+    "acknowledged": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "applied": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pending": null,
+    "memtable": [
+      {
+        "id": "foreign-7",
+        "namespace": "other",
+        "values": [
+          1,
+          0
+        ],
+        "seq": 5
+      }
+    ],
+    "slabs": [
+      {
+        "id": "L0-1",
+        "level": 0,
+        "namespace": "lesson",
+        "records": [
+          {
+            "id": "a-7",
+            "namespace": "lesson",
+            "values": [
+              1,
+              0
+            ],
+            "seq": 1
+          },
+          {
+            "id": "b-7",
+            "namespace": "lesson",
+            "values": [
+              0,
+              1
+            ],
+            "seq": 2
+          }
+        ]
+      },
+      {
+        "id": "L0-2",
+        "level": 0,
+        "namespace": "lesson",
+        "records": [
+          {
+            "id": "a-7",
+            "namespace": "lesson",
+            "values": [
+              0,
+              1
+            ],
+            "seq": 3
+          },
+          {
+            "id": "c-7",
+            "namespace": "lesson",
+            "values": [
+              1,
+              1
+            ],
+            "seq": 4
+          }
+        ]
+      }
+    ],
+    "retired": [],
+    "plan": null,
+    "query": null,
+    "candidates": [],
+    "merged": [],
+    "top": []
+  }
+}

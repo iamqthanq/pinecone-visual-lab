@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Badge, Button, Panel, TextField } from './components'
 import { guideSteps, useGuided } from './guided-context'
@@ -8,9 +8,10 @@ import type { EmbeddingRecord } from './embeddings-api'
 import type { FetchedVectors, Manifest } from './vector-store-api'
 import type { SearchResult } from './search-api'
 import type { RagResult } from './rag-api'
-import { VectorInspector } from './VectorsLab'
-import { StoredVectorInspector } from './VectorStoreLab'
+import { VectorInspector } from './VectorInspector'
+import { StoredVectorInspector } from './StoredVectorInspector'
 import './guided.css'
+import { useDataMotion } from './useDataMotion'
 
 function Result({ value, action, notice }: { value: unknown; action: GuidedAction; notice: (v: string) => void }) {
   if (!value) return null
@@ -78,11 +79,13 @@ function StepActions() {
 
 export default function GuidedPanel() {
   const guide = useGuided()
+  const reveal = useRef<HTMLElement>(null)
+  useDataMotion(reveal, guide?.memory ? `${guide.memory.step}:${JSON.stringify(guide.session?.completed)}` : null, { selector: '.guide-step-heading, .guide-fact' })
   if (!guide) return null
   if (!guide.memory) return guide.error ? <div className="doc-message error" role="alert">{guide.error}</div> : null
   const { memory, session } = guide
-  return <Panel className="guided-panel" label="Guided Demo"><div className="guide-header"><Badge>GUIDED DEMO · LOCAL ONLY</Badge><div><Button disabled={Boolean(guide.busy)} onClick={() => void guide.refresh()}>Refresh backend evidence</Button><Button disabled={Boolean(guide.busy)} onClick={() => void guide.act('reset')}>Reset tour / simulation only</Button><Button onClick={guide.cancel}>Cancel Guided Demo</Button></div></div><p className="config-hint">{session?.provenance ?? 'Restoring versioned session; no text or secrets in browser storage.'} · {session?.embedding_mode === 'e5' ? 'E5 selected; cache/load not assumed' : session ? 'SAMPLE FIXTURE — NOT E5' : 'Model not yet verified'}</p><p className="guide-namespace mono">Session {memory.id}<br />Namespace {session?.target.namespace ?? 'rechecking'}</p>
-    <nav aria-label="Guided Demo steps"><ol className="guide-stepper">{guideSteps.map((s, i) => <li key={s.id}><button aria-current={memory.step === i ? 'step' : undefined} disabled={Boolean(guide.busy) || !session} onClick={() => guide.go(i)}><span>{i + 1}</span>{s.label}<small>{s.id === 'slab' ? `${memory.modes.length}/3 viewed` : session?.completed[s.id] ? 'VERIFIED' : 'pending'}</small></button></li>)}</ol></nav>
+  return <Panel ref={reveal} className="guided-panel" label="Guided Demo"><div className="guide-header"><Badge>GUIDED DEMO · LOCAL ONLY</Badge><div><Button disabled={Boolean(guide.busy)} onClick={() => void guide.refresh()}>Refresh backend evidence</Button><Button disabled={Boolean(guide.busy)} onClick={() => void guide.act('reset')}>Reset tour / simulation only</Button><Button onClick={guide.cancel}>Cancel Guided Demo</Button></div></div><p className="config-hint">{session?.provenance ?? 'Restoring versioned session; no text or secrets in browser storage.'} · {session?.embedding_mode === 'e5' ? 'E5 selected; cache/load not assumed' : session ? 'SAMPLE FIXTURE — NOT E5' : 'Model not yet verified'}</p><p className="guide-namespace mono">Session {memory.id}<br />Namespace {session?.target.namespace ?? 'rechecking'}</p>
+    <nav aria-label="Guided Demo steps"><ol className="guide-stepper">{guideSteps.map((s, i) => <li key={s.id}><button aria-current={memory.step === i ? 'step' : undefined} disabled={Boolean(guide.busy) || !session} onClick={() => guide.go(i)}><span>{i + 1}</span>{s.label}<small>{s.id === 'slab' ? `${memory.modes.length}/3 viewed` : s.id === 'rag' && session?.completed.rag ? session.rag_outcome?.startsWith('SKIPPED') ? 'SKIPPED' : session.rag_outcome === 'search_only' ? 'SEARCH ONLY' : 'VERIFIED' : session?.completed[s.id] ? 'VERIFIED' : 'pending'}</small></button></li>)}</ol></nav>
     {guide.error && <p className="doc-message error" role="alert">{guide.error}</p>}{session?.source_error && session.document_id && <p className="doc-warning" role="status">{session.source_error}</p>}{guide.busy && <div className="doc-message" role="status">{guide.busy}<Button onClick={guide.abort}>Cancel guided action</Button></div>}
     <StepActions key={`${memory.id}-${memory.step}`} /><details><summary>Backend receipt summary / safe reset policy</summary><pre className="guide-proof-json">{JSON.stringify(session, null, 2)}</pre><p>Reset clears only guide receipts and simulator progress. All sample and unrelated documents/vectors/indexes remain. No guided delete endpoint is provided.</p></details>
   </Panel>

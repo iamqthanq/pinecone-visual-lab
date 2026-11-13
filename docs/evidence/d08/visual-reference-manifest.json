@@ -1,0 +1,392 @@
+{
+  "status": "PROPOSED; independent ChatGPT/owner visual approval pending",
+  "references": [
+    {
+      "file": "architecture-compaction-1024.png",
+      "width": 1024,
+      "height": 4173,
+      "sha256": "9f40fded7ab1cb319738e42ca085954a5f7e3d69fa43475a7a40c5f2efd9152c"
+    },
+    {
+      "file": "architecture-compaction-1440.png",
+      "width": 1440,
+      "height": 3947,
+      "sha256": "ca40f6c4bc93fc5d519168db1d3242c6f04d1fdb400fb03bc4d6a60cfe0b1304"
+    },
+    {
+      "file": "architecture-compaction-390.png",
+      "width": 390,
+      "height": 5452,
+      "sha256": "1c747d79ae110914cfa8e9875e0dc8ec414e6db9c8cc57fbca106eadfe8e7b05"
+    },
+    {
+      "file": "architecture-compaction-768.png",
+      "width": 768,
+      "height": 4562,
+      "sha256": "bf3fa1f7bfcee6b701f2c23c035f207e237db9d5514afd281f00d2352ba2f5e2"
+    },
+    {
+      "file": "architecture-read-1024.png",
+      "width": 1024,
+      "height": 3374,
+      "sha256": "0fac3a1e299a8c6d6a658c6575fbcb12050570d0ac60e831390a44cac86eb4d8"
+    },
+    {
+      "file": "architecture-read-1440.png",
+      "width": 1440,
+      "height": 3148,
+      "sha256": "e3b788cfb097b7c391fbed2353c6e5b4e2c3676ec642cc325b026f5958c830f6"
+    },
+    {
+      "file": "architecture-read-390.png",
+      "width": 390,
+      "height": 4682,
+      "sha256": "5f2f40604aed997156105019a4becb811a81184ab73d903421634de7967a9e07"
+    },
+    {
+      "file": "architecture-read-768.png",
+      "width": 768,
+      "height": 3901,
+      "sha256": "9b477b6200c6a0c8e2f89bb903beaf7e99cb80be8b2b965a1dbafd0852a7d9b9"
+    },
+    {
+      "file": "architecture-write-1024.png",
+      "width": 1024,
+      "height": 4841,
+      "sha256": "126620c554245c27ec3bb8b85181d6372aa5129f32a0219a303349ed95324adb"
+    },
+    {
+      "file": "architecture-write-1440.png",
+      "width": 1440,
+      "height": 4544,
+      "sha256": "3ce06f24506c47f4b73d5a8bdaebdedcf86fea407436c112b52b9ba1055aace4"
+    },
+    {
+      "file": "architecture-write-390.png",
+      "width": 390,
+      "height": 6679,
+      "sha256": "b72f48552aa6c7f7a6dd0808a84311fb40eae440a40a154ef1ad508c80333220"
+    },
+    {
+      "file": "architecture-write-768.png",
+      "width": 768,
+      "height": 5380,
+      "sha256": "4d07ddb81669f5e6b3b7852f249cadf1b1857b37daf456b481466161f31ac498"
+    },
+    {
+      "file": "chunks-versions-1024.png",
+      "width": 1024,
+      "height": 2530,
+      "sha256": "ad55be3b9396401ca3dfe8ca6b364514d1fd7cd5527326168003c656aa304fb3"
+    },
+    {
+      "file": "chunks-versions-1440.png",
+      "width": 1440,
+      "height": 1991,
+      "sha256": "125b460bd9502ef483b13ed57a2d61e72ed6769eea849fa577b64a50262a0a90"
+    },
+    {
+      "file": "chunks-versions-390.png",
+      "width": 390,
+      "height": 3129,
+      "sha256": "478beca59b670dfec3b09a1a11ca7167ed6adf9701f2168b7fc7b318210696f5"
+    },
+    {
+      "file": "chunks-versions-768.png",
+      "width": 768,
+      "height": 2597,
+      "sha256": "437893fbc85632b3ef11dc12bdd1927629e19f48bf4ef524b3a404295e20e5cf"
+    },
+    {
+      "file": "delete-confirmation-1024.png",
+      "width": 1024,
+      "height": 2679,
+      "sha256": "3f3a1e8d8718a56b0593330cf0698b5b57fbd31b79a6c6b84d3d2bbe08efe889"
+    },
+    {
+      "file": "delete-confirmation-1440.png",
+      "width": 1440,
+      "height": 2140,
+      "sha256": "80201391430ceb69c485f481d1d75bc82d7315cf3fc0bb1d68017dc7b4907003"
+    },
+    {
+      "file": "delete-confirmation-390.png",
+      "width": 390,
+      "height": 3399,
+      "sha256": "4f42d9ac221bb7666854c99b4e985614454155d1b55d9d6bc587d0eb93f10b50"
+    },
+    {
+      "file": "delete-confirmation-768.png",
+      "width": 768,
+      "height": 2746,
+      "sha256": "7fd54514379fa64f02a8df08dcb2ec4e6cabc01273d758807b7b8620e8151f21"
+    },
+    {
+      "file": "documents-source-1024.png",
+      "width": 1024,
+      "height": 2530,
+      "sha256": "c42130bab57b4050df70fb5a4e2fe09d85770cb68388ad7e1f7f53099bb5d152"
+    },
+    {
+      "file": "documents-source-1440.png",
+      "width": 1440,
+      "height": 1991,
+      "sha256": "5252796acf9650334fd68cf9ea7fe74c5d3649eaf1a29465aff708f782a20ef4"
+    },
+    {
+      "file": "documents-source-390.png",
+      "width": 390,
+      "height": 3204,
+      "sha256": "917f254ba731753f5c3cc54ed67d01b3cd34f8772bcaaeb6894a4b5e1e05a3af"
+    },
+    {
+      "file": "documents-source-768.png",
+      "width": 768,
+      "height": 2597,
+      "sha256": "155e2c8fe201c35d4c00edcc798dd7ecf9dbaa57f5eee46357b6c907acf124ac"
+    },
+    {
+      "file": "documents-unselected-1024.png",
+      "width": 1024,
+      "height": 1118,
+      "sha256": "ded7cb4a85d112ccfba04dc7c64bb83635166d127baf64355552fbde0dea21a6"
+    },
+    {
+      "file": "documents-unselected-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "16af8caf3582a12523c79b1c5006ba6e6169e359c1e41b7848b95f481aa220c2"
+    },
+    {
+      "file": "documents-unselected-390.png",
+      "width": 390,
+      "height": 1421,
+      "sha256": "0496d32da3f7dd7d1b154c3a5e6ecf92e4cf62cc57ab359cbe8428c17d02f907"
+    },
+    {
+      "file": "documents-unselected-768.png",
+      "width": 768,
+      "height": 1136,
+      "sha256": "5c5a59b8de9fd1f771ea993c1a41bcb9b0582e1a6b65388e436194eec411e363"
+    },
+    {
+      "file": "embeddings-1024.png",
+      "width": 1024,
+      "height": 3322,
+      "sha256": "470ad6b42bbf3e0f31c6ea686c61eee136dc3ddb8ce7a003793d95109053f687"
+    },
+    {
+      "file": "embeddings-1440.png",
+      "width": 1440,
+      "height": 2986,
+      "sha256": "ee755b993c1a23f50f3cf6a4922b5003dc113d828f6a68c387ae096169558349"
+    },
+    {
+      "file": "embeddings-390.png",
+      "width": 390,
+      "height": 4281,
+      "sha256": "95a11d408dbd5737cfbc52271df9cd15fa5e3bc8c7f473fa9971e5546922274a"
+    },
+    {
+      "file": "embeddings-768.png",
+      "width": 768,
+      "height": 3394,
+      "sha256": "5202431501878340ef9acf77a22580119cfb0ad9973c1d3a36fbc4d5541711a9"
+    },
+    {
+      "file": "guided-complete-1024.png",
+      "width": 1024,
+      "height": 5063,
+      "sha256": "be38dc6782bc34d76bbf7580909ce7f694d289cc48148458dcdda8bb52c30a6e"
+    },
+    {
+      "file": "guided-complete-1440.png",
+      "width": 1440,
+      "height": 4677,
+      "sha256": "62e0520a9662b794fd7240d98b9f432b79291ac29dd6e37ce3db53b3aeae1e55"
+    },
+    {
+      "file": "guided-complete-390.png",
+      "width": 390,
+      "height": 6869,
+      "sha256": "f85d91a0d2ce60beb0a47d71866b4ae1c23b93830a97d8ace8b440b2bcd8d0bb"
+    },
+    {
+      "file": "guided-complete-768.png",
+      "width": 768,
+      "height": 5452,
+      "sha256": "00832acee360aad5cb8d600a5af1db29dc8ba383c488865e9d8e1004efe30aee"
+    },
+    {
+      "file": "guided-embedding-1024.png",
+      "width": 1024,
+      "height": 4029,
+      "sha256": "23e4abb1a4f75f372b33083b14dc86a99e55720fd0815a49e056da59ac32b6ae"
+    },
+    {
+      "file": "guided-embedding-1440.png",
+      "width": 1440,
+      "height": 3863,
+      "sha256": "8774a24f2607575e94fccc2d0ed14644093cdc5cf84054244f6184cfe1db285f"
+    },
+    {
+      "file": "guided-embedding-390.png",
+      "width": 390,
+      "height": 5332,
+      "sha256": "8d18f5ac5e122ae1dc6e5ac7903637697faaff1ecf965c1ca411fb87075a57e7"
+    },
+    {
+      "file": "guided-embedding-768.png",
+      "width": 768,
+      "height": 4122,
+      "sha256": "98374f0bce676fa4ae642abd5ec7b954b2e48cfd647f7107b76e6e95b9f55cd7"
+    },
+    {
+      "file": "invalid-config-1024.png",
+      "width": 1024,
+      "height": 2679,
+      "sha256": "cae71443d0ea4599d8ae51499e5080bdd69944d5a01a13e2355f70d3dc80ab61"
+    },
+    {
+      "file": "invalid-config-1440.png",
+      "width": 1440,
+      "height": 2140,
+      "sha256": "15afd452a3500c672db70cf8263d1c7beda9310ae940c886af266f24e008705a"
+    },
+    {
+      "file": "invalid-config-390.png",
+      "width": 390,
+      "height": 3399,
+      "sha256": "39b20bff08cd04cd92a26e2b0eb047ab9c6d5f750bdcfa2778c8986695e3f7d8"
+    },
+    {
+      "file": "invalid-config-768.png",
+      "width": 768,
+      "height": 2746,
+      "sha256": "fcaa2324b5b202d51a6dbbddb76e706f5893382d22f2142c0f8542f720b66cab"
+    },
+    {
+      "file": "offline-fault-1024.png",
+      "width": 1024,
+      "height": 2403,
+      "sha256": "7cac84385bceb33f6849b62e3cd73b744bfe5fa234c40a36675d0ffb5ab5bc34"
+    },
+    {
+      "file": "offline-fault-1440.png",
+      "width": 1440,
+      "height": 1538,
+      "sha256": "678a1ca4de4dfc237edcb70352270b3e10aa97d4ff62869bb5a46088b4737374"
+    },
+    {
+      "file": "offline-fault-390.png",
+      "width": 390,
+      "height": 3361,
+      "sha256": "e973db6dbe1f1d6891ad979b87477fecdadc5cc8a1640a6146d067f377547327"
+    },
+    {
+      "file": "offline-fault-768.png",
+      "width": 768,
+      "height": 2467,
+      "sha256": "828c3fbf22a620044bd0a9efc0589ddb7b5631772667806cc78e06320022e033"
+    },
+    {
+      "file": "overview-1024.png",
+      "width": 1024,
+      "height": 2403,
+      "sha256": "3719b1a8e37049331ca0580abf3c9a59e49410454dd805ccd5746b379f256a8d"
+    },
+    {
+      "file": "overview-1440.png",
+      "width": 1440,
+      "height": 1538,
+      "sha256": "cc51b753fd01aa4e298514a75c58db5e111060e8a70f7deb349593959d57c782"
+    },
+    {
+      "file": "overview-390.png",
+      "width": 390,
+      "height": 3361,
+      "sha256": "7ca2c3db8a8c0f2637694052224d21e621237b320564dbe0d7f6042770ecb9c1"
+    },
+    {
+      "file": "overview-768.png",
+      "width": 768,
+      "height": 2467,
+      "sha256": "6b8aefb0ddfe32e1c35a53d96eba3945afd80b167d2615c78b70a312a7d2aca1"
+    },
+    {
+      "file": "rag-chat-visible-1024.png",
+      "width": 1024,
+      "height": 3686,
+      "sha256": "e677093456e49a9f421295356f9227454259f143d4c4d1e175c7533e5de000ee"
+    },
+    {
+      "file": "rag-chat-visible-1440.png",
+      "width": 1440,
+      "height": 3263,
+      "sha256": "c97d681253e017fdb6154c768c8ce7035e7867a80e397e9d67a7a773a47df7f4"
+    },
+    {
+      "file": "rag-chat-visible-390.png",
+      "width": 390,
+      "height": 5017,
+      "sha256": "689e13df564d9d36a5c61942bf431a7cecab2f994a0af8281d0245bc13278b2f"
+    },
+    {
+      "file": "rag-chat-visible-768.png",
+      "width": 768,
+      "height": 3847,
+      "sha256": "4d44eb3d63e4e6236da1c29b5eea8d810c4fb7029bcd5dc0108c18c8ffc82ba4"
+    },
+    {
+      "file": "semantic-search-1024.png",
+      "width": 1024,
+      "height": 4576,
+      "sha256": "c9cc6d7a72a8920c383e877c0ba23fc87e9ab37ad0799d50487af5768cb72f1e"
+    },
+    {
+      "file": "semantic-search-1440.png",
+      "width": 1440,
+      "height": 3640,
+      "sha256": "4ca1b4a4d505d2cce3b22a07eb7c9beb13f4606132a10fa0f33451c3a8f77ffb"
+    },
+    {
+      "file": "semantic-search-390.png",
+      "width": 390,
+      "height": 6292,
+      "sha256": "c2c1f998e49121aac1f7c07f39fb55f148a4ad9c4a10d13452a81503756ea7bc"
+    },
+    {
+      "file": "semantic-search-768.png",
+      "width": 768,
+      "height": 4664,
+      "sha256": "35d4f6324ab91cd501f57d0661b98fd64dbfe2ec0c98d68f08231f218dd07c8a"
+    },
+    {
+      "file": "vector-explorer-1024.png",
+      "width": 1024,
+      "height": 3992,
+      "sha256": "05c7d634709f56452e1366944a13274f7463cc08af980c3fec8ae2d202161cc5"
+    },
+    {
+      "file": "vector-explorer-1440.png",
+      "width": 1440,
+      "height": 3940,
+      "sha256": "53243ab3976975f7df025b472ace0baa5c911959ef9854a32870d944a697b096"
+    },
+    {
+      "file": "vector-explorer-390.png",
+      "width": 390,
+      "height": 5364,
+      "sha256": "2d116052aba887e121fcacd1190fc4a901825df62aaa65aeba447fefdcdca1e9"
+    },
+    {
+      "file": "vector-explorer-768.png",
+      "width": 768,
+      "height": 4024,
+      "sha256": "2052112648c66efffb5a91a4fa4792505d199357ac25facbf97c476083d24f0d"
+    }
+  ],
+  "comparison": "Playwright screenshot threshold0.1, at most100 different pixels; fixed before verification; no auto update",
+  "negative_oracle": "Deliberate red panel must be rejected by the same comparator",
+  "rag_capture": "Visible-time-mask supplement replaces the four legacy hidden-details-mask RAG references; originals remain immutable"
+}

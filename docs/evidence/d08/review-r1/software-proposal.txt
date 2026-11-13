@@ -1,0 +1,18 @@
+COMMAND: npm.cmd run test:visual
+
+> pinecone-visual-lab@0.8.0 test:visual
+> playwright test --config playwright.visual.config.ts
+
+[WebServer] (node:20508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:26108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\visual\audit.spec.ts:53:1 › paired production visual audit on owned persistent synthetic data (2.9m)
+
+  1 passed (3.0m)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 183.97

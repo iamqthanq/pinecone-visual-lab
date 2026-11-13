@@ -1,31 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Braces, Check, Copy, LoaderCircle, RefreshCw, X } from 'lucide-react'
+import { Braces, Check, LoaderCircle, RefreshCw, X } from 'lucide-react'
 import { Badge, Button, Panel } from './components'
 import { documentAPI } from './documents-api'
 import type { ChunkVersion, DocumentSummary, SourceDocument } from './documents-api'
 import { embeddingAPI } from './embeddings-api'
 import type { EmbeddingRecord, ModelStatus, Similarity } from './embeddings-api'
 import './vectors.css'
+import { VectorInspector } from './VectorInspector'
+export { VectorInspector } from './VectorInspector'
 import { demoSelection } from './guided-state'
-
-export function VectorInspector({ record, title, onNotice }: { record: EmbeddingRecord; title: string; onNotice: (text: string) => void }) {
-  const [view, setView] = useState('heatmap')
-  return <Panel className="vector-inspector" label={title}>
-    <div className="document-panel-heading"><h2><Braces size={18} />{title}</h2><Badge tone="green">{record.dimension} DIMENSIONS</Badge></div>
-    <p className="vector-model mono">{record.model_id} · {record.model_revision}</p>
-    {record.mode !== 'e5' && <p className="doc-warning">TEST FIXTURE — NOT E5. These vectors do not encode semantic meaning.</p>}
-    <div className="vector-metrics"><span><small>INPUT</small><strong>{record.input_token_count} tokens</strong></span><span><small>L2 NORM</small><strong>{record.norm.toFixed(6)}</strong></span><span><small>INFERENCE · BATCH {record.batch_size}</small><strong>{record.inference_ms.toFixed(1)} ms{record.cached ? ' · cached' : ''}</strong></span><span><small>LOAD · THIS RECORD</small><strong>{record.load_ms.toFixed(1)} ms</strong></span></div>
-    <p className="config-hint">Prefix <code>{record.prefix}</code> · L2 normalized · CPU / float32 · min {Math.min(...record.values).toFixed(5)} / max {Math.max(...record.values).toFixed(5)}</p>
-    {record.source_chunk_id && <p className="vector-provenance mono">Document {record.source_document_id}<br />Version {record.source_version_id}<br />Chunk {record.source_chunk_id} · pages {record.page_start}–{record.page_end}</p>}
-    <div className="vector-view-controls"><div role="group" aria-label={`${title} view`}><Button aria-pressed={view === 'heatmap'} onClick={() => setView('heatmap')}>Heatmap</Button><Button aria-pressed={view === 'table'} onClick={() => setView('table')}>Table</Button></div><Button aria-label={`Copy ${title}`} onClick={() => {
-      void navigator.clipboard.writeText(JSON.stringify(record)).then(() => onNotice('Full 384D vector JSON copied.')).catch(() => onNotice('Clipboard unavailable. Use the vector table to select values.'))
-    }}><Copy size={15} />Copy vector JSON</Button></div>
-    {view === 'heatmap' ? <><div className="vector-heatmap" role="group" aria-label={`${title} 384 dimensions`}>{record.values.map((value, index) => <span role="img" key={index} title={`Dimension ${index}: ${value}`} aria-label={`Dimension ${index}: ${value.toFixed(6)}`} style={{ background: value >= 0 ? `rgba(124,231,203,${0.15+Math.min(0.85, Math.abs(value)*5)})` : `rgba(158,142,247,${0.15+Math.min(0.85, Math.abs(value)*5)})` }} />)}</div><p className="config-hint">Indices 0–383, row by row. Mint ≥ 0 · violet &lt; 0. Color strength is magnitude. This is the full vector, not a 2D projection; use Table for every value.</p></>
-      : <div className="vector-table-scroll" tabIndex={0} role="region" aria-label={`${title} numeric values`}><table><caption>All 384 dimensions · zero-based index</caption><thead><tr><th scope="col">Dimension</th><th scope="col">Value</th></tr></thead><tbody>{record.values.map((value, index) => <tr key={index}><th scope="row">{index}</th><td>{value.toPrecision(9)}</td></tr>)}</tbody></table></div>}
-    <p className="config-hint">Whole-batch inference timing; no invented per-item latencies. Cached records retain their original measurement.</p>
-  </Panel>
-}
 
 export default function VectorsLab() {
   const selection = demoSelection(useLocation().search)
