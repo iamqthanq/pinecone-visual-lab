@@ -14,6 +14,7 @@ function Invoke-Gate {
 
 Invoke-Gate 'Frontend lint' { npm.cmd run lint }
 Invoke-Gate 'TypeScript strict' { npm.cmd run typecheck }
+Invoke-Gate 'Visual harness TypeScript strict' { npm.cmd run typecheck:visual }
 Invoke-Gate 'Frontend unit tests' { npm.cmd test }
 Invoke-Gate 'Python lint' { & $taskPython -m ruff check apps/api scripts tests }
 Invoke-Gate 'Backend API + Git guard tests' { & $taskPython scripts/run_pytest.py }

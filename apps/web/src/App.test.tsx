@@ -59,10 +59,11 @@ describe('D01 foundation', () => {
     fireEvent.click(screen.getByRole('link', { name: 'Search Lab' }))
     expect(await screen.findByRole('heading', { name: 'Find meaning. Follow the source.' })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('link', { name: 'Architecture Lab' }))
-    expect(await screen.findByRole('heading', { name: 'Follow a write. Unpack a read.' })).toBeInTheDocument()
+    // This route cold-loads React Flow/GSAP; wait for the actual heading, not a 1s import budget.
+    expect(await screen.findByRole('heading', { name: 'Follow a write. Unpack a read.' }, { timeout: 5000 })).toBeInTheDocument()
     expect(screen.getByText('SIMULATION — EDUCATIONAL MODEL — NOT PINECONE TELEMETRY')).toBeVisible()
     expect(screen.getByRole('button', { name: 'Next' })).toBeEnabled()
-  })
+  }, 10000)
 
   it('renders a meaningful unknown-route fallback', async () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(Response.json(health)))

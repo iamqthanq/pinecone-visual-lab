@@ -18,6 +18,20 @@ beforeEach(() => {
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals() })
 
 describe('Architecture simulator rendering/controller (real diagram is separately browser-tested)', () => {
+  it('ignores a queued resize after unmount and disconnects the observer', () => {
+    let callback: ResizeObserverCallback | undefined
+    const disconnect = vi.fn()
+    vi.stubGlobal('ResizeObserver', class {
+      constructor(value: ResizeObserverCallback) { callback = value }
+      observe() {}
+      disconnect = disconnect
+    })
+    const { unmount } = render(<ArchitectureLab />)
+    const resize = callback!
+    unmount()
+    expect(disconnect).toHaveBeenCalledOnce()
+    expect(() => resize([], {} as ResizeObserver)).not.toThrow()
+  })
   it('maps all conceptual nodes and edges, banner and accessible linear steps', () => {
     const s = initialSimulator('read')
     const graph = diagram(snapshot(s), program('read', 7)[0])

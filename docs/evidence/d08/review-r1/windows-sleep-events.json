@@ -1,0 +1,12 @@
+[
+    {
+        "local_time":  "2026-11-13T06:33:34.8695072+07:00",
+        "Id":  107,
+        "Message":  "The system has resumed from sleep."
+    },
+    {
+        "local_time":  "2026-11-13T06:33:33.1094786+07:00",
+        "Id":  42,
+        "Message":  "The system is entering sleep.\r\n\r\nSleep Reason: Button or Lid"
+    }
+]

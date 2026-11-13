@@ -1,0 +1,44 @@
+COMMAND: npx.cmd playwright test --config .cache/d08-r1/probe.config.ts --grep "compare recorded render probes"
+[WebServer] (node:29224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:7104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  name: 'default',
+  base: 0,
+  ci: '101 pixels (ratio 0.01 of all image pixels) are different.'
+}
+{
+  name: 'software',
+  base: '101 pixels (ratio 0.01 of all image pixels) are different.',
+  ci: 0
+}
+{
+  name: 'swiftshader',
+  base: '33 pixels (ratio 0.01 of all image pixels) are different.',
+  ci: '135 pixels (ratio 0.01 of all image pixels) are different.'
+}
+{
+  name: 'd3d11',
+  base: 0,
+  ci: '101 pixels (ratio 0.01 of all image pixels) are different.'
+}
+{
+  name: 'skia',
+  base: 0,
+  ci: '101 pixels (ratio 0.01 of all image pixels) are different.'
+}
+{
+  name: 'noLCD',
+  base: '37570 pixels (ratio 0.01 of all image pixels) are different.',
+  ci: '37215 pixels (ratio 0.01 of all image pixels) are different.'
+}
+  ok 1 .cache\d08-r1\probe.spec.ts:22:1 › compare recorded render probes (19.9s)
+
+  1 passed (22.1s)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 29.25

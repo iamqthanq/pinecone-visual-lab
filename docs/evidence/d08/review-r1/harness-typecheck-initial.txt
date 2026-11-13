@@ -1,0 +1,5 @@
+COMMAND: node node_modules/typescript/bin/tsc --project .cache/d08-r1/tsconfig.json
+tests/visual/audit.spec.ts(2,34): error TS6196: 'Page' is declared but never used.
+
+EXIT_CODE: 2
+ELAPSED_SECONDS: 7.01

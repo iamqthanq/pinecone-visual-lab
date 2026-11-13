@@ -4,7 +4,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 
 const fixture = process.env.PVL_E2E_FIXTURE === '1'
-const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d08/regression'
+const evidence = fixture ? 'test-results/fixture-screenshots' : 'docs/evidence/d08/review-r1/regression'
 const label = `${fixture ? 'NOT E5' : 'REAL E5'} / SQLite / MOCK OLLAMA or search-only / NO CLOUD`
 async function action(page: Page, button: string, type: string) {
   const response = page.waitForResponse(r => r.url().includes('/api/guided/sessions/') && r.url().endsWith('/actions') && r.request().postDataJSON()?.action === type, { timeout: 160000 })
@@ -130,7 +130,7 @@ test('complete guided local pipeline, reload/source linking, optional RAG, three
     if (mode === 'read') { expect(image.top.map((r: { id: string }) => r.id)).toEqual(['c-7', 'a-7']); expect(image.top[0].score).toBeCloseTo(1 / Math.sqrt(2), 12) }
     if (mode === 'compaction') { expect(image.slabs.at(-1).id).toBe('L2-1'); expect(image.slabs.at(-1).records.find((r: { id: string }) => r.id === 'b-7').values).toBeNull() }
     await mkdir(evidence, { recursive: true })
-    await writeFile(`${fixture ? 'test-results' : 'docs/evidence/d08/regression'}/simulator-${mode}.json`, JSON.stringify({ label: 'SIMULATION / TOY 2D / NOT E5 / NOT PINECONE TELEMETRY', snapshot: image }, null, 2) + '\n', 'utf8')
+    await writeFile(`${fixture ? 'test-results' : 'docs/evidence/d08/review-r1/regression'}/simulator-${mode}.json`, JSON.stringify({ label: 'SIMULATION / TOY 2D / NOT E5 / NOT PINECONE TELEMETRY', snapshot: image }, null, 2) + '\n', 'utf8')
     if (!fixture) await captured(page, `simulator-${mode}-1440`)
   }
   await expect(page.getByText('Guided Demo complete. Real local pipeline and educational simulation remain distinct.')).toBeVisible()
@@ -151,7 +151,7 @@ test('complete guided local pipeline, reload/source linking, optional RAG, three
   expect(remaining.records).toEqual(userFetch.records)
   expect((await request.get(`/api/vector-store/jobs/${job.id}`)).ok()).toBeTruthy()
   entries.push({ action: 'reset', ...reset, unrelated_preserved: true })
-  await writeFile(fixture ? 'docs/evidence/d08/regression/fixture-guided-example.json' : 'docs/evidence/d08/regression/browser-guided-example.json', JSON.stringify({ label, sid, entries }, null, 2) + '\n', 'utf8')
+  await writeFile(fixture ? 'docs/evidence/d08/review-r1/regression/fixture-guided-example.json' : 'docs/evidence/d08/review-r1/regression/browser-guided-example.json', JSON.stringify({ label, sid, entries }, null, 2) + '\n', 'utf8')
   await page.getByRole('button', { name: 'Cancel Guided Demo' }).click()
   await expect(page.getByRole('region', { name: 'Guided Demo', exact: true })).toHaveCount(0)
   expect(await page.evaluate(() => sessionStorage.getItem('pvl-guided-v1'))).toBeNull()

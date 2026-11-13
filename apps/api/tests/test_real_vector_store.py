@@ -62,7 +62,7 @@ def test_real_e5_confirmed_source_sqlite_storage_restart_namespace_and_owned_del
             doc["id"], version["id"], [record["metadata"]["chunk_id"]]
         )[0]
         assert cached["values"] == record["values"] and cached["prefix"] == "passage: "
-        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d08/regression"
+        evidence = Path(__file__).resolve().parents[3] / "docs/evidence/d08/review-r1/regression"
         evidence.mkdir(parents=True, exist_ok=True)
         (evidence / "real-local-stored-vector.json").write_text(
             json.dumps(

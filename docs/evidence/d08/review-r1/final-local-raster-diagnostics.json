@@ -1,0 +1,193 @@
+{
+  "note": "Raw RGB diagnostics, not tolerance comparator; all64 accepted at unchanged100/.1",
+  "byte_identical": 47,
+  "different": [
+    {
+      "file": "documents-unselected-1440.png",
+      "raw_pixels": 18,
+      "bbox": [
+        260,
+        104,
+        369,
+        317
+      ],
+      "actual_sha256": "a97935611b8e0d65dfecd8744f3d3cdf2c43315b204c8046b13a31f44d14dafe"
+    },
+    {
+      "file": "documents-source-1440.png",
+      "raw_pixels": 54,
+      "bbox": [
+        537,
+        336,
+        1404,
+        1116
+      ],
+      "actual_sha256": "de8cd0fff32ffb35522e6e72a2dc3a05672defc44ce7bec3a23ec65a45e6d52c"
+    },
+    {
+      "file": "documents-source-1024.png",
+      "raw_pixels": 14,
+      "bbox": [
+        972,
+        707,
+        975,
+        747
+      ],
+      "actual_sha256": "574a0f0cfab2e0d148a0c0c2229c68d3c04ec83efeb75092f60692d796623d3d"
+    },
+    {
+      "file": "documents-source-768.png",
+      "raw_pixels": 14,
+      "bbox": [
+        716,
+        774,
+        719,
+        814
+      ],
+      "actual_sha256": "b24c2724cde77e79d221100ea6af4837e267bd6cf4b0675a93eedcfd10ce79a4"
+    },
+    {
+      "file": "documents-source-390.png",
+      "raw_pixels": 14,
+      "bbox": [
+        348,
+        949,
+        351,
+        989
+      ],
+      "actual_sha256": "2a90602a7a7c36518b8451d0cdc4a6339c8280a3ced09ec60322a3338135b702"
+    },
+    {
+      "file": "chunks-versions-1440.png",
+      "raw_pixels": 30,
+      "bbox": [
+        537,
+        336,
+        1404,
+        862
+      ],
+      "actual_sha256": "14ece68b2c4ce07e33df718ddfc2ed6406a7adb03ad10f235e92ad877ee3674e"
+    },
+    {
+      "file": "chunks-versions-1024.png",
+      "raw_pixels": 14,
+      "bbox": [
+        972,
+        707,
+        975,
+        747
+      ],
+      "actual_sha256": "459a77a9bd3b812df3c60d48dd0a089743d5ebcf69f8a763db84c9d766157019"
+    },
+    {
+      "file": "chunks-versions-768.png",
+      "raw_pixels": 14,
+      "bbox": [
+        716,
+        774,
+        719,
+        814
+      ],
+      "actual_sha256": "ec20126a044267d28a815fe694d1507a3db93de63ca5058dfa6c5e7bfca54b25"
+    },
+    {
+      "file": "chunks-versions-390.png",
+      "raw_pixels": 14,
+      "bbox": [
+        348,
+        949,
+        351,
+        989
+      ],
+      "actual_sha256": "bea94ed630136757149c2ef496efd895950d4090546ca5a5adb6b3d17adb9714"
+    },
+    {
+      "file": "invalid-config-1440.png",
+      "raw_pixels": 30,
+      "bbox": [
+        537,
+        336,
+        1404,
+        862
+      ],
+      "actual_sha256": "340ac71dc9a2f7b23fa2dca226df2f9af1cd5eb1bd00242b1e2f8bb28eec73e4"
+    },
+    {
+      "file": "invalid-config-1024.png",
+      "raw_pixels": 14,
+      "bbox": [
+        972,
+        707,
+        975,
+        747
+      ],
+      "actual_sha256": "2c80d5d1fe485d4e9dd0b0006fa7920ca48cf8f1bdc663b12db300da3c7f84f8"
+    },
+    {
+      "file": "invalid-config-768.png",
+      "raw_pixels": 14,
+      "bbox": [
+        716,
+        774,
+        719,
+        814
+      ],
+      "actual_sha256": "58bbaa25ca024f3736e87069e83c5204a2628d3c26cd224a7d41487771170b1a"
+    },
+    {
+      "file": "invalid-config-390.png",
+      "raw_pixels": 14,
+      "bbox": [
+        348,
+        949,
+        351,
+        989
+      ],
+      "actual_sha256": "492995ce12d2732d745aa8c196733e1e367df45dcedc38b191ee3d6e2af32241"
+    },
+    {
+      "file": "delete-confirmation-1440.png",
+      "raw_pixels": 14,
+      "bbox": [
+        1376,
+        338,
+        1403,
+        861
+      ],
+      "actual_sha256": "7d645de6dd658b7ad1d34c0f43eb7336baa5e72cbda32272375463db378a4b61"
+    },
+    {
+      "file": "delete-confirmation-1024.png",
+      "raw_pixels": 10,
+      "bbox": [
+        972,
+        709,
+        975,
+        747
+      ],
+      "actual_sha256": "edd9ce9ce502aea2411725716f6dcf2801a9c64cd9d713105e403e679dd19cbc"
+    },
+    {
+      "file": "delete-confirmation-768.png",
+      "raw_pixels": 10,
+      "bbox": [
+        716,
+        776,
+        719,
+        814
+      ],
+      "actual_sha256": "a63cabc38dd237dcfa981525a569d785c096ef81d2887192fd1d6ff37bab97ad"
+    },
+    {
+      "file": "delete-confirmation-390.png",
+      "raw_pixels": 14,
+      "bbox": [
+        348,
+        949,
+        351,
+        989
+      ],
+      "actual_sha256": "1046133842befe7ea696f1b145792c70c7e7e0a3658112372870f181fc01285f"
+    }
+  ]
+}

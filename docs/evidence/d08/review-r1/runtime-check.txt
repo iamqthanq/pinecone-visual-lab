@@ -1,0 +1,6 @@
+COMMAND: .venv\Scripts\python.exe docs/evidence/d08/review-r1/verify-runtime.py
+Cached E5 assets/tokenizer checksum PASS. Runtime/license/resource manifest recorded.
+No Ollama binary invoked, daemon probed, model downloaded/loaded, or cloud contacted.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 8.07

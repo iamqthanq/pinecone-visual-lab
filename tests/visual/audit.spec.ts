@@ -1,9 +1,11 @@
 import { test, expect } from '@playwright/test'
-import type { APIRequestContext, Page } from '@playwright/test'
+import type { APIRequestContext } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises'
 import { execFileSync } from 'node:child_process'
+import { createHash } from 'node:crypto'
 import { record, recorded, replay } from './replay'
+import { renderingEnvironment, softwareReferences } from './rendering'
 
 const fixture = process.env.PVL_E2E_FIXTURE === '1'
 const mode = fixture ? 'fixture' : 'real-e5'
@@ -11,9 +13,9 @@ const stage = process.env.PVL_VISUAL_STAGE ?? 'verify'
 const replaying = process.env.PVL_VISUAL_REPLAY === '1'
 const recording = process.env.PVL_VISUAL_RECORD === '1'
 const supplement = process.env.PVL_VISUAL_SUPPLEMENT === 'rag'
-if (supplement && stage === 'verify') throw new Error('Supplement capture is separate from immutable reference verification')
+if (supplement && ['verify', 'proposal'].includes(stage)) throw new Error('Supplement capture is separate from software reference verification/proposal')
 if (recording && (!fixture || stage !== 'after' || replaying)) throw new Error('Recording requires explicit fixture AFTER capture against the real isolated API')
-const output = stage === 'verify' ? `.cache/d08-visual-verify/${mode}` : `docs/evidence/d08/${stage}/${mode}`
+const output = stage === 'proposal' ? softwareReferences : stage === 'verify' ? `.cache/d08-visual-verify/${mode}` : `docs/evidence/d08/${stage}/${mode}`
 const widths = [{ width: 1440, height: 900 }, { width: 1024, height: 768 }, { width: 768, height: 1024 }, { width: 390, height: 844 }]
 const query = 'Tìm kiếm vector sử dụng embedding và cosine như thế nào?'
 
@@ -49,12 +51,23 @@ async function prepare(request: APIRequestContext): Promise<Seed> {
   return seed!
 }
 
-test('paired production visual audit on owned persistent synthetic data', async ({ page, request, browser }) => {
+test('paired production visual audit on owned persistent synthetic data', async ({ page, request, browser }, testInfo) => {
   const seed = replaying ? (await recorded()).seed as Seed : await prepare(request)
   const playback = replaying ? await replay(page) : null
   const saveRecording = recording ? record(page, seed) : null
   await mkdir(output, { recursive: true })
+  const environment = await renderingEnvironment(browser, page, ['proposal', 'verify'].includes(stage))
+  // Persist before the first assertion/capture so failed CI retains the actual environment.
+  const environmentJson = JSON.stringify(environment, null, 2) + '\n'
+  await writeFile(testInfo.outputPath('rendering-environment.json'), environmentJson, 'utf8')
+  await testInfo.attach('rendering-environment', { body: environmentJson, contentType: 'application/json' })
+  if (['proposal', 'verify'].includes(stage)) {
+    expect(environment.gpu.featureStatus?.gpu_compositing).toBe('disabled_software')
+    expect(environment.gpu.featureStatus?.rasterization).toBe('disabled_software')
+    expect(environment.client).toMatchObject({ locale: 'en-US', dpr: 1, reducedMotion: true })
+  }
   const captures: unknown[] = [], accessibility: unknown[] = []
+  const captureStates: unknown[] = []
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   const selected = new URLSearchParams({ demoDocument: seed.document_id, demoVersion: seed.version_id, demoChunk: seed.chunk_id, demoNamespace: seed.target.namespace })
@@ -62,7 +75,7 @@ test('paired production visual audit on owned persistent synthetic data', async 
   const masks = ['.connection-message small', '.search-trace .document-panel-heading > strong', '.search-trace li > span:last-child', '.vector-metrics > span:nth-child(3) strong', '.vector-metrics > span:nth-child(4) strong']
   async function shots(screen: string, state: string, scan = true) {
     if (supplement && screen !== 'rag-chat') return
-    const cleanRag = screen === 'rag-chat' && (supplement || stage === 'verify')
+    const cleanRag = screen === 'rag-chat' && (supplement || ['verify', 'proposal'].includes(stage))
     for (const viewport of widths) {
       await page.setViewportSize(viewport)
       await page.evaluate(async () => { await document.fonts.ready; (document.activeElement as HTMLElement)?.blur(); scrollTo(0, 0); await new Promise(requestAnimationFrame); await new Promise(requestAnimationFrame) })
@@ -70,13 +83,28 @@ test('paired production visual audit on owned persistent synthetic data', async 
       // Baseline records defects; after/verify must fix them, never mask layout.
       if (stage !== 'before') expect(overflow, `${screen} overflow ${viewport.width}`).toBe(false)
       const file = `${cleanRag ? 'rag-chat-visible' : screen}-${viewport.width}.png`
-      if (stage === 'before') {
+      const renderingState = await page.evaluate(() => {
+        const node = document.querySelector<HTMLElement>('.sim-node-content')
+        return { deviceScaleFactor: devicePixelRatio, locale: navigator.language,
+          fontsStatus: document.fonts.status, faces: Array.from(document.fonts).map(face => ({ family: face.family, weight: face.weight, status: face.status })),
+          graph: node ? { viewport: document.querySelector('.react-flow__viewport')?.getAttribute('style'),
+            nodes: document.querySelectorAll('.react-flow__node').length, font: getComputedStyle(node).font,
+            step: document.querySelector<HTMLInputElement>('input[aria-label="Seek simulation step"]')?.value,
+            mode: document.querySelector<HTMLSelectElement>('select[aria-label="Walkthrough"]')?.value,
+            runningAnimations: document.querySelector('.simulator')?.getAnimations({ subtree: true }).filter(animation => animation.playState === 'running').length } : null }
+      })
+      const captureState = { file, viewport, renderingState, sha256: null as string | null }
+      captureStates.push(captureState)
+      await writeFile(testInfo.outputPath('capture-states.json'), JSON.stringify(captureStates, null, 2) + '\n', 'utf8')
+      if (stage === 'before' || stage === 'proposal') {
         let exists = false; try { await access(`${output}/${file}`); exists = true } catch { /* new baseline */ }
-        if (exists) throw new Error(`Refuse overwriting original BEFORE ${file}`)
+        if (exists) throw new Error(`Refuse overwriting ${stage} reference ${file}`)
       }
       const options = { fullPage: true, animations: 'disabled' as const, mask: masks.map(s => page.locator(cleanRag ? `${s}:visible` : s)), maskColor: '#30485c' }
       if (stage === 'verify') await expect(page).toHaveScreenshot(file, options)
-      await page.screenshot({ path: `${output}/${file}`, ...options })
+      const image = await page.screenshot({ path: `${output}/${file}`, ...options })
+      captureState.sha256 = createHash('sha256').update(image).digest('hex')
+      await writeFile(testInfo.outputPath('capture-states.json'), JSON.stringify(captureStates, null, 2) + '\n', 'utf8')
       captures.push({ file, screen, state, viewport, overflow, scroll: { x: 0, y: 0 }, masks: cleanRag ? masks.map(s => `${s}:visible`) : masks, url: new URL(page.url()).pathname + new URL(page.url()).search })
       if (scan && [1440, 390].includes(viewport.width)) {
         const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()
@@ -163,7 +191,8 @@ test('paired production visual audit on owned persistent synthetic data', async 
   expect(errors).toEqual([])
   expect(playback?.missing ?? []).toEqual([])
   await saveRecording?.()
-  const manifest = { stage, mode, label: `${fixture ? 'NOT E5' : 'REAL E5'} / LOCAL SQLITE / MOCK OLLAMA NOT REAL LLM / NO CLOUD`,
+  await testInfo.attach('capture-states', { body: JSON.stringify(captureStates, null, 2), contentType: 'application/json' })
+  const manifest = { stage, mode, environment, label: `${fixture ? 'NOT E5' : 'REAL E5'} / LOCAL SQLITE / MOCK OLLAMA NOT REAL LLM / NO CLOUD`,
     source_base: '24d56a9af81d0277224dc0f3b7eff5fd0f395bf3', browser: browser.version(),
     head: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), seed, captures, accessibility,
     provenance: 'Bundled project-authored CC0 Vietnamese sample; separate ignored data root; BEFORE never overwritten',

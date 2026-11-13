@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
-const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d08/regression'
+const evidence = process.env.PVL_E2E_FIXTURE === '1' ? 'test-results/fixture-screenshots' : 'docs/evidence/d08/review-r1/regression'
 async function restoreScreenshotViewport(page: import('@playwright/test').Page) {
   await page.evaluate(() => {
     (document.activeElement as HTMLElement)?.blur()
@@ -45,7 +45,7 @@ test('real PDF upload → page → preview → inspect → confirm → JSONL →
   expect(chunks[0]).toMatchObject({ page_start: 1, index: 0, chunk_size: 300, overlap: 50 })
   expect(chunks.every(chunk => chunk.model_token_count <= 512 && chunk.token_count <= 300)).toBeTruthy()
   await mkdir(evidence, { recursive: true })
-  if (tokenizer.mode === 'e5') await writeFile('docs/evidence/d08/regression/synthetic-confirmed.jsonl', content, 'utf8')
+  if (tokenizer.mode === 'e5') await writeFile('docs/evidence/d08/review-r1/regression/synthetic-confirmed.jsonl', content, 'utf8')
   await page.evaluate(() => document.fonts.ready)
   await restoreScreenshotViewport(page)
   await page.screenshot({ path: `${evidence}/desktop-1440.png`, fullPage: true })

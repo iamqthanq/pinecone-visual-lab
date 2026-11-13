@@ -30,7 +30,9 @@ export default function ArchitectureLab({ initial, onChange }: { initial?: Simul
   useEffect(() => {
     if (!graphArea.current) return
     const resize = new ResizeObserver(() => {
-      const focus = graphArea.current!.clientWidth < 600 && current?.active.length ? current.active.map(id => ({ id })) : undefined
+      const area = graphArea.current
+      if (!area) return // A queued resize can arrive after route unmount clears the ref.
+      const focus = area.clientWidth < 600 && current?.active.length ? current.active.map(id => ({ id })) : undefined
       void graphHandle.current?.fitView({ nodes: focus, duration: 0, padding: focus ? 0.4 : 0.16 })
     })
     resize.observe(graphArea.current)

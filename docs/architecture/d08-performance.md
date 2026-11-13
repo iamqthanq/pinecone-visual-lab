@@ -1,5 +1,7 @@
 # D08 frontend loading, motion and measured performance
 
+R1 note: [CI raster investigation](../evidence/d08/review-r1/INVESTIGATION.md) adds a software compositor only to visual proposal/verification. Historical native-rendered performance measurements below remain unchanged; normal application/E2E/performance paths retain native rendering. Controlled renderer probes used the byte-identical original D08 build. A subsequent queued-resize null guard changes emitted JS hashes; R1 records those assets separately and makes no new product performance claim.
+
 The D07 production entry imported every lab, including React Flow/GSAP, and the eager Guided panel imported inspectors from full lab modules. The reproduced baseline is `index-BHBSqUm6.js`,660,065 bytes; Vite reported660.06kB /210.61kB gzip and a500kB warning. This was a warning, not a failed D07 build. [Original build](../evidence/d08/bundle-before-build.txt), [asset hashes](../evidence/d08/bundle-before.json).
 
 ## Dependency boundaries

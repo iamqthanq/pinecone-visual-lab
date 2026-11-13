@@ -1,0 +1,10 @@
+COMMAND: .venv\Scripts\python.exe docs/evidence/d08/review-r1/verify-repair.py
+12 functional test files preserve every original assertion; only evidence destinations differ.
+64 exact original state names retained; proposed reference hashes/profile/axe/five-width overflow verified.
+47/64 actual local PNG hashes equal software proposals byte for byte (diagnostic; tolerance unchanged).
+24 current production assets verified; sole product change is the queued resize null guard (no layout change).
+Full quality, real E5, fixture/real Edge and 9 visual cases have actual completed exit 0 logs.
+Independent visual approval pending; GitHub CI is reported separately, never inferred from local PASS.
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.96

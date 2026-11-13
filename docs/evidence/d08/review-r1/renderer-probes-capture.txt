@@ -1,0 +1,20 @@
+COMMAND: npx.cmd playwright test --config .cache/d08-r1/probe.config.ts
+[WebServer] (node:21312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:27624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+default 157.0.4341.42
+software 157.0.4341.42
+swiftshader 157.0.4341.42
+d3d11 157.0.4341.42
+skia 157.0.4341.42
+noLCD 157.0.4341.42
+  ok 1 .cache\d08-r1\probe.spec.ts:4:1 › render pipeline probes without changing references (36.8s)
+
+  1 passed (39.2s)
+
+EXIT_CODE: 0
+ELAPSED_SECONDS: 45.98

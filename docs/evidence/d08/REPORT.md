@@ -1,5 +1,7 @@
 # D08 / Issue15 — Workbench polish, bounded motion and measured loading
 
+**Round1 update:** the initial handoff below is historical at8625597. Independent review found reproducible CI visual failure on run43280051381 attempts1/2 (101/100 pixels). The repair, causal renderer experiment, separate software-reference proposal and new test/CI results are tracked in [R1 investigation](review-r1/INVESTIGATION.md) and [R1 report](review-r1/REPORT.md). Original hardware goldens and BEFORE/AFTER evidence are retained; no tolerance increase or automatic baseline approval.
+
 Assignment: [Issue15, full A–F](https://github.com/iamqthanq/pinecone-visual-lab/issues/15). Existing Windows checkout `D:\Corel\HK1_NAM4\PR\Giữa kì\pinecone-visual-lab`; origin `https://github.com/iamqthanq/pinecone-visual-lab`; integration `main`; feature `feature/issue-15-taste-gsap-polish`.
 
 Gate0 directly read the Issue, Master Plan Windows v2.1, AGENTS, authentic workflow, Branch Policy, frontend foundation/code/tests and D02–D07 architecture/evidence. PR14 MERGED / Issue13 CLOSED; fetched main contains D07 merge `24d56a9af81d0277224dc0f3b7eff5fd0f395bf3`. Initial worktree was clean and the feature was created from that fresh remote base. Active assignment/local guards now target Issue15. [GitHub read evidence](github-gate0.json), [Git audit](git-audit.txt). Branch metadata reported `protected:false`, rulesets `[]`; detailed protection API returned403 to the integration. No server settings changed.

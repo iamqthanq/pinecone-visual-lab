@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   foundation:
-    runs-on: windows-latest
+    runs-on: windows-2025
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -73,7 +73,7 @@ jobs:
         with:
           name: lab-browser-evidence
           path: |
-            docs/evidence/d08/regression/fixture-search-example.json
-            docs/evidence/d08/regression/fixture-rag-example.json
-            docs/evidence/d08/regression/fixture-guided-example.json
+            docs/evidence/d08/review-r1/regression/fixture-search-example.json
+            docs/evidence/d08/review-r1/regression/fixture-rag-example.json
+            docs/evidence/d08/review-r1/regression/fixture-guided-example.json
             test-results/

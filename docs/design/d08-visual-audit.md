@@ -1,5 +1,7 @@
 # D08 visual audit — technical seminar workbench
 
+R1 follow-up: original hardware captures below are preserved. [Software renderer/reference proposal and64 paired comparisons](../evidence/d08/review-r1/INVESTIGATION.md) address a reproducible CI raster mismatch without changing product design, source data, screenshot coverage, masks or tolerance. Independent approval of the separate software candidates remains pending.
+
 Audit reference: D07 `main` merge `24d56a9af81d0277224dc0f3b7eff5fd0f395bf3`. Actual production build, Microsoft Edge157.0.4341.42, Windows;128 BEFORE screenshots,16 states ×4 viewports ×2 independently labeled modes. Captures precede any application UI change. [Real-E5 manifest](../evidence/d08/before/real-e5/manifest.json), [NOT-E5 manifest](../evidence/d08/before/fixture/manifest.json). Source IDs/version/namespace persist in separate ignored synthetic databases between captures. No personal data, cloud or real Ollama.
 
 ## Intent and source guidance
