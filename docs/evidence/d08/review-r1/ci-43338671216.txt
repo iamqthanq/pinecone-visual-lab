@@ -1,0 +1,774 @@
+foundation	Set up job	﻿2026-11-13T00:38:40.6299756Z Current runner version: '2.338.2'
+foundation	Set up job	2026-11-13T00:38:40.6343012Z ##[group]Runner Image Provisioner
+foundation	Set up job	2026-11-13T00:38:40.6343835Z Hosted Compute Agent
+foundation	Set up job	2026-11-13T00:38:40.6344411Z Version: 20261103.629
+foundation	Set up job	2026-11-13T00:38:40.6344992Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+foundation	Set up job	2026-11-13T00:38:40.6345652Z Build Date: 2026-11-03T17:26:59Z
+foundation	Set up job	2026-11-13T00:38:40.6346303Z Worker ID: {527bd3ec-8f8f-4875-9474-67f1aa64a10e}
+foundation	Set up job	2026-11-13T00:38:40.6346945Z Region: westus
+foundation	Set up job	2026-11-13T00:38:40.6347413Z Cloud: Azure
+foundation	Set up job	2026-11-13T00:38:40.6347921Z ##[endgroup]
+foundation	Set up job	2026-11-13T00:38:40.6349206Z ##[group]Operating System
+foundation	Set up job	2026-11-13T00:38:40.6349824Z Microsoft Windows Server 2025
+foundation	Set up job	2026-11-13T00:38:40.6350394Z 10.0.26100
+foundation	Set up job	2026-11-13T00:38:40.6350964Z Datacenter
+foundation	Set up job	2026-11-13T00:38:40.6351447Z ##[endgroup]
+foundation	Set up job	2026-11-13T00:38:40.6351916Z ##[group]Runner Image
+foundation	Set up job	2026-11-13T00:38:40.6352444Z Image: windows-2025-vs2026
+foundation	Set up job	2026-11-13T00:38:40.6353048Z Version: 20261103.298.1
+foundation	Set up job	2026-11-13T00:38:40.6354111Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+foundation	Set up job	2026-11-13T00:38:40.6356232Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+foundation	Set up job	2026-11-13T00:38:40.6357776Z ##[endgroup]
+foundation	Set up job	2026-11-13T00:38:40.6359079Z ##[group]GITHUB_TOKEN Permissions
+foundation	Set up job	2026-11-13T00:38:40.6360934Z Contents: read
+foundation	Set up job	2026-11-13T00:38:40.6361556Z Metadata: read
+foundation	Set up job	2026-11-13T00:38:40.6362048Z ##[endgroup]
+foundation	Set up job	2026-11-13T00:38:40.6363980Z Secret source: Actions
+foundation	Set up job	2026-11-13T00:38:40.6364868Z Cache mode: write
+foundation	Set up job	2026-11-13T00:38:40.6365527Z Prepare workflow directory
+foundation	Set up job	2026-11-13T00:38:40.6796500Z Prepare all required actions
+foundation	Set up job	2026-11-13T00:38:40.6868257Z Getting action download info
+foundation	Set up job	2026-11-13T00:38:41.0346625Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+foundation	Set up job	2026-11-13T00:38:41.1671192Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+foundation	Set up job	2026-11-13T00:38:41.3441796Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+foundation	Set up job	2026-11-13T00:38:41.4900728Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+foundation	Set up job	2026-11-13T00:38:41.8454120Z Complete job name: foundation
+foundation	Run actions/checkout@v4	﻿2026-11-13T00:38:42.0031098Z ##[group]Run actions/checkout@v4
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0032521Z with:
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0033327Z   repository: iamqthanq/pinecone-visual-lab
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0042127Z   token: ***
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0042878Z   ssh-strict: true
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0043635Z   ssh-user: git
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0044396Z   persist-credentials: true
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0045231Z   clean: true
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0045996Z   sparse-checkout-cone-mode: true
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0046905Z   fetch-depth: 1
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0047653Z   fetch-tags: false
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0048416Z   show-progress: true
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0049212Z   lfs: false
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0049923Z   submodules: false
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0050743Z   set-safe-directory: true
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0051648Z   allow-unsafe-pr-checkout: false
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.0052822Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.1537016Z Syncing repository: iamqthanq/pinecone-visual-lab
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.1539541Z ##[group]Getting Git version info
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.1541443Z Working directory is 'D:\a\pinecone-visual-lab\pinecone-visual-lab'
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.2460433Z [command]"C:\Program Files\Git\bin\git.exe" version
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.5483081Z git version 2.56.0.windows.4
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.5537861Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.5558998Z Temporarily overriding HOME='D:\a\_temp\36637cce-8e9b-42e1-9c8a-f3d88442bbca' before making global git config changes
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.5561286Z Adding repository directory to the temporary git global config as a safe directory
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.5570765Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\pinecone-visual-lab\pinecone-visual-lab
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.6184075Z Deleting the contents of 'D:\a\pinecone-visual-lab\pinecone-visual-lab'
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.6190972Z ##[group]Initializing the repository
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.6201463Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\pinecone-visual-lab\pinecone-visual-lab
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.7005566Z Initialized empty Git repository in D:/a/pinecone-visual-lab/pinecone-visual-lab/.git/
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.7068406Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/iamqthanq/pinecone-visual-lab
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.7885603Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.7887231Z ##[group]Disabling automatic garbage collection
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.7894886Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.8269547Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.8270998Z ##[group]Setting up auth
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.8281292Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+foundation	Run actions/checkout@v4	2026-11-13T00:38:42.8668503Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+foundation	Run actions/checkout@v4	2026-11-13T00:38:44.2011142Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+foundation	Run actions/checkout@v4	2026-11-13T00:38:44.2399969Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+foundation	Run actions/checkout@v4	2026-11-13T00:38:44.8280270Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+foundation	Run actions/checkout@v4	2026-11-13T00:38:44.8668680Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+foundation	Run actions/checkout@v4	2026-11-13T00:38:45.3834301Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+foundation	Run actions/checkout@v4	2026-11-13T00:38:45.4221273Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:45.4222098Z ##[group]Fetching the repository
+foundation	Run actions/checkout@v4	2026-11-13T00:38:45.4235331Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3037ba4fbf3c4ddf9ff72c3669483d093c7c08ae:refs/remotes/pull/16/merge
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5112060Z From https://github.com/iamqthanq/pinecone-visual-lab
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5113143Z  * [new ref]         3037ba4fbf3c4ddf9ff72c3669483d093c7c08ae -> pull/16/merge
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5156891Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5157617Z ##[group]Determining the checkout info
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5161357Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5171126Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.5696242Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.6151172Z ##[group]Checking out the ref
+foundation	Run actions/checkout@v4	2026-11-13T00:38:56.6160459Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/16/merge
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.6733387Z Updating files:  85% (927/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.6867304Z Updating files:  86% (930/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.7011970Z Updating files:  87% (941/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.7208407Z Updating files:  88% (952/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.7336714Z Updating files:  89% (963/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.7530136Z Updating files:  90% (973/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.7841732Z Updating files:  91% (984/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8006311Z Updating files:  92% (995/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8173302Z Updating files:  93% (1006/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8206097Z Updating files:  94% (1017/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8236505Z Updating files:  95% (1027/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8274632Z Updating files:  96% (1038/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8303573Z Updating files:  97% (1049/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8336413Z Updating files:  98% (1060/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8371074Z Updating files:  99% (1071/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8371576Z Updating files: 100% (1081/1081)
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.8372131Z Updating files: 100% (1081/1081), done.
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9899161Z Note: switching to 'refs/remotes/pull/16/merge'.
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9899628Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9899995Z You are in 'detached HEAD' state. You can look around, make experimental
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9901029Z changes and commit them, and you can discard any commits you make in this
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9901742Z state without impacting any branches by switching back to a branch.
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9902173Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9902442Z If you want to create a new branch to retain commits you create, you may
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9902904Z do so (now or later) by using -c with the switch command. Example:
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903165Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903300Z   git switch -c <new-branch-name>
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903467Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903560Z Or undo this operation with:
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903727Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903806Z   git switch -
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9903913Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9904119Z Turn off this advice by setting config variable advice.detachedHead to false
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9904429Z
+foundation	Run actions/checkout@v4	2026-11-13T00:38:57.9904775Z HEAD is now at 3037ba4 Merge 01033a770e2408b3d28bee3baf1c140c86389497 into 24d56a9af81d0277224dc0f3b7eff5fd0f395bf3
+foundation	Run actions/checkout@v4	2026-11-13T00:38:58.0243152Z ##[endgroup]
+foundation	Run actions/checkout@v4	2026-11-13T00:38:58.0728569Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+foundation	Run actions/checkout@v4	2026-11-13T00:38:58.1092898Z 3037ba4fbf3c4ddf9ff72c3669483d093c7c08ae
+foundation	Run actions/setup-node@v4	﻿2026-11-13T00:38:58.1576948Z ##[group]Run actions/setup-node@v4
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1577271Z with:
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1577511Z   node-version: 22.20.0
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1577714Z   cache: npm
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1577883Z   always-auth: false
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1578071Z   check-latest: false
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1581208Z   token: ***
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.1581397Z ##[endgroup]
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.3294412Z Attempting to download 22.20.0...
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.3470940Z (node:5060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:58.3471995Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:59.0190024Z Acquiring 22.20.0 - x64 from https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-win32-x64.7z
+foundation	Run actions/setup-node@v4	2026-11-13T00:38:59.5962822Z Extracting ...
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:02.1280209Z Adding to the cache ...
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:06.4439422Z ##[group]Environment details
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:07.6197910Z node: v22.20.0
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:07.6198315Z npm: 10.9.3
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:07.6198494Z yarn: 1.22.22
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:07.6198922Z ##[endgroup]
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:07.6923433Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\22.20.0\x64\npm.cmd config get cache"
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:07.9818576Z C:\npm\cache
+foundation	Run actions/setup-node@v4	2026-11-13T00:39:08.3804364Z npm cache is not found
+foundation	Run actions/setup-python@v5	﻿2026-11-13T00:39:08.4147612Z ##[group]Run actions/setup-python@v5
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4147942Z with:
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4148130Z   python-version: 3.13
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4148326Z   cache: pip
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4148556Z   cache-dependency-path: apps/api/requirements.lock
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4148852Z   check-latest: false
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4151527Z   token: ***
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4151712Z   update-environment: true
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4151930Z   allow-prereleases: false
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4152130Z   freethreaded: false
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.4152321Z ##[endgroup]
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.5736328Z ##[group]Installed versions
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.5924547Z (node:7440) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.5925617Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.5926107Z Successfully set up CPython (3.13.17)
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:08.5926540Z ##[endgroup]
+foundation	Run actions/setup-python@v5	2026-11-13T00:39:11.1805602Z pip cache is not found
+foundation	Install exact locked dependencies (no AI models)	﻿2026-11-13T00:39:11.2137446Z ##[group]Run npm ci
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2137755Z npm ci
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2138013Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2138322Z python -m venv .venv
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2138596Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2139013Z .venv/Scripts/python.exe -m pip install -r apps/api/requirements.lock
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2139390Z exit $LASTEXITCODE
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2833012Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2833467Z env:
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2833793Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2834397Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2834979Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2835498Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2836077Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:11.2836473Z ##[endgroup]
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4134984Z
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4137116Z added 279 packages, and audited 287 packages in 12s
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4137586Z
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4137843Z 60 packages are looking for funding
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4138287Z   run `npm fund` for details
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4154664Z
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:24.4155073Z found 0 vulnerabilities
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.0679927Z Collecting annotated-doc==0.0.6 (from -r apps/api/requirements.lock (line 1))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.1210680Z   Downloading annotated_doc-0.0.6-py3-none-any.whl.metadata (6.5 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.1712394Z Collecting annotated-types==0.8.0 (from -r apps/api/requirements.lock (line 2))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.1852419Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.2448154Z Collecting anyio==4.16.0 (from -r apps/api/requirements.lock (line 3))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.2598608Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.3265105Z Collecting certifi==2026.10.23 (from -r apps/api/requirements.lock (line 4))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.3409227Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.5277745Z Collecting charset-normalizer==3.5.2 (from -r apps/api/requirements.lock (line 5))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.5477267Z   Downloading charset_normalizer-3.5.2-cp313-cp313-win_amd64.whl.metadata (47 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.6212918Z Collecting click==8.5.1 (from -r apps/api/requirements.lock (line 6))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.6365929Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.6824664Z Collecting colorama==0.4.6 (from -r apps/api/requirements.lock (line 7))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.6957365Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.7676947Z Collecting fastapi==0.162.4 (from -r apps/api/requirements.lock (line 8))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.7801424Z   Downloading fastapi-0.162.4-py3-none-any.whl.metadata (27 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.8400796Z Collecting filelock==4.2.10 (from -r apps/api/requirements.lock (line 9))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.8528017Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.9014494Z Collecting fsspec==2026.9.0 (from -r apps/api/requirements.lock (line 10))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.9173905Z   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.9753946Z Collecting h11==0.16.0 (from -r apps/api/requirements.lock (line 11))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:31.9889095Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.0361354Z Collecting h2==4.4.1 (from -r apps/api/requirements.lock (line 12))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.0500174Z   Downloading h2-4.4.1-py3-none-any.whl.metadata (3.8 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.1464876Z Collecting hf-xet==1.8.0 (from -r apps/api/requirements.lock (line 13))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.1626423Z   Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.2121631Z Collecting hpack==4.2.0 (from -r apps/api/requirements.lock (line 14))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.2250867Z   Downloading hpack-4.2.0-py3-none-any.whl.metadata (3.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.2881563Z Collecting httpcore==1.0.9 (from -r apps/api/requirements.lock (line 15))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.3055311Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.3508596Z Collecting httpcore2==2.16.0 (from -r apps/api/requirements.lock (line 16))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.3640629Z   Downloading httpcore2-2.16.0-py3-none-any.whl.metadata (27 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.4185705Z Collecting httpx==0.28.1 (from -r apps/api/requirements.lock (line 17))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.4319430Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.4796427Z Collecting httpx2==2.16.0 (from -r apps/api/requirements.lock (line 18))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.4926060Z   Downloading httpx2-2.16.0-py3-none-any.whl.metadata (10 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.5782100Z Collecting huggingface_hub==2.4.0 (from -r apps/api/requirements.lock (line 19))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.5929843Z   Downloading huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.6509752Z Collecting hyperframe==6.1.0 (from -r apps/api/requirements.lock (line 20))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.6651746Z   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.7165742Z Collecting idna==3.20 (from -r apps/api/requirements.lock (line 21))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.7294631Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.7724112Z Collecting iniconfig==2.3.1 (from -r apps/api/requirements.lock (line 22))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.7891158Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.8365071Z Collecting Jinja2==3.1.6 (from -r apps/api/requirements.lock (line 23))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.8511640Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.8977718Z Collecting markdown-it-py==4.3.0 (from -r apps/api/requirements.lock (line 24))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:32.9149593Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.0149762Z Collecting MarkupSafe==3.0.4 (from -r apps/api/requirements.lock (line 25))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.0780651Z   Downloading markupsafe-3.0.4-cp313-cp313-win_amd64.whl.metadata (2.8 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.1327420Z Collecting mdurl==0.1.2 (from -r apps/api/requirements.lock (line 26))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.1472971Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.2045755Z Collecting mpmath==1.3.0 (from -r apps/api/requirements.lock (line 27))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.2183042Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.3295404Z Collecting msgspec==0.22.0 (from -r apps/api/requirements.lock (line 28))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.3455548Z   Downloading msgspec-0.22.0-cp313-cp313-win_amd64.whl.metadata (6.1 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.4068221Z Collecting networkx==3.7 (from -r apps/api/requirements.lock (line 29))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.4201894Z   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.6759350Z Collecting numpy==2.5.4 (from -r apps/api/requirements.lock (line 30))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.6949184Z   Downloading numpy-2.5.4-cp313-cp313-win_amd64.whl.metadata (6.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.7514045Z Collecting opentelemetry-api==1.45.2 (from -r apps/api/requirements.lock (line 31))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:33.7653361Z   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.0720773Z Collecting orjson==3.13.0 (from -r apps/api/requirements.lock (line 32))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.0951719Z   Downloading orjson-3.13.0-cp313-cp313-win_amd64.whl.metadata (43 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.1466884Z Collecting packaging==26.3 (from -r apps/api/requirements.lock (line 33))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.1602364Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.3748616Z Collecting pillow==13.0.0 (from -r apps/api/requirements.lock (line 34))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.3919119Z   Downloading pillow-13.0.0-cp313-cp313-win_amd64.whl.metadata (9.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.4669535Z Collecting pinecone==10.3.0 (from -r apps/api/requirements.lock (line 35))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.4889360Z   Downloading pinecone-10.3.0-cp310-abi3-win_amd64.whl.metadata (7.0 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.5351343Z Collecting pluggy==1.7.0 (from -r apps/api/requirements.lock (line 36))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.5494665Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.7024699Z Collecting pydantic==2.14.3 (from -r apps/api/requirements.lock (line 37))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:34.7174521Z   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.5594193Z Collecting pydantic_core==2.50.4 (from -r apps/api/requirements.lock (line 38))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.5771177Z   Downloading pydantic_core-2.50.4-cp313-cp313-win_amd64.whl.metadata (6.7 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.6282023Z Collecting Pygments==2.21.0 (from -r apps/api/requirements.lock (line 39))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.6411483Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.6915256Z Collecting pypdf==7.0.1 (from -r apps/api/requirements.lock (line 40))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.7043497Z   Downloading pypdf-7.0.1-py3-none-any.whl.metadata (7.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.7652356Z Collecting pytest==9.2.0 (from -r apps/api/requirements.lock (line 41))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.7784717Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.8235591Z Collecting python-multipart==0.0.33 (from -r apps/api/requirements.lock (line 42))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.8367727Z   Downloading python_multipart-0.0.33-py3-none-any.whl.metadata (6.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.9069373Z Collecting PyYAML==6.0.3 (from -r apps/api/requirements.lock (line 43))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:35.9190728Z   Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl.metadata (2.4 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:36.3855782Z Collecting regex==2026.11.9 (from -r apps/api/requirements.lock (line 44))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:36.4031654Z   Downloading regex-2026.11.9-cp313-cp313-win_amd64.whl.metadata (41 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:36.5701588Z Collecting reportlab==5.1.0 (from -r apps/api/requirements.lock (line 45))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:36.5845825Z   Downloading reportlab-5.1.0-py3-none-any.whl.metadata (1.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:36.6608523Z Collecting rich==15.0.0 (from -r apps/api/requirements.lock (line 46))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:36.6739035Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.0824260Z Collecting ruff==0.17.4 (from -r apps/api/requirements.lock (line 47))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.1143262Z   Downloading ruff-0.17.4-py3-none-win_amd64.whl.metadata (21 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.2917826Z Collecting safetensors==0.8.0 (from -r apps/api/requirements.lock (line 48))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.3043619Z   Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl.metadata (4.2 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.4171492Z Collecting setuptools==84.2.1 (from -r apps/api/requirements.lock (line 49))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.4307634Z   Downloading setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.4855128Z Collecting shellingham==1.5.4 (from -r apps/api/requirements.lock (line 50))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.4977798Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.5539101Z Collecting starlette==1.10.0 (from -r apps/api/requirements.lock (line 51))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.5669938Z   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.6139853Z Collecting sympy==1.14.0 (from -r apps/api/requirements.lock (line 52))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.6262068Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.8159498Z Collecting tokenizers==0.23.3 (from -r apps/api/requirements.lock (line 53))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.8299653Z   Downloading tokenizers-0.23.3-cp310-abi3-win_amd64.whl.metadata (10 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.9362619Z Collecting torch==2.15.0 (from -r apps/api/requirements.lock (line 54))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:37.9490705Z   Downloading torch-2.15.0-cp313-cp313-win_amd64.whl.metadata (36 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.0507670Z Collecting tqdm==4.70.1 (from -r apps/api/requirements.lock (line 55))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.0652443Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.1621115Z Collecting transformers==5.22.2 (from -r apps/api/requirements.lock (line 56))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.1752241Z   Downloading transformers-5.22.2-py3-none-any.whl.metadata (31 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.2631030Z Collecting truststore==0.10.5 (from -r apps/api/requirements.lock (line 57))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.2756843Z   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.3447060Z Collecting typer==0.29.1 (from -r apps/api/requirements.lock (line 58))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.3573364Z   Downloading typer-0.29.1-py3-none-any.whl.metadata (16 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.4040855Z Collecting typing-inspection==0.4.5 (from -r apps/api/requirements.lock (line 59))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.4174538Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.4695186Z Collecting typing_extensions==4.16.0 (from -r apps/api/requirements.lock (line 60))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.4836878Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.5468304Z Collecting uvicorn==0.54.0 (from -r apps/api/requirements.lock (line 61))
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.5604438Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.6707367Z Downloading annotated_doc-0.0.6-py3-none-any.whl (5.3 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.6999924Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.7326015Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.7582070Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.7866252Z Downloading charset_normalizer-3.5.2-cp313-cp313-win_amd64.whl (206 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.8159136Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.8439045Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.8737686Z Downloading fastapi-0.162.4-py3-none-any.whl (151 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.9034863Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.9316236Z Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.9603696Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:38.9860296Z Downloading h2-4.4.1-py3-none-any.whl (62 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.0173107Z Downloading hpack-4.2.0-py3-none-any.whl (34 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.0424871Z Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.0802296Z Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl (3.9 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.1367547Z    ---------------------------------------- 3.9/3.9 MB 69.1 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.1508434Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.1777798Z Downloading httpcore2-2.16.0-py3-none-any.whl (85 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.2070436Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.2400462Z Downloading httpx2-2.16.0-py3-none-any.whl (97 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.2692457Z Downloading huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.2917488Z    ---------------------------------------- 857.0/857.0 kB 30.6 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.3046392Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.3313620Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.3600004Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.3909678Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.4222005Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.4518618Z Downloading markupsafe-3.0.4-cp313-cp313-win_amd64.whl (14 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.4797884Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.4991444Z    ---------------------------------------- 536.2/536.2 kB 16.7 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.5128384Z Downloading msgspec-0.22.0-cp313-cp313-win_amd64.whl (192 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.5411399Z Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.5753382Z    ---------------------------------------- 2.1/2.1 MB 60.4 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.5935083Z Downloading numpy-2.5.4-cp313-cp313-win_amd64.whl (12.6 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.8170655Z    ---------------------------------------- 12.6/12.6 MB 55.8 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.8372570Z Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.8704016Z Downloading orjson-3.13.0-cp313-cp313-win_amd64.whl (121 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.8982939Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:39.9377821Z Downloading pillow-13.0.0-cp313-cp313-win_amd64.whl (7.3 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.0257394Z    ---------------------------------------- 7.3/7.3 MB 83.8 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.0418729Z Downloading pinecone-10.3.0-cp310-abi3-win_amd64.whl (3.0 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.1143475Z    ---------------------------------------- 3.0/3.0 MB 39.4 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.1290009Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.1620710Z Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.2036779Z Downloading pydantic_core-2.50.4-cp313-cp313-win_amd64.whl (2.3 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.2482853Z    ---------------------------------------- 2.3/2.3 MB 48.3 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.2626015Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.2880585Z    ---------------------------------------- 1.3/1.3 MB 43.9 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.3010657Z Downloading pypdf-7.0.1-py3-none-any.whl (416 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.3296468Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.3712975Z Downloading python_multipart-0.0.33-py3-none-any.whl (32 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.3973893Z Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl (154 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.4319523Z Downloading regex-2026.11.9-cp313-cp313-win_amd64.whl (280 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.4773235Z Downloading reportlab-5.1.0-py3-none-any.whl (2.0 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.5102166Z    ---------------------------------------- 2.0/2.0 MB 60.4 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.5229788Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.7761850Z Downloading ruff-0.17.4-py3-none-win_amd64.whl (10.3 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.8536970Z    ---------------------------------------- 10.3/10.3 MB 135.2 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.8960561Z Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl (355 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.9290797Z Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.9529443Z    ---------------------------------------- 876.3/876.3 kB 29.3 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.9650330Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:40.9908091Z Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:41.0190522Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:41.0808780Z    ---------------------------------------- 6.3/6.3 MB 103.5 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:41.0973861Z Downloading tokenizers-0.23.3-cp310-abi3-win_amd64.whl (2.9 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:41.1381412Z    ---------------------------------------- 2.9/2.9 MB 69.3 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:41.1540292Z Downloading torch-2.15.0-cp313-cp313-win_amd64.whl (126.7 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:43.7188115Z    ---------------------------------------- 126.7/126.7 MB 49.4 MB/s  0:00:02
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:43.7326209Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:43.7700434Z Downloading transformers-5.22.2-py3-none-any.whl (13.1 MB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:44.1550324Z    ---------------------------------------- 13.1/13.1 MB 33.9 MB/s  0:00:00
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:44.1687953Z Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:44.2017700Z Downloading typer-0.29.1-py3-none-any.whl (121 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:44.2297584Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:44.2604682Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:44.2891661Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:39:45.1024914Z Installing collected packages: mpmath, typing_extensions, truststore, sympy, shellingham, setuptools, safetensors, ruff, regex, PyYAML, python-multipart, pypdf, Pygments, pluggy, pillow, packaging, orjson, numpy, networkx, msgspec, mdurl, MarkupSafe, iniconfig, idna, hyperframe, hpack, hf-xet, h11, fsspec, filelock, colorama, click, charset-normalizer, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, tqdm, reportlab, pytest, pydantic_core, opentelemetry-api, markdown-it-py, Jinja2, httpcore2, httpcore, h2, anyio, torch, starlette, rich, pydantic, httpx2, httpx, typer, huggingface_hub, fastapi, tokenizers, pinecone, transformers
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:40:30.5575460Z
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:40:30.5637281Z Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 PyYAML-6.0.3 Pygments-2.21.0 annotated-doc-0.0.6 annotated-types-0.8.0 anyio-4.16.0 certifi-2026.10.23 charset-normalizer-3.5.2 click-8.5.1 colorama-0.4.6 fastapi-0.162.4 filelock-4.2.10 fsspec-2026.9.0 h11-0.16.0 h2-4.4.1 hf-xet-1.8.0 hpack-4.2.0 httpcore-1.0.9 httpcore2-2.16.0 httpx-0.28.1 httpx2-2.16.0 huggingface_hub-2.4.0 hyperframe-6.1.0 idna-3.20 iniconfig-2.3.1 markdown-it-py-4.3.0 mdurl-0.1.2 mpmath-1.3.0 msgspec-0.22.0 networkx-3.7 numpy-2.5.4 opentelemetry-api-1.45.2 orjson-3.13.0 packaging-26.3 pillow-13.0.0 pinecone-10.3.0 pluggy-1.7.0 pydantic-2.14.3 pydantic_core-2.50.4 pypdf-7.0.1 pytest-9.2.0 python-multipart-0.0.33 regex-2026.11.9 reportlab-5.1.0 rich-15.0.0 ruff-0.17.4 safetensors-0.8.0 setuptools-84.2.1 shellingham-1.5.4 starlette-1.10.0 sympy-1.14.0 tokenizers-0.23.3 torch-2.15.0 tqdm-4.70.1 transformers-5.22.2 truststore-0.10.5 typer-0.29.1 typing-inspection-0.4.5 typing_extensions-4.16.0 uvicorn-0.54.0
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:40:30.5650411Z
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:40:30.5652484Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+foundation	Install exact locked dependencies (no AI models)	2026-11-13T00:40:30.5653922Z [notice] To update, run: D:\a\pinecone-visual-lab\pinecone-visual-lab\.venv\Scripts\python.exe -m pip install --upgrade pip
+foundation	Local quality gates	﻿2026-11-13T00:40:30.9108934Z ##[group]Run ./scripts/check.ps1
+foundation	Local quality gates	2026-11-13T00:40:30.9109294Z ./scripts/check.ps1
+foundation	Local quality gates	2026-11-13T00:40:30.9183279Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	Local quality gates	2026-11-13T00:40:30.9183624Z env:
+foundation	Local quality gates	2026-11-13T00:40:30.9183878Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Local quality gates	2026-11-13T00:40:30.9184327Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	Local quality gates	2026-11-13T00:40:30.9184774Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Local quality gates	2026-11-13T00:40:30.9185172Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Local quality gates	2026-11-13T00:40:30.9185559Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Local quality gates	2026-11-13T00:40:30.9185877Z   PVL_DISABLE_CLOUD: 1
+foundation	Local quality gates	2026-11-13T00:40:30.9186070Z   HF_HUB_OFFLINE: 1
+foundation	Local quality gates	2026-11-13T00:40:30.9186257Z   TRANSFORMERS_OFFLINE: 1
+foundation	Local quality gates	2026-11-13T00:40:30.9186458Z   PVL_OLLAMA_ENABLED: 0
+foundation	Local quality gates	2026-11-13T00:40:30.9186654Z ##[endgroup]
+foundation	Local quality gates	2026-11-13T00:40:31.3382998Z [D08] Frontend lint
+foundation	Local quality gates	2026-11-13T00:40:31.6350803Z
+foundation	Local quality gates	2026-11-13T00:40:31.6351425Z > pinecone-visual-lab@0.8.0 lint
+foundation	Local quality gates	2026-11-13T00:40:31.6351815Z > npm run lint --workspace apps/web
+foundation	Local quality gates	2026-11-13T00:40:31.6352002Z
+foundation	Local quality gates	2026-11-13T00:40:31.9449444Z
+foundation	Local quality gates	2026-11-13T00:40:31.9450065Z > @pinecone-visual-lab/web@0.8.0 lint
+foundation	Local quality gates	2026-11-13T00:40:31.9453584Z > eslint .
+foundation	Local quality gates	2026-11-13T00:40:31.9453817Z
+foundation	Local quality gates	2026-11-13T00:40:42.2302768Z [D08] TypeScript strict
+foundation	Local quality gates	2026-11-13T00:40:42.5487855Z
+foundation	Local quality gates	2026-11-13T00:40:42.5488689Z > pinecone-visual-lab@0.8.0 typecheck
+foundation	Local quality gates	2026-11-13T00:40:42.5489283Z > npm run typecheck --workspace apps/web
+foundation	Local quality gates	2026-11-13T00:40:42.5489588Z
+foundation	Local quality gates	2026-11-13T00:40:42.8676298Z
+foundation	Local quality gates	2026-11-13T00:40:42.8677073Z > @pinecone-visual-lab/web@0.8.0 typecheck
+foundation	Local quality gates	2026-11-13T00:40:42.8679103Z > tsc --noEmit
+foundation	Local quality gates	2026-11-13T00:40:42.8679267Z
+foundation	Local quality gates	2026-11-13T00:40:48.8667784Z [D08] Visual harness TypeScript strict
+foundation	Local quality gates	2026-11-13T00:40:49.1744571Z
+foundation	Local quality gates	2026-11-13T00:40:49.1745222Z > pinecone-visual-lab@0.8.0 typecheck:visual
+foundation	Local quality gates	2026-11-13T00:40:49.1745641Z > tsc --project tsconfig.visual.json
+foundation	Local quality gates	2026-11-13T00:40:49.1745876Z
+foundation	Local quality gates	2026-11-13T00:40:51.0968124Z [D08] Frontend unit tests
+foundation	Local quality gates	2026-11-13T00:40:51.4021652Z
+foundation	Local quality gates	2026-11-13T00:40:51.4022329Z > pinecone-visual-lab@0.8.0 test
+foundation	Local quality gates	2026-11-13T00:40:51.4022770Z > npm run test --workspace apps/web
+foundation	Local quality gates	2026-11-13T00:40:51.4022986Z
+foundation	Local quality gates	2026-11-13T00:40:51.7125920Z
+foundation	Local quality gates	2026-11-13T00:40:51.7126529Z > @pinecone-visual-lab/web@0.8.0 test
+foundation	Local quality gates	2026-11-13T00:40:51.7126938Z > vitest run
+foundation	Local quality gates	2026-11-13T00:40:51.7127082Z
+foundation	Local quality gates	2026-11-13T00:40:52.2775326Z
+foundation	Local quality gates	2026-11-13T00:40:52.2779971Z  RUN  v5.1.0 D:/a/pinecone-visual-lab/pinecone-visual-lab/apps/web
+foundation	Local quality gates	2026-11-13T00:40:52.2781521Z
+foundation	Local quality gates	2026-11-13T00:40:57.5877981Z  ✓ src/VectorStoreLab.test.tsx (6 tests) 3164ms
+foundation	Local quality gates	2026-11-13T00:40:57.5879513Z    ✓ D04 Vector Explorer (6)
+foundation	Local quality gates	2026-11-13T00:40:57.5880973Z      ✓ defaults to local and switching to LIVE alone never discovers cloud 432ms
+foundation	Local quality gates	2026-11-13T00:40:57.5883035Z      ✓ requires exact confirmation, ingests, fetches from adapter and deletes only owned IDs 1966ms
+foundation	Local quality gates	2026-11-13T00:40:57.5893539Z      ✓ clears stale fetched state on a namespace change 326ms
+foundation	Local quality gates	2026-11-13T00:40:57.5895258Z      ✓ retains the manifest after an ingest failure for safe resume 375ms
+foundation	Local quality gates	2026-11-13T00:40:58.2101750Z  ✓ src/RagChat.test.tsx (11 tests) 3713ms
+foundation	Local quality gates	2026-11-13T00:40:58.2102817Z    ✓ D06 RAG Chat (11)
+foundation	Local quality gates	2026-11-13T00:40:58.2104474Z      ✓ uses explicit actions only; validates tabs and preserves Semantic Search state 717ms
+foundation	Local quality gates	2026-11-13T00:40:58.2106704Z      ✓ renders verified sources, plaintext/XSS-safe answer, separate retrieval and measured traces 303ms
+foundation	Local quality gates	2026-11-13T00:40:58.2108966Z      ✓ keeps history bounded, resets on namespace/filter/model changes and clears explicitly 1681ms
+foundation	Local quality gates	2026-11-13T00:41:01.1134940Z  ✓ src/SearchLab.test.tsx (7 tests) 1672ms
+foundation	Local quality gates	2026-11-13T00:41:01.1136080Z    ✓ D05 Search Lab (7)
+foundation	Local quality gates	2026-11-13T00:41:01.1137571Z      ✓ sends explicit query/filter/top-k, shows real source, raw score, deep link and trace 597ms
+foundation	Local quality gates	2026-11-13T00:41:01.1139418Z      ✓ runs comparison only on request and clears stale results after namespace change 326ms
+foundation	Local quality gates	2026-11-13T00:41:01.3449475Z  ✓ src/GuidedProvider.test.tsx (5 tests) 1172ms
+foundation	Local quality gates	2026-11-13T00:41:01.3451063Z    ✓ opt-in cross-route guide with backend-authoritative completion (5)
+foundation	Local quality gates	2026-11-13T00:41:01.3452901Z      ✓ has no guide/backend traffic when off; route visits cannot complete steps 439ms
+foundation	Local quality gates	2026-11-13T00:41:04.0691505Z  ✓ src/ArchitectureLab.test.tsx (5 tests) 1049ms
+foundation	Local quality gates	2026-11-13T00:41:04.0694378Z    ✓ Architecture simulator rendering/controller (real diagram is separately browser-tested) (5)
+foundation	Local quality gates	2026-11-13T00:41:04.0696742Z      ✓ maps all conceptual nodes and edges, banner and accessible linear steps 338ms
+foundation	Local quality gates	2026-11-13T00:41:04.2378819Z  ✓ src/DocumentsLab.test.tsx (5 tests) 936ms
+foundation	Local quality gates	2026-11-13T00:41:04.2380723Z    ✓ loads actual source text, rejects invalid settings before generating, and requires confirmation for delete 364ms
+foundation	Local quality gates	2026-11-13T00:41:05.8076050Z  ✓ src/simulator.test.ts (7 tests) 102ms
+foundation	Local quality gates	2026-11-13T00:41:07.7625799Z  ✓ src/useDataMotion.test.tsx (6 tests) 204ms
+foundation	Local quality gates	2026-11-13T00:41:08.9850547Z  ✓ src/App.test.tsx (7 tests) 2886ms
+foundation	Local quality gates	2026-11-13T00:41:08.9852451Z    ✓ D01 foundation (7)
+foundation	Local quality gates	2026-11-13T00:41:08.9868788Z      ✓ shows a pending state until the real API responds 315ms
+foundation	Local quality gates	2026-11-13T00:41:08.9911659Z      ✓ shows disconnected help and can reconnect through the retry control 326ms
+foundation	Local quality gates	2026-11-13T00:41:08.9913715Z      ✓ navigates to Documents, Vectors, Search and the implemented educational Architecture Lab 1797ms
+foundation	Local quality gates	2026-11-13T00:41:11.1745674Z  ✓ src/VectorsLab.test.tsx (3 tests) 1625ms
+foundation	Local quality gates	2026-11-13T00:41:11.1747343Z    ✓ shows every vector value and marks incompatible test fixtures explicitly 1244ms
+foundation	Local quality gates	2026-11-13T00:41:11.2216130Z  ✓ src/LabBoundary.test.tsx (2 tests) 286ms
+foundation	Local quality gates	2026-11-13T00:41:12.7808736Z  ✓ src/guided-state.test.ts (11 tests) 10ms
+foundation	Local quality gates	2026-11-13T00:41:13.1384619Z  ✓ src/components.test.tsx (1 test) 196ms
+foundation	Local quality gates	2026-11-13T00:41:14.1732897Z  ✓ src/vector-target.test.ts (1 test) 4ms
+foundation	Local quality gates	2026-11-13T00:41:14.1794434Z
+foundation	Local quality gates	2026-11-13T00:41:14.1799901Z  Test Files  14 passed (14)
+foundation	Local quality gates	2026-11-13T00:41:14.1802305Z       Tests  77 passed (77)
+foundation	Local quality gates	2026-11-13T00:41:14.1802849Z    Start at  00:40:52
+foundation	Local quality gates	2026-11-13T00:41:14.1808474Z    Duration  21.89s (tests 42%, environment 42%, setup 8%, import 5%, transform 3%)
+foundation	Local quality gates	2026-11-13T00:41:14.1817141Z
+foundation	Local quality gates	2026-11-13T00:41:14.1819488Z Environment  jsdom was created 14 times · 16.73s total, 42% of tracked time
+foundation	Local quality gates	2026-11-13T00:41:14.1821633Z              create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+foundation	Local quality gates	2026-11-13T00:41:14.1822702Z              learn more: https://vitest.dev/guide/improving-performance#test-environments
+foundation	Local quality gates	2026-11-13T00:41:14.1823084Z
+foundation	Local quality gates	2026-11-13T00:41:14.2590031Z [D08] Python lint
+foundation	Local quality gates	2026-11-13T00:41:14.3605903Z All checks passed!
+foundation	Local quality gates	2026-11-13T00:41:14.3736767Z [D08] Backend API + Git guard tests
+foundation	Local quality gates	2026-11-13T00:41:16.7197348Z ============================= test session starts =============================
+foundation	Local quality gates	2026-11-13T00:41:16.7198032Z platform win32 -- Python 3.13.17, pytest-9.2.0, pluggy-1.7.0
+foundation	Local quality gates	2026-11-13T00:41:16.7198904Z cachedir: D:\a\pinecone-visual-lab\pinecone-visual-lab\.cache\pytest\793c2bbfa27b4a44acd775a64209277b\cache
+foundation	Local quality gates	2026-11-13T00:41:16.7199707Z rootdir: D:\a\pinecone-visual-lab\pinecone-visual-lab\apps\api
+foundation	Local quality gates	2026-11-13T00:41:16.7200163Z configfile: pyproject.toml
+foundation	Local quality gates	2026-11-13T00:41:16.7200478Z plugins: anyio-4.16.0
+foundation	Local quality gates	2026-11-13T00:41:16.7200830Z collected 226 items / 6 deselected / 220 selected
+foundation	Local quality gates	2026-11-13T00:41:16.7201089Z
+foundation	Local quality gates	2026-11-13T00:41:16.7790397Z apps\api\tests\test_chunking.py ............                             [  5%]
+foundation	Local quality gates	2026-11-13T00:41:18.2112425Z apps\api\tests\test_documents.py ..........................              [ 17%]
+foundation	Local quality gates	2026-11-13T00:41:20.6217368Z apps\api\tests\test_embeddings.py ...................                    [ 25%]
+foundation	Local quality gates	2026-11-13T00:41:22.8272192Z apps\api\tests\test_guided.py ...............                            [ 32%]
+foundation	Local quality gates	2026-11-13T00:41:22.8912146Z apps\api\tests\test_health.py ...                                        [ 34%]
+foundation	Local quality gates	2026-11-13T00:41:22.9903974Z apps\api\tests\test_ollama.py ............................               [ 46%]
+foundation	Local quality gates	2026-11-13T00:41:26.5153622Z apps\api\tests\test_rag.py ..........................                    [ 58%]
+foundation	Local quality gates	2026-11-13T00:41:30.3841774Z apps\api\tests\test_search.py ....................................       [ 75%]
+foundation	Local quality gates	2026-11-13T00:41:30.6167674Z apps\api\tests\test_search_live.py ........                              [ 78%]
+foundation	Local quality gates	2026-11-13T00:41:30.8272044Z apps\api\tests\test_vector_adapters.py ........................          [ 89%]
+foundation	Local quality gates	2026-11-13T00:41:33.0214827Z apps\api\tests\test_vector_service.py ........                           [ 93%]
+foundation	Local quality gates	2026-11-13T00:42:08.0898450Z apps\api\tests\test_git_guard.py ...............                         [100%]
+foundation	Local quality gates	2026-11-13T00:42:08.0899163Z
+foundation	Local quality gates	2026-11-13T00:42:08.0901227Z ===================== 220 passed, 6 deselected in 52.54s ======================
+foundation	Local quality gates	2026-11-13T00:42:08.7046151Z [D08] Production frontend build
+foundation	Local quality gates	2026-11-13T00:42:09.0063495Z
+foundation	Local quality gates	2026-11-13T00:42:09.0064204Z > pinecone-visual-lab@0.8.0 build
+foundation	Local quality gates	2026-11-13T00:42:09.0064717Z > npm run build --workspace apps/web
+foundation	Local quality gates	2026-11-13T00:42:09.0064947Z
+foundation	Local quality gates	2026-11-13T00:42:09.3191938Z
+foundation	Local quality gates	2026-11-13T00:42:09.3192824Z > @pinecone-visual-lab/web@0.8.0 build
+foundation	Local quality gates	2026-11-13T00:42:15.2222025Z > tsc --noEmit && vite build
+foundation	Local quality gates	2026-11-13T00:42:15.2222402Z
+foundation	Local quality gates	2026-11-13T00:42:15.2223387Z vite v8.3.8 building client environment for production...
+foundation	Local quality gates	2026-11-13T00:42:15.2457467Z transforming...
+foundation	Local quality gates	2026-11-13T00:42:15.6865311Z ✓ 2149 modules transformed.
+foundation	Local quality gates	2026-11-13T00:42:15.7585401Z rendering chunks...
+foundation	Local quality gates	2026-11-13T00:42:15.8493814Z computing gzip size...
+foundation	Local quality gates	2026-11-13T00:42:15.8529729Z dist/index.html                                                     0.76 kB │ gzip:  0.42 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8530920Z dist/assets/ibm-plex-mono-vietnamese-400-normal-DDuiU_S-.woff       5.62 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8531994Z dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-DMdlQ8Kv.woff     5.82 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8533156Z dist/assets/ibm-plex-mono-vietnamese-400-normal-BulugwFq.woff2      5.86 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8534316Z dist/assets/ibm-plex-mono-cyrillic-ext-400-normal-xuaO2J-f.woff2    6.91 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8535399Z dist/assets/ibm-plex-mono-cyrillic-400-normal-CEL4l2ZJ.woff         7.20 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8536838Z dist/assets/ibm-plex-mono-cyrillic-400-normal-BSMlKf0J.woff2        8.35 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8537949Z dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2           8.52 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8539078Z dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2                9.44 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8540318Z dist/.vite/manifest.json                                           10.02 kB │ gzip:  1.27 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8541202Z dist/assets/ibm-plex-mono-latin-ext-400-normal-D3D2R8hC.woff       11.76 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8541885Z dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff           13.14 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8542526Z dist/assets/ibm-plex-mono-latin-ext-400-normal-BmRBH3aV.woff2      13.34 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8543572Z dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2            14.50 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8544230Z dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2          14.70 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8544851Z dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2           15.12 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8545491Z dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2               24.83 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8546238Z dist/assets/RagChat-BXxVIHDQ.css                                    1.86 kB │ gzip:  0.70 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8547033Z dist/assets/StoredVectorInspector-DxWK2FWG.css                      2.80 kB │ gzip:  0.98 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8547817Z dist/assets/GuidedPanel-BhfmGV-F.css                                2.84 kB │ gzip:  0.96 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8566755Z dist/assets/vectors-DmKxnioJ.css                                    3.63 kB │ gzip:  1.08 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8567909Z dist/assets/SearchLab-CY9mMbyc.css                                  4.30 kB │ gzip:  1.27 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8570095Z dist/assets/DocumentsLab-Cnjb3pCN.css                               8.52 kB │ gzip:  2.23 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8571594Z dist/assets/ArchitectureLab-BuN918to.css                           18.59 kB │ gzip:  3.49 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8573121Z dist/assets/index-BGaVrgfh.css                                     49.59 kB │ gzip: 13.60 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8574289Z dist/assets/copy-BO7Ipngl.js                                        0.27 kB │ gzip:  0.23 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8575407Z dist/assets/documents-api-Dnl7A59J.js                               1.09 kB │ gzip:  0.58 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8576622Z dist/assets/vectors-DPeHDYna.js                                     1.37 kB │ gzip:  0.67 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8578303Z dist/assets/vector-store-api-Cc-VkiJo.js                            1.51 kB │ gzip:  0.79 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8579218Z dist/assets/StoredVectorInspector-CtSgdtsb.js                       2.65 kB │ gzip:  1.15 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8580047Z dist/assets/VectorInspector-CEjylYkM.js                             2.84 kB │ gzip:  1.21 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8580804Z dist/assets/VectorsLab-m1YJSjo5.js                                 10.82 kB │ gzip:  3.93 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8581705Z dist/assets/GuidedPanel-DEdPPPht.js                                11.87 kB │ gzip:  4.10 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8582478Z dist/assets/components-Dkxyj7JT.js                                 13.11 kB │ gzip:  5.15 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8583214Z dist/assets/VectorStoreLab-VD4kX2U6.js                             15.62 kB │ gzip:  5.12 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8584414Z dist/assets/RagChat-DAFnjHrJ.js                                    16.41 kB │ gzip:  5.74 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8585184Z dist/assets/DocumentsLab-G0cicTBf.js                               16.45 kB │ gzip:  5.71 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8585916Z dist/assets/SearchLab-EFVi1Nks.js                                  18.59 kB │ gzip:  6.55 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8586606Z dist/assets/gsap-OWHkPl-m.js                                       69.99 kB │ gzip: 27.44 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8587326Z dist/assets/ArchitectureLab-DxIX67wx.js                           195.86 kB │ gzip: 63.68 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8588031Z dist/assets/index-h0-vE7h6.js                                     292.49 kB │ gzip: 93.61 kB
+foundation	Local quality gates	2026-11-13T00:42:15.8588625Z
+foundation	Local quality gates	2026-11-13T00:42:15.8588830Z ✓ built in 633ms
+foundation	Local quality gates	2026-11-13T00:42:16.3065342Z [D08] Secret / artifact scan
+foundation	Local quality gates	2026-11-13T00:42:16.5264038Z Checked 1081 tracked/unignored paths; findings: 0
+foundation	Local quality gates	2026-11-13T00:42:16.5364816Z [D08] Diff whitespace
+foundation	Local quality gates	2026-11-13T00:42:17.3973258Z [D08] Staged diff whitespace
+foundation	Local quality gates	2026-11-13T00:42:17.4395112Z [D08] All local required checks PASS. Browser E2E: npm run test:e2e (isolated ports/data).
+foundation	Dependency advisory and installed requirement checks	﻿2026-11-13T00:42:17.4871882Z ##[group]Run npm audit --audit-level=moderate
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4872346Z npm audit --audit-level=moderate
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4872681Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4873057Z .venv/Scripts/python.exe -m pip check
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4873359Z exit $LASTEXITCODE
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4946880Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4947223Z env:
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4947492Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4947951Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4948398Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4948789Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4949184Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:17.4949499Z ##[endgroup]
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:18.7335540Z found 0 vulnerabilities
+foundation	Dependency advisory and installed requirement checks	2026-11-13T00:42:19.1960939Z No broken requirements found.
+foundation	Browser integration and actual API smoke	﻿2026-11-13T00:42:19.2971638Z ##[group]Run npx playwright install msedge
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.2972090Z npx playwright install msedge
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.2972628Z if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.2972939Z npm run test:e2e
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.2973172Z exit $LASTEXITCODE
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3044417Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3044761Z env:
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3045037Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3045489Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3045936Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3046327Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3046714Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3047026Z   PVL_E2E_FIXTURE: 1
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3047216Z   PVL_DISABLE_CLOUD: 1
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3047449Z   HF_HUB_OFFLINE: 1
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3047641Z   TRANSFORMERS_OFFLINE: 1
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3047847Z   PVL_OLLAMA_ENABLED: 0
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:19.3048036Z ##[endgroup]
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:21.4518665Z Downloading Microsoft Edge
+foundation	Browser integration and actual API smoke	2026-11-13T00:42:22.5000769Z Installing Microsoft Edge
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0576158Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0596975Z ProductVersion   FileVersion      FileName
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0601963Z --------------   -----------      --------
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0605428Z 157.0.4341.46    157.0.4341.46    C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0606823Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0607719Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.0889021Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-win64.zip
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5468857Z |                                                                                |   0% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5532133Z |■■■■■■■■                                                                        |  10% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5561915Z |■■■■■■■■■■■■■■■■                                                                |  20% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5588039Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5612921Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5638640Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5671076Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5694029Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5716466Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5742250Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.5765824Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 1.6 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.6625211Z FFmpeg (playwright ffmpeg v1013) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\ffmpeg-1013
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:46.6633371Z Downloading Winldd (playwright winldd v1007) from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1192480Z |■■■■■■■■                                                                        |  12% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1194670Z |■■■■■■■■■■■■■■■■                                                                |  25% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1215504Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  38% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1221453Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  51% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1228901Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1235286Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  89% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1239428Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 0.1 MiB
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.1543008Z Winldd (playwright winldd v1007) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\winldd-1007
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.5217352Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.5218503Z > pinecone-visual-lab@0.8.0 test:e2e
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.5219057Z > playwright test
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:47.5219272Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:50.8174937Z [WebServer] INFO:     Started server process [8900]
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:50.8178062Z [WebServer] INFO:     Waiting for application startup.
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:50.8178650Z [WebServer] INFO:     Application startup complete.
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:50.8179217Z [WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:52.9209546Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:52.9210158Z Running 20 tests using 1 worker
+foundation	Browser integration and actual API smoke	2026-11-13T00:43:52.9210510Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:02.1044901Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:02.1144635Z   ok  1 tests\e2e\documents.spec.ts:15:1 › real PDF upload → page → preview → inspect → confirm → JSONL → persistence (7.9s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:04.1897124Z   ok  2 tests\e2e\documents.spec.ts:73:1 › TXT/BOM upload, validation error, and confirmed deletion (2.1s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:13.4495023Z   ok  3 tests\e2e\embeddings.spec.ts:8:1 › confirmed source → CPU embedding → all 384 values → query → cosine → responsive inspector (9.2s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:14.8157403Z   ok  4 tests\e2e\embeddings.spec.ts:75:1 › model missing stays unavailable, with no invented vector or startup download (1.3s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:18.8215915Z   ok  5 tests\e2e\foundation.spec.ts:6:1 › live API health, desktop navigation, accessibility, and screenshot (4.0s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:33.4802417Z   ok  6 tests\e2e\foundation.spec.ts:40:1 › mobile menu, deep links, reduced motion and layout at five widths (14.6s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:34.7546104Z   ok  7 tests\e2e\foundation.spec.ts:63:1 › network failure and recovery (explicitly intercepted fault injection) (1.3s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:35.7593439Z   ok  8 tests\e2e\foundation.spec.ts:75:1 › keyboard skip link is first and visible (985ms)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:46.2234829Z   ok  9 tests\e2e\guided.spec.ts:26:1 › complete guided local pipeline, reload/source linking, optional RAG, three simulations and safe reset (10.4s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:52.3971305Z   ok 10 tests\e2e\guided.spec.ts:160:1 › standalone simulation finite play/pause/back/replay/reset, reduced motion and no backend writes (6.2s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:44:54.2067265Z   ok 11 tests\e2e\guided.spec.ts:191:1 › malformed guide storage and backend failure remain cancellable without implicit data/model calls (1.8s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:00.1727463Z   ok 12 tests\e2e\rag.spec.ts:8:1 › RAG: actual upload/confirmed/ACTIVE → D05 retrieval → MOCK OLLAMA → verified citations/context → exact source (5.9s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:02.8656790Z   ok 13 tests\e2e\rag.spec.ts:81:1 › RAG: search-only, no source, error/cancel and tab keyboard recovery (2.7s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:05.0687945Z   ok 14 tests\e2e\rag.spec.ts:111:1 › RAG: untrusted source with forged citation fails closed through actual backend (2.2s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:11.9981018Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:11.9985061Z   ok 15 tests\e2e\search.spec.ts:9:1 › Vietnamese PDF/TXT → ACTIVE ingest → Search/filter/compare/trace → exact historical source → reload/namespace (6.9s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:14.4747078Z   ok 16 tests\e2e\search.spec.ts:108:1 › Search reload and LIVE switch make no automatic cloud query; invalid deep links fail closed (2.5s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:22.4045655Z   ok 17 tests\e2e\vector-store.spec.ts:9:1 › confirmed chunks → E5/fixture → local upsert → actual adapter fetch → reload → namespace isolation → owned delete (7.9s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:23.6080008Z   ok 18 tests\e2e\vector-store.spec.ts:87:1 › LIVE switching makes no implicit discovery; explicit connect is safely denied in offline E2E (1.2s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:24.9109742Z   ok 19 tests\e2e\vector-store.spec.ts:100:1 › local index creation requires preview and explicit confirmation (1.3s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:27.5384561Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:27.5386844Z   ok 20 tests\e2e\vector-store.spec.ts:112:1 › multi-page Vietnamese PDF confirmed version is stored with real source pages (2.6s)
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:28.1785303Z
+foundation	Browser integration and actual API smoke	2026-11-13T00:45:28.1792508Z   20 passed (1.7m)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	﻿2026-11-13T00:45:28.2481975Z ##[group]Run npm run test:visual
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2482479Z npm run test:visual
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2556564Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2556968Z env:
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2557293Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2557838Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2558340Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2558822Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2559269Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2559638Z   PVL_E2E_FIXTURE: 1
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2559890Z   PVL_VISUAL_STAGE: verify
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2560152Z   PVL_VISUAL_REPLAY: 1
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.2560401Z ##[endgroup]
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.9875841Z
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.9876605Z > pinecone-visual-lab@0.8.0 test:visual
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.9877509Z > playwright test --config playwright.visual.config.ts
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:28.9877825Z
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:31.2005966Z
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:31.2007426Z Running 9 tests using 1 worker
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:45:31.2008372Z
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:46:56.2913660Z   ok 1 tests\visual\audit.spec.ts:54:1 › paired production visual audit on owned persistent synthetic data (1.4m)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:46:58.2392993Z   ok 2 tests\visual\config.spec.ts:4:1 › config rejects both snapshot-update aliases and CI proposal capture before any tests execute (1.9s)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:46:59.6353188Z   ok 3 tests\visual\regression.spec.ts:4:1 › visual comparator accepts the frozen candidate and rejects a deliberate panel-color defect (1.4s)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:46:59.8291960Z   ok 4 tests\visual\rendering.spec.ts:4:1 › visual profile fixes the effective software compositor, locale, scale and reduced motion (173ms)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:01.2158215Z   ok 5 tests\visual\resilience.spec.ts:4:1 › production initial graph defers labs, diagram, GSAP and RAG; slow route cannot replace newer navigation (1.4s)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:02.1816000Z   ok 6 tests\visual\resilience.spec.ts:27:1 › failed lazy asset keeps shell usable and explicit reload recovers the same URL (944ms)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:03.2058727Z   ok 7 tests\visual\resilience.spec.ts:41:1 › native confirmation traps keyboard focus, Escape restores invoker, mobile navigation works without pointer (1.0s)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:04.7178360Z   ok 8 tests\visual\resilience.spec.ts:73:1 › real GSAP motion settles and reduced-motion change leaves all source data visible (1.5s)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:05.3126036Z   ok 9 tests\visual\resilience.spec.ts:89:1 › Guided Demo can be cancelled while its lazy panel is pending without deleting source data (572ms)
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:05.7110365Z
+foundation	Frozen visual candidate regression (recorded NOT E5, no API/cloud/model)	2026-11-13T00:47:05.7116291Z   9 passed (1.6m)
+foundation	Preserve browser evidence	﻿2026-11-13T00:47:05.7862394Z ##[group]Run actions/upload-artifact@v4
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7862782Z with:
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7862963Z   name: lab-browser-evidence
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7863960Z   path: docs/evidence/d08/review-r1/regression/fixture-search-example.json
+foundation	Preserve browser evidence	docs/evidence/d08/review-r1/regression/fixture-rag-example.json
+foundation	Preserve browser evidence	docs/evidence/d08/review-r1/regression/fixture-guided-example.json
+foundation	Preserve browser evidence	test-results/
+foundation	Preserve browser evidence
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7864948Z   if-no-files-found: warn
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7865230Z   compression-level: 6
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7865506Z   overwrite: false
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7866179Z   include-hidden-files: false
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7866493Z env:
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7866807Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7867331Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7867822Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7868266Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7868753Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+foundation	Preserve browser evidence	2026-11-13T00:47:05.7869126Z ##[endgroup]
+foundation	Preserve browser evidence	2026-11-13T00:47:05.9785486Z (node:5848) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	Preserve browser evidence	2026-11-13T00:47:05.9786280Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	Preserve browser evidence	2026-11-13T00:47:05.9988920Z Multiple search paths detected. Calculating the least common ancestor of all paths
+foundation	Preserve browser evidence	2026-11-13T00:47:05.9994541Z The least common ancestor is D:\a\pinecone-visual-lab\pinecone-visual-lab. This will be the root directory of the artifact
+foundation	Preserve browser evidence	2026-11-13T00:47:05.9995990Z With the provided path, there will be 27 files uploaded
+foundation	Preserve browser evidence	2026-11-13T00:47:06.0003563Z Artifact name is valid!
+foundation	Preserve browser evidence	2026-11-13T00:47:06.0005629Z Root directory input is valid!
+foundation	Preserve browser evidence	2026-11-13T00:47:06.4003650Z Beginning upload of artifact content to blob storage
+foundation	Preserve browser evidence	2026-11-13T00:47:06.6480319Z (node:5848) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+foundation	Preserve browser evidence	2026-11-13T00:47:07.8241053Z Uploaded bytes 4896217
+foundation	Preserve browser evidence	2026-11-13T00:47:07.8993571Z Finished uploading artifact content to blob storage!
+foundation	Preserve browser evidence	2026-11-13T00:47:07.8995452Z SHA256 digest of uploaded artifact zip is 49d2ff57467e642cbbe7e6655d587cf4008997e1396c368ab24fba038b381421
+foundation	Preserve browser evidence	2026-11-13T00:47:07.8998075Z Finalizing artifact upload
+foundation	Preserve browser evidence	2026-11-13T00:47:08.2705547Z Artifact lab-browser-evidence.zip successfully finalized. Artifact ID 13999080910
+foundation	Preserve browser evidence	2026-11-13T00:47:08.2707030Z Artifact lab-browser-evidence has been successfully uploaded! Final size is 4896217 bytes. Artifact ID is 13999080910
+foundation	Preserve browser evidence	2026-11-13T00:47:08.2717852Z Artifact download URL: https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43338671216/artifacts/13999080910
+foundation	Post Run actions/setup-python@v5	﻿2026-11-13T00:47:08.3072166Z Post job cleanup.
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:08.4544020Z (node:4556) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:08.4544850Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:08.5709279Z [command]"C:\Program Files\Git\usr\bin\tar.exe" --posix -cf cache.tzst --exclude cache.tzst -P -C D:/a/pinecone-visual-lab/pinecone-visual-lab --files-from manifest.txt --force-local --use-compress-program "zstd -T0"
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:09.7813809Z (node:4556) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:10.7643370Z Sent 0 of 205863181 (0.0%), 0.0 MBs/sec
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:11.7664978Z Sent 71645453 of 205863181 (34.8%), 34.2 MBs/sec
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:12.0358746Z Sent 205863181 of 205863181 (100.0%), 86.4 MBs/sec
+foundation	Post Run actions/setup-python@v5	2026-11-13T00:47:12.3427629Z Cache saved with the key: setup-python-Windows-x64-python-3.13.17-pip-f9ce3252cd3a8812538f39b8b1163e52c7040cfe62c8b44eea755fbad0a9f221
+foundation	Post Run actions/setup-node@v4	﻿2026-11-13T00:47:12.3844471Z Post job cleanup.
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:12.5346301Z (node:3064) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:12.5347279Z (Use `node --trace-deprecation ...` to show where the warning was created)
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:12.6425751Z [command]"C:\Program Files\Git\usr\bin\tar.exe" --posix -cf cache.tzst --exclude cache.tzst -P -C D:/a/pinecone-visual-lab/pinecone-visual-lab --files-from manifest.txt --force-local --use-compress-program "zstd -T0"
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:13.3928028Z (node:3064) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:14.3852206Z Sent 5505024 of 51305783 (10.7%), 5.2 MBs/sec
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:15.3921511Z Sent 51305783 of 51305783 (100.0%), 24.4 MBs/sec
+foundation	Post Run actions/setup-node@v4	2026-11-13T00:47:16.0308835Z Cache saved with the key: node-cache-Windows-x64-npm-1b1848ddcf2cc6bac15dca0346325762f7ad173d9d7d7db222b5f8a888440e3e
+foundation	Post Run actions/checkout@v4	﻿2026-11-13T00:47:16.0647263Z Post job cleanup.
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.2616336Z [command]"C:\Program Files\Git\bin\git.exe" version
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.2956169Z git version 2.56.0.windows.4
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.3025704Z Temporarily overriding HOME='D:\a\_temp\4accdff1-061c-4ad7-be2e-cedd1313a376' before making global git config changes
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.3027171Z Adding repository directory to the temporary git global config as a safe directory
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.3036319Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\pinecone-visual-lab\pinecone-visual-lab
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.3417550Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.3785347Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.9367562Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.9696901Z http.https://github.com/.extraheader
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:16.9740079Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:17.0106548Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:17.5551421Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+foundation	Post Run actions/checkout@v4	2026-11-13T00:47:17.5922446Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+foundation	Complete job	﻿2026-11-13T00:47:18.1728597Z Cleaning up orphan processes
+foundation	Complete job	2026-11-13T00:47:18.2165887Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

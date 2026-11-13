@@ -54,7 +54,13 @@ The initial strict harness run caught an unused `Page` type import; it was fixed
 
 ## Publication and CI
 
-Not pushed yet. GitHub CI for this repair is **PENDING**, never inferred from local results. Original attempts failed as stated above. Actual run URL, tested SHA and results will be recorded after safe push and completion.
+Implementation commit **`01033a770e2408b3d28bee3baf1c140c86389497`** was pushed through the existing safe script/hook; remote branch SHA matched local, the worktree was clean immediately after publication, and remote `main` remained `24d56a9af81d0277224dc0f3b7eff5fd0f395bf3`. [Actual push log](push-implementation.txt), [changed-file inventory](changed-files.txt), [staged scope/secret gate](staged-check.txt).
+
+**GitHub CI PASS — actual completed [run 43338671216](https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43338671216), attempt 1**, source SHA above. Windows Server 2025 image `windows-2025-vs2026`, version `20261103.298.1`. All quality, dependency, Edge and visual steps succeeded. Actual log counts: **77 frontend, 220 backend/guards, 20 Edge fixture, 9 visual; no skipped/unexpected/flaky visual cases**. [Run/job/artifact records](CI_VERIFIED.json), [complete sanitized CI log](ci-43338671216.txt).
+
+The downloaded artifact's published ZIP digest `49d2ff57467e642cbbe7e6655d587cf4008997e1396c368ab24fba038b381421` was verified before parsing. CI actually used **Edge 157.0.4341.46**, versus local 157.0.4341.42; effective GPU compositing and rasterization were both `disabled_software`, en-US/scale1/reduced-motion. All 64 captures have actual PNG hashes. **49/64** equal the software proposals byte for byte, including **Architecture Write 1440**, which again exactly equals both original failing CI actuals. This confirms the reported image is now accepted through a consistent rendering profile on a real hosted runner, across these two Edge patches. Other accepted subpixel differences remain covered by the unchanged budget. [Artifact verification log](ci-artifact-check.txt), [actual CI renderer/states/hashes](ci-artifact-verification.json), [read-only verification script](verify-ci-artifact.py).
+
+This report/artifact publication is a documentation-only follow-up to the CI-tested implementation. Product, tests, configuration, lockfiles and software reference images must remain identical to `01033a7`; the final handoff independently checks the subsequent HEAD/remote equality, clean worktree and its CI run. Original failed attempts remain part of the investigation and are not replaced by the successful run.
 
 ## Review boundaries / remaining limitations
 

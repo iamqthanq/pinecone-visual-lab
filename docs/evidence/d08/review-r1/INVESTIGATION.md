@@ -6,7 +6,9 @@ Review: [5880290833 on Draft PR16](https://github.com/iamqthanq/pinecone-visual-
 
 Run [43280051381](https://github.com/iamqthanq/pinecone-visual-lab/actions/runs/43280051381): attempt1 job131398613752, attempt2 job131410437368. Both Windows quality/build/security, advisory/pip and20 fixture Edge integrations passed; both visual suites had6 pass /1 fail, at `architecture-write-1440.png`,101 pixels against100, threshold0.1. Actual logs retain the stable-screenshot/font-ready wait; this was not dismissed as a timing fluke.
 
-[Review/run/job metadata](original-ci.json), [artifact/font/trace analysis](ci-artifact-analysis.json), [attempt1 log](original-ci/attempt-1.log), [attempt2 log](original-ci/attempt-2.log). Connector downloaded both ZIPs; local SHA-256 matches their GitHub digest:
+[Review/run/job metadata](original-ci.json), [artifact/font/trace analysis](ci-artifact-analysis.json), [attempt1 log](original-ci/attempt-1.txt), [attempt2 log](original-ci/attempt-2.txt). Connector downloaded both ZIPs; local SHA-256 matches their GitHub digest:
+
+Published text logs normalize ANSI decoration, line endings and trailing whitespace only; diagnostics and results remain intact. Raw downloaded logs/archives remain in ignored local cache. A staging whitespace failure on copied logs was retained and corrected; no source/test rule was relaxed.
 
 | Attempt | GitHub artifact | ZIP SHA-256 |
 | --- | --- | --- |

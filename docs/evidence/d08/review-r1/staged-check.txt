@@ -1,7 +1,7 @@
 COMMAND: .venv\Scripts\python.exe docs/evidence/d08/review-r1/verify-staged.py
-Checked 1081 tracked/unignored paths; findings: 0
-253 staged R1 files; exact branch/Issue/remote/hooks verified; no deletion or oversized/private artifacts.
+Checked 1090 tracked/unignored paths; findings: 0
+14 staged R1 files; exact branch/Issue/remote/hooks verified; no deletion or oversized/private artifacts.
 Safe push remains the existing explicit-refspec script; main and historical evidence are outside this staging scope.
 
 EXIT_CODE: 0
-ELAPSED_SECONDS: 1.29
+ELAPSED_SECONDS: 0.85
